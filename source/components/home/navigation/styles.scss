@@ -1,0 +1,25 @@
+.navbar {
+    color: white;
+    font-size: 20px;
+    height: 60px;
+    font-family: Roboto, sans-serif;
+    font-weight: 100;
+    background-color: rgba(21, 31, 40, 0.75);
+    opacity: 1;
+    position: -webkit-sticky;
+    position: sticky;
+    top: -1px;
+    z-index: 1;
+    ul li a {
+      margin: 10px;
+      padding:10px;
+    }
+    ul li a:hover {
+      color: rgb(184, 52, 50);
+      text-decoration: none;
+    }
+}
+
+#logo {
+  width: 50px;
+}

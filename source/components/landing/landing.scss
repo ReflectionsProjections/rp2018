@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,300');
+
+$bg: #0c202b;
+
+.button {
+  font-family: 'Roboto Slab', serif;
+  background-color: #B32024;
+  padding: 1em 4em;
+  border-radius: 5px;
+  color: rgba(255, 255, 255, 0.8);
+  letter-spacing: 2px;
+  border:none;
+  display: inline-block;
+  font-size: inherit;
+  box-sizing: border-box;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.landing {
+
+  font-family: 'Roboto Slab', serif;
+  width: 100%;
+  height: calc(100vh - 6em);
+  padding-bottom: 3em;
+  padding-top: 3em;
+  background-image: url('../../assets/svg/background-overlay.svg');
+  background-size: cover;
+  background-color: $bg;
+  color: white;
+  position: relative;
+
+  .hero-header {
+
+    display: flex;
+    width: 80%;
+    margin: 0 10%;
+    height: 50vh;
+
+    @media only screen and (max-width: 850px) {
+      height: 40vh;
+    }
+
+    img {
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .hero-item {
+      flex-basis: 33%;
+      flex-grow: 1;
+      flex-shrink: 1;
+      position: relative;
+      height: 100%;
+
+      img {
+        width: 100%;
+      }
+
+      .hero-item-title {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        h1 {
+          font-size: 3em;
+        }
+        img {
+          width: 85%;
+        }
+      }
+
+      @media only screen and (max-width: 850px) {
+        .hero-item-title {
+          height: 100%;
+          width: 100%;
+
+          h1 {
+            display: none;
+          }
+
+          img {
+            height: 100%;
+          }
+        }
+      }
+
+    }
+
+    .left {
+      text-align: right;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .right {
+      text-align: left;
+    }
+  }
+
+  .hero-header-header-mobile {
+    display: none;
+  }
+
+  @media only screen and (max-width: 850px) {
+    .hero-header-header-mobile {
+      font-size: 4.25vw;
+      margin-bottom: 5%;
+      display: flex;
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}
+
+.responsive-container {
+
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+}
+
+@media (min-width: 850px) {
+
+  .responsive-container {
+    width: 750px;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+
+}
+
+@media (max-width: 850px) {
+
+  .left, .right {
+    display: none;
+  }
+
+  .center {
+    text-align: center;
+  }
+
+  p {
+    font-size: 0.9em;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .hero-header {
+    height: 25vh;
+  }
+
+  .hero-item-title {
+    img {
+
+    }
+  }
+
+  .registration-date {
+      font-size: 6vw;
+  }
+
+  .registration-info, .past_speakers {
+    font-size: 2.5vw;
+  }
+}
+
+@media (min-width: 992px) {
+  .responsive-container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .responsive-container {
+    width: 1170px;
+  }
+
+}

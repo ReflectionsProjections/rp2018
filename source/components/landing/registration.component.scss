@@ -1,0 +1,37 @@
+.registration {
+  min-height: 40vh;
+  text-align: center;
+  .registration-email-input {
+    margin: 2em;
+  }
+
+  .registration-date {
+    .mobile {
+      font-size: 6vw;
+    }
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .thin {
+     a {
+       color: inherit;
+       text-decoration: none;
+     }
+  }
+}
+
+@media (min-width: 850px) {
+
+}
+
+@media (min-width: 992px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}

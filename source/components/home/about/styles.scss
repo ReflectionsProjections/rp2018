@@ -1,0 +1,37 @@
+.About {
+    margin-top: 80px;
+    margin-bottom: 5em;
+
+    .jumbotron {
+        background-color: inherit;
+        color: white;
+        text-align: center;
+        font-family: inherit;
+    }
+
+    &__header {
+        max-width: 500px;
+    }
+
+    &__counter {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      font-size: 24px;
+      font-family: inherit;
+      font-weight: 10;
+    }
+}
+
+button{
+  background-color: rgb(21, 31, 40);
+  height: 50px;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 100;
+  font-family: Roboto, sans-serif;
+  color: #C8212A;
+  border-radius: 10px;
+  border-color: #C8212A;
+}
