@@ -1,11 +1,10 @@
 .navbar {
     color: white;
-    font-size: 20px;
-    height: 60px;
-    font-family: Roboto, sans-serif;
-    font-weight: 100;
-    background-color: rgba(21, 31, 40, 0.75);
-    opacity: 1;
+    font-size: 19px;
+    height: 10vh;
+    font-family: 'Roboto Slab', serif;
+    background-color: #151f28;
+    opacity: 0.85;
     position: -webkit-sticky;
     position: sticky;
     top: -1px;
@@ -15,11 +14,16 @@
       padding:10px;
     }
     ul li a:hover {
-      color: rgb(184, 52, 50);
+      color: #97c88c;
       text-decoration: none;
     }
 }
 
 #logo {
   width: 50px;
+}
+
+#nav_items {
+  flex-direction: row;
+  align-content: space-between;
 }

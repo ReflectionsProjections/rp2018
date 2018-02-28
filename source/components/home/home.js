@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 import { } from 'react-bootstrap'
-
 import styles from './styles.scss'
-
 import Navigation from './navigation/navigation'
+import Start from './start/start'
 import About from './about/about'
 import Events from './events/events'
 import Speakers from './speakers/speakers'
@@ -21,11 +20,11 @@ class Home extends Component {
         return(
             <div className="Home">
                 <Navigation />
+                <Start />
                 <About />
-                <Speakers />
                 <Tracks />
-                <Events />
                 <Sponsors />
+                <Speakers />
                 <Footer />
             </div>
         )

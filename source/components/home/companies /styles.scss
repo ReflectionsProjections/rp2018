@@ -1,12 +1,10 @@
 .Sponsors {
-    padding: 10vh 5vw 10vh 5vw;
-    background-color: rgba(255, 255, 255, 0.3);
+    margin-top: 10vh;
     &__card {
         color: white;
         text-align: center;
         position: relative;
         min-height: 150px;
-        background-color: none;
 
         img {
             position: absolute;
@@ -15,9 +13,20 @@
             transform: translate(-50%, -50%);
             max-width: 100%;
             max-height: 100%;
+            // max-height: 100px;
             padding: 7px;
         }
     }
+
+    &__cardLogo {
+
+    }
+
+    &__card--tier1 {
+        min-height: 250px;
+        border: 10px solid #7F1B22;
+    }
+
     &__gridRow {
         text-align: center;
     }
@@ -32,8 +41,18 @@
         align-content: center;
     }
 
+    &__card--tier2 {
+        min-height: 200px;
+        border: 10px solid #A15E3D;
+    }
+
     &__card--tier3 {
         min-height: 150px;
+        border: 7px solid #5D8B6F;
+    }
+
+    &__card--tier4 {
+        border: 5px solid #0F7F92;
     }
 
     &__header {
@@ -41,5 +60,5 @@
         text-align: center;
     }
 
-    //margin: 80px auto;
+    margin: 80px auto;
 }

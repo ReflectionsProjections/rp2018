@@ -1,24 +1,26 @@
 .Speakers {
+    padding: 5vh 5vw 10vh 5vw;
     &__card {
         position: relative;
-        background-color: #E6E6E6;
+        background-color: rgba(60, 116, 113, 0.2);
+        margin: 0.5em;
+        color:#ffff;
 
         img {
             max-width: 100%;
             width: auto;
-            max-height: 300px;
-            
-        }
-        .caption{
-            // display: flexbox;
-            // align-content: center;
-            // justify-content: center;
+            max-height: 300px;  
         }
     }
 
     &__card--keynote {
-        background-color: #E6E6E6;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+        background-color: rgba(60, 116, 113, 0.2);
         position: relative;
+        color:#ffff;
         h3,p{
             text-align: center;
         }
@@ -30,7 +32,8 @@
 
     &__header {
         text-align: center;
-        color: white;
+        color:#ffff;
+        margin-bottom: 1em;
     }
 
     &__overlay {
@@ -39,8 +42,8 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: rgba(255, 255, 255, 0.9);
-        color: black;
+        background-color: rgba(60, 116, 113, 0.2);
+        color:#ffff;
         padding: 10px;
         overflow-y: scroll;
         display: none;
@@ -52,11 +55,13 @@
     }
     h3{
         text-align: center;
+        font-size: 20px;
+        font-weight: lighter;
+        font-family: "Roboto Slab", serif;
+        padding: 1em;
     }
 
-    margin: 80px auto;
-
     .thumbnail{
-        padding:0;
+        padding: 0;
     }
 }

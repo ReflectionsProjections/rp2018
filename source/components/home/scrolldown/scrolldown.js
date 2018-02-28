@@ -15,7 +15,7 @@ class Scrolldown extends Component {
             const scrolledY = window.scrollY;
             if(scrolledY){
                 window.scroll({
-                  top: scrolledY - 100,
+                  top: scrolledY - 10,
                   left: 0,
                   behavior: 'smooth',
                 });

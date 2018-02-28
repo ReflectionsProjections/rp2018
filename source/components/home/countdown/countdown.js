@@ -13,7 +13,7 @@ class Countdown extends Component {
     calDate() {
       let oneDay = 24*60*60*1000;
       let secondDate = new Date;
-      let firstDate = new Date('September 25, 2018');
+      let firstDate = new Date('September 17, 2018');
       let diffDays = Math.round(Math.abs((firstDate.getTime() - secondDate.getTime())/(oneDay)));
       return diffDays;
     }

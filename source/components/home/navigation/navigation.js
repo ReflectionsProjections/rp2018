@@ -14,12 +14,10 @@ class Navigation extends Component {
         this.scrollTo = (name) => {
             const element = document.getElementById(name);
             element.scrollIntoView();
-
             const scrolledY = window.scrollY;
-
             if(scrolledY){
                 window.scroll({
-                  top: scrolledY - 100,
+                  top: scrolledY - 50,
                   left: 0,
                   behavior: 'smooth'
                 });
@@ -39,13 +37,13 @@ class Navigation extends Component {
                 </a>
               </Navbar.Brand>
             </Navbar.Header>
-            <Nav style={{flexDirection: "row", alignContent: "space-between"}}>
+            <Nav id="nav_items">
               <NavItem onClick={() => this.scrollTo('About')} eventKey={1} href="#" className="Navigation__item--active">About</NavItem>
-              <NavItem onClick={() => this.scrollTo('Speakers')} eventKey={2} href="#">Speakers</NavItem>
-              <NavItem onClick={() => this.scrollTo('Tracks')} eventKey={3} href="#">Tracks</NavItem>
-              <NavItem onClick={() => this.scrollTo('Events')} eventKey={6} href="#">Schedule</NavItem>
+              <NavItem onClick={() => this.scrollTo('Tracks')} eventKey={2} href="#">Tracks</NavItem>
               <NavItem onClick={() => this.scrollTo('Sponsors')} eventKey={4} href="#">Sponsors</NavItem>
-              <NavItem onClick={() => this.linkTo('http://reflectionsprojections.org/signup')} eventKey={5} href="">Register</NavItem>
+              <NavItem onClick={() => this.scrollTo('Speakers')} eventKey={3} href="#">Speakers</NavItem>
+              <NavItem href="https://reflectionsprojections.org/schedule/" target="_blank" rel="noopener noreferrer" eventKey={5} color="white">Schedule</NavItem>
+              <NavItem href="https://acmrp.typeform.com/to/Tv3j4W" target="_blank" rel="noopener noreferrer" eventKey={6} color="white">Register</NavItem>
             </Nav>
             </Navbar>
         )

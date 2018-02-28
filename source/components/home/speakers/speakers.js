@@ -237,7 +237,7 @@ class Speakers extends Component {
             if(speaker.keynote) {
                 return(
                     <Col key={idx} xs={12} sm={6} md={6}>
-                        <Thumbnail onClick={(e) => this.handleClick(e, 'js-overlay-' + idx)} className="Speakers__card--keynote" src={speaker.img} style={{"border":"6px solid #9a6fb0"}}>
+                        <Thumbnail onClick={(e) => this.handleClick(e, 'js-overlay-' + idx)} className="Speakers__card--keynote" src={speaker.img}>
                             <h3>{speaker.name}</h3>
                             <p>Keynote Speaker</p>
                             <div onClick={(e) => this.hideOverlay(e, 'js-overlay-' + idx)} id={'js-overlay-' + idx} className="Speakers__overlay">
@@ -263,10 +263,9 @@ class Speakers extends Component {
 
                 }
                 var hexStr = "6px solid " + hex;
-                // console.log(hexStr);
                 return(
                     <Col key={idx} xs={12} sm={6} md={3} style={{"border:": ""}}>
-                        <Thumbnail onClick={(e) => this.handleClick(e, 'js-overlay-' + idx)} className="Speakers__card js-speakercard" src={speaker.img} style={{"border":hexStr}}>
+                        <Thumbnail onClick={(e) => this.handleClick(e, 'js-overlay-' + idx)} className="Speakers__card js-speakercard" src={speaker.img}>
                             <h3>{speaker.name}</h3>
                             <div onClick={(e) => this.hideOverlay(e, 'js-overlay-' + idx)} id={'js-overlay-' + idx} className="Speakers__overlay">
                                 <h4>{speaker.name}</h4><br/>
@@ -280,7 +279,7 @@ class Speakers extends Component {
 
         return(
             <div className="Speakers" id="Speakers">
-                <PageHeader className="Speakers__header">Speakers</PageHeader>
+                <PageHeader className="Speakers__header">Speakers of 2017</PageHeader>
                 <Grid>
                     <Row>
                         {speakerView}
