@@ -2,11 +2,11 @@
     padding: 10vh 5vw 10vh 5vw;
     background-color: rgba(255, 255, 255, 0.3);
     &__card {
-        color: white;
         text-align: center;
         position: relative;
         min-height: 150px;
-        background-color: none;
+        background: none;
+        border: none;
 
         img {
             position: absolute;
@@ -32,14 +32,9 @@
         align-content: center;
     }
 
-    &__card--tier3 {
-        min-height: 150px;
-    }
-
     &__header {
         color: white;
         text-align: center;
+        border: none;
     }
-
-    //margin: 80px auto;
 }

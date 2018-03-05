@@ -44,10 +44,9 @@ class Footer extends Component {
 					<Media.Body>
 						<p className="Footer__contact">
 							<FA name='phone' /> +1 (217) 333-5828 <br />
-							<a href="mailto:conference-chair@acm.illinois.edu"><FA name='envelope' /> conference-chair@acm.illinois.edu</a> <br/>
-							<a href="https://twitter.com/acmrp2017"><FA name='twitter' /> @acmrp2017</a> <br/>
-							<FA name='snapchat-ghost' /> officialrp2017<br/>
-							{/* <a href="#" id="snapchatModal" onClick={this.handleOpenModal}> <FA name='snapchat-ghost' /> officialrp2017</a> <br/> */}
+							<a href="mailto:conference-chair@acm.illinois.edu"><FA name='envelope'/> conference-chair@acm.illinois.edu</a> <br/>
+							<a href="https://twitter.com/acmrp2017"><FA name='twitter'/> @acmrp2018</a> <br/>
+							<FA name='snapchat-ghost' /> officialrp2018<br/>
 						</p>
 					</Media.Body>
 				</Media>
@@ -56,15 +55,5 @@ class Footer extends Component {
 		)
 	}
 }
-{/* <Modal
-className="Modal__Bootstrap modal-dialog"
-closeTimeoutMS={150}
-contentLabel="Snapchat Ghost"
-isOpen={this.state.showModal}
->
-<div className="modal-content" onClick={this.handleCloseModal}>
-	<img src="../assets/img/snapcode.png"/>
-</div>
-</Modal> */}
 
 export default Footer;

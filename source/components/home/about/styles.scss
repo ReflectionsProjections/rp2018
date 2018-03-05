@@ -1,55 +1,79 @@
 #About {
-    font-size: 18px;
-    height: 100vh;
-    font-family: 'Roboto Slab', serif;
-    font-weight: thin;
-    color: white;
+    font-size: 16px;
+    min-height: 100vh;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+    color: #275354;
+    font-weight: lighter;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    padding: 10vh 5vw 10vh 5vw;
 }
 
-#join_us {
-    color: #cadea5;
-}
-
-.intro {
-    padding-top: 20vh;
-    padding-left: 8vw;
-    padding-right: 8vw;
-    padding-bottom: 5vh;
-}
-
-.data_facts {
+.about-grid {
     display: flex;
-    width: 100vw;
-    padding-top: 0%;
-    padding-left: 8%;
-    padding-right: 8%;
-    justify-content: center;
-    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
 }
 
-.data_item {
-    flex: 1;
-    border: 1.5px solid #ffff;
-    box-sizing: border-box;
-    padding-top: 2vh;
-    padding-left: 2vw;
-    padding-right: 2vw;
-    padding-bottom: 5vh;
-    margin: 2vw;
-    flex: 1;
-    justify-content: center;
+.about-grid .col{
+    margin: 1em;
+}
+
+.ReactFlipCard {
+    min-height: 40vh;
+}
+
+.ReactFlipCard,
+  .ReactFlipCard__Front,
+  .ReactFlipCard__Back {
+    width: 25vw;
+  }
+
+
+.ReactFlipCard__Front,
+  .ReactFlipCard__Back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: -webkit-transform 300ms;
+    transition: -webkit-transform 300ms;
+    transition: transform 300ms;
+    transition: transform 300ms, -webkit-transform 300ms;
+    -webkit-transition-timing-function: linear;
+    transition-timing-function: linear;
+    vertical-align: middle;
+    height: inherit;
+}
+
+.ReactFlipCard__Front {
+    //background: linear-gradient(to bottom right, #d1e5ac, #56b7b7);
+    background-color: rgba(60, 116, 113, 0.1);
+    padding: 30px;
     text-align: center;
+    color: #cadea5;
+    border: 2px solid #cadea5;
 }
 
-.num {
-    font-weight: bolder;
-    font-size: 35px;
-    padding: 2vh;
+.ReactFlipCard__Back {
+    background: linear-gradient(to bottom right, #56b7b7, #d1e5ac);
+    padding: 30px;
+    text-align: left;
+    font-weight: 100;
+    opacity: 0.8;
 }
 
+@media (max-width: 440px) {
+    .about-grid {
+      display: block;
+      .col {
+        width: 100%;
+      }
+    }
 
-
-
+    .ReactFlipCard,
+    .ReactFlipCard__Front,
+    .ReactFlipCard__Back {
+        width: 80vw;
+        margin: 0 auto;
+    }
+}

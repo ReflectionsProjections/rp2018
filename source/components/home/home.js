@@ -9,6 +9,8 @@ import Speakers from './speakers/speakers'
 import Tracks from './tracks/tracks'
 import Sponsors from './sponsors/sponsors'
 import Footer from './footer/footer'
+import Photos from './photos/photos'
+
 
 class Home extends Component {
 
@@ -22,9 +24,8 @@ class Home extends Component {
                 <Navigation />
                 <Start />
                 <About />
-                <Tracks />
-                <Sponsors />
                 <Speakers />
+                <Sponsors />
                 <Footer />
             </div>
         )

@@ -57,10 +57,10 @@ class Tracks extends Component {
 
         const trackView = trackList.map( (track, idx) => {
             return(
-                <Col key={idx} xs={12} sm={6} md={4}>
-                    <Panel className="Tracks__card" style={{"border":"5px solid"+track.color}}>
-                        <h3>{track.name}</h3><br />
-                        <h5>{track.desc}</h5>
+                <Col key={idx} lg={12} xs={12} sm={6} md={4}>
+                    <Panel className="Tracks__card">
+                        <div>{track.name}</div><br />
+                        <div>{track.desc}</div>
                     </Panel>
                 </Col>
             )

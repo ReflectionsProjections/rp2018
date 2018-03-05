@@ -24,28 +24,36 @@ class Navigation extends Component {
             }
         };
 
-        this.linkTo = (url) => {
-            window.location = url;
-        };
+        this.burgerToggle = () => {
+            let linksEl = document.querySelector('.narrow-links');
+            if (linksEl.style.display === 'block') {
+                linksEl.style.display = 'none';
+            } else {
+                linksEl.style.display = 'block';
+            }
+        }
 
         return(
-          <Navbar>
-            <Navbar.Header>
-              <Navbar.Brand>
-                <a href="#">
-                  <img id="logo" src="../assets/svg/logo.svg"/>
-                </a>
-              </Navbar.Brand>
-            </Navbar.Header>
-            <Nav id="nav_items">
-              <NavItem onClick={() => this.scrollTo('About')} eventKey={1} href="#" className="Navigation__item--active">About</NavItem>
-              <NavItem onClick={() => this.scrollTo('Tracks')} eventKey={2} href="#">Tracks</NavItem>
-              <NavItem onClick={() => this.scrollTo('Sponsors')} eventKey={4} href="#">Sponsors</NavItem>
-              <NavItem onClick={() => this.scrollTo('Speakers')} eventKey={3} href="#">Speakers</NavItem>
-              <NavItem href="https://reflectionsprojections.org/schedule/" target="_blank" rel="noopener noreferrer" eventKey={5} color="white">Schedule</NavItem>
-              <NavItem href="https://acmrp.typeform.com/to/Tv3j4W" target="_blank" rel="noopener noreferrer" eventKey={6} color="white">Register</NavItem>
-            </Nav>
-            </Navbar>
+            <div className="Navigation">
+                <Navbar collapseOnSelect fixedTop>
+                    <Navbar.Header>
+                        <Navbar.Brand>
+                            <a href="#">
+                                <img className="Navigation__logo" src="../assets/svg/logo.svg" />
+                            </a>
+                        </Navbar.Brand>
+                        <Navbar.Toggle />
+                    </Navbar.Header>
+                    <Navbar.Collapse>
+                    <Nav pullRight>
+                        <NavItem onClick={() => this.scrollTo('About')} eventKey={1} href="#" className="Navigation__item--active">About</NavItem>
+                        <NavItem onClick={() => this.scrollTo('Speakers')} eventKey={2} href="#Speakers">Speakers</NavItem>
+                        <NavItem onClick={() => this.scrollTo('Sponsors')} eventKey={4} href="#">Sponsors</NavItem>
+                        <NavItem href="https://acmrp.typeform.com/to/Tv3j4W" target="_blank" rel="noopener noreferrer">Register</NavItem>
+                    </Nav>
+                    </Navbar.Collapse>
+                </Navbar>
+            </div>
         )
     }
 }

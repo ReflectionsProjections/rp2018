@@ -14,16 +14,15 @@ class Start extends Component {
 
     render() {
         return(
-            <div id="Start">
+            <div className="Start">
                 <Jumbotron>
                     <img className="header" src="../assets/svg/home_header.svg" />
                     <p className="caps">September 17 - 22th, 2018</p>
                     <div className="counter">
                         <Countdown/>
-                        <div style={{margin: "15px", paddingBottom: "10px"}}>Days&nbsp; Left</div>
+                        <div style={{margin: "15px", paddingBottom: "10px"}}>DAYS&nbsp; LEFT</div>
                     </div>
-                    <a className="btn" href="http://reflectionsprojections.org/signup" ><button>GO REGISTER</button></a>
-                    <a className="btn" href="http://reflectionsprojections.org/signup" ><button>CHECK SCHEDULE</button></a>
+                    <a className="btn" href="http://reflectionsprojections.org/signup" target="_blank" rel="noopener noreferrer"><button>REGISTER</button></a>
                     <Scrolldown/>
                 </Jumbotron>
             </div>

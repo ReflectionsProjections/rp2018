@@ -1,8 +1,8 @@
-#Start {
+.Start {
     margin-top: 10vh;
-    height: 70vh;
-    font-size: 20px;
-    font-family: 'Roboto Slab', serif;
+    height: 100vh; 
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
     font-weight: bold;
 
     .jumbotron {
@@ -11,41 +11,56 @@
         text-align: center;
         font-family: inherit;
     }
+
+    .caps {
+        margin: 25px;
+    }
+
+    .counter {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2em;
+        flex-direction: row;
+    }
+
+    .header {
+        max-width: 50%;
+    }
+    
+    .btn {
+        border: none;
+        margin: 10px;
+    }
+
+    .btn button{
+        background: none;
+        height: 50px;
+        width: 150px;
+        font-size: 1.2em;
+        color: #cadea5;
+        border: 2px solid #cadea5;
+        text-align: center;
+    }
+    
+    .btn button:hover {
+        border-color: #97c88c;
+    } 
+
+    @media (max-width: 400px) {
+        .header {
+            max-width: 90%;
+        } 
+        .Start {
+            font-size: 0.8em;
+        } 
+        .btn button{
+            font-size: 0.8em;
+            width: 100px;
+        }  
+    }
 }
 
-.caps {
-    margin: 25px;
-}
 
-.counter {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    flex-direction: row;
-}
-
-.header {
-    max-width: 500px;
-}
-
-.btn {
-    border: none;
-    margin: 10px;
-}
-
-.btn button{
-    background-color: rgb(21, 31, 40);
-    height: 50px;
-    padding: 10px;
-    font-size: 18px;
-    color: #3c7471;
-    border-color: #3c7471;
-    width: 200px;
-}
-
-.btn button:hover {
-    border-color: #97c88c;
-}
 
 
