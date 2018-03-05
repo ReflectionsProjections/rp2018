@@ -29,13 +29,16 @@
   "dependencies": {
     "jquery": "^3.3.1",
     "normalize.css": "^6.0.0",
-    "react": "^15.4.2",
-    "react-bootstrap": "^0.31.1",
-    "react-dom": "^15.4.2",
+    "react": "^15.6.2",
+    "react-bootstrap": "^0.31.5",
+    "react-dom": "^15.6.2",
     "react-fontawesome": "^1.6.1",
     "react-modal": "^2.3.2",
+    "react-photo-gallery": "^6.0.22",
     "react-router": "^4.0.0",
     "react-router-dom": "^4.0.0",
+    "react-slick": "^0.19.0",
+    "slick-carousel": "^1.8.1",
     "superagent": "^3.5.2"
   }
 }
