@@ -87,8 +87,8 @@ class Speakers extends Component {
             return(
                 <Col key={idx} xs={12} lg={4} sm={9} md={9}>
                     <Thumbnail onClick={(e) => this.handleClick(e, 'js-overlay-' + idx)} className="Speakers__card js-speakercard" src={speaker.img}>
-                        <h3>{speaker.name}</h3>
-                        <h3>{speaker.year}</h3>
+                        <h3 style={{color: "white"}}>{speaker.name}</h3>
+                        <h3 style={{color: "white"}}>{speaker.year}</h3>
                     </Thumbnail>
                 </Col>
             )

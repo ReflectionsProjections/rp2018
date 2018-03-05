@@ -185,7 +185,7 @@ class Sponsors extends Component {
 
         const tier2Sponsors = sponsorsList.tier2.map( (sponsor, idx) => {
             return(
-                <Col key={idx} lg={6} xs={6} sm={6} md={6}>
+                <Col key={idx} xs={12} lg={6} sm={2} md={2}>
                     <Panel className="Sponsors__card Sponsors__card--tier3">
                         <img className="Sponsors__cardLogo" src={sponsor.img} alt={sponsor.name}/>
                     </Panel>
