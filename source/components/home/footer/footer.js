@@ -45,8 +45,9 @@ class Footer extends Component {
 						<p className="Footer__contact">
 							<FA name='phone' /> +1 (217) 333-5828 <br />
 							<a href="mailto:conference-chair@acm.illinois.edu"><FA name='envelope'/> conference-chair@acm.illinois.edu</a> <br/>
-							<a href="https://twitter.com/acmrp2017"><FA name='twitter'/> @acmrp2018</a> <br/>
-							<FA name='snapchat-ghost' /> officialrp2018<br/>
+							<a href="https://twitter.com/uiuc_rp"><FA name='twitter'/> @uiuc_rp</a> <br/>
+              <a href="https://www.instagram.com/uiuc_rp/"><FA name='instagram' /> @uiuc_rp </a> <br/>
+							<FA name='snapchat-ghost' /> uiuc_rp<br/>
 						</p>
 					</Media.Body>
 				</Media>
