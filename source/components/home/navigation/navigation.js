@@ -33,6 +33,10 @@ class Navigation extends Component {
             }
         }
 
+        this.emailTo = (address) => {
+            location.href = address;
+        }
+
         return(
             <div className="Navigation">
                 <Navbar collapseOnSelect fixedTop>
@@ -46,10 +50,10 @@ class Navigation extends Component {
                     </Navbar.Header>
                     <Navbar.Collapse>
                     <Nav pullRight>
-                        <NavItem onClick={() => this.scrollTo('About')} eventKey={1} href="#" className="Navigation__item--active">About</NavItem>
+                        <NavItem onClick={() => this.scrollTo('About')} eventKey={1} href="#About" className="Navigation__item--active">About</NavItem>
                         <NavItem onClick={() => this.scrollTo('Speakers')} eventKey={2} href="#Speakers">Speakers</NavItem>
-                        <NavItem onClick={() => this.scrollTo('Sponsors')} eventKey={4} href="#">Sponsors</NavItem>
-                        <NavItem href="https://acmrp.typeform.com/to/Tv3j4W" target="_blank" rel="noopener noreferrer">Register</NavItem>
+                        <NavItem onClick={() => this.scrollTo('Sponsors')} eventKey={3} href="#Sponsors">Sponsors</NavItem>
+                        <NavItem onClick={() => this.emailTo('mailto:conference-chair@acm.illinois.edu')} href="#">Contact</NavItem>
                     </Nav>
                     </Navbar.Collapse>
                 </Navbar>

@@ -7,14 +7,14 @@
   z-index: 1;
 
   .navbar {
-    background-color: #151f28;
+    background-color: #232b35;
   
     .navbar-header {
         min-height: $nav-height;
     }
 
     .nav > li > a {
-        color: white;
+        color: #ffff;
         font-size: 19px;
         font-family: 'Roboto Slab', serif;
         line-height: $nav-height;
@@ -22,6 +22,9 @@
         letter-spacing: 0.5px;
         padding-top: 0;
         padding-bottom: 0;
+    }
+    .nav > li > a :hover {
+      color: #cadea5;
     }
   }
 

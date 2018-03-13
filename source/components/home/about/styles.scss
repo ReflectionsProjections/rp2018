@@ -1,13 +1,13 @@
 #About {
     font-size: 16px;
-    min-height: 100vh;
+    min-height: 85vh;
     overflow: hidden;
     font-family: 'Roboto', sans-serif;
     color: #275354;
-    font-weight: lighter;
     display: flex;
     flex-direction: column;
     padding: 10vh 5vw 10vh 5vw;
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 .about-grid {
@@ -28,8 +28,11 @@
   .ReactFlipCard__Front,
   .ReactFlipCard__Back {
     width: 25vw;
+    outline: none;
   }
-
+.ReactFlipCard__Front {
+    min-height: 13vh;
+}
 
 .ReactFlipCard__Front,
   .ReactFlipCard__Back {
@@ -63,6 +66,10 @@
     border: none;
 }
 
+.descrip {
+    font-size: 20px;
+}
+
 @media (max-width: 440px) {
     .about-grid {
       display: block;
@@ -76,5 +83,11 @@
     .ReactFlipCard__Back {
         width: 80vw;
         margin: 0 auto;
+        margin-bottom: 1em;
+    }
+
+    .ReactFlipCard,
+    .ReactFlipCard__Back {
+        min-height: 50vh;
     }
 }

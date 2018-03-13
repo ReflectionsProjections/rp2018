@@ -36,7 +36,7 @@ class Footer extends Component {
 			margin: "-10px 0 0 0"
 		};
 		return(
-			<div className="Footer container">
+			<div className="Footer container" id="Footer">
 				<Media>
 					<Media.Left>
 						<img style={logoStyle} src="../assets/svg/acm_logo_50.svg" alt="Image"/>
