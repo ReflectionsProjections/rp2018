@@ -56,7 +56,7 @@ class Speakers extends Component {
                 'year': 2012
             },
             {
-                'name': 'Alex Ohanian',
+                'name': 'Alexis Ohanian',
                 'img': '../assets/img/keynotes/alex.jpg',
                 'year': 2009
             },
