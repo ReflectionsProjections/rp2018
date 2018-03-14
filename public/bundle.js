@@ -11500,7 +11500,7 @@ var Photos = function (_Component) {
             return _react2.default.createElement(
               'div',
               null,
-              _react2.default.createElement('img', { src: item.src, alt: item.alt, style: { maxWidth: 300 } })
+              _react2.default.createElement('img', { src: item.src, alt: item.alt, style: { maxWidth: 380 } })
             );
           })
         )
@@ -25460,7 +25460,7 @@ exports = module.exports = __webpack_require__(20)(undefined);
 
 
 // module
-exports.push([module.i, "#About {\n  font-size: 16px;\n  min-height: 100vh;\n  overflow: hidden;\n  font-family: 'Roboto', sans-serif;\n  color: #275354;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  padding: 10vh 5vw 10vh 5vw;\n  background-color: rgba(255, 255, 255, 0.3); }\n\n.about-grid {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-pack: justify;\n  justify-content: space-between;\n  width: 100%; }\n\n.about-grid .col {\n  margin: 1em; }\n\n.ReactFlipCard {\n  min-height: 40vh;\n  outline: none; }\n\n.ReactFlipCard,\n.ReactFlipCard__Front,\n.ReactFlipCard__Back {\n  width: 25vw;\n  outline: none; }\n\n.ReactFlipCard__Front {\n  min-height: 15vh; }\n\n.ReactFlipCard__Front,\n.ReactFlipCard__Back {\n  -webkit-backface-visibility: hidden;\n  backface-visibility: hidden;\n  transition: transform 300ms;\n  transition-timing-function: linear;\n  vertical-align: middle;\n  height: inherit; }\n\n.ReactFlipCard__Front {\n  background-color: rgba(60, 116, 113, 0.1);\n  padding: 30px;\n  text-align: center;\n  color: #cadea5;\n  border: 3px solid #cadea5; }\n\n.ReactFlipCard__Back {\n  background: linear-gradient(to bottom right, #56b7b7, #d1e5ac);\n  padding: 30px;\n  text-align: left;\n  font-weight: 100;\n  opacity: 1;\n  border: none; }\n\n.descrip {\n  font-size: 20px; }\n\n@media (max-width: 440px) {\n  .about-grid {\n    display: block; }\n    .about-grid .col {\n      width: 100%; }\n  .ReactFlipCard,\n  .ReactFlipCard__Front,\n  .ReactFlipCard__Back {\n    width: 80vw;\n    margin: 0 auto;\n    margin-bottom: 1em; }\n  .ReactFlipCard,\n  .ReactFlipCard__Back {\n    min-height: 50vh; } }\n", ""]);
+exports.push([module.i, "#About {\n  font-size: 16px;\n  min-height: 100vh;\n  overflow: hidden;\n  font-family: 'Roboto', sans-serif;\n  color: #275354;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  padding: 10vh 5vw 10vh 5vw;\n  background-color: rgba(255, 255, 255, 0.3); }\n\n.about-grid {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-pack: justify;\n  justify-content: space-between;\n  width: 100%; }\n\n.about-grid .col {\n  margin: 1em; }\n\n.ReactFlipCard {\n  min-height: 40vh;\n  outline: none; }\n\n.ReactFlipCard,\n.ReactFlipCard__Front,\n.ReactFlipCard__Back {\n  width: 25vw;\n  outline: none; }\n\n.ReactFlipCard__Front {\n  min-height: 15vh; }\n\n.ReactFlipCard__Front,\n.ReactFlipCard__Back {\n  -webkit-backface-visibility: hidden;\n  backface-visibility: hidden;\n  transition: transform 300ms;\n  transition-timing-function: linear;\n  vertical-align: middle;\n  height: inherit; }\n\n.ReactFlipCard__Front {\n  width: 25vw;\n  background-color: rgba(60, 116, 113, 0.1);\n  padding: 30px;\n  text-align: center;\n  color: #cadea5;\n  border: 3px solid #cadea5; }\n\n.ReactFlipCard__Back {\n  background: linear-gradient(to bottom right, #56b7b7, #d1e5ac);\n  padding: 30px;\n  text-align: left;\n  font-weight: 100;\n  opacity: 1;\n  border: none; }\n\n.descrip {\n  font-size: 20px; }\n\n@media (max-width: 440px) {\n  .about-grid {\n    display: block; }\n    .about-grid .col {\n      width: 100%; }\n  .ReactFlipCard,\n  .ReactFlipCard__Front,\n  .ReactFlipCard__Back {\n    width: 85vw;\n    margin: 0 auto; }\n  .ReactFlipCard {\n    margin-bottom: 1em;\n    min-height: 60vh; } }\n", ""]);
 
 // exports
 
@@ -25516,7 +25516,7 @@ exports = module.exports = __webpack_require__(20)(undefined);
 
 
 // module
-exports.push([module.i, "#Photos {\n  min-height: 50vh;\n  padding: 2vh 2vw 5vh 2vw; }\n", ""]);
+exports.push([module.i, "#Photos {\n  min-height: 50vh;\n  padding: 2vh 2vw 5vh 2vw; }\n\n@media (max-width: 440px) {\n  #Photos {\n    min-height: 25vh; } }\n", ""]);
 
 // exports
 
@@ -25544,7 +25544,7 @@ exports = module.exports = __webpack_require__(20)(undefined);
 
 
 // module
-exports.push([module.i, ".Speakers {\n  padding: 5vh 5vw 10vh 5vw; }\n  .Speakers__card {\n    position: relative;\n    background-color: rgba(60, 116, 113, 0.2);\n    margin: 0.5em;\n    border: none; }\n    .Speakers__card img {\n      max-width: 100%;\n      width: auto;\n      max-height: 300px; }\n  .Speakers__header {\n    text-align: center;\n    color: #ffff;\n    margin-bottom: 1em; }\n  .Speakers__overlay {\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    background-color: rgba(60, 116, 113, 0.2);\n    color: #ffff;\n    padding: 10px;\n    overflow-y: scroll;\n    display: none;\n    z-index: 999; }\n    .Speakers__overlay p {\n      text-indent: 20px;\n      text-align: left; }\n  .Speakers h3 {\n    text-align: center;\n    font-size: 20px;\n    font-weight: lighter;\n    font-family: \"Roboto Slab\", serif;\n    padding: 0.2em;\n    color: #ffff; }\n  .Speakers .thumbnail {\n    padding: 0; }\n", ""]);
+exports.push([module.i, ".Speakers {\n  padding: 5vh 5vw 10vh 5vw; }\n  .Speakers__card {\n    position: relative;\n    background-color: rgba(60, 116, 113, 0.5);\n    margin: 0.5em;\n    border: none; }\n    .Speakers__card img {\n      max-width: 100%;\n      width: auto;\n      max-height: 300px; }\n  .Speakers__header {\n    text-align: center;\n    color: #ffff;\n    margin-bottom: 1em; }\n  .Speakers__overlay {\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    background-color: rgba(60, 116, 113, 0.9);\n    color: #ffff;\n    padding: 10px;\n    overflow-y: scroll;\n    display: none;\n    z-index: 999; }\n    .Speakers__overlay p {\n      text-indent: 20px;\n      text-align: left; }\n  .Speakers h3 {\n    text-align: center;\n    font-size: 20px;\n    font-weight: lighter;\n    font-family: \"Roboto Slab\", serif;\n    padding: 0.2em;\n    color: #ffff; }\n  .Speakers .thumbnail {\n    padding: 0; }\n", ""]);
 
 // exports
 

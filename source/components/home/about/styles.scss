@@ -51,6 +51,7 @@
 
 .ReactFlipCard__Front {
     //background: linear-gradient(to bottom right, #d1e5ac, #56b7b7);
+    width: 25vw;
     background-color: rgba(60, 116, 113, 0.1);
     padding: 30px;
     text-align: center;
@@ -82,13 +83,12 @@
     .ReactFlipCard,
     .ReactFlipCard__Front,
     .ReactFlipCard__Back {
-        width: 80vw;
+        width: 85vw;
         margin: 0 auto;
-        margin-bottom: 1em;
     }
 
-    .ReactFlipCard,
-    .ReactFlipCard__Back {
-        min-height: 50vh;
+    .ReactFlipCard {
+        margin-bottom: 1em;
+        min-height: 60vh;
     }
 }
