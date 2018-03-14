@@ -42,7 +42,7 @@ class Photos extends Component {
             responsive: [{
               breakpoint: 3000,
               settings: {
-                slidesToShow: 3,
+                slidesToShow: 2,
                 slidesToScroll: 1,
                 infinite: true,
                 className: 'center',
@@ -71,7 +71,7 @@ class Photos extends Component {
                 <Slider {...settings}>
                     {PHOTO_SET.map((item, index) => (
                         <div>
-                        <img src={item.src} alt={item.alt} style={{maxWidth: 350}}/>
+                        <img src={item.src} alt={item.alt} style={{maxWidth: 600}}/>
                         </div>
                     ))}
                 </Slider>
