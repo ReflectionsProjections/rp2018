@@ -1,10 +1,17 @@
 #Photos {
     min-height: 45vh;
     padding: 2vh 2vw 5vh 2vw; 
+
+    #Photos_items {
+        max-width: 25vw;
+    }
 }
 
 @media (max-width: 440px) {
     #Photos {
-        min-height: 25vh;
+        min-height: 40vh;
+        #Photos_items {
+            max-width: 90vw;
+        }
     }
 }
