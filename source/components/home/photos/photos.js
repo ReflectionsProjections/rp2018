@@ -71,7 +71,7 @@ class Photos extends Component {
                 <Slider {...settings}>
                     {PHOTO_SET.map((item, index) => (
                         <div>
-                        <img src={item.src} alt={item.alt} style={{maxWidth: 380}}/>
+                        <img src={item.src} alt={item.alt} style={{maxWidth: 340}}/>
                         </div>
                     ))}
                 </Slider>
