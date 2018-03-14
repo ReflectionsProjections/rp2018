@@ -11500,7 +11500,7 @@ var Photos = function (_Component) {
             return _react2.default.createElement(
               'div',
               null,
-              _react2.default.createElement('img', { src: item.src, alt: item.alt, style: { maxWidth: 300 } })
+              _react2.default.createElement('img', { src: item.src, alt: item.alt, style: { maxWidth: "25vw" } })
             );
           })
         )
@@ -25516,7 +25516,7 @@ exports = module.exports = __webpack_require__(20)(undefined);
 
 
 // module
-exports.push([module.i, "#Photos {\n  min-height: 50vh;\n  padding: 2vh 2vw 5vh 2vw; }\n\n@media (max-width: 440px) {\n  #Photos {\n    min-height: 25vh; } }\n", ""]);
+exports.push([module.i, "#Photos {\n  min-height: 45vh;\n  padding: 2vh 2vw 5vh 2vw; }\n\n@media (max-width: 440px) {\n  #Photos {\n    min-height: 25vh; } }\n", ""]);
 
 // exports
 
