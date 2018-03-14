@@ -11500,7 +11500,7 @@ var Photos = function (_Component) {
             return _react2.default.createElement(
               'div',
               null,
-              _react2.default.createElement('img', { src: item.src, alt: item.alt, style: { maxWidth: 325 } })
+              _react2.default.createElement('img', { src: item.src, alt: item.alt, style: { maxWidth: 305 } })
             );
           })
         )
