@@ -11468,7 +11468,7 @@ var Photos = function (_Component) {
         responsive: [{
           breakpoint: 3000,
           settings: (_settings = {
-            slidesToShow: 2,
+            slidesToShow: 3,
             slidesToScroll: 1,
             infinite: true,
             className: 'center',
@@ -11500,7 +11500,7 @@ var Photos = function (_Component) {
             return _react2.default.createElement(
               'div',
               null,
-              _react2.default.createElement('img', { src: item.src, alt: item.alt, style: { maxWidth: 560 } })
+              _react2.default.createElement('img', { src: item.src, alt: item.alt, style: { maxWidth: 300 } })
             );
           })
         )
