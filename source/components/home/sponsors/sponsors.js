@@ -173,7 +173,7 @@ class Sponsors extends Component {
                 },
                 {
                     name: 'West Monroe',
-                    img: '../assets/img/sponsors/jobfair/megabyte/westmonroe.jpg',
+                    img: '../assets/img/sponsors/jobfair/megabyte/westmonroe.png',
                 },
                 {
                     name: 'Thing B1G',
