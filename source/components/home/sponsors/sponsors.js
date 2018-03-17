@@ -176,7 +176,7 @@ class Sponsors extends Component {
                     img: '../assets/img/sponsors/jobfair/megabyte/westmonroe.png',
                 },
                 {
-                    name: 'Thing B1G',
+                    name: 'Think BIG',
                     img: '../assets/img/sponsors/startups/thinkbig.jpg',
                 },
             ]
