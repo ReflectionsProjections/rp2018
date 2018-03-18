@@ -36,7 +36,7 @@ class Speakers extends Component {
                 'year': 2016
             },
             {
-                'name': 'Jay “Saurik” freeman',
+                'name': 'Jay “Saurik” Freeman',
                 'img': '../assets/img/keynotes/jay.jpg',
                 'year': 2014
             },
