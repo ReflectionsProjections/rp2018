@@ -20640,7 +20640,7 @@ var Footer = function (_Component) {
 								'a',
 								{ href: 'mailto:conference-chair@acm.illinois.edu' },
 								_react2.default.createElement(FA, { name: 'envelope' }),
-								' conference-chair@acm.illinois.edu'
+								' conference-chair@acm.illinois.edu '
 							),
 							' ',
 							_react2.default.createElement('br', null),
@@ -20664,7 +20664,7 @@ var Footer = function (_Component) {
 								'a',
 								{ href: 'https://twitter.com/uiuc_rp' },
 								_react2.default.createElement(FA, { name: 'twitter' }),
-								' @uiuc_rp'
+								' @uiuc_rp '
 							),
 							_react2.default.createElement(
 								'a',
@@ -20672,7 +20672,6 @@ var Footer = function (_Component) {
 								_react2.default.createElement(FA, { name: 'reddit' }),
 								' uiuc_rp '
 							),
-							'  ',
 							_react2.default.createElement('br', null),
 							_react2.default.createElement(
 								'a',
@@ -20680,8 +20679,13 @@ var Footer = function (_Component) {
 								_react2.default.createElement(FA, { name: 'instagram' }),
 								' @uiuc_rp '
 							),
-							_react2.default.createElement(FA, { name: 'snapchat-ghost' }),
-							' uiuc_rp',
+							_react2.default.createElement(
+								'a',
+								{ id: 'snapshot' },
+								_react2.default.createElement(FA, { name: 'snapchat-ghost' }),
+								' uiuc_rp ',
+								_react2.default.createElement('img', { className: 'tooltiptext', src: '../assets/img/snapcode.png' })
+							),
 							_react2.default.createElement('br', null)
 						)
 					)
@@ -20843,7 +20847,7 @@ var Navigation = function (_Component) {
                 var scrolledY = window.scrollY;
                 if (scrolledY) {
                     window.scroll({
-                        top: scrolledY - 50,
+                        top: scrolledY - 25,
                         left: 0,
                         behavior: 'smooth'
                     });
@@ -20877,7 +20881,7 @@ var Navigation = function (_Component) {
                             null,
                             _react2.default.createElement(
                                 'a',
-                                { href: '#' },
+                                { href: '#', style: { opacity: 1 } },
                                 _react2.default.createElement('img', { className: 'Navigation__logo', src: '../assets/svg/logo.svg' })
                             )
                         ),
@@ -20913,9 +20917,9 @@ var Navigation = function (_Component) {
                             _react2.default.createElement(
                                 _reactBootstrap.NavItem,
                                 { onClick: function onClick() {
-                                        return _this2.emailTo('mailto:conference-chair@acm.illinois.edu');
-                                    }, href: '#' },
-                                'Contact'
+                                        return _this2.scrollTo('Footer');
+                                    }, eventKey: 4, href: '#Contacts' },
+                                'Contacts'
                             )
                         )
                     )
@@ -21072,7 +21076,7 @@ var Speakers = function (_Component) {
                 'img': '../assets/img/keynotes/basil.jpg',
                 'year': 2016
             }, {
-                'name': 'Jay “Saurik” freeman',
+                'name': 'Jay “Saurik” Freeman',
                 'img': '../assets/img/keynotes/jay.jpg',
                 'year': 2014
             }, {
@@ -25460,7 +25464,7 @@ exports = module.exports = __webpack_require__(20)(undefined);
 
 
 // module
-exports.push([module.i, "#About {\n  font-size: 16px;\n  min-height: 100vh;\n  overflow: hidden;\n  font-family: 'Roboto', sans-serif;\n  color: #275354;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  padding: 10vh 5vw 10vh 5vw;\n  background-color: rgba(255, 255, 255, 0.3); }\n\n.about-grid {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-pack: justify;\n  justify-content: space-between;\n  width: 100%; }\n\n.about-grid .col {\n  margin: 1em; }\n\n.ReactFlipCard {\n  min-height: 40vh;\n  outline: none; }\n\n.ReactFlipCard,\n.ReactFlipCard__Front,\n.ReactFlipCard__Back {\n  width: 25vw;\n  outline: none; }\n\n.ReactFlipCard__Front {\n  min-height: 15vh; }\n\n.ReactFlipCard__Front,\n.ReactFlipCard__Back {\n  -webkit-backface-visibility: hidden;\n  backface-visibility: hidden;\n  transition: transform 300ms;\n  transition-timing-function: linear;\n  vertical-align: middle;\n  height: inherit; }\n\n.ReactFlipCard__Front {\n  width: 25vw;\n  background-color: rgba(60, 116, 113, 0.1);\n  padding: 30px;\n  text-align: center;\n  color: #cadea5;\n  border: 3px solid #cadea5; }\n\n.ReactFlipCard__Back {\n  background: linear-gradient(to bottom right, #56b7b7, #d1e5ac);\n  padding: 30px;\n  text-align: left;\n  font-weight: 100;\n  opacity: 1;\n  border: none; }\n\n.descrip {\n  font-size: 20px; }\n\n@media (max-width: 440px) {\n  .about-grid {\n    display: block; }\n    .about-grid .col {\n      width: 100%; }\n  .ReactFlipCard,\n  .ReactFlipCard__Front,\n  .ReactFlipCard__Back {\n    width: 85vw;\n    margin: 0 auto; }\n  .ReactFlipCard {\n    margin-bottom: 1em;\n    min-height: 60vh; } }\n", ""]);
+exports.push([module.i, "#About {\n  font-size: 16px;\n  min-height: 100vh;\n  overflow: hidden;\n  font-family: 'Roboto', sans-serif;\n  color: #275354;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  padding: 10vh 5vw 10vh 5vw;\n  background-color: rgba(255, 255, 255, 0.17); }\n\n.about-grid {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-pack: justify;\n  justify-content: space-between;\n  width: 100%; }\n\n.about-grid .col {\n  margin: 1em; }\n\n.ReactFlipCard {\n  min-height: 40vh;\n  outline: none; }\n\n.ReactFlipCard,\n.ReactFlipCard__Front,\n.ReactFlipCard__Back {\n  width: 25vw;\n  outline: none; }\n\n.ReactFlipCard__Front {\n  min-height: 15vh; }\n\n.ReactFlipCard__Front,\n.ReactFlipCard__Back {\n  -webkit-backface-visibility: hidden;\n  backface-visibility: hidden;\n  transition: transform 300ms;\n  transition-timing-function: linear;\n  vertical-align: middle;\n  height: inherit; }\n\n.ReactFlipCard__Front {\n  width: 25vw;\n  background-color: rgba(60, 116, 113, 0.1);\n  padding: 30px;\n  text-align: center;\n  color: #cadea5;\n  border: 4px solid #cadea5;\n  font-weight: bold; }\n\n.ReactFlipCard__Back {\n  background: linear-gradient(to bottom right, #56b7b7, #d1e5ac);\n  padding: 30px;\n  text-align: left;\n  font-weight: 100;\n  opacity: 0.9;\n  border: none; }\n\n.descrip {\n  font-size: 20px; }\n\n@media (max-width: 440px) {\n  .about-grid {\n    display: block; }\n    .about-grid .col {\n      width: 100%; }\n  .ReactFlipCard,\n  .ReactFlipCard__Front,\n  .ReactFlipCard__Back {\n    width: 85vw;\n    margin: 0 auto; }\n  .ReactFlipCard {\n    margin-bottom: 1em;\n    min-height: 60vh; } }\n", ""]);
 
 // exports
 
@@ -25488,7 +25492,7 @@ exports = module.exports = __webpack_require__(20)(undefined);
 
 
 // module
-exports.push([module.i, ".Footer {\n  padding: 2em 0; }\n  .Footer__header {\n    color: white;\n    text-align: center; }\n  .Footer__contact {\n    color: white;\n    font-family: 'Robot', sans-serif; }\n    .Footer__contact .glyphicon {\n      top: 3px;\n      left: 3px;\n      margin-right: 0.5em; }\n\na {\n  padding: 6px; }\n\n.ReactModal__Body--open {\n  background-color: rgba(20, 20, 20, 0.85) !important; }\n\n.ReactModal__Overlay .ReactModal__Overlay--after-open {\n  background-color: black; }\n", ""]);
+exports.push([module.i, ".Footer {\n  padding: 2em 0; }\n  .Footer__header {\n    color: white;\n    text-align: center; }\n  .Footer__contact {\n    color: white;\n    font-family: \"Roboto Slab\", serif;\n    font-size: 18px;\n    font-weight: 300; }\n    .Footer__contact .glyphicon {\n      top: 3px;\n      left: 3px;\n      margin-right: 0.5em; }\n\na {\n  padding: 6px; }\n\n.Footer__contact a:hover {\n  color: #c9e88f;\n  text-shadow: 2px #c9e88f;\n  text-decoration: none !important; }\n\n#snapshot {\n  position: relative; }\n\n#snapshot .tooltiptext {\n  left: 0%; }\n\n#snapshot:hover .tooltiptext {\n  visibility: visible;\n  opacity: 1; }\n\n.tooltiptext {\n  visibility: hidden;\n  width: auto;\n  max-width: 150%;\n  background-color: #555;\n  color: #fff;\n  text-align: center;\n  border-radius: 25px;\n  padding: 7px;\n  position: absolute;\n  z-index: 1;\n  bottom: 20%;\n  left: 170%;\n  margin-left: 100px;\n  opacity: 0;\n  transition: opacity 0.3s;\n  font-size: 16px; }\n\n.tooltiptext::after {\n  position: absolute;\n  top: 100%;\n  left: 50%;\n  border-width: 5px;\n  border-style: solid;\n  border-color: #555 transparent transparent transparent; }\n\n.ReactModal__Body--open {\n  background-color: rgba(20, 20, 20, 0.85) !important; }\n\n.ReactModal__Overlay .ReactModal__Overlay--after-open {\n  background-color: black; }\n\n@media (max-width: 440px) {\n  .Footer__contact {\n    font-size: 16px; }\n  .tooltiptext {\n    bottom: 100%;\n    margin-left: -50px; } }\n", ""]);
 
 // exports
 
@@ -25502,7 +25506,7 @@ exports = module.exports = __webpack_require__(20)(undefined);
 
 
 // module
-exports.push([module.i, ".Navigation {\n  height: 10vh;\n  position: -webkit-sticky;\n  position: sticky;\n  top: -1px;\n  z-index: 1; }\n  .Navigation .navbar {\n    background-color: #252f3a; }\n    .Navigation .navbar .navbar-header {\n      min-height: 10vh; }\n    .Navigation .navbar .nav > li > a {\n      color: #ffff;\n      font-size: 19px;\n      font-family: 'Roboto Slab', serif;\n      line-height: 10vh;\n      text-transform: uppercase;\n      letter-spacing: 0.5px;\n      padding-top: 0;\n      padding-bottom: 0;\n      font-weight: bold; }\n    .Navigation .navbar .nav > li > a :hover {\n      color: #cadea5; }\n  .Navigation__logo {\n    width: 50px; }\n\n@media (max-width: 400px) {\n  .Navigation__logo {\n    width: 40px; }\n  .Navigation .navbar .nav > li > a {\n    font-size: 1em; } }\n", ""]);
+exports.push([module.i, ".Navigation {\n  height: 10vh;\n  position: -webkit-sticky;\n  position: sticky;\n  top: -1px;\n  z-index: 1; }\n  .Navigation .navbar {\n    background-color: #252f3a; }\n    .Navigation .navbar .navbar-header {\n      min-height: 10vh; }\n    .Navigation .navbar .nav > li > a {\n      color: #ffff;\n      font-size: 19px;\n      font-family: 'Roboto Slab', serif;\n      line-height: 10vh;\n      text-transform: uppercase;\n      letter-spacing: 0.5px;\n      padding-top: 0;\n      padding-bottom: 0;\n      font-weight: bold;\n      opacity: 1; }\n    .Navigation .navbar .nav > li > a:hover {\n      color: #c9e88f;\n      text-shadow: 5px #c9e88f;\n      text-decoration: none; }\n  .Navigation__logo {\n    width: 60px;\n    animation: spin  8.5s linear infinite; }\n\n@media (max-width: 400px) {\n  .Navigation__logo {\n    width: 40px; }\n  .Navigation .navbar .nav > li > a {\n    font-size: 1em; } }\n\n@keyframes spin {\n  100% {\n    transform: rotate(360deg); } }\n", ""]);
 
 // exports
 
@@ -25544,7 +25548,7 @@ exports = module.exports = __webpack_require__(20)(undefined);
 
 
 // module
-exports.push([module.i, ".Speakers {\n  padding: 5vh 5vw 10vh 5vw; }\n  .Speakers__card {\n    position: relative;\n    background-color: rgba(60, 116, 113, 0.5);\n    margin: 0.5em;\n    border: none; }\n    .Speakers__card img {\n      max-width: 100%;\n      width: auto;\n      max-height: 300px; }\n  .Speakers__header {\n    text-align: center;\n    color: #ffff;\n    margin-bottom: 1em; }\n  .Speakers__overlay {\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    background-color: rgba(60, 116, 113, 0.9);\n    color: #ffff;\n    padding: 10px;\n    overflow-y: scroll;\n    display: none;\n    z-index: 999; }\n    .Speakers__overlay p {\n      text-indent: 20px;\n      text-align: left; }\n  .Speakers h3 {\n    text-align: center;\n    font-size: 20px;\n    font-weight: lighter;\n    font-family: \"Roboto Slab\", serif;\n    padding: 0.2em;\n    color: #ffff; }\n  .Speakers .thumbnail {\n    padding: 0; }\n", ""]);
+exports.push([module.i, ".Speakers {\n  padding: 5vh 5vw 10vh 5vw; }\n  .Speakers__card {\n    position: relative;\n    background-color: rgba(60, 116, 113, 0.5);\n    margin: 0.5em;\n    border: none; }\n    .Speakers__card img {\n      max-width: 100%;\n      width: auto;\n      max-height: 300px; }\n  .Speakers__header {\n    text-align: center;\n    color: #ffff;\n    margin-bottom: 1em; }\n  .Speakers__overlay {\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    background-color: rgba(60, 116, 113, 0.9);\n    color: #ffff;\n    padding: 10px;\n    overflow-y: scroll;\n    display: none;\n    z-index: 999; }\n    .Speakers__overlay p {\n      text-indent: 20px;\n      text-align: left; }\n  .Speakers h3 {\n    text-align: center;\n    font-size: 20px;\n    font-weight: light;\n    font-family: \"Roboto Slab\", serif;\n    padding: 0.2em;\n    color: #ffff; }\n  .Speakers .thumbnail {\n    padding: 0; }\n", ""]);
 
 // exports
 
@@ -25558,7 +25562,7 @@ exports = module.exports = __webpack_require__(20)(undefined);
 
 
 // module
-exports.push([module.i, ".Sponsors {\n  padding: 10vh 5vw 10vh 5vw;\n  background-color: rgba(255, 255, 255, 0.3); }\n  .Sponsors__card {\n    text-align: center;\n    position: relative;\n    min-height: 150px;\n    background: none;\n    border: none; }\n    .Sponsors__card img {\n      position: absolute;\n      left: 50%;\n      top: 50%;\n      transform: translate(-50%, -50%);\n      max-width: 100%;\n      max-height: 100%;\n      padding: 7px; }\n  .Sponsors__gridRow {\n    text-align: center; }\n  .Sponsors__centeredCard {\n    left: 50%;\n    transform: translateX(-50%); }\n  .Sponsors__centerContent {\n    text-align: center;\n    -ms-flex-line-pack: center;\n    align-content: center; }\n  .Sponsors__header {\n    color: white;\n    text-align: center;\n    border: none; }\n", ""]);
+exports.push([module.i, ".Sponsors {\n  padding: 10vh 5vw 10vh 5vw;\n  background-color: rgba(255, 255, 255, 0.2); }\n  .Sponsors__card {\n    text-align: center;\n    position: relative;\n    min-height: 150px;\n    background: none;\n    border: none; }\n    .Sponsors__card img {\n      position: absolute;\n      left: 50%;\n      top: 50%;\n      transform: translate(-50%, -50%);\n      max-width: 100%;\n      max-height: 100%;\n      padding: 7px; }\n  .Sponsors__gridRow {\n    text-align: center; }\n  .Sponsors__centeredCard {\n    left: 50%;\n    transform: translateX(-50%); }\n  .Sponsors__centerContent {\n    text-align: center;\n    -ms-flex-line-pack: center;\n    align-content: center; }\n  .Sponsors__header {\n    color: white;\n    text-align: center;\n    border: none; }\n", ""]);
 
 // exports
 
