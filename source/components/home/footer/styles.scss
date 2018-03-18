@@ -24,7 +24,7 @@ a {
     padding: 6px;
 }
 
-a:hover {
+.Footer__contact a:hover {
     color: #c9e88f;
     text-shadow: 2px #c9e88f;
     text-decoration: none !important;
@@ -74,6 +74,17 @@ a:hover {
 .ReactModal__Body--open{
     background-color: rgba(20, 20, 20, 0.85) !important;
 }
+
 .ReactModal__Overlay .ReactModal__Overlay--after-open{
     background-color: black;
+}
+
+@media (max-width: 440px) {
+    .Footer__contact {
+        font-size: 16px;
+    }
+    .tooltiptext {
+        bottom: 100%;
+        margin-left: -50px;
+    }
 }
