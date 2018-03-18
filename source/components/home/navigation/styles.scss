@@ -24,13 +24,19 @@
         padding-bottom: 0;
         font-weight: bold;
     }
-    .nav > li > a :hover {
-      color: #cadea5;
+    .nav > li > a:hover {
+      color: #c9e88f;
+      text-shadow: 5px #c9e88f;
+      text-decoration: none;
     }
   }
 
   &__logo {
-      width: 50px;
+      width: 55px;
+      opacity: 1.5;
+      -webkit-animation:spin  8.5s linear infinite;
+      -moz-animation:spin  8.5s linear infinite;
+      animation:spin  8.5s linear infinite;
   }
 }
 
@@ -45,4 +51,21 @@
       }
     }
   }
+}
+
+@-moz-keyframes spin { 
+  100% { 
+    -moz-transform: rotate(360deg); 
+  } 
+}
+@-webkit-keyframes spin { 
+  100% { 
+    -webkit-transform: rotate(360deg); 
+  } 
+}
+@keyframes spin { 
+  100% { 
+    -webkit-transform: rotate(360deg); 
+    transform:rotate(360deg); 
+  } 
 }
