@@ -25506,7 +25506,7 @@ exports = module.exports = __webpack_require__(20)(undefined);
 
 
 // module
-exports.push([module.i, ".Navigation {\n  height: 10vh;\n  position: -webkit-sticky;\n  position: sticky;\n  top: -1px;\n  z-index: 1; }\n  .Navigation .navbar {\n    background-color: #252f3a; }\n    .Navigation .navbar .navbar-header {\n      min-height: 10vh; }\n    .Navigation .navbar .nav > li > a {\n      color: #ffff;\n      font-size: 19px;\n      font-family: 'Roboto Slab', serif;\n      line-height: 10vh;\n      text-transform: uppercase;\n      letter-spacing: 0.5px;\n      padding-top: 0;\n      padding-bottom: 0;\n      font-weight: bold;\n      opacity: 1; }\n    .Navigation .navbar .nav > li > a:hover {\n      color: #c9e88f;\n      text-shadow: 5px #c9e88f;\n      text-decoration: none; }\n  .Navigation__logo {\n    width: 60px;\n    animation: spin  8.5s linear infinite; }\n\n@media (max-width: 400px) {\n  .Navigation__logo {\n    width: 40px; }\n  .Navigation .navbar .nav > li > a {\n    font-size: 1em; } }\n\n@keyframes spin {\n  100% {\n    transform: rotate(360deg); } }\n", ""]);
+exports.push([module.i, ".Navigation {\n  height: 10vh;\n  position: -webkit-sticky;\n  position: sticky;\n  top: -1px;\n  z-index: 1; }\n  .Navigation .navbar {\n    background-color: #252f3a; }\n    .Navigation .navbar .navbar-header {\n      min-height: 10vh; }\n    .Navigation .navbar .nav > li > a {\n      color: #ffff;\n      font-size: 19px;\n      font-family: 'Roboto Slab', serif;\n      line-height: 10vh;\n      text-transform: uppercase;\n      letter-spacing: 0.5px;\n      padding-top: 0;\n      padding-bottom: 0;\n      font-weight: bold;\n      opacity: 1; }\n    .Navigation .navbar .nav > li > a:hover {\n      color: #c9e88f;\n      text-shadow: 5px #c9e88f;\n      text-decoration: none; }\n  .Navigation__logo {\n    width: 55px;\n    animation: spin  8.5s linear infinite; }\n\n@media (max-width: 400px) {\n  .Navigation__logo {\n    width: 40px; }\n  .Navigation .navbar .nav > li > a {\n    font-size: 1em; } }\n\n@keyframes spin {\n  100% {\n    transform: rotate(360deg); } }\n", ""]);
 
 // exports
 
@@ -25702,7 +25702,7 @@ exports = module.exports = __webpack_require__(20)(undefined);
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:100,300);", ""]);
 
 // module
-exports.push([module.i, "body {\n  min-width: 200px;\n  padding: 0;\n  margin: 0;\n  width: 100vw; }\n\nh1, h2, h3, h4, h5, h6 {\n  padding: 0;\n  margin: 0;\n  font-weight: 300; }\n\np {\n  font-family: 'Roboto Slab', serif;\n  font-weight: 100;\n  font-size: 1.2em; }\n\nbutton {\n  outline: none; }\n", ""]);
+exports.push([module.i, "body {\n  min-width: 200px;\n  padding: 0;\n  margin: 0;\n  width: 100vw;\n  overflow-x: hidden; }\n\nh1, h2, h3, h4, h5, h6 {\n  padding: 0;\n  margin: 0;\n  font-weight: 300; }\n\np {\n  font-family: 'Roboto Slab', serif;\n  font-weight: 100;\n  font-size: 1.2em; }\n\nbutton {\n  outline: none; }\n", ""]);
 
 // exports
 
