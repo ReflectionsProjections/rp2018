@@ -165,7 +165,7 @@ class Sponsors extends Component {
                 },
                 {
                     name: 'Capital One',
-                    img: '../assets/img/sponsors/jobfair/megabyte/capitalone.jpg',
+                    img: '../assets/img/sponsors/jobfair/megabyte/capitalone.png',
                 },
                 {
                     name: 'Huawei',
@@ -215,7 +215,7 @@ class Sponsors extends Component {
 
         return(
             <div className="Sponsors" id="Sponsors">
-                <PageHeader className="Sponsors__header">Sponsors of 2017</PageHeader>
+                <PageHeader className="Sponsors__header">2017 Sponsors</PageHeader>
                 <Grid>
                     <Row>
                         {tier2Sponsors}
