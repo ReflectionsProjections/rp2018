@@ -7,7 +7,7 @@
     display: flex;
     flex-direction: column;
     padding: 10vh 5vw 10vh 5vw;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.17);
 }
 
 .about-grid {
@@ -50,13 +50,13 @@
 }
 
 .ReactFlipCard__Front {
-    //background: linear-gradient(to bottom right, #d1e5ac, #56b7b7);
     width: 25vw;
     background-color: rgba(60, 116, 113, 0.1);
     padding: 30px;
     text-align: center;
     color: #cadea5;
-    border: 3px solid #cadea5;
+    border: 4px solid #cadea5;
+    font-weight: bold;
 }
 
 .ReactFlipCard__Back {
@@ -64,7 +64,7 @@
     padding: 30px;
     text-align: left;
     font-weight: 100;
-    opacity: 1;
+    opacity: 0.9;
     border: none;
 }
 

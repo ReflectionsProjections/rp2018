@@ -42,7 +42,7 @@ class Navigation extends Component {
                 <Navbar collapseOnSelect fixedTop>
                     <Navbar.Header>
                         <Navbar.Brand>
-                            <a href="#">
+                            <a href="#" style={{opacity: 1}}>
                                 <img className="Navigation__logo" src="../assets/svg/logo.svg" />
                             </a>
                         </Navbar.Brand>
