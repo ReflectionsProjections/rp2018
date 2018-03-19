@@ -21061,20 +21061,38 @@ var Speakers = function (_Component) {
             // Keynotes
             {
                 'name': 'Brian J. Fox',
-                'desc': 'Computer programmer, entrepreneur, author, and free software advocate',
                 'img': '../assets/img/keynotes/brian.jpg',
-                'bio': 'Brian J. Fox is an American computer programmer, entrepreneur, author, and free software advocate. He was the original author of the GNU Bash shell, which he announced as a beta in June 1989. Fox also built the first interactive online banking software in the U.S. for Wells Fargo in 1995, and he created an open source election system in 2008.\n' + '\n' + 'Brian got involved in computing in the early 1980s. He authored Terrapin Logo for the Apple //e and Apple //GS computers, and then began working with Richard Stallman (RMS) to help build the Free Software Foundation (FSF) and project GNU at MIT. While working with RMS, Brian authored Info and Makeinfo and contributed heavily to the TeXinfo documentation system. He also was the maintainer of Emacs, and contributed to both gcc and gdb. His "readline" and "history" libraries are widely used in a wide variety of applications.\n',
-                'year': 2017
+                'year': 2017,
+                'youtube': 'https://www.youtube.com/watch?v=itBU4F50N8Q'
             }, {
                 'name': 'Chris Gladwin',
-                'desc': 'Founder and Vice Chairman of CleverSafe',
                 'img': '../assets/img/keynotes/chris.jpg',
-                'bio': 'In 2004, Chris founded Cleversafe which became the largest and most strategic object storage vendor in the world (according to IDC.)  He raised $100M and then led the company to a $1.4B exit in 2015 when IBM acquired the company.  ' + 'The technology team he created generated over 1,000 patents granted or filed, creating one of the ten most powerful patent portfolios in the world.  Prior to Cleversafe, Chris was the Foundering CEO of startups MusicNow and Cruise Technologies, and led ' + 'product strategy for Zenith Data Systems.  He started his career at Lockheed Martin as a database programmer, and holds an engineering degree from MIT.  Chris is now the CEO and Co-Founder of Ocient whose mission is to successfully provide the leading platform the world uses to analyze its largest datasets.',
                 'year': 2017
+            }, {
+                'name': 'Travis Oliphant',
+                'img': '../assets/img/keynotes/travis.jpg',
+                'year': 2017,
+                'youtube': 'https://www.youtube.com/watch?v=_PDvlqbgxCU'
+            }, {
+                'name': 'Laura I. Gómez',
+                'img': '../assets/img/keynotes/laura.jpg',
+                'year': 2016
             }, {
                 'name': 'Basil Alwan',
                 'img': '../assets/img/keynotes/basil.jpg',
                 'year': 2016
+            }, {
+                'name': 'Roy Bhat',
+                'img': '../assets/img/keynotes/roy.jpg',
+                'year': 2016
+            }, {
+                'name': 'Anna Patterson',
+                'img': '../assets/img/keynotes/anna.jpg',
+                'year': 2015
+            }, {
+                'name': 'Cassidy Williams',
+                'img': '../assets/img/keynotes/cassidy.jpg',
+                'year': 2015
             }, {
                 'name': 'Jay “Saurik” Freeman',
                 'img': '../assets/img/keynotes/jay.jpg',
@@ -21088,6 +21106,10 @@ var Speakers = function (_Component) {
                 'img': '../assets/img/keynotes/robin.jpg',
                 'year': 2013
             }, {
+                'name': 'Danielle Feinberg',
+                'img': '../assets/img/keynotes/danielle.jpg',
+                'year': 2012
+            }, {
                 'name': 'Stefano Zacchiroli',
                 'img': '../assets/img/keynotes/stefano.jpg',
                 'year': 2012
@@ -21100,6 +21122,12 @@ var Speakers = function (_Component) {
                 'img': '../assets/img/keynotes/steve.jpg',
                 'year': 1995
             }];
+
+            this.handleClick = function (evt, url, id) {
+                if (url != null && url != undefined) {
+                    window.open(url, '_blank');
+                }
+            };
 
             var speakerView = speakerList.map(function (speaker, idx) {
                 var hex = "";
@@ -21122,13 +21150,16 @@ var Speakers = function (_Component) {
 
                 }
                 var hexStr = "6px solid " + hex;
+                var link = speaker.youtube;
+                var reveal = link != undefined && link != null ? "visible" : "hidden";
+                var cl = link != undefined && link != null ? "#c9e88f" : "#a4b0bc";
                 return _react2.default.createElement(
                     _reactBootstrap.Col,
                     { key: idx, xs: 12, lg: 4, sm: 9, md: 9 },
                     _react2.default.createElement(
                         _reactBootstrap.Thumbnail,
                         { onClick: function onClick(e) {
-                                return _this2.handleClick(e, 'js-overlay-' + idx);
+                                return _this2.handleClick(e, link, idx);
                             }, className: 'Speakers__card js-speakercard', src: speaker.img },
                         _react2.default.createElement(
                             'h3',
@@ -21139,7 +21170,8 @@ var Speakers = function (_Component) {
                             'h3',
                             { style: { color: "white" } },
                             speaker.year
-                        )
+                        ),
+                        _react2.default.createElement('span', { className: 'glyphicon glyphicon-play-circle', id: 'youtube-icon', style: { color: cl } })
                     )
                 );
             });
@@ -21338,7 +21370,7 @@ var Sponsors = function (_Component) {
                     name: 'West Monroe',
                     img: '../assets/img/sponsors/jobfair/megabyte/westmonroe.jpg'
                 }, {
-                    name: 'Thing B1G',
+                    name: 'Think BIG',
                     img: '../assets/img/sponsors/startups/thinkbig.jpg'
                 }]
             };
@@ -21385,7 +21417,7 @@ var Sponsors = function (_Component) {
                 _react2.default.createElement(
                     _reactBootstrap.PageHeader,
                     { className: 'Sponsors__header' },
-                    'Sponsors of 2017'
+                    '2017 Sponsors'
                 ),
                 _react2.default.createElement(
                     _reactBootstrap.Grid,
@@ -25464,7 +25496,7 @@ exports = module.exports = __webpack_require__(20)(undefined);
 
 
 // module
-exports.push([module.i, "#About {\n  font-size: 16px;\n  min-height: 100vh;\n  overflow: hidden;\n  font-family: 'Roboto', sans-serif;\n  color: #275354;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  padding: 10vh 5vw 10vh 5vw;\n  background-color: rgba(255, 255, 255, 0.17); }\n\n.about-grid {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-pack: justify;\n  justify-content: space-between;\n  width: 100%; }\n\n.about-grid .col {\n  margin: 1em; }\n\n.ReactFlipCard {\n  min-height: 40vh;\n  outline: none; }\n\n.ReactFlipCard,\n.ReactFlipCard__Front,\n.ReactFlipCard__Back {\n  width: 25vw;\n  outline: none; }\n\n.ReactFlipCard__Front {\n  min-height: 15vh; }\n\n.ReactFlipCard__Front,\n.ReactFlipCard__Back {\n  -webkit-backface-visibility: hidden;\n  backface-visibility: hidden;\n  transition: transform 300ms;\n  transition-timing-function: linear;\n  vertical-align: middle;\n  height: inherit; }\n\n.ReactFlipCard__Front {\n  width: 25vw;\n  background-color: rgba(60, 116, 113, 0.1);\n  padding: 30px;\n  text-align: center;\n  color: #cadea5;\n  border: 4px solid #cadea5;\n  font-weight: bold; }\n\n.ReactFlipCard__Back {\n  background: linear-gradient(to bottom right, #56b7b7, #d1e5ac);\n  padding: 30px;\n  text-align: left;\n  font-weight: 100;\n  opacity: 0.9;\n  border: none; }\n\n.descrip {\n  font-size: 20px; }\n\n@media (max-width: 440px) {\n  .about-grid {\n    display: block; }\n    .about-grid .col {\n      width: 100%; }\n  .ReactFlipCard,\n  .ReactFlipCard__Front,\n  .ReactFlipCard__Back {\n    width: 85vw;\n    margin: 0 auto; }\n  .ReactFlipCard {\n    margin-bottom: 1em;\n    min-height: 60vh; } }\n", ""]);
+exports.push([module.i, "#About {\n  font-size: 16px;\n  min-height: 100vh;\n  overflow: hidden;\n  font-family: 'Roboto', sans-serif;\n  color: #275354;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  padding: 10vh 5vw 10vh 5vw;\n  background-color: rgba(255, 255, 255, 0.17); }\n\n.about-grid {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-pack: justify;\n  justify-content: space-between;\n  width: 100%; }\n\n.about-grid .col {\n  margin: 1em; }\n\n.ReactFlipCard {\n  min-height: 40vh;\n  outline: none; }\n\n.ReactFlipCard,\n.ReactFlipCard__Front,\n.ReactFlipCard__Back {\n  width: 25vw;\n  outline: none; }\n\n.ReactFlipCard__Front {\n  min-height: 15vh; }\n\n.ReactFlipCard__Front,\n.ReactFlipCard__Back {\n  -webkit-backface-visibility: hidden;\n  backface-visibility: hidden;\n  transition: transform 300ms;\n  transition-timing-function: linear;\n  vertical-align: middle;\n  height: inherit; }\n\n.ReactFlipCard__Front {\n  width: 25vw;\n  background-color: rgba(60, 116, 113, 0.1);\n  padding: 30px;\n  text-align: center;\n  color: #cadea5;\n  border: 4px solid #cadea5;\n  font-weight: bold; }\n\n.ReactFlipCard__Back {\n  background: linear-gradient(to top right, #d3e5ae 40%, #56a09b 100%);\n  padding: 30px;\n  text-align: left;\n  font-weight: 100;\n  border: none;\n  opacity: 2; }\n\n.descrip {\n  font-size: 20px; }\n\n@media (max-width: 440px) {\n  .about-grid {\n    display: block; }\n    .about-grid .col {\n      width: 100%; }\n  .ReactFlipCard,\n  .ReactFlipCard__Front,\n  .ReactFlipCard__Back {\n    width: 85vw;\n    margin: 0 auto; }\n  .ReactFlipCard {\n    margin-bottom: 1em;\n    min-height: 60vh; } }\n", ""]);
 
 // exports
 
@@ -25548,7 +25580,7 @@ exports = module.exports = __webpack_require__(20)(undefined);
 
 
 // module
-exports.push([module.i, ".Speakers {\n  padding: 5vh 5vw 10vh 5vw; }\n  .Speakers__card {\n    position: relative;\n    background-color: rgba(60, 116, 113, 0.5);\n    margin: 0.5em;\n    border: none; }\n    .Speakers__card img {\n      max-width: 100%;\n      width: auto;\n      max-height: 300px; }\n  .Speakers__header {\n    text-align: center;\n    color: #ffff;\n    margin-bottom: 1em; }\n  .Speakers__overlay {\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    background-color: rgba(60, 116, 113, 0.9);\n    color: #ffff;\n    padding: 10px;\n    overflow-y: scroll;\n    display: none;\n    z-index: 999; }\n    .Speakers__overlay p {\n      text-indent: 20px;\n      text-align: left; }\n  .Speakers h3 {\n    text-align: center;\n    font-size: 20px;\n    font-weight: light;\n    font-family: \"Roboto Slab\", serif;\n    padding: 0.2em;\n    color: #ffff; }\n  .Speakers .thumbnail {\n    padding: 0; }\n", ""]);
+exports.push([module.i, ".Speakers {\n  padding: 5vh 5vw 10vh 5vw; }\n  .Speakers__card {\n    position: relative;\n    background-color: rgba(60, 116, 113, 0.5);\n    margin: 0.5em;\n    border: none; }\n    .Speakers__card img {\n      max-width: 100%;\n      width: auto;\n      max-height: 300px; }\n  .Speakers__header {\n    text-align: center;\n    color: #ffff;\n    margin-bottom: 1em; }\n  .Speakers__overlay {\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    background-color: rgba(60, 116, 113, 0.9);\n    color: #ffff;\n    padding: 10px;\n    overflow-y: scroll;\n    display: none;\n    z-index: 999; }\n    .Speakers__overlay p {\n      text-indent: 20px;\n      text-align: left; }\n  .Speakers h3 {\n    text-align: center;\n    font-size: 20px;\n    font-weight: light;\n    font-family: \"Roboto Slab\", serif;\n    padding: 0.2em;\n    color: #ffff; }\n  .Speakers .thumbnail {\n    padding: 0; }\n\n#youtube-icon {\n  font-size: 30px;\n  margin-left: 8px; }\n\n.glyphicon glyphicon-play-circle :hover {\n  color: blue; }\n", ""]);
 
 // exports
 
