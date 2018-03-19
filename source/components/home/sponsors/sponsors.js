@@ -165,7 +165,7 @@ class Sponsors extends Component {
                 },
                 {
                     name: 'Capital One',
-                    img: '../assets/img/sponsors/jobfair/megabyte/capitalone.png',
+                    img: '../assets/img/sponsors/jobfair/megabyte/capitalone.jpg',
                 },
                 {
                     name: 'Huawei',
@@ -173,7 +173,7 @@ class Sponsors extends Component {
                 },
                 {
                     name: 'West Monroe',
-                    img: '../assets/img/sponsors/jobfair/megabyte/westmonroe.png',
+                    img: '../assets/img/sponsors/jobfair/megabyte/westmonroe.jpg',
                 },
                 {
                     name: 'Think BIG',
