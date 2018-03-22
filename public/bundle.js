@@ -21060,39 +21060,18 @@ var Speakers = function (_Component) {
             var speakerList = [
             // Keynotes
             {
+                'name': 'Steve Wozniak',
+                'img': '../assets/img/keynotes/steve.jpg',
+                'year': 1995
+            }, {
+                'name': 'Alexis Ohanian',
+                'img': '../assets/img/keynotes/alex.jpg',
+                'year': 2009
+            }, {
                 'name': 'Brian J. Fox',
                 'img': '../assets/img/keynotes/brian.jpg',
                 'year': 2017,
                 'youtube': 'https://www.youtube.com/watch?v=itBU4F50N8Q'
-            }, {
-                'name': 'Chris Gladwin',
-                'img': '../assets/img/keynotes/chris.jpg',
-                'year': 2017
-            }, {
-                'name': 'Travis Oliphant',
-                'img': '../assets/img/keynotes/travis.jpg',
-                'year': 2017,
-                'youtube': 'https://www.youtube.com/watch?v=_PDvlqbgxCU'
-            }, {
-                'name': 'Laura I. Gómez',
-                'img': '../assets/img/keynotes/laura.jpg',
-                'year': 2016
-            }, {
-                'name': 'Basil Alwan',
-                'img': '../assets/img/keynotes/basil.jpg',
-                'year': 2016
-            }, {
-                'name': 'Roy Bhat',
-                'img': '../assets/img/keynotes/roy.jpg',
-                'year': 2016
-            }, {
-                'name': 'Anna Patterson',
-                'img': '../assets/img/keynotes/anna.jpg',
-                'year': 2015
-            }, {
-                'name': 'Cassidy Williams',
-                'img': '../assets/img/keynotes/cassidy.jpg',
-                'year': 2015
             }, {
                 'name': 'Jay “Saurik” Freeman',
                 'img': '../assets/img/keynotes/jay.jpg',
@@ -21102,25 +21081,46 @@ var Speakers = function (_Component) {
                 'img': '../assets/img/keynotes/peter.jpg',
                 'year': 2013
             }, {
+                'name': 'Danielle Feinberg',
+                'img': '../assets/img/keynotes/danielle.jpg',
+                'year': 2012
+            }, {
+                'name': 'Travis Oliphant',
+                'img': '../assets/img/keynotes/travis.jpg',
+                'year': 2017,
+                'youtube': 'https://www.youtube.com/watch?v=_PDvlqbgxCU'
+            }, {
+                'name': 'Anna Patterson',
+                'img': '../assets/img/keynotes/anna.jpg',
+                'year': 2015
+            }, {
                 'name': 'Robin Walker',
                 'img': '../assets/img/keynotes/robin.jpg',
                 'year': 2013
             }, {
-                'name': 'Danielle Feinberg',
-                'img': '../assets/img/keynotes/danielle.jpg',
-                'year': 2012
+                'name': 'Laura I. Gómez',
+                'img': '../assets/img/keynotes/laura.jpg',
+                'year': 2016
+            }, {
+                'name': 'Basil Alwan',
+                'img': '../assets/img/keynotes/basil.jpg',
+                'year': 2016
+            }, {
+                'name': 'Cassidy Williams',
+                'img': '../assets/img/keynotes/cassidy.jpg',
+                'year': 2015
+            }, {
+                'name': 'Chris Gladwin',
+                'img': '../assets/img/keynotes/chris.jpg',
+                'year': 2017
             }, {
                 'name': 'Stefano Zacchiroli',
                 'img': '../assets/img/keynotes/stefano.jpg',
                 'year': 2012
             }, {
-                'name': 'Alexis Ohanian',
-                'img': '../assets/img/keynotes/alex.jpg',
-                'year': 2009
-            }, {
-                'name': 'Steve Wozniak',
-                'img': '../assets/img/keynotes/steve.jpg',
-                'year': 1995
+                'name': 'Roy Bhat',
+                'img': '../assets/img/keynotes/roy.jpg',
+                'year': 2016
             }];
 
             this.handleClick = function (evt, url, id) {
@@ -21155,44 +21155,67 @@ var Speakers = function (_Component) {
                 var cl = link != undefined && link != null ? "#c9e88f" : "#a4b0bc";
                 return _react2.default.createElement(
                     _reactBootstrap.Col,
-                    { key: idx, xs: 12, lg: 4, sm: 9, md: 9 },
+                    { key: idx,
+                        xs: 12,
+                        lg: 4,
+                        sm: 9,
+                        md: 9 },
                     _react2.default.createElement(
                         _reactBootstrap.Thumbnail,
                         { onClick: function onClick(e) {
                                 return _this2.handleClick(e, link, idx);
-                            }, className: 'Speakers__card js-speakercard', src: speaker.img },
+                            },
+                            className: 'Speakers__card js-speakercard',
+                            src: speaker.img },
                         _react2.default.createElement(
                             'h3',
                             { style: { color: "white" } },
-                            speaker.name
+                            ' ',
+                            speaker.name,
+                            ' '
                         ),
+                        ' ',
                         _react2.default.createElement(
                             'h3',
                             { style: { color: "white" } },
-                            speaker.year
+                            ' ',
+                            speaker.year,
+                            ' '
                         ),
-                        _react2.default.createElement('span', { className: 'glyphicon glyphicon-play-circle', id: 'youtube-icon', style: { color: cl } })
-                    )
+                        ' ',
+                        _react2.default.createElement('span', { className: 'glyphicon glyphicon-play-circle',
+                            id: 'youtube-icon',
+                            style: { color: cl }
+                        }),
+                        '  '
+                    ),
+                    ' '
                 );
             });
 
             return _react2.default.createElement(
                 'div',
-                { className: 'Speakers', id: 'Speakers' },
+                { className: 'Speakers',
+                    id: 'Speakers' },
                 _react2.default.createElement(
                     _reactBootstrap.PageHeader,
                     { className: 'Speakers__header' },
-                    'Past Keynote Speakers'
+                    ' Past Keynote Speakers '
                 ),
+                ' ',
                 _react2.default.createElement(
                     _reactBootstrap.Grid,
                     null,
                     _react2.default.createElement(
                         _reactBootstrap.Row,
                         null,
-                        speakerView
-                    )
-                )
+                        ' ',
+                        speakerView,
+                        ' '
+                    ),
+                    ' '
+                ),
+                ' '
             );
         }
     }]);
@@ -21289,7 +21312,7 @@ var Sponsors = function (_Component) {
                     img: '../assets/img/sponsors/jobfair/megabyte/pinterest.jpg'
                 }, {
                     name: 'CME Group',
-                    img: '../assets/img/sponsors/jobfair/megabyte/cmegroup.jpg'
+                    img: '../assets/img/sponsors/jobfair/megabyte/cmegroup.png'
                 }, {
                     name: 'Uber',
                     img: '../assets/img/sponsors/jobfair/megabyte/uber.jpg'
@@ -21362,7 +21385,7 @@ var Sponsors = function (_Component) {
                     img: '../assets/img/sponsors/jobfair/megabyte/janestreet.jpg'
                 }, {
                     name: 'Capital One',
-                    img: '../assets/img/sponsors/jobfair/megabyte/capitalone.jpg'
+                    img: '../assets/img/sponsors/jobfair/megabyte/capitalone.png'
                 }, {
                     name: 'Huawei',
                     img: '../assets/img/sponsors/jobfair/megabyte/huawei.jpg'
@@ -21378,66 +21401,103 @@ var Sponsors = function (_Component) {
             var tier2Sponsors = sponsorsList.tier2.map(function (sponsor, idx) {
                 return _react2.default.createElement(
                     _reactBootstrap.Col,
-                    { key: idx, xs: 12, lg: 6, sm: 2, md: 2 },
+                    { key: idx,
+                        xs: 12,
+                        lg: 6,
+                        sm: 2,
+                        md: 2 },
                     _react2.default.createElement(
                         _reactBootstrap.Panel,
                         { className: 'Sponsors__card Sponsors__card--tier3' },
-                        _react2.default.createElement('img', { className: 'Sponsors__cardLogo', src: sponsor.img, alt: sponsor.name })
-                    )
+                        _react2.default.createElement('img', { className: 'Sponsors__cardLogo',
+                            src: sponsor.img,
+                            alt: sponsor.name
+                        }),
+                        ' '
+                    ),
+                    ' '
                 );
             });
 
             var tier3Sponsors = sponsorsList.tier3.map(function (sponsor, idx) {
                 return _react2.default.createElement(
                     _reactBootstrap.Col,
-                    { key: idx, xs: 12, sm: 4, md: 4 },
+                    { key: idx,
+                        xs: 12,
+                        sm: 4,
+                        md: 4 },
                     _react2.default.createElement(
                         _reactBootstrap.Panel,
                         { className: 'Sponsors__card Sponsors__card--tier3' },
-                        _react2.default.createElement('img', { className: 'Sponsors__cardLogo', src: sponsor.img, alt: sponsor.name })
-                    )
+                        _react2.default.createElement('img', { className: 'Sponsors__cardLogo',
+                            src: sponsor.img,
+                            alt: sponsor.name
+                        }),
+                        ' '
+                    ),
+                    ' '
                 );
             });
 
             var tier4Sponsors = sponsorsList.tier4.map(function (sponsor, idx) {
                 return _react2.default.createElement(
                     _reactBootstrap.Col,
-                    { key: idx, xs: 12, sm: 3, md: 3 },
+                    { key: idx,
+                        xs: 12,
+                        sm: 3,
+                        md: 3 },
                     _react2.default.createElement(
                         _reactBootstrap.Panel,
                         { className: 'Sponsors__card Sponsors__card--tier4' },
-                        _react2.default.createElement('img', { className: 'Sponsors__cardLogo', src: sponsor.img, alt: sponsor.name })
-                    )
+                        _react2.default.createElement('img', { className: 'Sponsors__cardLogo',
+                            src: sponsor.img,
+                            alt: sponsor.name
+                        }),
+                        ' '
+                    ),
+                    ' '
                 );
             });
 
             return _react2.default.createElement(
                 'div',
-                { className: 'Sponsors', id: 'Sponsors' },
+                { className: 'Sponsors',
+                    id: 'Sponsors' },
                 _react2.default.createElement(
                     _reactBootstrap.PageHeader,
                     { className: 'Sponsors__header' },
-                    '2017 Sponsors'
+                    ' 2017 Sponsors '
                 ),
+                ' ',
                 _react2.default.createElement(
                     _reactBootstrap.Grid,
                     null,
                     _react2.default.createElement(
                         _reactBootstrap.Row,
                         null,
-                        tier2Sponsors
+                        ' ',
+                        tier2Sponsors,
+                        ' '
                     ),
+                    ' ',
                     _react2.default.createElement(
                         _reactBootstrap.Row,
                         { className: 'Sponsors_centerContent' },
-                        tier3Sponsors
+                        ' ',
+                        tier3Sponsors,
+                        ' '
                     ),
+                    ' ',
                     _react2.default.createElement(
                         _reactBootstrap.Row,
                         null,
-                        tier4Sponsors
-                    )
-                )
+                        ' ',
+                        tier4Sponsors,
+                        ' '
+                    ),
+                    ' '
+                ),
+                ' '
             );
         }
     }]);
@@ -25580,7 +25640,7 @@ exports = module.exports = __webpack_require__(20)(undefined);
 
 
 // module
-exports.push([module.i, ".Speakers {\n  padding: 5vh 5vw 10vh 5vw; }\n  .Speakers__card {\n    position: relative;\n    background-color: rgba(60, 116, 113, 0.5);\n    margin: 0.5em;\n    border: none; }\n    .Speakers__card img {\n      max-width: 100%;\n      width: auto;\n      max-height: 300px; }\n  .Speakers__header {\n    text-align: center;\n    color: #ffff;\n    margin-bottom: 1em; }\n  .Speakers__overlay {\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    background-color: rgba(60, 116, 113, 0.9);\n    color: #ffff;\n    padding: 10px;\n    overflow-y: scroll;\n    display: none;\n    z-index: 999; }\n    .Speakers__overlay p {\n      text-indent: 20px;\n      text-align: left; }\n  .Speakers h3 {\n    text-align: center;\n    font-size: 20px;\n    font-weight: light;\n    font-family: \"Roboto Slab\", serif;\n    padding: 0.2em;\n    color: #ffff; }\n  .Speakers .thumbnail {\n    padding: 0; }\n\n#youtube-icon {\n  font-size: 30px;\n  margin-left: 8px; }\n\n.glyphicon glyphicon-play-circle :hover {\n  color: blue; }\n", ""]);
+exports.push([module.i, ".Speakers {\n  padding: 5vh 5vw 10vh 5vw; }\n  .Speakers__card {\n    position: relative;\n    background-color: rgba(60, 116, 113, 0.5);\n    margin: 0.5em;\n    border: none; }\n    .Speakers__card img {\n      max-width: 100%;\n      width: auto;\n      max-height: 300px; }\n  .Speakers__card:hover {\n    background-color: rgba(100, 236, 152, 0.5);\n    opacity: 0.9;\n    box-shadow: 0 4px 8px 0 rgba(171, 255, 35, 0.479), 0 6px 20px 0 rgba(15, 167, 61, 0.903); }\n  .Speakers__header {\n    text-align: center;\n    color: #ffff;\n    margin-bottom: 1em; }\n  .Speakers__overlay {\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    background-color: rgba(60, 116, 113, 0.9);\n    color: #ffff;\n    padding: 10px;\n    overflow-y: scroll;\n    display: none;\n    z-index: 999; }\n    .Speakers__overlay p {\n      text-indent: 20px;\n      text-align: left; }\n  .Speakers h3 {\n    text-align: center;\n    font-size: 20px;\n    font-weight: light;\n    font-family: \"Roboto Slab\", serif;\n    padding: 0.2em;\n    color: #ffff; }\n  .Speakers .thumbnail {\n    padding: 0; }\n\n#youtube-icon {\n  font-size: 30px;\n  margin-left: 8px; }\n\n.glyphicon glyphicon-play-circle :hover {\n  color: blue; }\n", ""]);
 
 // exports
 
