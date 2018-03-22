@@ -7,6 +7,15 @@
     }
 }
 
+@media (max-width: 1050px) {
+    #Photos {
+        min-height: 55vh;
+        #Photos_items {
+            max-width: 40vw;
+        }
+    }
+}
+
 @media (max-width: 440px) {
     #Photos {
         min-height: 40vh;

@@ -77,7 +77,7 @@ class About extends Component {
                 <div className="about-grid">
                     <div className="col">
                         <FlipCard>
-                            <div><h3>What is Reflections|Projections?</h3></div>
+                            <div><h3>What is Reflections | Projections?</h3></div>
                             <div className="descrip">
                             Reflections | Projections is an annual technology conference organized and run by students
                             at the University of Illinois at Urbana-Champaign, drawing students, speakers, and companies from around the world.

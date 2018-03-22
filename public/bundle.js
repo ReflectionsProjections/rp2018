@@ -20326,7 +20326,7 @@ var About = function (_Component) {
                                 _react2.default.createElement(
                                     'h3',
                                     null,
-                                    'What is Reflections|Projections?'
+                                    'What is Reflections | Projections?'
                                 )
                             ),
                             _react2.default.createElement(
@@ -25540,7 +25540,7 @@ exports = module.exports = __webpack_require__(20)(undefined);
 
 
 // module
-exports.push([module.i, "#About {\n  font-size: 16px;\n  min-height: 100vh;\n  overflow: hidden;\n  font-family: 'Roboto', sans-serif;\n  color: #275354;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  padding: 10vh 5vw 10vh 5vw;\n  background-color: rgba(255, 255, 255, 0.17); }\n\n.about-grid {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-pack: justify;\n  justify-content: space-between;\n  width: 100%; }\n\n.about-grid .col {\n  margin: 1em; }\n\n.ReactFlipCard {\n  min-height: 40vh;\n  outline: none; }\n\n.ReactFlipCard,\n.ReactFlipCard__Front,\n.ReactFlipCard__Back {\n  width: 25vw;\n  outline: none; }\n\n.ReactFlipCard__Front {\n  min-height: 15vh; }\n\n.ReactFlipCard__Front,\n.ReactFlipCard__Back {\n  -webkit-backface-visibility: hidden;\n  backface-visibility: hidden;\n  transition: transform 300ms;\n  transition-timing-function: linear;\n  vertical-align: middle;\n  height: inherit; }\n\n.ReactFlipCard__Front {\n  width: 25vw;\n  background-color: rgba(60, 116, 113, 0.1);\n  padding: 30px;\n  text-align: center;\n  color: #cadea5;\n  border: 4px solid #cadea5;\n  font-weight: bold; }\n\n.ReactFlipCard__Back {\n  background: linear-gradient(to top right, #d3e5ae 40%, #56a09b 100%);\n  padding: 30px;\n  text-align: left;\n  font-weight: 100;\n  border: none;\n  opacity: 2; }\n\n.descrip {\n  font-size: 20px; }\n\n@media (max-width: 440px) {\n  .about-grid {\n    display: block; }\n    .about-grid .col {\n      width: 100%; }\n  .ReactFlipCard,\n  .ReactFlipCard__Front,\n  .ReactFlipCard__Back {\n    width: 85vw;\n    margin: 0 auto; }\n  .ReactFlipCard {\n    margin-bottom: 1em;\n    min-height: 60vh; } }\n", ""]);
+exports.push([module.i, "#About {\n  font-size: 16px;\n  min-height: 100vh;\n  overflow: hidden;\n  font-family: 'Roboto', sans-serif;\n  color: #275354;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  padding: 10vh 5vw 10vh 5vw;\n  background-color: rgba(255, 255, 255, 0.17); }\n\n.about-grid {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-pack: justify;\n  justify-content: space-between;\n  width: 100%; }\n\n.about-grid .col {\n  margin: 1em; }\n\n.ReactFlipCard {\n  height: 40vh;\n  outline: none; }\n\n.ReactFlipCard,\n.ReactFlipCard__Front,\n.ReactFlipCard__Back {\n  width: 25vw;\n  outline: none; }\n\n.ReactFlipCard__Front {\n  min-height: 15vh; }\n\n.ReactFlipCard__Front,\n.ReactFlipCard__Back {\n  -webkit-backface-visibility: hidden;\n  backface-visibility: hidden;\n  transition: transform 300ms;\n  transition-timing-function: linear;\n  vertical-align: middle;\n  height: inherit; }\n\n.ReactFlipCard__Front {\n  background-color: rgba(60, 116, 113, 0.1);\n  padding: 30px;\n  text-align: center;\n  color: #cadea5;\n  border: 4px solid #cadea5;\n  font-weight: bold; }\n\n.ReactFlipCard__Back {\n  background: linear-gradient(to top right, #d3e5ae 40%, #56a09b 100%);\n  padding: 30px;\n  text-align: left;\n  font-weight: 100;\n  border: none;\n  opacity: 2; }\n\n.descrip {\n  font-size: 20px; }\n\n@media (max-width: 1050px) {\n  .about-grid {\n    display: block; }\n    .about-grid .col {\n      width: 100%; }\n  .ReactFlipCard,\n  .ReactFlipCard__Back {\n    width: 85vw;\n    margin: 0 auto;\n    height: 190px;\n    margin-bottom: 10px; }\n  .ReactFlipCard__Front {\n    width: 85vw;\n    margin: 0 auto;\n    min-height: 65px; } }\n\n@media (max-width: 440px) {\n  .about-grid {\n    display: block; }\n    .about-grid .col {\n      width: 100%; }\n  .ReactFlipCard,\n  .ReactFlipCard__Back {\n    width: 85vw;\n    margin: 0 auto;\n    margin-bottom: 1em;\n    min-height: 320px; }\n  .descrip {\n    font-size: 18px; } }\n", ""]);
 
 // exports
 
@@ -25596,7 +25596,7 @@ exports = module.exports = __webpack_require__(20)(undefined);
 
 
 // module
-exports.push([module.i, "#Photos {\n  min-height: 45vh;\n  padding: 2vh 2vw 5vh 2vw; }\n  #Photos #Photos_items {\n    max-width: 25vw; }\n\n@media (max-width: 440px) {\n  #Photos {\n    min-height: 40vh; }\n    #Photos #Photos_items {\n      max-width: 90vw; } }\n", ""]);
+exports.push([module.i, "#Photos {\n  min-height: 45vh;\n  padding: 2vh 2vw 5vh 2vw; }\n  #Photos #Photos_items {\n    max-width: 25vw; }\n\n@media (max-width: 1050px) {\n  #Photos {\n    min-height: 55vh; }\n    #Photos #Photos_items {\n      max-width: 40vw; } }\n\n@media (max-width: 440px) {\n  #Photos {\n    min-height: 40vh; }\n    #Photos #Photos_items {\n      max-width: 90vw; } }\n", ""]);
 
 // exports
 
