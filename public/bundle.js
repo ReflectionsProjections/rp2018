@@ -21155,18 +21155,12 @@ var Speakers = function (_Component) {
                 var cl = link != undefined && link != null ? "#c9e88f" : "#a4b0bc";
                 return _react2.default.createElement(
                     _reactBootstrap.Col,
-                    { key: idx,
-                        xs: 12,
-                        lg: 4,
-                        sm: 9,
-                        md: 9 },
+                    { key: idx, xs: 12, lg: 4, sm: 9, md: 9 },
                     _react2.default.createElement(
                         _reactBootstrap.Thumbnail,
                         { onClick: function onClick(e) {
                                 return _this2.handleClick(e, link, idx);
-                            },
-                            className: 'Speakers__card js-speakercard',
-                            src: speaker.img },
+                            }, className: 'Speakers__card js-speakercard', src: speaker.img },
                         _react2.default.createElement(
                             'h3',
                             { style: { color: "white" } },
@@ -21174,7 +21168,6 @@ var Speakers = function (_Component) {
                             speaker.name,
                             ' '
                         ),
-                        ' ',
                         _react2.default.createElement(
                             'h3',
                             { style: { color: "white" } },
@@ -21182,27 +21175,19 @@ var Speakers = function (_Component) {
                             speaker.year,
                             ' '
                         ),
-                        ' ',
-                        _react2.default.createElement('span', { className: 'glyphicon glyphicon-play-circle',
-                            id: 'youtube-icon',
-                            style: { color: cl }
-                        }),
-                        '  '
-                    ),
-                    ' '
+                        _react2.default.createElement('span', { className: 'glyphicon glyphicon-play-circle', id: 'youtube-icon', style: { color: cl } })
+                    )
                 );
             });
 
             return _react2.default.createElement(
                 'div',
-                { className: 'Speakers',
-                    id: 'Speakers' },
+                { className: 'Speakers', id: 'Speakers' },
                 _react2.default.createElement(
                     _reactBootstrap.PageHeader,
                     { className: 'Speakers__header' },
                     ' Past Keynote Speakers '
                 ),
-                ' ',
                 _react2.default.createElement(
                     _reactBootstrap.Grid,
                     null,
@@ -21214,8 +21199,7 @@ var Speakers = function (_Component) {
                         ' '
                     ),
                     ' '
-                ),
-                ' '
+                )
             );
         }
     }]);
@@ -25640,7 +25624,7 @@ exports = module.exports = __webpack_require__(20)(undefined);
 
 
 // module
-exports.push([module.i, ".Speakers {\n  padding: 5vh 5vw 10vh 5vw; }\n  .Speakers__card {\n    position: relative;\n    background-color: rgba(60, 116, 113, 0.5);\n    margin: 0.5em;\n    border: none; }\n    .Speakers__card img {\n      max-width: 100%;\n      width: auto;\n      max-height: 300px; }\n  .Speakers__card:hover {\n    background-color: rgba(100, 236, 152, 0.5);\n    opacity: 0.9;\n    box-shadow: 0 4px 8px 0 rgba(171, 255, 35, 0.479), 0 6px 20px 0 rgba(15, 167, 61, 0.903); }\n  .Speakers__header {\n    text-align: center;\n    color: #ffff;\n    margin-bottom: 1em; }\n  .Speakers__overlay {\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    background-color: rgba(60, 116, 113, 0.9);\n    color: #ffff;\n    padding: 10px;\n    overflow-y: scroll;\n    display: none;\n    z-index: 999; }\n    .Speakers__overlay p {\n      text-indent: 20px;\n      text-align: left; }\n  .Speakers h3 {\n    text-align: center;\n    font-size: 20px;\n    font-weight: light;\n    font-family: \"Roboto Slab\", serif;\n    padding: 0.2em;\n    color: #ffff; }\n  .Speakers .thumbnail {\n    padding: 0; }\n\n#youtube-icon {\n  font-size: 30px;\n  margin-left: 8px; }\n\n.glyphicon glyphicon-play-circle :hover {\n  color: blue; }\n", ""]);
+exports.push([module.i, ".Speakers {\n  padding: 5vh 5vw 10vh 5vw; }\n  .Speakers__card {\n    position: relative;\n    background-color: rgba(60, 116, 113, 0.5);\n    margin: 0.5em;\n    border: none; }\n    .Speakers__card img {\n      max-width: 100%;\n      width: auto;\n      max-height: 300px; }\n  .Speakers__card:hover {\n    background-color: rgba(60, 116, 113, 0.9);\n    opacity: 0.9;\n    box-shadow: 0 4px 8px 0 rgba(60, 116, 113, 0.5), 0 6px 20px 0 #3c7471; }\n  .Speakers__header {\n    text-align: center;\n    color: #ffff;\n    margin-bottom: 1em; }\n  .Speakers__overlay {\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    background-color: rgba(60, 116, 113, 0.5);\n    color: #ffff;\n    padding: 10px;\n    overflow-y: scroll;\n    display: none;\n    z-index: 999; }\n    .Speakers__overlay p {\n      text-indent: 20px;\n      text-align: left; }\n  .Speakers h3 {\n    text-align: center;\n    font-size: 20px;\n    font-weight: light;\n    font-family: \"Roboto Slab\", serif;\n    padding: 0.2em;\n    color: #ffff; }\n  .Speakers .thumbnail {\n    padding: 0; }\n\n#youtube-icon {\n  font-size: 30px;\n  margin-left: 8px; }\n", ""]);
 
 // exports
 

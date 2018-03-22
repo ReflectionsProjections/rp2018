@@ -123,43 +123,22 @@ class Speakers extends Component {
             var link = speaker.youtube;
             var reveal = (link != undefined && link != null) ? "visible" : "hidden";
             var cl = (link != undefined && link != null) ? "#c9e88f" : "#a4b0bc";
-            return ( <
-                Col key = { idx }
-                xs = { 12 }
-                lg = { 4 }
-                sm = { 9 }
-                md = { 9 } >
-                <
-                Thumbnail onClick = {
-                    (e) => this.handleClick(e, link, idx) }
-                className = "Speakers__card js-speakercard"
-                src = { speaker.img } >
-                <
-                h3 style = {
-                    { color: "white" } } > { speaker.name } < /h3> <
-                h3 style = {
-                    { color: "white" } } > { speaker.year } < /h3> <
-                span className = "glyphicon glyphicon-play-circle"
-                id = "youtube-icon"
-                style = {
-                    { color: cl } }
-                />  <
-                /Thumbnail> <
-                /Col>
+            return ( 
+                <Col key = { idx } xs = { 12 } lg = { 4 } sm = { 9 } md = { 9 } >
+                    <Thumbnail onClick = {(e) => this.handleClick(e, link, idx) } className = "Speakers__card js-speakercard" src = { speaker.img } >
+                    <h3 style = {{ color: "white" } } > { speaker.name } </h3> 
+                    <h3 style = {{ color: "white" } } > { speaker.year } </h3> 
+                    <span className = "glyphicon glyphicon-play-circle" id = "youtube-icon" style = {{ color: cl } }/>  
+                    </Thumbnail> 
+                </Col>
             )
         });
 
-        return ( <
-            div className = "Speakers"
-            id = "Speakers" >
-            <
-            PageHeader className = "Speakers__header" > Past Keynote Speakers < /PageHeader> <
-            Grid >
-            <
-            Row > { speakerView } <
-            /Row> <
-            /Grid> <
-            /div>
+        return ( 
+            <div className = "Speakers" id = "Speakers" >
+                <PageHeader className = "Speakers__header" > Past Keynote Speakers </PageHeader> 
+                <Grid ><Row > { speakerView } </Row> </Grid> 
+            </div>
         )
     }
 }
