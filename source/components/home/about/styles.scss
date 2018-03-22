@@ -47,7 +47,6 @@
     -webkit-transition-timing-function: linear;
     transition-timing-function: linear;
     vertical-align: middle;
-    height: inherit;
 }
 
 .ReactFlipCard__Front {
@@ -66,19 +65,21 @@
     font-weight: 100;
     border: none;
     opacity: 2;
+    margin-bottom: 10px;
 }
 
 .descrip {
     font-size: 20px;
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1240px) {
     .about-grid {
         display: block;
         .col {
             width: 100%;
         }
     }
+
     .ReactFlipCard,
     .ReactFlipCard__Back {
         width: 85vw;
@@ -86,6 +87,7 @@
         height: 190px;
         margin-bottom: 10px;
     }
+    
     .ReactFlipCard__Front{
         width: 85vw;
         margin: 0 auto;
@@ -108,6 +110,7 @@
         margin-bottom: 1em;
         min-height: 320px;
     }
+
     .descrip {
         font-size: 18px;
     }
