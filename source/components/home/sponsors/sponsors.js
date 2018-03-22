@@ -12,8 +12,7 @@ class Sponsors extends Component {
     render() {
         const sponsorsList = {
 
-            tier2: [
-                {
+            tier2: [{
                     name: 'Nvidia',
                     img: '../assets/img/sponsors/jobfair/petabyte/nvidia.jpg',
                 },
@@ -23,8 +22,7 @@ class Sponsors extends Component {
                 },
             ],
 
-            tier3: [
-                {
+            tier3: [{
                     name: 'Forcepoint',
                     img: '../assets/img/sponsors/jobfair/gigabyte/forcepoint.jpg',
                 },
@@ -51,8 +49,7 @@ class Sponsors extends Component {
 
             ],
 
-            tier4: [
-                {
+            tier4: [{
                     name: 'Facebook',
                     img: '../assets/img/sponsors/jobfair/megabyte/facebook.jpg',
                 },
@@ -70,7 +67,7 @@ class Sponsors extends Component {
                 },
                 {
                     name: 'CME Group',
-                    img: '../assets/img/sponsors/jobfair/megabyte/cmegroup.jpg',
+                    img: '../assets/img/sponsors/jobfair/megabyte/cmegroup.png',
                 },
                 {
                     name: 'Uber',
@@ -165,7 +162,7 @@ class Sponsors extends Component {
                 },
                 {
                     name: 'Capital One',
-                    img: '../assets/img/sponsors/jobfair/megabyte/capitalone.jpg',
+                    img: '../assets/img/sponsors/jobfair/megabyte/capitalone.png',
                 },
                 {
                     name: 'Huawei',
@@ -183,51 +180,76 @@ class Sponsors extends Component {
         }
 
 
-        const tier2Sponsors = sponsorsList.tier2.map( (sponsor, idx) => {
-            return(
-                <Col key={idx} xs={12} lg={6} sm={2} md={2}>
-                    <Panel className="Sponsors__card Sponsors__card--tier3">
-                        <img className="Sponsors__cardLogo" src={sponsor.img} alt={sponsor.name}/>
-                    </Panel>
-                </Col>
+        const tier2Sponsors = sponsorsList.tier2.map((sponsor, idx) => {
+            return ( <
+                Col key = { idx }
+                xs = { 12 }
+                lg = { 6 }
+                sm = { 2 }
+                md = { 2 } >
+                <
+                Panel className = "Sponsors__card Sponsors__card--tier3" >
+                <
+                img className = "Sponsors__cardLogo"
+                src = { sponsor.img }
+                alt = { sponsor.name }
+                /> <
+                /Panel> <
+                /Col>
             )
         });
 
-        const tier3Sponsors = sponsorsList.tier3.map( (sponsor, idx) => {
-            return(
-                <Col key={idx} xs={12} sm={4} md={4}>
-                    <Panel className="Sponsors__card Sponsors__card--tier3">
-                        <img className="Sponsors__cardLogo" src={sponsor.img} alt={sponsor.name}/>
-                    </Panel>
-                </Col>
+        const tier3Sponsors = sponsorsList.tier3.map((sponsor, idx) => {
+            return ( <
+                Col key = { idx }
+                xs = { 12 }
+                sm = { 4 }
+                md = { 4 } >
+                <
+                Panel className = "Sponsors__card Sponsors__card--tier3" >
+                <
+                img className = "Sponsors__cardLogo"
+                src = { sponsor.img }
+                alt = { sponsor.name }
+                /> <
+                /Panel> <
+                /Col>
             )
         });
 
-        const tier4Sponsors = sponsorsList.tier4.map( (sponsor, idx) => {
-            return(
-                <Col key={idx} xs={12} sm={3} md={3}>
-                    <Panel className="Sponsors__card Sponsors__card--tier4">
-                        <img className="Sponsors__cardLogo" src={sponsor.img} alt={sponsor.name}/>
-                    </Panel>
-                </Col>
+        const tier4Sponsors = sponsorsList.tier4.map((sponsor, idx) => {
+            return ( <
+                Col key = { idx }
+                xs = { 12 }
+                sm = { 3 }
+                md = { 3 } >
+                <
+                Panel className = "Sponsors__card Sponsors__card--tier4" >
+                <
+                img className = "Sponsors__cardLogo"
+                src = { sponsor.img }
+                alt = { sponsor.name }
+                /> <
+                /Panel> <
+                /Col>
             )
         });
 
-        return(
-            <div className="Sponsors" id="Sponsors">
-                <PageHeader className="Sponsors__header">2017 Sponsors</PageHeader>
-                <Grid>
-                    <Row>
-                        {tier2Sponsors}
-                    </Row>
-                    <Row className="Sponsors_centerContent">
-                        {tier3Sponsors}
-                    </Row>
-                    <Row>
-                        {tier4Sponsors}
-                    </Row>
-                </Grid>
-            </div>
+        return ( <
+            div className = "Sponsors"
+            id = "Sponsors" >
+            <
+            PageHeader className = "Sponsors__header" > 2017 Sponsors < /PageHeader> <
+            Grid >
+            <
+            Row > { tier2Sponsors } <
+            /Row> <
+            Row className = "Sponsors_centerContent" > { tier3Sponsors } <
+            /Row> <
+            Row > { tier4Sponsors } <
+            /Row> <
+            /Grid> <
+            /div>
         )
     }
 }
