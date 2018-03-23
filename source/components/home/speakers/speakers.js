@@ -136,7 +136,7 @@ class Speakers extends Component {
 
         return ( 
             <div className = "Speakers" id = "Speakers" >
-                <PageHeader className = "Speakers__header" > Past Keynote Speakers </PageHeader> 
+                <PageHeader className = "Speakers__header" > Past Speakers </PageHeader> 
                 <Grid ><Row > { speakerView } </Row> </Grid> 
             </div>
         )

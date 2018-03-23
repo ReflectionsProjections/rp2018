@@ -51,10 +51,10 @@ class Navigation extends Component {
                     <Navbar.Collapse>
                     <Nav pullRight>
                         <NavItem onClick={() => this.scrollTo('About')} eventKey={1} href="#About" className="Navigation__item--active">About</NavItem>
-                        <NavItem onClick={() => this.scrollTo('Speakers')} eventKey={2} href="#Speakers">Speakers</NavItem>
-                        <NavItem onClick={() => this.scrollTo('Sponsors')} eventKey={3} href="#Sponsors">Sponsors</NavItem>
+                        <NavItem onClick={() => this.scrollTo('Speakers')} eventKey={2} href="#Speakers">Past Speakers</NavItem>
+                        <NavItem onClick={() => this.scrollTo('Sponsors')} eventKey={3} href="#Sponsors">Past Sponsors</NavItem>
                         {/*<NavItem onClick={() => this.emailTo('mailto:conference-chair@acm.illinois.edu')} href="#">Contact</NavItem>*/}
-                        <NavItem onClick={() => this.scrollTo('Footer')} eventKey={4} href="#Contacts">Contacts</NavItem>
+                        <NavItem onClick={() => this.scrollTo('Footer')} eventKey={4} href="#Contacts">Contact Us</NavItem>
                     </Nav>
                     </Navbar.Collapse>
                 </Navbar>
