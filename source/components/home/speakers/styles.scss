@@ -11,11 +11,6 @@
             max-height: 300px;
         }
     }
-    &__card:hover {
-        background-color: rgba(60, 116, 113, 0.9);
-        opacity: 0.9;
-        box-shadow: 0 4px 8px 0 rgba(60, 116, 113, 0.5), 0 6px 20px 0 rgba(60, 116, 113, 1);
-    }
     &__header {
         text-align: center;
         color: #ffff;
@@ -55,4 +50,9 @@
     font-size: 30px;
     margin-left: 8px;
 }
-
+// Ensures that only speaker cards with YouTube links are highlighted
+div>div.Speakers__youtube:hover {
+    background-color: rgba(60, 116, 113, 0.9);
+    opacity: 0.9;
+    box-shadow: 0 4px 8px 0 rgba(60, 116, 113, 0.5), 0 6px 20px 0 rgba(60, 116, 113, 1);
+}
