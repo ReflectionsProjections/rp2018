@@ -16,6 +16,7 @@ class Speakers extends Component {
             {
                 'name': 'Steve Wozniak',
                 'img': '../assets/img/keynotes/steve.jpg',
+
                 'year': 'Co-founder of Apple',
                 'wikipedia': 'https://en.wikipedia.org/wiki/Steve_Wozniak'
             },
@@ -35,8 +36,10 @@ class Speakers extends Component {
             {
                 'name': 'Jay “Saurik” Freeman',
                 'img': '../assets/img/keynotes/jay.jpg',
+
                 'year': 'Creator of Cydia',
                 'wikipedia': 'https://en.wikipedia.org/wiki/Jay_Freeman'
+                'year': 'Creator of Cydia'
             },
             {
                 'name': 'Peter Norvig',
@@ -53,6 +56,7 @@ class Speakers extends Component {
             {
                 'name': 'Travis Oliphant',
                 'img': '../assets/img/keynotes/travis.jpg',
+
                 'year': 'Founder of Anaconda and creator of NumPy',
                 'youtube': 'https://www.youtube.com/watch?v=_PDvlqbgxCU',
                 'wikipedia': 'https://en.wikipedia.org/wiki/Travis_Oliphant'
@@ -66,6 +70,7 @@ class Speakers extends Component {
             {
                 'name': 'Robin Walker',
                 'img': '../assets/img/keynotes/robin.jpg',
+
                 'year': 'Co-developer of Team Fortress',
                 'wikipedia': 'https://en.wikipedia.org/wiki/Robin_Walker_(game_designer)'
             },

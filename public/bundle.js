@@ -2775,7 +2775,7 @@ module.exports = ReactUpdates;
 /* 36 */
 /***/ (function(module, exports) {
 
-var core = module.exports = { version: '2.5.3' };
+var core = module.exports = { version: '2.5.4' };
 if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
 
 
@@ -3412,6 +3412,7 @@ var global = __webpack_require__(47);
 var core = __webpack_require__(36);
 var ctx = __webpack_require__(127);
 var hide = __webpack_require__(63);
+var has = __webpack_require__(52);
 var PROTOTYPE = 'prototype';
 
 var $export = function (type, name, source) {
@@ -3429,7 +3430,7 @@ var $export = function (type, name, source) {
   for (key in source) {
     // contains in native
     own = !IS_FORCED && target && target[key] !== undefined;
-    if (own && key in exports) continue;
+    if (own && has(exports, key)) continue;
     // export native or passed
     out = own ? target[key] : source[key];
     // prevent global pollution for namespaces
@@ -7696,7 +7697,7 @@ module.exports = exports['default'];
  * @api public
  */
 
-exports = module.exports = function(searchInput) {
+function keyCode(searchInput) {
   // Keyboard Events
   if (searchInput && 'object' === typeof searchInput) {
     var hasKeyCode = searchInput.which || searchInput.keyCode || searchInput.charCode
@@ -7722,6 +7723,35 @@ exports = module.exports = function(searchInput) {
 
   return undefined
 }
+
+/**
+ * Compares a keyboard event with a given keyCode or keyName.
+ *
+ * @param {Event} event Keyboard event that should be tested
+ * @param {Mixed} keyCode {Number} or keyName {String}
+ * @return {Boolean}
+ * @api public
+ */
+keyCode.isEventKey = function isEventKey(event, nameOrCode) {
+  if (event && 'object' === typeof event) {
+    var keyCode = event.which || event.keyCode || event.charCode
+    if (keyCode === null || keyCode === undefined) { return false; }
+    if (typeof nameOrCode === 'string') {
+      // check codes
+      var foundNamedKey = codes[nameOrCode.toLowerCase()]
+      if (foundNamedKey) { return foundNamedKey === keyCode; }
+    
+      // check aliases
+      var foundNamedKey = aliases[nameOrCode.toLowerCase()]
+      if (foundNamedKey) { return foundNamedKey === keyCode; }
+    } else if (typeof nameOrCode === 'number') {
+      return nameOrCode === keyCode;
+    }
+    return false;
+  }
+}
+
+exports = module.exports = keyCode;
 
 /**
  * Get by name
@@ -7792,13 +7822,13 @@ var aliases = exports.aliases = {
   'return': 13,
   'escape': 27,
   'spc': 32,
+  'spacebar': 32,
   'pgup': 33,
   'pgdn': 34,
   'ins': 45,
   'del': 46,
   'cmd': 91
 }
-
 
 /*!
  * Programatically add the following
@@ -11569,7 +11599,6 @@ var LIBRARY = __webpack_require__(130);
 var $export = __webpack_require__(46);
 var redefine = __webpack_require__(205);
 var hide = __webpack_require__(63);
-var has = __webpack_require__(52);
 var Iterators = __webpack_require__(74);
 var $iterCreate = __webpack_require__(369);
 var setToStringTag = __webpack_require__(133);
@@ -11596,7 +11625,7 @@ module.exports = function (Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCE
   var VALUES_BUG = false;
   var proto = Base.prototype;
   var $native = proto[ITERATOR] || proto[FF_ITERATOR] || DEFAULT && proto[DEFAULT];
-  var $default = (!BUGGY && $native) || getMethod(DEFAULT);
+  var $default = $native || getMethod(DEFAULT);
   var $entries = DEFAULT ? !DEF_VALUES ? $default : getMethod('entries') : undefined;
   var $anyNative = NAME == 'Array' ? proto.entries || $native : $native;
   var methods, key, IteratorPrototype;
@@ -11607,7 +11636,7 @@ module.exports = function (Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCE
       // Set @@toStringTag to native iterators
       setToStringTag(IteratorPrototype, TAG, true);
       // fix for some old engines
-      if (!LIBRARY && !has(IteratorPrototype, ITERATOR)) hide(IteratorPrototype, ITERATOR, returnThis);
+      if (!LIBRARY && typeof IteratorPrototype[ITERATOR] != 'function') hide(IteratorPrototype, ITERATOR, returnThis);
     }
   }
   // fix Array#{values, @@iterator}.name in V8 / FF
@@ -20905,21 +20934,21 @@ var Navigation = function (_Component) {
                                 { onClick: function onClick() {
                                         return _this2.scrollTo('Speakers');
                                     }, eventKey: 2, href: '#Speakers' },
-                                'Speakers'
+                                'Past Speakers'
                             ),
                             _react2.default.createElement(
                                 _reactBootstrap.NavItem,
                                 { onClick: function onClick() {
                                         return _this2.scrollTo('Sponsors');
                                     }, eventKey: 3, href: '#Sponsors' },
-                                'Sponsors'
+                                'Past Sponsors'
                             ),
                             _react2.default.createElement(
                                 _reactBootstrap.NavItem,
                                 { onClick: function onClick() {
                                         return _this2.scrollTo('Footer');
                                     }, eventKey: 4, href: '#Contacts' },
-                                'Contacts'
+                                'Contact Us'
                             )
                         )
                     )
@@ -21152,7 +21181,12 @@ var Speakers = function (_Component) {
                 var hexStr = "6px solid " + hex;
                 var link = speaker.youtube;
                 var reveal = link != undefined && link != null ? "visible" : "hidden";
-                var cl = link != undefined && link != null ? "#c9e88f" : "#a4b0bc";
+                //hasLinkColor - Color of glyphicon link if the speaker's card DOES LINK to a YouTube video
+                var hasLinkColor = "#c9e88f";
+                //hasNoLinkColor - Color of glyphicon link if the speaker's card DOES NOT LINK to a YouTube video
+                var hasNoLinkColor = "#a4b0bc";
+                var cl = link != undefined && link != null ? hasLinkColor : hasNoLinkColor;
+                var cName = cl == hasLinkColor ? "Speakers__card js-speakercard Speakers__youtube" : "Speakers__card js-speakercard";
                 return _react2.default.createElement(
                     _reactBootstrap.Col,
                     { key: idx, xs: 12, lg: 4, sm: 9, md: 9 },
@@ -21160,7 +21194,7 @@ var Speakers = function (_Component) {
                         _reactBootstrap.Thumbnail,
                         { onClick: function onClick(e) {
                                 return _this2.handleClick(e, link, idx);
-                            }, className: 'Speakers__card js-speakercard', src: speaker.img },
+                            }, className: cName, src: speaker.img },
                         _react2.default.createElement(
                             'h3',
                             { style: { color: "white" } },
@@ -21186,7 +21220,12 @@ var Speakers = function (_Component) {
                 _react2.default.createElement(
                     _reactBootstrap.PageHeader,
                     { className: 'Speakers__header' },
-                    ' Past Keynote Speakers '
+                    ' ',
+                    _react2.default.createElement(
+                        'h2',
+                        null,
+                        'Past Speakers '
+                    )
                 ),
                 _react2.default.createElement(
                     _reactBootstrap.Grid,
@@ -21217,7 +21256,7 @@ exports.default = Speakers;
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -21241,252 +21280,249 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var Sponsors = function (_Component) {
-    _inherits(Sponsors, _Component);
+  _inherits(Sponsors, _Component);
 
-    function Sponsors() {
-        _classCallCheck(this, Sponsors);
+  function Sponsors() {
+    _classCallCheck(this, Sponsors);
 
-        return _possibleConstructorReturn(this, (Sponsors.__proto__ || Object.getPrototypeOf(Sponsors)).call(this));
+    return _possibleConstructorReturn(this, (Sponsors.__proto__ || Object.getPrototypeOf(Sponsors)).call(this));
+  }
+
+  _createClass(Sponsors, [{
+    key: "render",
+    value: function render() {
+      var sponsorsList = {
+        tier2: [{
+          name: "Nvidia",
+          img: "../assets/img/sponsors/jobfair/petabyte/nvidia.jpg"
+        }, {
+          name: "RetailMeNot",
+          img: "../assets/img/sponsors/jobfair/terabyte/retailmenot.svg"
+        }],
+
+        tier3: [{
+          name: "Forcepoint",
+          img: "../assets/img/sponsors/jobfair/gigabyte/forcepoint.jpg"
+        }, {
+          name: "Microsoft",
+          img: "../assets/img/sponsors/jobfair/gigabyte/microsoft.jpg"
+        }, {
+          name: "IMO",
+          img: "../assets/img/sponsors/jobfair/gigabyte/imo.svg"
+        }, {
+          name: "Northern Trust",
+          img: "../assets/img/sponsors/jobfair/gigabyte/northerntrust.jpg"
+        }, {
+          name: "Qualtrics",
+          img: "../assets/img/sponsors/jobfair/gigabyte/qualtrics.jpg"
+        }, {
+          name: "Bank of America",
+          img: "../assets/img/sponsors/jobfair/gigabyte/bankofamerica.jpg"
+        }],
+
+        tier4: [{
+          name: "Facebook",
+          img: "../assets/img/sponsors/jobfair/megabyte/facebook.jpg"
+        }, {
+          name: "Google",
+          img: "../assets/img/sponsors/jobfair/megabyte/google.jpg"
+        }, {
+          name: "Indeed",
+          img: "../assets/img/sponsors/jobfair/megabyte/indeed.jpg"
+        }, {
+          name: "Pinterest",
+          img: "../assets/img/sponsors/jobfair/megabyte/pinterest.jpg"
+        }, {
+          name: "CME Group",
+          img: "../assets/img/sponsors/jobfair/megabyte/cmegroup.png"
+        }, {
+          name: "Uber",
+          img: "../assets/img/sponsors/jobfair/megabyte/uber.jpg"
+        }, {
+          name: "Yelp",
+          img: "../assets/img/sponsors/jobfair/megabyte/yelp.jpg"
+        }, {
+          name: "Amobee",
+          img: "../assets/img/sponsors/jobfair/megabyte/amobee.jpg"
+        }, {
+          name: "Riverbed",
+          img: "../assets/img/sponsors/jobfair/megabyte/riverbed.jpg"
+        }, {
+          name: "Gartner",
+          img: "../assets/img/sponsors/jobfair/megabyte/gartner.jpg"
+        }, {
+          name: "NccGroup",
+          img: "../assets/img/sponsors/jobfair/megabyte/nccgroup.jpg"
+        }, {
+          name: "Navtalent",
+          img: "../assets/img/sponsors/jobfair/megabyte/navtalent.jpg"
+        }, {
+          name: "Sandia",
+          img: "../assets/img/sponsors/jobfair/megabyte/sandia.jpg"
+        }, {
+          name: "Morningstar",
+          img: "../assets/img/sponsors/jobfair/megabyte/morningstar.jpg"
+        },
+
+        // startups
+
+        {
+          name: "a16z",
+          img: "../assets/img/sponsors/startups/andreessenhorowitz.jpg"
+        }, {
+          name: "Buildout",
+          img: "../assets/img/sponsors/startups/buildout.jpg"
+        }, {
+          name: "Cloudflare",
+          img: "../assets/img/sponsors/startups/cloudflare.svg"
+        }, {
+          name: "Curalate",
+          img: "../assets/img/sponsors/startups/curalate.svg"
+        }, {
+          name: "Fornojo",
+          img: "../assets/img/sponsors/startups/fornojo.jpg"
+        }, {
+          name: "Granular",
+          img: "../assets/img/sponsors/startups/granular.jpg"
+        }, {
+          name: "Liferay",
+          img: "../assets/img/sponsors/startups/liferay.jpg"
+        }, {
+          name: "Mixmax",
+          img: "../assets/img/sponsors/startups/mixmax.jpg"
+        }, {
+          name: "Ocient",
+          img: "../assets/img/sponsors/startups/ocient.jpg"
+        }, {
+          name: "Rubrik",
+          img: "../assets/img/sponsors/startups/rubrik.jpg"
+        }, {
+          name: "Samsara",
+          img: "../assets/img/sponsors/startups/samsara.jpg"
+        }, {
+          name: "Sprout Social",
+          img: "../assets/img/sponsors/startups/sproutsocial.jpg"
+        }, {
+          name: "Jane Street",
+          img: "../assets/img/sponsors/jobfair/megabyte/janestreet.jpg"
+        }, {
+          name: "Capital One",
+          img: "../assets/img/sponsors/jobfair/megabyte/capitalone.png"
+        }, {
+          name: "Huawei",
+          img: "../assets/img/sponsors/jobfair/megabyte/huawei.jpg"
+        }, {
+          name: "West Monroe",
+          img: "../assets/img/sponsors/jobfair/megabyte/westmonroe.jpg"
+        }, {
+          name: "Think BIG",
+          img: "../assets/img/sponsors/startups/thinkbig.jpg"
+        }]
+      };
+
+      var tier2Sponsors = sponsorsList.tier2.map(function (sponsor, idx) {
+        return _react2.default.createElement(
+          _reactBootstrap.Col,
+          { key: idx, xs: 12, lg: 6, sm: 2, md: 2 },
+          _react2.default.createElement(
+            _reactBootstrap.Panel,
+            { className: "Sponsors__card Sponsors__card--tier3" },
+            _react2.default.createElement("img", {
+              className: "Sponsors__cardLogo",
+              src: sponsor.img,
+              alt: sponsor.name
+            }),
+            " "
+          ),
+          " "
+        );
+      });
+
+      var tier3Sponsors = sponsorsList.tier3.map(function (sponsor, idx) {
+        return _react2.default.createElement(
+          _reactBootstrap.Col,
+          { key: idx, xs: 12, sm: 4, md: 4 },
+          _react2.default.createElement(
+            _reactBootstrap.Panel,
+            { className: "Sponsors__card Sponsors__card--tier3" },
+            _react2.default.createElement("img", {
+              className: "Sponsors__cardLogo",
+              src: sponsor.img,
+              alt: sponsor.name
+            }),
+            " "
+          ),
+          " "
+        );
+      });
+
+      var tier4Sponsors = sponsorsList.tier4.map(function (sponsor, idx) {
+        return _react2.default.createElement(
+          _reactBootstrap.Col,
+          { key: idx, xs: 12, sm: 3, md: 3 },
+          _react2.default.createElement(
+            _reactBootstrap.Panel,
+            { className: "Sponsors__card Sponsors__card--tier4" },
+            _react2.default.createElement("img", {
+              className: "Sponsors__cardLogo",
+              src: sponsor.img,
+              alt: sponsor.name
+            }),
+            " "
+          ),
+          " "
+        );
+      });
+
+      return _react2.default.createElement(
+        "div",
+        { className: "Sponsors", id: "Sponsors" },
+        _react2.default.createElement(
+          _reactBootstrap.PageHeader,
+          { className: "Sponsors__header" },
+          " ",
+          _react2.default.createElement(
+            "h2",
+            null,
+            "Past Sponsors"
+          ),
+          " "
+        ),
+        " ",
+        _react2.default.createElement(
+          _reactBootstrap.Grid,
+          null,
+          _react2.default.createElement(
+            _reactBootstrap.Row,
+            null,
+            " ",
+            tier2Sponsors,
+            " "
+          ),
+          " ",
+          _react2.default.createElement(
+            _reactBootstrap.Row,
+            { className: "Sponsors_centerContent" },
+            " ",
+            tier3Sponsors,
+            " "
+          ),
+          " ",
+          _react2.default.createElement(
+            _reactBootstrap.Row,
+            null,
+            " ",
+            tier4Sponsors,
+            " "
+          ),
+          " "
+        ),
+        " "
+      );
     }
+  }]);
 
-    _createClass(Sponsors, [{
-        key: 'render',
-        value: function render() {
-            var sponsorsList = {
-
-                tier2: [{
-                    name: 'Nvidia',
-                    img: '../assets/img/sponsors/jobfair/petabyte/nvidia.jpg'
-                }, {
-                    name: 'RetailMeNot',
-                    img: '../assets/img/sponsors/jobfair/terabyte/retailmenot.svg'
-                }],
-
-                tier3: [{
-                    name: 'Forcepoint',
-                    img: '../assets/img/sponsors/jobfair/gigabyte/forcepoint.jpg'
-                }, {
-                    name: 'Microsoft',
-                    img: '../assets/img/sponsors/jobfair/gigabyte/microsoft.jpg'
-                }, {
-                    name: 'IMO',
-                    img: '../assets/img/sponsors/jobfair/gigabyte/imo.svg'
-                }, {
-                    name: 'Northern Trust',
-                    img: '../assets/img/sponsors/jobfair/gigabyte/northerntrust.jpg'
-                }, {
-                    name: 'Qualtrics',
-                    img: '../assets/img/sponsors/jobfair/gigabyte/qualtrics.jpg'
-                }, {
-                    name: 'Bank of America',
-                    img: '../assets/img/sponsors/jobfair/gigabyte/bankofamerica.jpg'
-                }],
-
-                tier4: [{
-                    name: 'Facebook',
-                    img: '../assets/img/sponsors/jobfair/megabyte/facebook.jpg'
-                }, {
-                    name: 'Google',
-                    img: '../assets/img/sponsors/jobfair/megabyte/google.jpg'
-                }, {
-                    name: 'Indeed',
-                    img: '../assets/img/sponsors/jobfair/megabyte/indeed.jpg'
-                }, {
-                    name: 'Pinterest',
-                    img: '../assets/img/sponsors/jobfair/megabyte/pinterest.jpg'
-                }, {
-                    name: 'CME Group',
-                    img: '../assets/img/sponsors/jobfair/megabyte/cmegroup.png'
-                }, {
-                    name: 'Uber',
-                    img: '../assets/img/sponsors/jobfair/megabyte/uber.jpg'
-                }, {
-                    name: 'Yelp',
-                    img: '../assets/img/sponsors/jobfair/megabyte/yelp.jpg'
-                }, {
-                    name: 'Amobee',
-                    img: '../assets/img/sponsors/jobfair/megabyte/amobee.jpg'
-                }, {
-                    name: 'Riverbed',
-                    img: '../assets/img/sponsors/jobfair/megabyte/riverbed.jpg'
-                }, {
-                    name: 'Gartner',
-                    img: '../assets/img/sponsors/jobfair/megabyte/gartner.jpg'
-                }, {
-                    name: 'NccGroup',
-                    img: '../assets/img/sponsors/jobfair/megabyte/nccgroup.jpg'
-                }, {
-                    name: 'Navtalent',
-                    img: '../assets/img/sponsors/jobfair/megabyte/navtalent.jpg'
-                }, {
-                    name: 'Sandia',
-                    img: '../assets/img/sponsors/jobfair/megabyte/sandia.jpg'
-                }, {
-                    name: 'Morningstar',
-                    img: '../assets/img/sponsors/jobfair/megabyte/morningstar.jpg'
-                },
-
-                // startups
-
-                {
-                    name: 'a16z',
-                    img: '../assets/img/sponsors/startups/andreessenhorowitz.jpg'
-                }, {
-                    name: 'Buildout',
-                    img: '../assets/img/sponsors/startups/buildout.jpg'
-                }, {
-                    name: 'Cloudflare',
-                    img: '../assets/img/sponsors/startups/cloudflare.svg'
-                }, {
-                    name: 'Curalate',
-                    img: '../assets/img/sponsors/startups/curalate.svg'
-                }, {
-                    name: 'Fornojo',
-                    img: '../assets/img/sponsors/startups/fornojo.jpg'
-                }, {
-                    name: 'Granular',
-                    img: '../assets/img/sponsors/startups/granular.jpg'
-                }, {
-                    name: 'Liferay',
-                    img: '../assets/img/sponsors/startups/liferay.jpg'
-                }, {
-                    name: 'Mixmax',
-                    img: '../assets/img/sponsors/startups/mixmax.jpg'
-                }, {
-                    name: 'Ocient',
-                    img: '../assets/img/sponsors/startups/ocient.jpg'
-                }, {
-                    name: 'Rubrik',
-                    img: '../assets/img/sponsors/startups/rubrik.jpg'
-                }, {
-                    name: 'Samsara',
-                    img: '../assets/img/sponsors/startups/samsara.jpg'
-                }, {
-                    name: 'Sprout Social',
-                    img: '../assets/img/sponsors/startups/sproutsocial.jpg'
-                }, {
-                    name: 'Jane Street',
-                    img: '../assets/img/sponsors/jobfair/megabyte/janestreet.jpg'
-                }, {
-                    name: 'Capital One',
-                    img: '../assets/img/sponsors/jobfair/megabyte/capitalone.png'
-                }, {
-                    name: 'Huawei',
-                    img: '../assets/img/sponsors/jobfair/megabyte/huawei.jpg'
-                }, {
-                    name: 'West Monroe',
-                    img: '../assets/img/sponsors/jobfair/megabyte/westmonroe.jpg'
-                }, {
-                    name: 'Think BIG',
-                    img: '../assets/img/sponsors/startups/thinkbig.jpg'
-                }]
-            };
-
-            var tier2Sponsors = sponsorsList.tier2.map(function (sponsor, idx) {
-                return _react2.default.createElement(
-                    _reactBootstrap.Col,
-                    { key: idx,
-                        xs: 12,
-                        lg: 6,
-                        sm: 2,
-                        md: 2 },
-                    _react2.default.createElement(
-                        _reactBootstrap.Panel,
-                        { className: 'Sponsors__card Sponsors__card--tier3' },
-                        _react2.default.createElement('img', { className: 'Sponsors__cardLogo',
-                            src: sponsor.img,
-                            alt: sponsor.name
-                        }),
-                        ' '
-                    ),
-                    ' '
-                );
-            });
-
-            var tier3Sponsors = sponsorsList.tier3.map(function (sponsor, idx) {
-                return _react2.default.createElement(
-                    _reactBootstrap.Col,
-                    { key: idx,
-                        xs: 12,
-                        sm: 4,
-                        md: 4 },
-                    _react2.default.createElement(
-                        _reactBootstrap.Panel,
-                        { className: 'Sponsors__card Sponsors__card--tier3' },
-                        _react2.default.createElement('img', { className: 'Sponsors__cardLogo',
-                            src: sponsor.img,
-                            alt: sponsor.name
-                        }),
-                        ' '
-                    ),
-                    ' '
-                );
-            });
-
-            var tier4Sponsors = sponsorsList.tier4.map(function (sponsor, idx) {
-                return _react2.default.createElement(
-                    _reactBootstrap.Col,
-                    { key: idx,
-                        xs: 12,
-                        sm: 3,
-                        md: 3 },
-                    _react2.default.createElement(
-                        _reactBootstrap.Panel,
-                        { className: 'Sponsors__card Sponsors__card--tier4' },
-                        _react2.default.createElement('img', { className: 'Sponsors__cardLogo',
-                            src: sponsor.img,
-                            alt: sponsor.name
-                        }),
-                        ' '
-                    ),
-                    ' '
-                );
-            });
-
-            return _react2.default.createElement(
-                'div',
-                { className: 'Sponsors',
-                    id: 'Sponsors' },
-                _react2.default.createElement(
-                    _reactBootstrap.PageHeader,
-                    { className: 'Sponsors__header' },
-                    ' 2017 Sponsors '
-                ),
-                ' ',
-                _react2.default.createElement(
-                    _reactBootstrap.Grid,
-                    null,
-                    _react2.default.createElement(
-                        _reactBootstrap.Row,
-                        null,
-                        ' ',
-                        tier2Sponsors,
-                        ' '
-                    ),
-                    ' ',
-                    _react2.default.createElement(
-                        _reactBootstrap.Row,
-                        { className: 'Sponsors_centerContent' },
-                        ' ',
-                        tier3Sponsors,
-                        ' '
-                    ),
-                    ' ',
-                    _react2.default.createElement(
-                        _reactBootstrap.Row,
-                        null,
-                        ' ',
-                        tier4Sponsors,
-                        ' '
-                    ),
-                    ' '
-                ),
-                ' '
-            );
-        }
-    }]);
-
-    return Sponsors;
+  return Sponsors;
 }(_react.Component);
 
 exports.default = Sponsors;
@@ -25582,7 +25618,7 @@ exports = module.exports = __webpack_require__(20)(undefined);
 
 
 // module
-exports.push([module.i, ".Navigation {\n  height: 10vh;\n  position: -webkit-sticky;\n  position: sticky;\n  top: -1px;\n  z-index: 1; }\n  .Navigation .navbar {\n    background-color: #252f3a; }\n    .Navigation .navbar .navbar-header {\n      min-height: 10vh; }\n    .Navigation .navbar .nav > li > a {\n      color: #ffff;\n      font-size: 19px;\n      font-family: 'Roboto Slab', serif;\n      line-height: 10vh;\n      text-transform: uppercase;\n      letter-spacing: 0.5px;\n      padding-top: 0;\n      padding-bottom: 0;\n      font-weight: bold;\n      opacity: 1; }\n    .Navigation .navbar .nav > li > a:hover {\n      color: #c9e88f;\n      text-shadow: 5px #c9e88f;\n      text-decoration: none; }\n  .Navigation__logo {\n    width: 55px;\n    animation: spin  8.5s linear infinite; }\n\n@media (max-width: 400px) {\n  .Navigation__logo {\n    width: 40px; }\n  .Navigation .navbar .nav > li > a {\n    font-size: 1em; } }\n\n@keyframes spin {\n  100% {\n    transform: rotate(360deg); } }\n", ""]);
+exports.push([module.i, ".Navigation {\n  height: 12vh;\n  position: -webkit-sticky;\n  position: sticky;\n  top: -1px;\n  z-index: 1; }\n  .Navigation .navbar {\n    background-color: #252f3a; }\n    .Navigation .navbar .navbar-header {\n      min-height: 12vh; }\n    .Navigation .navbar .nav > li > a {\n      color: #ffff;\n      font-size: 19px;\n      font-family: 'Roboto Slab', serif;\n      line-height: 12vh;\n      text-transform: uppercase;\n      letter-spacing: 0.5px;\n      padding-top: 0;\n      padding-bottom: 0;\n      font-weight: bold;\n      opacity: 1; }\n    .Navigation .navbar .nav > li > a:hover {\n      color: #c9e88f;\n      text-shadow: 5px #c9e88f;\n      text-decoration: none; }\n  .Navigation__logo {\n    width: 55px; }\n\n@media (max-width: 400px) {\n  .Navigation__logo {\n    width: 40px; }\n  .Navigation .navbar .nav > li > a {\n    font-size: 1em; } }\n\n@keyframes spin {\n  100% {\n    transform: rotate(360deg); } }\n", ""]);
 
 // exports
 
@@ -25624,7 +25660,7 @@ exports = module.exports = __webpack_require__(20)(undefined);
 
 
 // module
-exports.push([module.i, ".Speakers {\n  padding: 5vh 5vw 10vh 5vw; }\n  .Speakers__card {\n    position: relative;\n    background-color: rgba(60, 116, 113, 0.5);\n    margin: 0.5em;\n    border: none; }\n    .Speakers__card img {\n      max-width: 100%;\n      width: auto;\n      max-height: 300px; }\n  .Speakers__card:hover {\n    background-color: rgba(60, 116, 113, 0.9);\n    opacity: 0.9;\n    box-shadow: 0 4px 8px 0 rgba(60, 116, 113, 0.5), 0 6px 20px 0 #3c7471; }\n  .Speakers__header {\n    text-align: center;\n    color: #ffff;\n    margin-bottom: 1em; }\n  .Speakers__overlay {\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    background-color: rgba(60, 116, 113, 0.5);\n    color: #ffff;\n    padding: 10px;\n    overflow-y: scroll;\n    display: none;\n    z-index: 999; }\n    .Speakers__overlay p {\n      text-indent: 20px;\n      text-align: left; }\n  .Speakers h3 {\n    text-align: center;\n    font-size: 20px;\n    font-weight: light;\n    font-family: \"Roboto Slab\", serif;\n    padding: 0.2em;\n    color: #ffff; }\n  .Speakers .thumbnail {\n    padding: 0; }\n\n#youtube-icon {\n  font-size: 30px;\n  margin-left: 8px; }\n", ""]);
+exports.push([module.i, ".Speakers {\n  padding: 5vh 5vw 10vh 5vw; }\n  .Speakers__card {\n    position: relative;\n    background-color: rgba(60, 116, 113, 0.5);\n    margin: 0.5em;\n    border: none; }\n    .Speakers__card img {\n      max-width: 100%;\n      width: auto;\n      max-height: 300px; }\n  .Speakers__header {\n    text-align: center;\n    color: #ffff;\n    margin-bottom: 1em; }\n  .Speakers__overlay {\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    background-color: rgba(60, 116, 113, 0.5);\n    color: #ffff;\n    padding: 10px;\n    overflow-y: scroll;\n    display: none;\n    z-index: 999; }\n    .Speakers__overlay p {\n      text-indent: 20px;\n      text-align: left; }\n  .Speakers h3 {\n    text-align: center;\n    font-size: 20px;\n    font-weight: light;\n    font-family: \"Roboto Slab\", serif;\n    padding: 0.2em;\n    color: #ffff; }\n  .Speakers .thumbnail {\n    padding: 0; }\n\n#youtube-icon {\n  font-size: 30px;\n  margin-left: 8px; }\n\ndiv > div.Speakers__youtube:hover {\n  background-color: rgba(60, 116, 113, 0.9);\n  opacity: 0.9;\n  box-shadow: 0 4px 8px 0 rgba(60, 116, 113, 0.5), 0 6px 20px 0 #3c7471; }\n\nh2 {\n  font-family: 'Roboto Slab', serif; }\n", ""]);
 
 // exports
 
@@ -25638,7 +25674,7 @@ exports = module.exports = __webpack_require__(20)(undefined);
 
 
 // module
-exports.push([module.i, ".Sponsors {\n  padding: 10vh 5vw 10vh 5vw;\n  background-color: rgba(255, 255, 255, 0.2); }\n  .Sponsors__card {\n    text-align: center;\n    position: relative;\n    min-height: 150px;\n    background: none;\n    border: none; }\n    .Sponsors__card img {\n      position: absolute;\n      left: 50%;\n      top: 50%;\n      transform: translate(-50%, -50%);\n      max-width: 100%;\n      max-height: 100%;\n      padding: 7px; }\n  .Sponsors__gridRow {\n    text-align: center; }\n  .Sponsors__centeredCard {\n    left: 50%;\n    transform: translateX(-50%); }\n  .Sponsors__centerContent {\n    text-align: center;\n    -ms-flex-line-pack: center;\n    align-content: center; }\n  .Sponsors__header {\n    color: white;\n    text-align: center;\n    border: none; }\n", ""]);
+exports.push([module.i, ".Sponsors {\n  padding: 10vh 5vw 10vh 5vw;\n  background-color: rgba(255, 255, 255, 0.2); }\n  .Sponsors__card {\n    text-align: center;\n    position: relative;\n    min-height: 150px;\n    background: none;\n    border: none; }\n    .Sponsors__card img {\n      position: absolute;\n      left: 50%;\n      top: 50%;\n      transform: translate(-50%, -50%);\n      max-width: 100%;\n      max-height: 100%;\n      padding: 7px; }\n  .Sponsors__gridRow {\n    text-align: center; }\n  .Sponsors__centeredCard {\n    left: 50%;\n    transform: translateX(-50%); }\n  .Sponsors__centerContent {\n    text-align: center;\n    -ms-flex-line-pack: center;\n    align-content: center; }\n  .Sponsors__header {\n    color: white;\n    text-align: center;\n    border: none; }\n\nh2 {\n  font-family: 'Roboto Slab', serif; }\n\n.panel {\n  box-shadow: unset !important;\n  -webkit-box-shadow: unset !important;\n  -moz-box-shadow: unset !important; }\n", ""]);
 
 // exports
 
@@ -27290,7 +27326,7 @@ exports.default = createHashHistory;
 
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
   var e, m
-  var eLen = nBytes * 8 - mLen - 1
+  var eLen = (nBytes * 8) - mLen - 1
   var eMax = (1 << eLen) - 1
   var eBias = eMax >> 1
   var nBits = -7
@@ -27303,12 +27339,12 @@ exports.read = function (buffer, offset, isLE, mLen, nBytes) {
   e = s & ((1 << (-nBits)) - 1)
   s >>= (-nBits)
   nBits += eLen
-  for (; nBits > 0; e = e * 256 + buffer[offset + i], i += d, nBits -= 8) {}
+  for (; nBits > 0; e = (e * 256) + buffer[offset + i], i += d, nBits -= 8) {}
 
   m = e & ((1 << (-nBits)) - 1)
   e >>= (-nBits)
   nBits += mLen
-  for (; nBits > 0; m = m * 256 + buffer[offset + i], i += d, nBits -= 8) {}
+  for (; nBits > 0; m = (m * 256) + buffer[offset + i], i += d, nBits -= 8) {}
 
   if (e === 0) {
     e = 1 - eBias
@@ -27323,7 +27359,7 @@ exports.read = function (buffer, offset, isLE, mLen, nBytes) {
 
 exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
   var e, m, c
-  var eLen = nBytes * 8 - mLen - 1
+  var eLen = (nBytes * 8) - mLen - 1
   var eMax = (1 << eLen) - 1
   var eBias = eMax >> 1
   var rt = (mLen === 23 ? Math.pow(2, -24) - Math.pow(2, -77) : 0)
@@ -27356,7 +27392,7 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
       m = 0
       e = eMax
     } else if (e + eBias >= 1) {
-      m = (value * c - 1) * Math.pow(2, mLen)
+      m = ((value * c) - 1) * Math.pow(2, mLen)
       e = e + eBias
     } else {
       m = value * Math.pow(2, eBias - 1) * Math.pow(2, mLen)
