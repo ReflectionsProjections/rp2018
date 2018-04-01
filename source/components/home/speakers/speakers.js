@@ -22,14 +22,14 @@ class Speakers extends Component {
             {
                 'name': 'Alexis Ohanian',
                 'img': '../assets/img/keynotes/alex.jpg',
-                'year': 'Co-founder and Executive Chairman of Reddit',
+                'year': 'Co-founder of Reddit',
                 'wikipedia': 'https://en.wikipedia.org/wiki/Alexis_Ohanian'
             },
             {
                 'name': 'Brian J. Fox',
                 'img': '../assets/img/keynotes/brian.jpg',
-                'year': 2017,
-                'youtube': 'Author of GNU Bash shell',
+                'year': 'Author of GNU Bash shell',
+                'youtube': 'https://www.youtube.com/watch?v=itBU4F50N8Q',
                 'wikipedia': 'https://en.wikipedia.org/wiki/Brian_Fox_(computer_programmer)'
             },
             {
@@ -53,7 +53,7 @@ class Speakers extends Component {
             {
                 'name': 'Travis Oliphant',
                 'img': '../assets/img/keynotes/travis.jpg',
-                'year': 'Founder of Anaconda and primary creator of NumPy',
+                'year': 'Founder of Anaconda and creator of NumPy',
                 'youtube': 'https://www.youtube.com/watch?v=_PDvlqbgxCU',
                 'wikipedia': 'https://en.wikipedia.org/wiki/Travis_Oliphant'
             },
@@ -149,7 +149,7 @@ class Speakers extends Component {
                     <Col key = { idx } xs = { 12 } lg = { 4 } sm = { 9 } md = { 9 } >
                         <Thumbnail className = {cName} src = { speaker.img } >
                         <h3 style = {{ color: "white" } } > { speaker.name } </h3> 
-                        <h3 style = {{ color: "white" } } > { speaker.year } </h3> 
+                        <h4 style = {{ color: "white" } } > { speaker.year } </h4> 
                         <a href= {link}>
                             <span className = "glyphicon glyphicon-play-circle" id = "youtube-icon" style = {{ color: cl } }/>
                         </a> 
@@ -164,7 +164,7 @@ class Speakers extends Component {
                     <Col key = { idx } xs = { 12 } lg = { 4 } sm = { 9 } md = { 9 } >
                         <Thumbnail className = {cName} src = { speaker.img } >
                         <h3 style = {{ color: "white" } } > { speaker.name } </h3> 
-                        <h3 style = {{ color: "white" } } > { speaker.year } </h3> 
+                        <h4 style = {{ color: "white" } } > { speaker.year } </h4> 
                         <a href= {link}>
                             <span className = "glyphicon glyphicon-play-circle" id = "youtube-icon" style = {{ color: cl, opacity: 0 } }/>
                         </a> 
