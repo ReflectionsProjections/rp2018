@@ -135,6 +135,7 @@ class Speakers extends Component {
             }
             var hexStr = "6px solid " + hex;
             var link = speaker.youtube;
+            var wikilink = speaker.wikipedia;
             var reveal = (link != undefined && link != null) ? "visible" : "hidden";
             //hasLinkColor - Color of glyphicon link if the speaker's card DOES LINK to a YouTube video
             const hasLinkColor = "#c9e88f";
@@ -146,22 +147,30 @@ class Speakers extends Component {
             if (link) {
                 return ( 
                     <Col key = { idx } xs = { 12 } lg = { 4 } sm = { 9 } md = { 9 } >
-                        <Thumbnail onClick = {(e) => this.handleClick(e, link, idx) } className = {cName} src = { speaker.img } >
+                        <Thumbnail className = {cName} src = { speaker.img } >
                         <h3 style = {{ color: "white" } } > { speaker.name } </h3> 
                         <h3 style = {{ color: "white" } } > { speaker.year } </h3> 
-                        <span className = "glyphicon glyphicon-play-circle" id = "youtube-icon" style = {{ color: cl } }/>
-                        <span className = "glyphicon glyphicon-info-sign" id = "wiki-icon" style = {{ color: wikicolor} }/>  
+                        <a href= {link}>
+                            <span className = "glyphicon glyphicon-play-circle" id = "youtube-icon" style = {{ color: cl } }/>
+                        </a> 
+                        <a href= {wikilink}>
+                            <span className = "glyphicon glyphicon-info-sign" id = "wiki-icon" style = {{ color: wikicolor} }/>
+                        </a> 
                         </Thumbnail> 
                     </Col>
                 )
             } else {
                 return(
                     <Col key = { idx } xs = { 12 } lg = { 4 } sm = { 9 } md = { 9 } >
-                        <Thumbnail onClick = {(e) => this.handleClick(e, link, idx) } className = {cName} src = { speaker.img } >
+                        <Thumbnail className = {cName} src = { speaker.img } >
                         <h3 style = {{ color: "white" } } > { speaker.name } </h3> 
                         <h3 style = {{ color: "white" } } > { speaker.year } </h3> 
-                        <span className = "glyphicon glyphicon-play-circle" id = "youtube-icon" style = {{ color: cl, opacity: 0 } }/>  
-                        <span className = "glyphicon glyphicon-info-sign" id = "wiki-icon" style = {{ color: wikicolor} }/>
+                        <a href= {link}>
+                            <span className = "glyphicon glyphicon-play-circle" id = "youtube-icon" style = {{ color: cl, opacity: 0 } }/>
+                        </a> 
+                        <a href= {wikilink}>
+                            <span className = "glyphicon glyphicon-info-sign" id = "wiki-icon" style = {{ color: wikicolor} }/>
+                        </a> 
                         </Thumbnail> 
                     </Col>
                 )
