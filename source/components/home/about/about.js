@@ -77,8 +77,8 @@ class About extends Component {
                 <div className="about-grid">
                     <div className="col">
                         <FlipCard>
-                            <div><h3>What is R|P?</h3></div>
-                            <div>
+                            <div><h3>What is Reflections | Projections?</h3></div>
+                            <div className="descrip">
                             Reflections | Projections is an annual technology conference organized and run by students
                             at the University of Illinois at Urbana-Champaign, drawing students, speakers, and companies from around the world.
                             </div>
@@ -87,7 +87,7 @@ class About extends Component {
                     <div className="col">
                         <FlipCard>
                             <div><h3>What can I do?</h3></div>
-                            <div>
+                            <div className="descrip">
                             The week-long event features tech talks via speakers from across the industry and academia, two career fairs, and an array of workshops.
                             Put your wits to the test with our Artificial Intelligence programming competition, MechMania, or our puzzle challenge Puzzlebang!
                             </div>
@@ -96,7 +96,7 @@ class About extends Component {
                     <div className="col">
                         <FlipCard>
                             <div><h3>Who can attend?</h3></div>
-                            <div>
+                            <div className="descrip">
                             Reflections | Projections is free and open to anyone regardless of age, major, or
                             affiliation with the University of Illinois. Come join a discussion led by some of
                             the brightest minds in the business about the bleeding edge of the tech industry! 

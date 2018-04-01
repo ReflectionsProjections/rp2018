@@ -4,10 +4,10 @@
     overflow: hidden;
     font-family: 'Roboto', sans-serif;
     color: #275354;
-    font-weight: lighter;
     display: flex;
     flex-direction: column;
     padding: 10vh 5vw 10vh 5vw;
+    background-color: rgba(255, 255, 255, 0.17);
 }
 
 .about-grid {
@@ -21,15 +21,20 @@
 }
 
 .ReactFlipCard {
-    min-height: 40vh;
+    height: 40vh;
+    outline: none;
 }
 
 .ReactFlipCard,
   .ReactFlipCard__Front,
   .ReactFlipCard__Back {
     width: 25vw;
+    outline: none;
   }
 
+.ReactFlipCard__Front {
+    min-height: 15vh;
+}
 
 .ReactFlipCard__Front,
   .ReactFlipCard__Back {
@@ -42,25 +47,52 @@
     -webkit-transition-timing-function: linear;
     transition-timing-function: linear;
     vertical-align: middle;
-    height: inherit;
 }
 
 .ReactFlipCard__Front {
-    //background: linear-gradient(to bottom right, #d1e5ac, #56b7b7);
     background-color: rgba(60, 116, 113, 0.1);
     padding: 30px;
     text-align: center;
     color: #cadea5;
-    border: 2px solid #cadea5;
+    border: 4px solid #cadea5;
+    font-weight: bold;
 }
 
 .ReactFlipCard__Back {
-    background: linear-gradient(to bottom right, #56b7b7, #d1e5ac);
+    background: linear-gradient(to top right, #d3e5ae 40%, #56a09b 100%);
     padding: 30px;
     text-align: left;
     font-weight: 100;
-    opacity: 0.8;
     border: none;
+    opacity: 2;
+    margin-bottom: 10px;
+}
+
+.descrip {
+    font-size: 20px;
+}
+
+@media (max-width: 1240px) {
+    .about-grid {
+        display: block;
+        .col {
+            width: 100%;
+        }
+    }
+
+    .ReactFlipCard,
+    .ReactFlipCard__Back {
+        width: 85vw;
+        margin: 0 auto;
+        height: 190px;
+        margin-bottom: 10px;
+    }
+    
+    .ReactFlipCard__Front{
+        width: 85vw;
+        margin: 0 auto;
+        min-height: 65px;
+    }
 }
 
 @media (max-width: 440px) {
@@ -72,9 +104,15 @@
     }
 
     .ReactFlipCard,
-    .ReactFlipCard__Front,
     .ReactFlipCard__Back {
-        width: 80vw;
+        width: 85vw;
         margin: 0 auto;
+        margin-bottom: 1em;
+        min-height: 320px;
+    }
+
+    .descrip {
+        font-size: 18px;
     }
 }
+

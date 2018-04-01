@@ -11500,7 +11500,7 @@ var Photos = function (_Component) {
             return _react2.default.createElement(
               'div',
               null,
-              _react2.default.createElement('img', { src: item.src, alt: item.alt, style: { maxWidth: 350 } })
+              _react2.default.createElement('img', { id: 'Photos_items', src: item.src, alt: item.alt })
             );
           })
         )
@@ -20323,11 +20323,15 @@ var About = function (_Component) {
                             _react2.default.createElement(
                                 'div',
                                 null,
-                                'What is Reflections|Projections?'
+                                _react2.default.createElement(
+                                    'h3',
+                                    null,
+                                    'What is Reflections | Projections?'
+                                )
                             ),
                             _react2.default.createElement(
                                 'div',
-                                null,
+                                { className: 'descrip' },
                                 'Reflections | Projections is an annual technology conference organized and run by students at the University of Illinois at Urbana-Champaign, drawing students, speakers, and companies from around the world.'
                             )
                         )
@@ -20349,7 +20353,7 @@ var About = function (_Component) {
                             ),
                             _react2.default.createElement(
                                 'div',
-                                null,
+                                { className: 'descrip' },
                                 'The week-long event features tech talks via speakers from across the industry and academia, two career fairs, and an array of workshops. Put your wits to the test with our Artificial Intelligence programming competition, MechMania, or our puzzle challenge Puzzlebang!'
                             )
                         )
@@ -20371,7 +20375,7 @@ var About = function (_Component) {
                             ),
                             _react2.default.createElement(
                                 'div',
-                                null,
+                                { className: 'descrip' },
                                 'Reflections | Projections is free and open to anyone regardless of age, major, or affiliation with the University of Illinois. Come join a discussion led by some of the brightest minds in the business about the bleeding edge of the tech industry!'
                             )
                         )
@@ -20610,7 +20614,7 @@ var Footer = function (_Component) {
 			};
 			return _react2.default.createElement(
 				'div',
-				{ className: 'Footer container' },
+				{ className: 'Footer container', id: 'Footer' },
 				_react2.default.createElement(
 					_reactBootstrap.Media,
 					null,
@@ -20625,27 +20629,63 @@ var Footer = function (_Component) {
 						_react2.default.createElement(
 							'p',
 							{ className: 'Footer__contact' },
-							_react2.default.createElement(FA, { name: 'phone' }),
-							' +1 (217) 333-5828 ',
+							_react2.default.createElement(
+								'a',
+								null,
+								_react2.default.createElement(FA, { name: 'phone' }),
+								' +1 (217) 333-5828 '
+							),
 							_react2.default.createElement('br', null),
 							_react2.default.createElement(
 								'a',
 								{ href: 'mailto:conference-chair@acm.illinois.edu' },
 								_react2.default.createElement(FA, { name: 'envelope' }),
-								' conference-chair@acm.illinois.edu'
+								' conference-chair@acm.illinois.edu '
 							),
 							' ',
 							_react2.default.createElement('br', null),
 							_react2.default.createElement(
 								'a',
-								{ href: 'https://twitter.com/acmrp2017' },
-								_react2.default.createElement(FA, { name: 'twitter' }),
-								' @acmrp2018'
+								{ href: 'https://www.facebook.com/acmrp/' },
+								_react2.default.createElement(FA, { name: 'facebook' }),
+								' ACM Reflections|Projections Conference '
 							),
 							' ',
 							_react2.default.createElement('br', null),
-							_react2.default.createElement(FA, { name: 'snapchat-ghost' }),
-							' officialrp2018',
+							_react2.default.createElement(
+								'a',
+								{ href: 'https://medium.com/@rp.uiuc.acm' },
+								_react2.default.createElement(FA, { name: 'medium' }),
+								' Reflections|Projections '
+							),
+							' ',
+							_react2.default.createElement('br', null),
+							_react2.default.createElement(
+								'a',
+								{ href: 'https://twitter.com/uiuc_rp' },
+								_react2.default.createElement(FA, { name: 'twitter' }),
+								' @uiuc_rp '
+							),
+							_react2.default.createElement(
+								'a',
+								{ href: 'https://www.reddit.com/user/uiuc_rp' },
+								_react2.default.createElement(FA, { name: 'reddit' }),
+								' uiuc_rp '
+							),
+							_react2.default.createElement('br', null),
+							_react2.default.createElement(
+								'a',
+								{ href: 'https://www.instagram.com/uiuc_rp/' },
+								_react2.default.createElement(FA, { name: 'instagram' }),
+								' @uiuc_rp '
+							),
+							_react2.default.createElement(
+								'a',
+								{ id: 'snapshot' },
+								_react2.default.createElement(FA, { name: 'snapchat-ghost' }),
+								' uiuc_rp ',
+								_react2.default.createElement('img', { className: 'tooltiptext', src: '../assets/img/snapcode.png' })
+							),
 							_react2.default.createElement('br', null)
 						)
 					)
@@ -20807,7 +20847,7 @@ var Navigation = function (_Component) {
                 var scrolledY = window.scrollY;
                 if (scrolledY) {
                     window.scroll({
-                        top: scrolledY - 50,
+                        top: scrolledY - 25,
                         left: 0,
                         behavior: 'smooth'
                     });
@@ -20821,6 +20861,10 @@ var Navigation = function (_Component) {
                 } else {
                     linksEl.style.display = 'block';
                 }
+            };
+
+            this.emailTo = function (address) {
+                location.href = address;
             };
 
             return _react2.default.createElement(
@@ -20837,7 +20881,7 @@ var Navigation = function (_Component) {
                             null,
                             _react2.default.createElement(
                                 'a',
-                                { href: '#' },
+                                { href: '#', style: { opacity: 1 } },
                                 _react2.default.createElement('img', { className: 'Navigation__logo', src: '../assets/svg/logo.svg' })
                             )
                         ),
@@ -20853,7 +20897,7 @@ var Navigation = function (_Component) {
                                 _reactBootstrap.NavItem,
                                 { onClick: function onClick() {
                                         return _this2.scrollTo('About');
-                                    }, eventKey: 1, href: '#', className: 'Navigation__item--active' },
+                                    }, eventKey: 1, href: '#About', className: 'Navigation__item--active' },
                                 'About'
                             ),
                             _react2.default.createElement(
@@ -20867,13 +20911,15 @@ var Navigation = function (_Component) {
                                 _reactBootstrap.NavItem,
                                 { onClick: function onClick() {
                                         return _this2.scrollTo('Sponsors');
-                                    }, eventKey: 4, href: '#' },
+                                    }, eventKey: 3, href: '#Sponsors' },
                                 'Sponsors'
                             ),
                             _react2.default.createElement(
                                 _reactBootstrap.NavItem,
-                                { href: 'https://acmrp.typeform.com/to/Tv3j4W', target: '_blank', rel: 'noopener noreferrer' },
-                                'Register'
+                                { onClick: function onClick() {
+                                        return _this2.scrollTo('Footer');
+                                    }, eventKey: 4, href: '#Contacts' },
+                                'Contacts'
                             )
                         )
                     )
@@ -21014,23 +21060,20 @@ var Speakers = function (_Component) {
             var speakerList = [
             // Keynotes
             {
+                'name': 'Steve Wozniak',
+                'img': '../assets/img/keynotes/steve.jpg',
+                'year': 1995
+            }, {
+                'name': 'Alexis Ohanian',
+                'img': '../assets/img/keynotes/alex.jpg',
+                'year': 2009
+            }, {
                 'name': 'Brian J. Fox',
-                'desc': 'Computer programmer, entrepreneur, author, and free software advocate',
                 'img': '../assets/img/keynotes/brian.jpg',
-                'bio': 'Brian J. Fox is an American computer programmer, entrepreneur, author, and free software advocate. He was the original author of the GNU Bash shell, which he announced as a beta in June 1989. Fox also built the first interactive online banking software in the U.S. for Wells Fargo in 1995, and he created an open source election system in 2008.\n' + '\n' + 'Brian got involved in computing in the early 1980s. He authored Terrapin Logo for the Apple //e and Apple //GS computers, and then began working with Richard Stallman (RMS) to help build the Free Software Foundation (FSF) and project GNU at MIT. While working with RMS, Brian authored Info and Makeinfo and contributed heavily to the TeXinfo documentation system. He also was the maintainer of Emacs, and contributed to both gcc and gdb. His "readline" and "history" libraries are widely used in a wide variety of applications.\n',
-                'year': 2017
+                'year': 2017,
+                'youtube': 'https://www.youtube.com/watch?v=itBU4F50N8Q'
             }, {
-                'name': 'Chris Gladwin',
-                'desc': 'Founder and Vice Chairman of CleverSafe',
-                'img': '../assets/img/keynotes/chris.jpg',
-                'bio': 'In 2004, Chris founded Cleversafe which became the largest and most strategic object storage vendor in the world (according to IDC.)  He raised $100M and then led the company to a $1.4B exit in 2015 when IBM acquired the company.  ' + 'The technology team he created generated over 1,000 patents granted or filed, creating one of the ten most powerful patent portfolios in the world.  Prior to Cleversafe, Chris was the Foundering CEO of startups MusicNow and Cruise Technologies, and led ' + 'product strategy for Zenith Data Systems.  He started his career at Lockheed Martin as a database programmer, and holds an engineering degree from MIT.  Chris is now the CEO and Co-Founder of Ocient whose mission is to successfully provide the leading platform the world uses to analyze its largest datasets.',
-                'year': 2017
-            }, {
-                'name': 'Basil Alwan',
-                'img': '../assets/img/keynotes/basil.jpg',
-                'year': 2016
-            }, {
-                'name': 'Jay “Saurik” freeman',
+                'name': 'Jay “Saurik” Freeman',
                 'img': '../assets/img/keynotes/jay.jpg',
                 'year': 2014
             }, {
@@ -21038,22 +21081,53 @@ var Speakers = function (_Component) {
                 'img': '../assets/img/keynotes/peter.jpg',
                 'year': 2013
             }, {
+                'name': 'Danielle Feinberg',
+                'img': '../assets/img/keynotes/danielle.jpg',
+                'year': 2012
+            }, {
+                'name': 'Travis Oliphant',
+                'img': '../assets/img/keynotes/travis.jpg',
+                'year': 2017,
+                'youtube': 'https://www.youtube.com/watch?v=_PDvlqbgxCU'
+            }, {
+                'name': 'Anna Patterson',
+                'img': '../assets/img/keynotes/anna.jpg',
+                'year': 2015
+            }, {
                 'name': 'Robin Walker',
                 'img': '../assets/img/keynotes/robin.jpg',
                 'year': 2013
+            }, {
+                'name': 'Laura I. Gómez',
+                'img': '../assets/img/keynotes/laura.jpg',
+                'year': 2016
+            }, {
+                'name': 'Basil Alwan',
+                'img': '../assets/img/keynotes/basil.jpg',
+                'year': 2016
+            }, {
+                'name': 'Cassidy Williams',
+                'img': '../assets/img/keynotes/cassidy.jpg',
+                'year': 2015
+            }, {
+                'name': 'Chris Gladwin',
+                'img': '../assets/img/keynotes/chris.jpg',
+                'year': 2017
             }, {
                 'name': 'Stefano Zacchiroli',
                 'img': '../assets/img/keynotes/stefano.jpg',
                 'year': 2012
             }, {
-                'name': 'Alex Ohanian',
-                'img': '../assets/img/keynotes/alex.jpg',
-                'year': 2009
-            }, {
-                'name': 'Steve Wozniak',
-                'img': '../assets/img/keynotes/steve.jpg',
-                'year': 1995
+                'name': 'Roy Bhat',
+                'img': '../assets/img/keynotes/roy.jpg',
+                'year': 2016
             }];
+
+            this.handleClick = function (evt, url, id) {
+                if (url != null && url != undefined) {
+                    window.open(url, '_blank');
+                }
+            };
 
             var speakerView = speakerList.map(function (speaker, idx) {
                 var hex = "";
@@ -21076,24 +21150,32 @@ var Speakers = function (_Component) {
 
                 }
                 var hexStr = "6px solid " + hex;
+                var link = speaker.youtube;
+                var reveal = link != undefined && link != null ? "visible" : "hidden";
+                var cl = link != undefined && link != null ? "#c9e88f" : "#a4b0bc";
                 return _react2.default.createElement(
                     _reactBootstrap.Col,
                     { key: idx, xs: 12, lg: 4, sm: 9, md: 9 },
                     _react2.default.createElement(
                         _reactBootstrap.Thumbnail,
                         { onClick: function onClick(e) {
-                                return _this2.handleClick(e, 'js-overlay-' + idx);
+                                return _this2.handleClick(e, link, idx);
                             }, className: 'Speakers__card js-speakercard', src: speaker.img },
                         _react2.default.createElement(
                             'h3',
-                            null,
-                            speaker.name
+                            { style: { color: "white" } },
+                            ' ',
+                            speaker.name,
+                            ' '
                         ),
                         _react2.default.createElement(
                             'h3',
-                            null,
-                            speaker.year
-                        )
+                            { style: { color: "white" } },
+                            ' ',
+                            speaker.year,
+                            ' '
+                        ),
+                        _react2.default.createElement('span', { className: 'glyphicon glyphicon-play-circle', id: 'youtube-icon', style: { color: cl } })
                     )
                 );
             });
@@ -21104,7 +21186,7 @@ var Speakers = function (_Component) {
                 _react2.default.createElement(
                     _reactBootstrap.PageHeader,
                     { className: 'Speakers__header' },
-                    'Past Keynote Speakers'
+                    ' Past Keynote Speakers '
                 ),
                 _react2.default.createElement(
                     _reactBootstrap.Grid,
@@ -21112,8 +21194,11 @@ var Speakers = function (_Component) {
                     _react2.default.createElement(
                         _reactBootstrap.Row,
                         null,
-                        speakerView
-                    )
+                        ' ',
+                        speakerView,
+                        ' '
+                    ),
+                    ' '
                 )
             );
         }
@@ -21211,7 +21296,7 @@ var Sponsors = function (_Component) {
                     img: '../assets/img/sponsors/jobfair/megabyte/pinterest.jpg'
                 }, {
                     name: 'CME Group',
-                    img: '../assets/img/sponsors/jobfair/megabyte/cmegroup.jpg'
+                    img: '../assets/img/sponsors/jobfair/megabyte/cmegroup.png'
                 }, {
                     name: 'Uber',
                     img: '../assets/img/sponsors/jobfair/megabyte/uber.jpg'
@@ -21284,7 +21369,7 @@ var Sponsors = function (_Component) {
                     img: '../assets/img/sponsors/jobfair/megabyte/janestreet.jpg'
                 }, {
                     name: 'Capital One',
-                    img: '../assets/img/sponsors/jobfair/megabyte/capitalone.jpg'
+                    img: '../assets/img/sponsors/jobfair/megabyte/capitalone.png'
                 }, {
                     name: 'Huawei',
                     img: '../assets/img/sponsors/jobfair/megabyte/huawei.jpg'
@@ -21292,7 +21377,7 @@ var Sponsors = function (_Component) {
                     name: 'West Monroe',
                     img: '../assets/img/sponsors/jobfair/megabyte/westmonroe.jpg'
                 }, {
-                    name: 'Thing B1G',
+                    name: 'Think BIG',
                     img: '../assets/img/sponsors/startups/thinkbig.jpg'
                 }]
             };
@@ -21300,66 +21385,103 @@ var Sponsors = function (_Component) {
             var tier2Sponsors = sponsorsList.tier2.map(function (sponsor, idx) {
                 return _react2.default.createElement(
                     _reactBootstrap.Col,
-                    { key: idx, lg: 6, xs: 6, sm: 6, md: 6 },
+                    { key: idx,
+                        xs: 12,
+                        lg: 6,
+                        sm: 2,
+                        md: 2 },
                     _react2.default.createElement(
                         _reactBootstrap.Panel,
                         { className: 'Sponsors__card Sponsors__card--tier3' },
-                        _react2.default.createElement('img', { className: 'Sponsors__cardLogo', src: sponsor.img, alt: sponsor.name })
-                    )
+                        _react2.default.createElement('img', { className: 'Sponsors__cardLogo',
+                            src: sponsor.img,
+                            alt: sponsor.name
+                        }),
+                        ' '
+                    ),
+                    ' '
                 );
             });
 
             var tier3Sponsors = sponsorsList.tier3.map(function (sponsor, idx) {
                 return _react2.default.createElement(
                     _reactBootstrap.Col,
-                    { key: idx, xs: 12, sm: 4, md: 4 },
+                    { key: idx,
+                        xs: 12,
+                        sm: 4,
+                        md: 4 },
                     _react2.default.createElement(
                         _reactBootstrap.Panel,
                         { className: 'Sponsors__card Sponsors__card--tier3' },
-                        _react2.default.createElement('img', { className: 'Sponsors__cardLogo', src: sponsor.img, alt: sponsor.name })
-                    )
+                        _react2.default.createElement('img', { className: 'Sponsors__cardLogo',
+                            src: sponsor.img,
+                            alt: sponsor.name
+                        }),
+                        ' '
+                    ),
+                    ' '
                 );
             });
 
             var tier4Sponsors = sponsorsList.tier4.map(function (sponsor, idx) {
                 return _react2.default.createElement(
                     _reactBootstrap.Col,
-                    { key: idx, xs: 12, sm: 3, md: 3 },
+                    { key: idx,
+                        xs: 12,
+                        sm: 3,
+                        md: 3 },
                     _react2.default.createElement(
                         _reactBootstrap.Panel,
                         { className: 'Sponsors__card Sponsors__card--tier4' },
-                        _react2.default.createElement('img', { className: 'Sponsors__cardLogo', src: sponsor.img, alt: sponsor.name })
-                    )
+                        _react2.default.createElement('img', { className: 'Sponsors__cardLogo',
+                            src: sponsor.img,
+                            alt: sponsor.name
+                        }),
+                        ' '
+                    ),
+                    ' '
                 );
             });
 
             return _react2.default.createElement(
                 'div',
-                { className: 'Sponsors', id: 'Sponsors' },
+                { className: 'Sponsors',
+                    id: 'Sponsors' },
                 _react2.default.createElement(
                     _reactBootstrap.PageHeader,
                     { className: 'Sponsors__header' },
-                    'Sponsors of 2017'
+                    ' 2017 Sponsors '
                 ),
+                ' ',
                 _react2.default.createElement(
                     _reactBootstrap.Grid,
                     null,
                     _react2.default.createElement(
                         _reactBootstrap.Row,
                         null,
-                        tier2Sponsors
+                        ' ',
+                        tier2Sponsors,
+                        ' '
                     ),
+                    ' ',
                     _react2.default.createElement(
                         _reactBootstrap.Row,
                         { className: 'Sponsors_centerContent' },
-                        tier3Sponsors
+                        ' ',
+                        tier3Sponsors,
+                        ' '
                     ),
+                    ' ',
                     _react2.default.createElement(
                         _reactBootstrap.Row,
                         null,
-                        tier4Sponsors
-                    )
-                )
+                        ' ',
+                        tier4Sponsors,
+                        ' '
+                    ),
+                    ' '
+                ),
+                ' '
             );
         }
     }]);
@@ -21410,6 +21532,12 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var popoverBottom = _react2.default.createElement(
+    _reactBootstrap.Popover,
+    { id: 'popover-positioned-bottom', style: { backgroundColor: "rgba(43, 92, 93, 0.5)", border: "2px solid #cadea5", borderRadius: 0 } },
+    'If you are willing to sponsor!'
+);
+
 var Start = function (_Component) {
     _inherits(Start, _Component);
 
@@ -21432,7 +21560,7 @@ var Start = function (_Component) {
                     _react2.default.createElement(
                         'p',
                         { className: 'caps' },
-                        'September 17 - 22th, 2018'
+                        'September 17 - 22nd, 2018'
                     ),
                     _react2.default.createElement(
                         'div',
@@ -21440,17 +21568,22 @@ var Start = function (_Component) {
                         _react2.default.createElement(_countdown2.default, null),
                         _react2.default.createElement(
                             'div',
-                            { style: { margin: "15px", paddingBottom: "10px" } },
+                            { style: { margin: "15px", paddingBottom: "10px", fontSize: "18px" } },
                             'DAYS\xA0 LEFT'
                         )
                     ),
                     _react2.default.createElement(
+                        'div',
+                        { className: 'intro' },
+                        ' Interested in sponsoring or attending? '
+                    ),
+                    _react2.default.createElement(
                         'a',
-                        { className: 'btn', href: 'http://reflectionsprojections.org/signup', target: '_blank', rel: 'noopener noreferrer' },
+                        { className: 'btn', href: 'mailto:conference-chair@acm.illinois.edu' },
                         _react2.default.createElement(
                             'button',
-                            null,
-                            'REGISTER'
+                            { className: 'contact' },
+                            'CONTACT US'
                         )
                     ),
                     _react2.default.createElement(_scrolldown2.default, null)
@@ -25407,7 +25540,7 @@ exports = module.exports = __webpack_require__(20)(undefined);
 
 
 // module
-exports.push([module.i, "#About {\n  font-size: 16px;\n  min-height: 100vh;\n  overflow: hidden;\n  font-family: 'Roboto', sans-serif;\n  color: #275354;\n  font-weight: lighter;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  padding: 10vh 5vw 10vh 5vw; }\n\n.about-grid {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-pack: justify;\n  justify-content: space-between;\n  width: 100%; }\n\n.about-grid .col {\n  margin: 1em; }\n\n.ReactFlipCard {\n  min-height: 40vh; }\n\n.ReactFlipCard,\n.ReactFlipCard__Front,\n.ReactFlipCard__Back {\n  width: 25vw; }\n\n.ReactFlipCard__Front,\n.ReactFlipCard__Back {\n  -webkit-backface-visibility: hidden;\n  backface-visibility: hidden;\n  transition: transform 300ms;\n  transition-timing-function: linear;\n  vertical-align: middle;\n  height: inherit; }\n\n.ReactFlipCard__Front {\n  background-color: rgba(60, 116, 113, 0.1);\n  padding: 30px;\n  text-align: center;\n  color: #cadea5;\n  border: 2px solid #cadea5; }\n\n.ReactFlipCard__Back {\n  background: linear-gradient(to bottom right, #56b7b7, #d1e5ac);\n  padding: 30px;\n  text-align: left;\n  font-weight: 100;\n  opacity: 0.8; }\n\n@media (max-width: 440px) {\n  .about-grid {\n    display: block; }\n    .about-grid .col {\n      width: 100%; }\n  .ReactFlipCard,\n  .ReactFlipCard__Front,\n  .ReactFlipCard__Back {\n    width: 80vw;\n    margin: 0 auto; } }\n", ""]);
+exports.push([module.i, "#About {\n  font-size: 16px;\n  min-height: 100vh;\n  overflow: hidden;\n  font-family: 'Roboto', sans-serif;\n  color: #275354;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  padding: 10vh 5vw 10vh 5vw;\n  background-color: rgba(255, 255, 255, 0.17); }\n\n.about-grid {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-pack: justify;\n  justify-content: space-between;\n  width: 100%; }\n\n.about-grid .col {\n  margin: 1em; }\n\n.ReactFlipCard {\n  height: 40vh;\n  outline: none; }\n\n.ReactFlipCard,\n.ReactFlipCard__Front,\n.ReactFlipCard__Back {\n  width: 25vw;\n  outline: none; }\n\n.ReactFlipCard__Front {\n  min-height: 15vh; }\n\n.ReactFlipCard__Front,\n.ReactFlipCard__Back {\n  -webkit-backface-visibility: hidden;\n  backface-visibility: hidden;\n  transition: transform 300ms;\n  transition-timing-function: linear;\n  vertical-align: middle; }\n\n.ReactFlipCard__Front {\n  background-color: rgba(60, 116, 113, 0.1);\n  padding: 30px;\n  text-align: center;\n  color: #cadea5;\n  border: 4px solid #cadea5;\n  font-weight: bold; }\n\n.ReactFlipCard__Back {\n  background: linear-gradient(to top right, #d3e5ae 40%, #56a09b 100%);\n  padding: 30px;\n  text-align: left;\n  font-weight: 100;\n  border: none;\n  opacity: 2;\n  margin-bottom: 10px; }\n\n.descrip {\n  font-size: 20px; }\n\n@media (max-width: 1240px) {\n  .about-grid {\n    display: block; }\n    .about-grid .col {\n      width: 100%; }\n  .ReactFlipCard,\n  .ReactFlipCard__Back {\n    width: 85vw;\n    margin: 0 auto;\n    height: 190px;\n    margin-bottom: 10px; }\n  .ReactFlipCard__Front {\n    width: 85vw;\n    margin: 0 auto;\n    min-height: 65px; } }\n\n@media (max-width: 440px) {\n  .about-grid {\n    display: block; }\n    .about-grid .col {\n      width: 100%; }\n  .ReactFlipCard,\n  .ReactFlipCard__Back {\n    width: 85vw;\n    margin: 0 auto;\n    margin-bottom: 1em;\n    min-height: 320px; }\n  .descrip {\n    font-size: 18px; } }\n", ""]);
 
 // exports
 
@@ -25435,7 +25568,7 @@ exports = module.exports = __webpack_require__(20)(undefined);
 
 
 // module
-exports.push([module.i, ".Footer {\n  padding: 2em 0; }\n  .Footer__header {\n    color: white;\n    text-align: center; }\n  .Footer__contact {\n    color: white;\n    font-family: 'Robot', sans-serif; }\n    .Footer__contact .glyphicon {\n      top: 3px;\n      left: 3px;\n      margin-right: 0.5em; }\n\n.ReactModal__Body--open {\n  background-color: rgba(20, 20, 20, 0.85) !important; }\n\n.ReactModal__Overlay .ReactModal__Overlay--after-open {\n  background-color: black; }\n", ""]);
+exports.push([module.i, ".Footer {\n  padding: 2em 0; }\n  .Footer__header {\n    color: white;\n    text-align: center; }\n  .Footer__contact {\n    color: white;\n    font-family: \"Roboto Slab\", serif;\n    font-size: 18px;\n    font-weight: 300; }\n    .Footer__contact .glyphicon {\n      top: 3px;\n      left: 3px;\n      margin-right: 0.5em; }\n\na {\n  padding: 6px; }\n\n.Footer__contact a:hover {\n  color: #c9e88f;\n  text-shadow: 2px #c9e88f;\n  text-decoration: none !important; }\n\n#snapshot {\n  position: relative; }\n\n#snapshot .tooltiptext {\n  left: 0%; }\n\n#snapshot:hover .tooltiptext {\n  visibility: visible;\n  opacity: 1; }\n\n.tooltiptext {\n  visibility: hidden;\n  width: auto;\n  max-width: 150%;\n  background-color: #555;\n  color: #fff;\n  text-align: center;\n  border-radius: 25px;\n  padding: 7px;\n  position: absolute;\n  z-index: 1;\n  bottom: 20%;\n  left: 170%;\n  margin-left: 100px;\n  opacity: 0;\n  transition: opacity 0.3s;\n  font-size: 16px; }\n\n.tooltiptext::after {\n  position: absolute;\n  top: 100%;\n  left: 50%;\n  border-width: 5px;\n  border-style: solid;\n  border-color: #555 transparent transparent transparent; }\n\n.ReactModal__Body--open {\n  background-color: rgba(20, 20, 20, 0.85) !important; }\n\n.ReactModal__Overlay .ReactModal__Overlay--after-open {\n  background-color: black; }\n\n@media (max-width: 440px) {\n  .Footer__contact {\n    font-size: 16px; }\n  .tooltiptext {\n    bottom: 100%;\n    margin-left: -50px; } }\n", ""]);
 
 // exports
 
@@ -25449,7 +25582,7 @@ exports = module.exports = __webpack_require__(20)(undefined);
 
 
 // module
-exports.push([module.i, ".Navigation {\n  height: 10vh;\n  position: -webkit-sticky;\n  position: sticky;\n  top: -1px;\n  z-index: 1; }\n  .Navigation .navbar {\n    background-color: #151f28; }\n    .Navigation .navbar .navbar-header {\n      min-height: 10vh; }\n    .Navigation .navbar .nav > li > a {\n      color: white;\n      font-size: 19px;\n      font-family: 'Roboto Slab', serif;\n      line-height: 10vh;\n      text-transform: uppercase;\n      letter-spacing: 0.5px;\n      padding-top: 0;\n      padding-bottom: 0; }\n  .Navigation__logo {\n    width: 50px; }\n\n@media (max-width: 400px) {\n  .Navigation__logo {\n    width: 40px; }\n  .Navigation .navbar .nav > li > a {\n    font-size: 1em; } }\n", ""]);
+exports.push([module.i, ".Navigation {\n  height: 10vh;\n  position: -webkit-sticky;\n  position: sticky;\n  top: -1px;\n  z-index: 1; }\n  .Navigation .navbar {\n    background-color: #252f3a; }\n    .Navigation .navbar .navbar-header {\n      min-height: 10vh; }\n    .Navigation .navbar .nav > li > a {\n      color: #ffff;\n      font-size: 19px;\n      font-family: 'Roboto Slab', serif;\n      line-height: 10vh;\n      text-transform: uppercase;\n      letter-spacing: 0.5px;\n      padding-top: 0;\n      padding-bottom: 0;\n      font-weight: bold;\n      opacity: 1; }\n    .Navigation .navbar .nav > li > a:hover {\n      color: #c9e88f;\n      text-shadow: 5px #c9e88f;\n      text-decoration: none; }\n  .Navigation__logo {\n    width: 55px;\n    animation: spin  8.5s linear infinite; }\n\n@media (max-width: 400px) {\n  .Navigation__logo {\n    width: 40px; }\n  .Navigation .navbar .nav > li > a {\n    font-size: 1em; } }\n\n@keyframes spin {\n  100% {\n    transform: rotate(360deg); } }\n", ""]);
 
 // exports
 
@@ -25463,7 +25596,7 @@ exports = module.exports = __webpack_require__(20)(undefined);
 
 
 // module
-exports.push([module.i, "#Photos {\n  min-height: 50vh;\n  padding: 2vh 2vw 5vh 2vw; }\n", ""]);
+exports.push([module.i, "#Photos {\n  min-height: 45vh;\n  padding: 2vh 2vw 5vh 2vw; }\n  #Photos #Photos_items {\n    max-width: 25vw; }\n\n@media (max-width: 1050px) {\n  #Photos {\n    min-height: 55vh; }\n    #Photos #Photos_items {\n      max-width: 40vw; } }\n\n@media (max-width: 440px) {\n  #Photos {\n    min-height: 40vh; }\n    #Photos #Photos_items {\n      max-width: 90vw; } }\n", ""]);
 
 // exports
 
@@ -25491,7 +25624,7 @@ exports = module.exports = __webpack_require__(20)(undefined);
 
 
 // module
-exports.push([module.i, ".Speakers {\n  padding: 5vh 5vw 10vh 5vw; }\n  .Speakers__card {\n    position: relative;\n    background-color: rgba(60, 116, 113, 0.2);\n    margin: 0.5em;\n    border: none; }\n    .Speakers__card img {\n      max-width: 100%;\n      width: auto;\n      max-height: 300px; }\n  .Speakers__header {\n    text-align: center;\n    color: #ffff;\n    margin-bottom: 1em; }\n  .Speakers__overlay {\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    background-color: rgba(60, 116, 113, 0.2);\n    color: #ffff;\n    padding: 10px;\n    overflow-y: scroll;\n    display: none;\n    z-index: 999; }\n    .Speakers__overlay p {\n      text-indent: 20px;\n      text-align: left; }\n  .Speakers h3 {\n    text-align: center;\n    font-size: 20px;\n    font-weight: lighter;\n    font-family: \"Roboto Slab\", serif;\n    padding: 0.2em;\n    color: #ffff; }\n  .Speakers .thumbnail {\n    padding: 0; }\n", ""]);
+exports.push([module.i, ".Speakers {\n  padding: 5vh 5vw 10vh 5vw; }\n  .Speakers__card {\n    position: relative;\n    background-color: rgba(60, 116, 113, 0.5);\n    margin: 0.5em;\n    border: none; }\n    .Speakers__card img {\n      max-width: 100%;\n      width: auto;\n      max-height: 300px; }\n  .Speakers__card:hover {\n    background-color: rgba(60, 116, 113, 0.9);\n    opacity: 0.9;\n    box-shadow: 0 4px 8px 0 rgba(60, 116, 113, 0.5), 0 6px 20px 0 #3c7471; }\n  .Speakers__header {\n    text-align: center;\n    color: #ffff;\n    margin-bottom: 1em; }\n  .Speakers__overlay {\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    background-color: rgba(60, 116, 113, 0.5);\n    color: #ffff;\n    padding: 10px;\n    overflow-y: scroll;\n    display: none;\n    z-index: 999; }\n    .Speakers__overlay p {\n      text-indent: 20px;\n      text-align: left; }\n  .Speakers h3 {\n    text-align: center;\n    font-size: 20px;\n    font-weight: light;\n    font-family: \"Roboto Slab\", serif;\n    padding: 0.2em;\n    color: #ffff; }\n  .Speakers .thumbnail {\n    padding: 0; }\n\n#youtube-icon {\n  font-size: 30px;\n  margin-left: 8px; }\n", ""]);
 
 // exports
 
@@ -25505,7 +25638,7 @@ exports = module.exports = __webpack_require__(20)(undefined);
 
 
 // module
-exports.push([module.i, ".Sponsors {\n  padding: 10vh 5vw 10vh 5vw;\n  background-color: rgba(255, 255, 255, 0.3); }\n  .Sponsors__card {\n    text-align: center;\n    position: relative;\n    min-height: 150px;\n    background: none;\n    border: none; }\n    .Sponsors__card img {\n      position: absolute;\n      left: 50%;\n      top: 50%;\n      transform: translate(-50%, -50%);\n      max-width: 100%;\n      max-height: 100%;\n      padding: 7px; }\n  .Sponsors__gridRow {\n    text-align: center; }\n  .Sponsors__centeredCard {\n    left: 50%;\n    transform: translateX(-50%); }\n  .Sponsors__centerContent {\n    text-align: center;\n    -ms-flex-line-pack: center;\n    align-content: center; }\n  .Sponsors__header {\n    color: white;\n    text-align: center;\n    border: none; }\n", ""]);
+exports.push([module.i, ".Sponsors {\n  padding: 10vh 5vw 10vh 5vw;\n  background-color: rgba(255, 255, 255, 0.2); }\n  .Sponsors__card {\n    text-align: center;\n    position: relative;\n    min-height: 150px;\n    background: none;\n    border: none; }\n    .Sponsors__card img {\n      position: absolute;\n      left: 50%;\n      top: 50%;\n      transform: translate(-50%, -50%);\n      max-width: 100%;\n      max-height: 100%;\n      padding: 7px; }\n  .Sponsors__gridRow {\n    text-align: center; }\n  .Sponsors__centeredCard {\n    left: 50%;\n    transform: translateX(-50%); }\n  .Sponsors__centerContent {\n    text-align: center;\n    -ms-flex-line-pack: center;\n    align-content: center; }\n  .Sponsors__header {\n    color: white;\n    text-align: center;\n    border: none; }\n", ""]);
 
 // exports
 
@@ -25519,7 +25652,7 @@ exports = module.exports = __webpack_require__(20)(undefined);
 
 
 // module
-exports.push([module.i, ".Start {\n  margin-top: 10vh;\n  height: 100vh;\n  font-family: 'Roboto', sans-serif;\n  font-size: 1em;\n  font-weight: bold; }\n  .Start .jumbotron {\n    background-color: inherit;\n    color: white;\n    text-align: center;\n    font-family: inherit; }\n  .Start .caps {\n    margin: 25px; }\n  .Start .counter {\n    display: -ms-flexbox;\n    display: flex;\n    -ms-flex-align: center;\n    align-items: center;\n    -ms-flex-pack: center;\n    justify-content: center;\n    font-size: 1.2em;\n    -ms-flex-direction: row;\n    flex-direction: row; }\n  .Start .header {\n    max-width: 50%; }\n  .Start .btn {\n    border: none;\n    margin: 10px; }\n  .Start .btn button {\n    background: none;\n    height: 50px;\n    width: 150px;\n    font-size: 1.2em;\n    color: #cadea5;\n    border: 2px solid #cadea5;\n    text-align: center; }\n  .Start .btn button:hover {\n    border-color: #97c88c; }\n  @media (max-width: 400px) {\n    .Start .header {\n      max-width: 90%; }\n    .Start .Start {\n      font-size: 0.8em; }\n    .Start .btn button {\n      font-size: 0.8em;\n      width: 100px; } }\n", ""]);
+exports.push([module.i, ".Start {\n  margin-top: 10vh;\n  height: 100vh;\n  font-family: 'Roboto', sans-serif;\n  font-size: 1em;\n  font-weight: bold; }\n  .Start .jumbotron {\n    background-color: inherit;\n    color: white;\n    text-align: center;\n    font-family: inherit; }\n  .Start .caps {\n    margin: 25px; }\n  .Start .counter {\n    display: -ms-flexbox;\n    display: flex;\n    -ms-flex-align: center;\n    align-items: center;\n    -ms-flex-pack: center;\n    justify-content: center;\n    font-size: 1.2em;\n    -ms-flex-direction: row;\n    flex-direction: row; }\n  .Start .header {\n    max-width: 50%; }\n  .Start .btn {\n    border: none;\n    margin: 10px; }\n  .Start .btn button {\n    background: none;\n    height: 50px;\n    width: 150px;\n    font-size: 1.2em;\n    font-weight: bold;\n    color: #cadea5;\n    border: 3px solid #cadea5;\n    text-align: center;\n    position: relative; }\n  .Start .btn button:hover {\n    border-color: #97c88c; }\n  .Start .btn button:hover #tooltiptext {\n    visibility: visible;\n    opacity: 1; }\n  @media (max-width: 400px) {\n    .Start .header {\n      max-width: 90%; }\n    .Start .Start {\n      font-size: 0.8em; }\n    .Start .btn button {\n      font-size: 0.8em;\n      width: 100px; } }\n\n#tooltiptext {\n  visibility: hidden;\n  width: auto;\n  color: #cadea5;\n  text-align: center;\n  position: absolute;\n  padding: 0.5em 1em 0.5em 1em;\n  z-index: 1;\n  bottom: 10%;\n  left: 106%;\n  opacity: 0;\n  transition: opacity 0.3s;\n  font-size: 20px;\n  font-family: 'Roboto', sans-serif;\n  font-weight: 100;\n  border-radius: 0;\n  background-color: rgba(35, 44, 56, 0.85); }\n\n#tooltiptext::after {\n  position: absolute;\n  top: 100%;\n  left: 10%;\n  border-width: 5px;\n  border-style: solid;\n  border-color: #555 transparent transparent transparent; }\n\n#arrow-left {\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n  width: 0;\n  height: 0;\n  border-top: 10px solid transparent;\n  border-bottom: 10px solid transparent;\n  border-left: 10px solid transparent;\n  border-right: 10px solid rgba(79, 247, 238, 0.6); }\n\n.intro {\n  font-family: 'Roboto', sans-serif;\n  font-size: 20px;\n  font-weight: 100;\n  color: #cadea5; }\n", ""]);
 
 // exports
 
@@ -25533,7 +25666,7 @@ exports = module.exports = __webpack_require__(20)(undefined);
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Roboto);", ""]);
 
 // module
-exports.push([module.i, "body {\n  font-family: 'Roboto', sans-serif;\n  background-color: #121F29;\n  background-image: url(\"../../assets/svg/home_background.svg\");\n  scroll-behavior: smooth; }\n\n.Home * {\n  border: none; }\n\n.Home .caps {\n  text-transform: uppercase;\n  letter-spacing: 0.5px;\n  font-family: 'Roboto', sans-serif; }\n", ""]);
+exports.push([module.i, "body {\n  font-family: 'Roboto', sans-serif;\n  background-color: #28323f;\n  background-image: url(\"../../assets/svg/home_background.svg\");\n  scroll-behavior: smooth; }\n\n.Home * {\n  border: none; }\n\n.Home .caps {\n  text-transform: uppercase;\n  letter-spacing: 0.5px;\n  font-family: 'Roboto', sans-serif; }\n", ""]);
 
 // exports
 
@@ -25645,7 +25778,7 @@ exports = module.exports = __webpack_require__(20)(undefined);
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:100,300);", ""]);
 
 // module
-exports.push([module.i, "body {\n  min-width: 200px;\n  padding: 0;\n  margin: 0;\n  width: 100vw; }\n\nh1, h2, h3, h4, h5, h6 {\n  padding: 0;\n  margin: 0;\n  font-weight: 300; }\n\np {\n  font-family: 'Roboto Slab', serif;\n  font-weight: 100;\n  font-size: 1.2em; }\n", ""]);
+exports.push([module.i, "body {\n  min-width: 200px;\n  padding: 0;\n  margin: 0;\n  width: 100vw;\n  overflow-x: hidden; }\n\nh1, h2, h3, h4, h5, h6 {\n  padding: 0;\n  margin: 0;\n  font-weight: 300; }\n\np {\n  font-family: 'Roboto Slab', serif;\n  font-weight: 100;\n  font-size: 1.2em; }\n\nbutton {\n  outline: none; }\n", ""]);
 
 // exports
 
