@@ -16,74 +16,74 @@ class Speakers extends Component {
             {
                 'name': 'Steve Wozniak',
                 'img': '../assets/img/keynotes/steve.jpg',
-                'year': 1995
+                'year': 'Co-founder of Apple'
             },
             {
                 'name': 'Alexis Ohanian',
                 'img': '../assets/img/keynotes/alex.jpg',
-                'year': 2009
+                'year': 'Co-founder and Executive Chairman of Reddit'
             },
             {
                 'name': 'Brian J. Fox',
                 'img': '../assets/img/keynotes/brian.jpg',
-                'year': 2017,
+                'year': 'Author of GNU Bash shell',
                 'youtube': 'https://www.youtube.com/watch?v=itBU4F50N8Q',
             },
             {
                 'name': 'Jay “Saurik” Freeman',
                 'img': '../assets/img/keynotes/jay.jpg',
-                'year': 2014
+                'year': 'Creator of Cydia'
             },
             {
                 'name': 'Peter Norvig',
                 'img': '../assets/img/keynotes/peter.jpg',
-                'year': 2013
+                'year': 'Director of research at Google Inc.'
             },
             {
                 'name': 'Danielle Feinberg',
                 'img': '../assets/img/keynotes/danielle.jpg',
-                'year': 2012
+                'year': 'Director of Photography for Lighting at Pixar'
             },
             {
                 'name': 'Travis Oliphant',
                 'img': '../assets/img/keynotes/travis.jpg',
-                'year': 2017,
+                'year': 'Founder of Anaconda and primary creator of NumPy',
                 'youtube': 'https://www.youtube.com/watch?v=_PDvlqbgxCU'
             },
             {
                 'name': 'Anna Patterson',
                 'img': '../assets/img/keynotes/anna.jpg',
-                'year': 2015
+                'year': 'Co-founder of search engine Cuil'
             },
             {
                 'name': 'Robin Walker',
                 'img': '../assets/img/keynotes/robin.jpg',
-                'year': 2013
+                'year': 'Co-developer of Team Fortress'
             },
             {
                 'name': 'Laura I. Gómez',
                 'img': '../assets/img/keynotes/laura.jpg',
-                'year': 2016
+                'year': 'Founder and CEO of Atipica Inc.'
             },
             {
                 'name': 'Basil Alwan',
                 'img': '../assets/img/keynotes/basil.jpg',
-                'year': 2016
+                'year': 'President of IP/Optical Networks at Nokia'
             },
             {
                 'name': 'Cassidy Williams',
                 'img': '../assets/img/keynotes/cassidy.jpg',
-                'year': 2015
+                'year': 'Head of Developer Voice Programs at Amazon'
             },
             {
                 'name': 'Chris Gladwin',
                 'img': '../assets/img/keynotes/chris.jpg',
-                'year': 2017
+                'year': 'Founder of Cleversafe'
             },
             {
                 'name': 'Stefano Zacchiroli',
                 'img': '../assets/img/keynotes/stefano.jpg',
-                'year': 2012
+                'year': 'Debian Project Leader'
             },
             {
                 'name': 'Roy Bhat',
