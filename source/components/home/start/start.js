@@ -23,7 +23,7 @@ class Start extends Component {
             <div className="Start">
                 <Jumbotron>
                     <img className="header" src="../assets/svg/home_header.svg" />
-                    <p className="caps">September 17 - 22nd, 2018</p>
+                    <p className="caps">September 17<sup>th</sup> - 22<sup>nd</sup>, 2018</p>
                     <div className="counter">
                         <Countdown/>
                         <div style={{margin: "15px", paddingBottom: "10px", fontSize: "18px"}}>
