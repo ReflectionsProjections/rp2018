@@ -122,10 +122,15 @@ class Speakers extends Component {
             var hexStr = "6px solid " + hex;
             var link = speaker.youtube;
             var reveal = (link != undefined && link != null) ? "visible" : "hidden";
-            var cl = (link != undefined && link != null) ? "#c9e88f" : "#a4b0bc";
+            //hasLinkColor - Color of glyphicon link if the speaker's card DOES LINK to a YouTube video
+            const hasLinkColor = "#c9e88f";
+            //hasNoLinkColor - Color of glyphicon link if the speaker's card DOES NOT LINK to a YouTube video
+            const hasNoLinkColor = "#a4b0bc";
+            var cl = (link != undefined && link != null) ? hasLinkColor : hasNoLinkColor;
+            var cName = (cl == hasLinkColor)? "Speakers__card js-speakercard Speakers__youtube": "Speakers__card js-speakercard";
             return ( 
                 <Col key = { idx } xs = { 12 } lg = { 4 } sm = { 9 } md = { 9 } >
-                    <Thumbnail onClick = {(e) => this.handleClick(e, link, idx) } className = "Speakers__card js-speakercard" src = { speaker.img } >
+                    <Thumbnail onClick = {(e) => this.handleClick(e, link, idx) } className = {cName} src = { speaker.img } >
                     <h3 style = {{ color: "white" } } > { speaker.name } </h3> 
                     <h3 style = {{ color: "white" } } > { speaker.year } </h3> 
                     <span className = "glyphicon glyphicon-play-circle" id = "youtube-icon" style = {{ color: cl } }/>  
@@ -136,7 +141,7 @@ class Speakers extends Component {
 
         return ( 
             <div className = "Speakers" id = "Speakers" >
-                <PageHeader className = "Speakers__header" > Past Keynote Speakers </PageHeader> 
+                <PageHeader className = "Speakers__header" > <h2>Past Speakers </h2></PageHeader> 
                 <Grid ><Row > { speakerView } </Row> </Grid> 
             </div>
         )
