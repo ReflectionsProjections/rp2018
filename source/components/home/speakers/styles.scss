@@ -3,7 +3,7 @@
     &__card {
         position: relative;
         background-color: rgba(60, 116, 113, 0.5);
-        margin: 0.9em;
+        margin: 0.5em;
         border: none;
         img {
             max-width: 100%;
@@ -48,12 +48,7 @@
 
 #youtube-icon {
     font-size: 30px;
-    margin-left: 2%;
-}
-
-#wiki-icon {
-    font-size: 30px;
-    margin-left: 77%;
+    margin-left: 8px;
 }
 // Ensures that only speaker cards with YouTube links are highlighted
 div>div.Speakers__youtube:hover {
@@ -63,4 +58,9 @@ div>div.Speakers__youtube:hover {
 }
 h2 {
     font-family: 'Roboto Slab', serif;
+}
+
+#wiki-icon {
+    font-size: 30px;
+    margin-left: 77%;
 }
