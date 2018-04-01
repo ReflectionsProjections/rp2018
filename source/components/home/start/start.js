@@ -26,8 +26,10 @@ class Start extends Component {
                     <p className="caps">September 17 - 22nd, 2018</p>
                     <div className="counter">
                         <Countdown/>
-                        <div style={{margin: "15px", paddingBottom: "10px", fontSize: "18px"}}>DAYS&nbsp; LEFT</div>
-                    </div>
+                        <div style={{margin: "15px", paddingBottom: "10px", fontSize: "18px"}}>
+                            DAYS&nbsp; LEFT
+                        </div>
+                        </div>
                     <div className="intro"> Interested in sponsoring or attending? </div>
                     <a className="btn" href="mailto:conference-chair@acm.illinois.edu">
                         <button className="contact">CONTACT US
