@@ -3,7 +3,7 @@
     &__card {
         position: relative;
         background-color: rgba(60, 116, 113, 0.5);
-        margin: 0.5em;
+        margin: 0.9em;
         border: none;
         img {
             max-width: 100%;
@@ -53,6 +53,11 @@
 
 #youtube-icon {
     font-size: 30px;
-    margin-left: 8px;
+    margin-left: 2%;
+}
+
+#wiki-icon {
+    font-size: 30px;
+    margin-left: 77%;
 }
 
