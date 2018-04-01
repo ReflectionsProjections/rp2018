@@ -16,87 +16,87 @@ class Speakers extends Component {
             {
                 'name': 'Steve Wozniak',
                 'img': '../assets/img/keynotes/steve.jpg',
-                'year': 1995,
+                'year': 'Co-founder of Apple',
                 'wikipedia': 'https://en.wikipedia.org/wiki/Steve_Wozniak'
             },
             {
                 'name': 'Alexis Ohanian',
                 'img': '../assets/img/keynotes/alex.jpg',
-                'year': 2009,
+                'year': 'Co-founder and Executive Chairman of Reddit',
                 'wikipedia': 'https://en.wikipedia.org/wiki/Alexis_Ohanian'
             },
             {
                 'name': 'Brian J. Fox',
                 'img': '../assets/img/keynotes/brian.jpg',
                 'year': 2017,
-                'youtube': 'https://www.youtube.com/watch?v=itBU4F50N8Q',
+                'youtube': 'Author of GNU Bash shell',
                 'wikipedia': 'https://en.wikipedia.org/wiki/Brian_Fox_(computer_programmer)'
             },
             {
                 'name': 'Jay “Saurik” Freeman',
                 'img': '../assets/img/keynotes/jay.jpg',
-                'year': 2014,
+                'year': 'Creator of Cydia',
                 'wikipedia': 'https://en.wikipedia.org/wiki/Jay_Freeman'
             },
             {
                 'name': 'Peter Norvig',
                 'img': '../assets/img/keynotes/peter.jpg',
-                'year': 2013,
+                'year': 'Director of research at Google Inc.',
                 'wikipedia': 'https://en.wikipedia.org/wiki/Peter_Norvig'
             },
             {
                 'name': 'Danielle Feinberg',
                 'img': '../assets/img/keynotes/danielle.jpg',
-                'year': 2012,
+                'year': 'Director of Photography for Lighting at Pixar',
                 'wikipedia': 'https://en.wikipedia.org/wiki/Danielle_Feinberg'
             },
             {
                 'name': 'Travis Oliphant',
                 'img': '../assets/img/keynotes/travis.jpg',
-                'year': 2017,
+                'year': 'Founder of Anaconda and primary creator of NumPy',
                 'youtube': 'https://www.youtube.com/watch?v=_PDvlqbgxCU',
                 'wikipedia': 'https://en.wikipedia.org/wiki/Travis_Oliphant'
             },
             {
                 'name': 'Anna Patterson',
                 'img': '../assets/img/keynotes/anna.jpg',
-                'year': 2015,
+                'year': 'Co-founder of search engine Cuil',
                 'wikipedia': 'https://en.wikipedia.org/wiki/Anna_Patterson'
             },
             {
                 'name': 'Robin Walker',
                 'img': '../assets/img/keynotes/robin.jpg',
-                'year': 2013,
+                'year': 'Co-developer of Team Fortress',
                 'wikipedia': 'https://en.wikipedia.org/wiki/Robin_Walker_(game_designer)'
             },
             {
                 'name': 'Laura I. Gómez',
                 'img': '../assets/img/keynotes/laura.jpg',
-                'year': 2016,
+                'year': 'Founder and CEO of Atipica Inc.',
                 'wikipedia': ''
             },
             {
                 'name': 'Basil Alwan',
                 'img': '../assets/img/keynotes/basil.jpg',
-                'year': 2016,
+                'year': 'President of IP/Optical Networks at Nokia',
                 'wikipedia': ''
             },
             {
                 'name': 'Cassidy Williams',
                 'img': '../assets/img/keynotes/cassidy.jpg',
-                'year': 2015,
+                'year': 'Head of Developer Voice Programs at Amazon',
                 'wikipedia': ''
             },
             {
                 'name': 'Chris Gladwin',
                 'img': '../assets/img/keynotes/chris.jpg',
-                'year': 2017,
+                'year': 'Founder of Cleversafe',
                 'wikipedia': ''
             },
             {
                 'name': 'Stefano Zacchiroli',
                 'img': '../assets/img/keynotes/stefano.jpg',
-                'year': 2012,
+                'year': 'Debian Project Leader',
                 'wikipedia': ''
             },
             {
