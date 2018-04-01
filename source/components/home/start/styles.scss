@@ -6,6 +6,7 @@
     font-weight: bold;
 
     .jumbotron {
+        margin-top:-12vh;
         background-color: inherit;
         color: white;
         text-align: center;
@@ -39,14 +40,14 @@
         width: 150px;
         font-size: 1.2em;
         font-weight: bold;
-        color: #cadea5;
-        border: 3px solid #cadea5;
+        background-color: #3bc71c;
+        color:black;
         text-align: center;
         position: relative;
     }
     
     .btn button:hover {
-        border-color: #97c88c;
+        border-color: #69c755;
     } 
 
     .btn button:hover #tooltiptext {
@@ -112,7 +113,6 @@
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     font-weight: 100;
-    color:#cadea5;
 }
   
 

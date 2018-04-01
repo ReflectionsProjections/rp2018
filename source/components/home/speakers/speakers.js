@@ -16,94 +16,79 @@ class Speakers extends Component {
             {
                 'name': 'Steve Wozniak',
                 'img': '../assets/img/keynotes/steve.jpg',
-                'year': 1995,
-                'wikipedia': 'https://en.wikipedia.org/wiki/Steve_Wozniak'
+                'year': 1995
             },
             {
                 'name': 'Alexis Ohanian',
                 'img': '../assets/img/keynotes/alex.jpg',
-                'year': 2009,
-                'wikipedia': 'https://en.wikipedia.org/wiki/Alexis_Ohanian'
+                'year': 2009
             },
             {
                 'name': 'Brian J. Fox',
                 'img': '../assets/img/keynotes/brian.jpg',
                 'year': 2017,
                 'youtube': 'https://www.youtube.com/watch?v=itBU4F50N8Q',
-                'wikipedia': 'https://en.wikipedia.org/wiki/Brian_Fox_(computer_programmer)'
             },
             {
                 'name': 'Jay “Saurik” Freeman',
                 'img': '../assets/img/keynotes/jay.jpg',
-                'year': 2014,
-                'wikipedia': 'https://en.wikipedia.org/wiki/Jay_Freeman'
+                'year': 2014
             },
             {
                 'name': 'Peter Norvig',
                 'img': '../assets/img/keynotes/peter.jpg',
-                'year': 2013,
-                'wikipedia': 'https://en.wikipedia.org/wiki/Peter_Norvig'
+                'year': 2013
             },
             {
                 'name': 'Danielle Feinberg',
                 'img': '../assets/img/keynotes/danielle.jpg',
-                'year': 2012,
-                'wikipedia': 'https://en.wikipedia.org/wiki/Danielle_Feinberg'
+                'year': 2012
             },
             {
                 'name': 'Travis Oliphant',
                 'img': '../assets/img/keynotes/travis.jpg',
                 'year': 2017,
-                'youtube': 'https://www.youtube.com/watch?v=_PDvlqbgxCU',
-                'wikipedia': 'https://en.wikipedia.org/wiki/Travis_Oliphant'
+                'youtube': 'https://www.youtube.com/watch?v=_PDvlqbgxCU'
             },
             {
                 'name': 'Anna Patterson',
                 'img': '../assets/img/keynotes/anna.jpg',
-                'year': 2015,
-                'wikipedia': 'https://en.wikipedia.org/wiki/Anna_Patterson'
+                'year': 2015
             },
             {
                 'name': 'Robin Walker',
                 'img': '../assets/img/keynotes/robin.jpg',
-                'year': 2013,
-                'wikipedia': 'https://en.wikipedia.org/wiki/Robin_Walker_(game_designer)'
+                'year': 2013
             },
             {
                 'name': 'Laura I. Gómez',
                 'img': '../assets/img/keynotes/laura.jpg',
-                'year': 2016,
-                'wikipedia': ''
+                'year': 2016
             },
             {
                 'name': 'Basil Alwan',
                 'img': '../assets/img/keynotes/basil.jpg',
-                'year': 2016,
-                'wikipedia': ''
+                'year': 2016
             },
             {
                 'name': 'Cassidy Williams',
                 'img': '../assets/img/keynotes/cassidy.jpg',
-                'year': 2015,
-                'wikipedia': ''
+                'year': 2015
             },
             {
                 'name': 'Chris Gladwin',
                 'img': '../assets/img/keynotes/chris.jpg',
-                'year': 2017,
-                'wikipedia': ''
+                'year': 2017
             },
             {
                 'name': 'Stefano Zacchiroli',
                 'img': '../assets/img/keynotes/stefano.jpg',
-                'year': 2012,
-                'wikipedia': ''
+                'year': 2012
             },
             {
                 'name': 'Roy Bhat',
                 'img': '../assets/img/keynotes/roy.jpg',
-                'year': 2016,
-                'wikipedia': ''
+                'year': 2016
             }
         ];
 
@@ -138,33 +123,15 @@ class Speakers extends Component {
             var link = speaker.youtube;
             var reveal = (link != undefined && link != null) ? "visible" : "hidden";
             var cl = (link != undefined && link != null) ? "#c9e88f" : "#a4b0bc";
-            var wikicolor = "#c9e88f"
-            if (link) {
-                return ( 
+            return ( 
                 <Col key = { idx } xs = { 12 } lg = { 4 } sm = { 9 } md = { 9 } >
                     <Thumbnail onClick = {(e) => this.handleClick(e, link, idx) } className = "Speakers__card js-speakercard" src = { speaker.img } >
                     <h3 style = {{ color: "white" } } > { speaker.name } </h3> 
                     <h3 style = {{ color: "white" } } > { speaker.year } </h3> 
-                    <span className = "glyphicon glyphicon-play-circle" id = "youtube-icon" style = {{ color: cl} }/>  
-                    <span className = "glyphicon glyphicon-info-sign" id = "wiki-icon" style = {{ color: wikicolor} }/> 
+                    <span className = "glyphicon glyphicon-play-circle" id = "youtube-icon" style = {{ color: cl } }/>  
                     </Thumbnail> 
                 </Col>
-                )
-            } else {
-                return ( 
-                <Col key = { idx } xs = { 12 } lg = { 4 } sm = { 9 } md = { 9 } >
-                    <Thumbnail onClick = {(e) => this.handleClick(e, link, idx) } className = "Speakers__card js-speakercard" src = { speaker.img } >
-                    <h3 style = {{ color: "white" } } > { speaker.name } </h3> 
-                    <h3 style = {{ color: "white" } } > { speaker.year } </h3>
-                    <span className = "glyphicon glyphicon-play-circle" id = "youtube-icon" style = {{ color: cl, opacity: 0 } }/>  
-                    <span className = "glyphicon glyphicon-info-sign" id = "wiki-icon" style = {{ color: wikicolor} }/>
-                     
- 
-                    </Thumbnail> 
-                </Col>
-                )
-            }
-            
+            )
         });
 
         return ( 
