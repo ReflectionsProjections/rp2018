@@ -41,6 +41,14 @@
         padding: 0.2em;
         color: #ffff;
     }
+    h4 {
+        text-align: center;
+        font-size: 15px;
+        font-weight: light;
+        font-family: "Roboto Slab", serif;
+        padding: 0.4em;
+        color: #ffff;
+    }
     .thumbnail {
         padding: 0;
     }
@@ -58,4 +66,9 @@ div>div.Speakers__youtube:hover {
 }
 h2 {
     font-family: 'Roboto Slab', serif;
+}
+
+#wiki-icon {
+    font-size: 30px;
+    margin-left: 70%;
 }
