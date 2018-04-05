@@ -36,10 +36,8 @@ class Speakers extends Component {
             {
                 'name': 'Jay “Saurik” Freeman',
                 'img': '../assets/img/keynotes/jay.jpg',
-
                 'year': 'Creator of Cydia',
                 'wikipedia': 'https://en.wikipedia.org/wiki/Jay_Freeman'
-                'year': 'Creator of Cydia'
             },
             {
                 'name': 'Peter Norvig',
