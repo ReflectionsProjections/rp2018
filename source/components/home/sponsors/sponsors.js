@@ -125,10 +125,6 @@ class Sponsors extends Component {
           img: "../assets/img/sponsors/startups/curalate.svg"
         },
         {
-          name: "Fornojo",
-          img: "../assets/img/sponsors/startups/fornojo.jpg"
-        },
-        {
           name: "Granular",
           img: "../assets/img/sponsors/startups/granular.jpg"
         },
