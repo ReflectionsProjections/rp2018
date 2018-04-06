@@ -5,8 +5,9 @@
         background-color: rgba(60, 116, 113, 0.5);
         margin: 0.5em;
         border: none;
-        height: 430px;
+        height: 440px;
         img {
+            margin-top: 15px;
             max-width: 100%;
             width: auto;
             max-height: 300px;
@@ -57,6 +58,7 @@ h2 {
 }
 
 @media (max-width: 680px) {
-    .Speakers__card {
+    .Speakers__card img {
+        margin-top: 0px;
     }
 }
