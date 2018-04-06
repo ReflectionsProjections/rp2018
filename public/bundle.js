@@ -21471,7 +21471,7 @@ var Sponsors = function (_Component) {
       var tier2Sponsors = sponsorsList.tier2.map(function (sponsor, idx) {
         return _react2.default.createElement(
           _reactBootstrap.Col,
-          { key: idx, xs: 12, lg: 6, sm: 2, md: 2 },
+          { key: idx, xs: 12, lg: 6, sm: 6, md: 6 },
           _react2.default.createElement(
             _reactBootstrap.Panel,
             { className: "Sponsors__card Sponsors__card--tier3" },
@@ -21489,7 +21489,7 @@ var Sponsors = function (_Component) {
       var tier3Sponsors = sponsorsList.tier3.map(function (sponsor, idx) {
         return _react2.default.createElement(
           _reactBootstrap.Col,
-          { key: idx, xs: 12, sm: 4, md: 4 },
+          { key: idx, xs: 6, sm: 4, md: 4 },
           _react2.default.createElement(
             _reactBootstrap.Panel,
             { className: "Sponsors__card Sponsors__card--tier3" },
@@ -21507,7 +21507,7 @@ var Sponsors = function (_Component) {
       var tier4Sponsors = sponsorsList.tier4.map(function (sponsor, idx) {
         return _react2.default.createElement(
           _reactBootstrap.Col,
-          { key: idx, xs: 12, sm: 3, md: 3 },
+          { key: idx, xs: 6, sm: 3, md: 3 },
           _react2.default.createElement(
             _reactBootstrap.Panel,
             { className: "Sponsors__card Sponsors__card--tier4" },
@@ -25736,7 +25736,7 @@ exports = module.exports = __webpack_require__(20)(undefined);
 
 
 // module
-exports.push([module.i, ".Start {\n  margin-top: 10vh;\n  height: 100vh;\n  font-family: 'Roboto', sans-serif;\n  font-size: 1em;\n  font-weight: bold; }\n  .Start .jumbotron {\n    background-color: inherit;\n    color: white;\n    text-align: center;\n    font-family: inherit; }\n  .Start .caps {\n    margin: 25px; }\n  .Start .counter {\n    display: -ms-flexbox;\n    display: flex;\n    -ms-flex-align: center;\n    align-items: center;\n    -ms-flex-pack: center;\n    justify-content: center;\n    font-size: 1.2em;\n    -ms-flex-direction: row;\n    flex-direction: row; }\n  .Start .header {\n    max-width: 50%; }\n  .Start .btn {\n    border: none;\n    margin: 10px; }\n  .Start .btn button {\n    background: none;\n    height: 50px;\n    width: 150px;\n    font-size: 1.2em;\n    font-weight: bold;\n    color: #cadea5;\n    border: 3px solid #cadea5;\n    text-align: center;\n    position: relative; }\n  .Start .btn button:hover {\n    border-color: #97c88c; }\n  .Start .btn button:hover #tooltiptext {\n    visibility: visible;\n    opacity: 1; }\n  @media (max-width: 400px) {\n    .Start .header {\n      max-width: 90%; }\n    .Start .Start {\n      font-size: 0.8em; }\n    .Start .btn button {\n      font-size: 0.8em;\n      width: 100px; } }\n\n#tooltiptext {\n  visibility: hidden;\n  width: auto;\n  color: #cadea5;\n  text-align: center;\n  position: absolute;\n  padding: 0.5em 1em 0.5em 1em;\n  z-index: 1;\n  bottom: 10%;\n  left: 106%;\n  opacity: 0;\n  transition: opacity 0.3s;\n  font-size: 20px;\n  font-family: 'Roboto', sans-serif;\n  font-weight: 100;\n  border-radius: 0;\n  background-color: rgba(35, 44, 56, 0.85); }\n\n#tooltiptext::after {\n  position: absolute;\n  top: 100%;\n  left: 10%;\n  border-width: 5px;\n  border-style: solid;\n  border-color: #555 transparent transparent transparent; }\n\n#arrow-left {\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n  width: 0;\n  height: 0;\n  border-top: 10px solid transparent;\n  border-bottom: 10px solid transparent;\n  border-left: 10px solid transparent;\n  border-right: 10px solid rgba(79, 247, 238, 0.6); }\n\n.intro {\n  font-family: 'Roboto', sans-serif;\n  font-size: 20px;\n  font-weight: 100;\n  color: #cadea5; }\n", ""]);
+exports.push([module.i, ".Start {\n  margin-top: 10vh;\n  height: 100vh;\n  font-family: 'Roboto', sans-serif;\n  font-size: 1em;\n  font-weight: bold; }\n  .Start .jumbotron {\n    background-color: inherit;\n    color: white;\n    text-align: center;\n    font-family: inherit; }\n  .Start .caps {\n    margin: 25px; }\n  .Start .counter {\n    display: -ms-flexbox;\n    display: flex;\n    -ms-flex-align: center;\n    align-items: center;\n    -ms-flex-pack: center;\n    justify-content: center;\n    font-size: 1.2em;\n    -ms-flex-direction: row;\n    flex-direction: row; }\n  .Start .header {\n    max-width: 50%; }\n  .Start .btn {\n    border: none;\n    margin: 10px; }\n  .Start .btn button {\n    background: none;\n    height: 50px;\n    width: 150px;\n    font-size: 1.2em;\n    font-weight: bold;\n    color: #cadea5;\n    border: 3px solid #cadea5;\n    text-align: center;\n    position: relative;\n    background-color: #223241; }\n  .Start .btn button:hover {\n    border-color: #97c88c; }\n  .Start .btn button:hover #tooltiptext {\n    visibility: visible;\n    opacity: 1; }\n  @media (max-width: 400px) {\n    .Start .header {\n      max-width: 90%; }\n    .Start .Start {\n      font-size: 0.8em; }\n    .Start .btn button {\n      font-size: 0.8em;\n      width: 100px; } }\n\n#tooltiptext {\n  visibility: hidden;\n  width: auto;\n  color: #cadea5;\n  text-align: center;\n  position: absolute;\n  padding: 0.5em 1em 0.5em 1em;\n  z-index: 1;\n  bottom: 10%;\n  left: 106%;\n  opacity: 0;\n  transition: opacity 0.3s;\n  font-size: 20px;\n  font-family: 'Roboto', sans-serif;\n  font-weight: 100;\n  border-radius: 0;\n  background-color: rgba(35, 44, 56, 0.85); }\n\n#tooltiptext::after {\n  position: absolute;\n  top: 100%;\n  left: 10%;\n  border-width: 5px;\n  border-style: solid;\n  border-color: #555 transparent transparent transparent; }\n\n#arrow-left {\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n  width: 0;\n  height: 0;\n  border-top: 10px solid transparent;\n  border-bottom: 10px solid transparent;\n  border-left: 10px solid transparent;\n  border-right: 10px solid rgba(79, 247, 238, 0.6); }\n\n.intro {\n  font-family: 'Roboto', sans-serif;\n  font-size: 20px;\n  font-weight: 100;\n  color: #fff; }\n", ""]);
 
 // exports
 
