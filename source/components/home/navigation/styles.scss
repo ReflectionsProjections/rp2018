@@ -1,5 +1,5 @@
 .Navigation {
-  $nav-height: 12vh;
+  $nav-height: 10vh;
   height: $nav-height;
   position: -webkit-sticky;
   position: sticky;
@@ -8,6 +8,7 @@
 
   .navbar {
     background-color: #252f3a;
+    position: relative;
   
     .navbar-header {
         min-height: $nav-height;
@@ -34,6 +35,9 @@
 
   &__logo {
       width: 55px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
   }
 }
 

@@ -20351,12 +20351,8 @@ var About = function (_Component) {
                             null,
                             _react2.default.createElement(
                                 'div',
-                                null,
-                                _react2.default.createElement(
-                                    'h3',
-                                    null,
-                                    'What is Reflections | Projections?'
-                                )
+                                { className: 'title' },
+                                'What is Reflections | Projections?'
                             ),
                             _react2.default.createElement(
                                 'div',
@@ -20373,12 +20369,8 @@ var About = function (_Component) {
                             null,
                             _react2.default.createElement(
                                 'div',
-                                null,
-                                _react2.default.createElement(
-                                    'h3',
-                                    null,
-                                    'What can I do?'
-                                )
+                                { className: 'title' },
+                                'What can I do?'
                             ),
                             _react2.default.createElement(
                                 'div',
@@ -20395,12 +20387,8 @@ var About = function (_Component) {
                             null,
                             _react2.default.createElement(
                                 'div',
-                                null,
-                                _react2.default.createElement(
-                                    'h3',
-                                    null,
-                                    'Who can attend?'
-                                )
+                                { className: 'title' },
+                                'Who can attend?'
                             ),
                             _react2.default.createElement(
                                 'div',
@@ -20675,7 +20663,7 @@ var Footer = function (_Component) {
 							_react2.default.createElement('br', null),
 							_react2.default.createElement(
 								'a',
-								{ href: 'https://www.facebook.com/acmrp/' },
+								{ href: 'https://www.facebook.com/acmrp/', target: '_blank', rel: 'noopener noreferrer' },
 								_react2.default.createElement(FA, { name: 'facebook' }),
 								' ACM Reflections|Projections Conference '
 							),
@@ -20683,7 +20671,7 @@ var Footer = function (_Component) {
 							_react2.default.createElement('br', null),
 							_react2.default.createElement(
 								'a',
-								{ href: 'https://medium.com/@rp.uiuc.acm' },
+								{ href: 'https://medium.com/@reflectionsprojections', target: '_blank', rel: 'noopener noreferrer' },
 								_react2.default.createElement(FA, { name: 'medium' }),
 								' Reflections|Projections '
 							),
@@ -20691,20 +20679,20 @@ var Footer = function (_Component) {
 							_react2.default.createElement('br', null),
 							_react2.default.createElement(
 								'a',
-								{ href: 'https://twitter.com/uiuc_rp' },
+								{ href: 'https://twitter.com/uiuc_rp', target: '_blank', rel: 'noopener noreferrer' },
 								_react2.default.createElement(FA, { name: 'twitter' }),
 								' @uiuc_rp '
 							),
 							_react2.default.createElement(
 								'a',
-								{ href: 'https://www.reddit.com/user/uiuc_rp' },
+								{ href: 'https://www.reddit.com/user/uiuc_rp', target: '_blank', rel: 'noopener noreferrer' },
 								_react2.default.createElement(FA, { name: 'reddit' }),
 								' uiuc_rp '
 							),
 							_react2.default.createElement('br', null),
 							_react2.default.createElement(
 								'a',
-								{ href: 'https://www.instagram.com/uiuc_rp/' },
+								{ href: 'https://www.instagram.com/uiuc_rp/', target: '_blank', rel: 'noopener noreferrer' },
 								_react2.default.createElement(FA, { name: 'instagram' }),
 								' @uiuc_rp '
 							),
@@ -21084,72 +21072,86 @@ var Speakers = function (_Component) {
     _createClass(Speakers, [{
         key: 'render',
         value: function render() {
-            var _this2 = this;
 
             var speakerList = [
             // Keynotes
             {
                 'name': 'Steve Wozniak',
                 'img': '../assets/img/keynotes/steve.jpg',
-                'year': 1995
+                'year': 'Co-founder of Apple',
+                'wikipedia': 'https://en.wikipedia.org/wiki/Steve_Wozniak'
             }, {
                 'name': 'Alexis Ohanian',
                 'img': '../assets/img/keynotes/alex.jpg',
-                'year': 2009
+                'year': 'Co-founder of Reddit',
+                'wikipedia': 'https://en.wikipedia.org/wiki/Alexis_Ohanian'
             }, {
                 'name': 'Brian J. Fox',
                 'img': '../assets/img/keynotes/brian.jpg',
-                'year': 2017,
-                'youtube': 'https://www.youtube.com/watch?v=itBU4F50N8Q'
+                'year': 'Author of GNU Bash shell',
+                'youtube': 'https://www.youtube.com/watch?v=itBU4F50N8Q',
+                'wikipedia': 'https://en.wikipedia.org/wiki/Brian_Fox_(computer_programmer)'
             }, {
                 'name': 'Jay “Saurik” Freeman',
                 'img': '../assets/img/keynotes/jay.jpg',
-                'year': 2014
+                'year': 'Creator of Cydia',
+                'wikipedia': 'https://en.wikipedia.org/wiki/Jay_Freeman'
             }, {
                 'name': 'Peter Norvig',
                 'img': '../assets/img/keynotes/peter.jpg',
-                'year': 2013
+                'year': 'Director of research at Google Inc.',
+                'wikipedia': 'https://en.wikipedia.org/wiki/Peter_Norvig'
             }, {
                 'name': 'Danielle Feinberg',
                 'img': '../assets/img/keynotes/danielle.jpg',
-                'year': 2012
+                'year': 'Director of Photography at Pixar',
+                'wikipedia': 'https://en.wikipedia.org/wiki/Danielle_Feinberg'
             }, {
                 'name': 'Travis Oliphant',
                 'img': '../assets/img/keynotes/travis.jpg',
-                'year': 2017,
-                'youtube': 'https://www.youtube.com/watch?v=_PDvlqbgxCU'
+                'year': 'Founder of Anaconda & Creator of NumPy',
+                'youtube': 'https://www.youtube.com/watch?v=_PDvlqbgxCU',
+                'wikipedia': 'https://en.wikipedia.org/wiki/Travis_Oliphant'
             }, {
                 'name': 'Anna Patterson',
                 'img': '../assets/img/keynotes/anna.jpg',
-                'year': 2015
+                'year': 'Co-founder of search engine Cuil',
+                'wikipedia': 'https://en.wikipedia.org/wiki/Anna_Patterson'
             }, {
                 'name': 'Robin Walker',
                 'img': '../assets/img/keynotes/robin.jpg',
-                'year': 2013
+                'year': 'Co-developer of Team Fortress',
+                'wikipedia': 'https://en.wikipedia.org/wiki/Robin_Walker_(game_designer)'
             }, {
                 'name': 'Laura I. Gómez',
                 'img': '../assets/img/keynotes/laura.jpg',
-                'year': 2016
+                'year': 'Founder and CEO of Atipica Inc.',
+                'wikipedia': ''
             }, {
                 'name': 'Basil Alwan',
                 'img': '../assets/img/keynotes/basil.jpg',
-                'year': 2016
+                'year': 'President of IP/Optical Networks at Nokia',
+                'wikipedia': ''
             }, {
                 'name': 'Cassidy Williams',
                 'img': '../assets/img/keynotes/cassidy.jpg',
-                'year': 2015
+                'year': 'Head of Amazon Developer Voice Programs',
+                'wikipedia': ''
             }, {
                 'name': 'Chris Gladwin',
                 'img': '../assets/img/keynotes/chris.jpg',
-                'year': 2017
+                'year': 'Founder of Cleversafe',
+                'wikipedia': ''
             }, {
                 'name': 'Stefano Zacchiroli',
                 'img': '../assets/img/keynotes/stefano.jpg',
-                'year': 2012
+                'year': 'Debian Project Leader',
+                'wikipedia': ''
             }, {
                 'name': 'Roy Bhat',
                 'img': '../assets/img/keynotes/roy.jpg',
-                'year': 2016
+                'year': 'Keynote Speaker of 2016',
+                'wikipedia': ''
             }];
 
             this.handleClick = function (evt, url, id) {
@@ -21176,42 +21178,91 @@ var Speakers = function (_Component) {
                     case 'keynote':
                         hex = "#9a6fb0";
                         break;
-
                 }
                 var hexStr = "6px solid " + hex;
                 var link = speaker.youtube;
+                var wikilink = speaker.wikipedia;
                 var reveal = link != undefined && link != null ? "visible" : "hidden";
-                //hasLinkColor - Color of glyphicon link if the speaker's card DOES LINK to a YouTube video
                 var hasLinkColor = "#c9e88f";
-                //hasNoLinkColor - Color of glyphicon link if the speaker's card DOES NOT LINK to a YouTube video
                 var hasNoLinkColor = "#a4b0bc";
                 var cl = link != undefined && link != null ? hasLinkColor : hasNoLinkColor;
+                var wikicolor = "#c9e88f";
                 var cName = cl == hasLinkColor ? "Speakers__card js-speakercard Speakers__youtube" : "Speakers__card js-speakercard";
-                return _react2.default.createElement(
-                    _reactBootstrap.Col,
-                    { key: idx, xs: 12, lg: 4, sm: 9, md: 9 },
-                    _react2.default.createElement(
-                        _reactBootstrap.Thumbnail,
-                        { onClick: function onClick(e) {
-                                return _this2.handleClick(e, link, idx);
-                            }, className: cName, src: speaker.img },
+                if (link) {
+                    return _react2.default.createElement(
+                        _reactBootstrap.Col,
+                        { key: idx, xs: 12, lg: 4, sm: 9, md: 9 },
                         _react2.default.createElement(
-                            'h3',
-                            { style: { color: "white" } },
-                            ' ',
-                            speaker.name,
-                            ' '
-                        ),
+                            _reactBootstrap.Thumbnail,
+                            { className: cName, src: speaker.img },
+                            _react2.default.createElement(
+                                'h3',
+                                { style: { color: "white" } },
+                                ' ',
+                                speaker.name,
+                                ' '
+                            ),
+                            _react2.default.createElement(
+                                'h4',
+                                { style: { color: "white" } },
+                                ' ',
+                                speaker.year,
+                                ' '
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'icon-group' },
+                                _react2.default.createElement(
+                                    'a',
+                                    { href: link, target: '_blank', rel: 'noopener noreferrer' },
+                                    _react2.default.createElement('span', { className: 'glyphicon glyphicon-play-circle', id: 'youtube-icon', style: { color: cl } })
+                                ),
+                                _react2.default.createElement(
+                                    'a',
+                                    { href: wikilink, target: '_blank', rel: 'noopener noreferrer' },
+                                    _react2.default.createElement('span', { className: 'glyphicon glyphicon-info-sign', id: 'wiki-icon', style: { color: wikicolor } })
+                                )
+                            )
+                        )
+                    );
+                } else {
+                    return _react2.default.createElement(
+                        _reactBootstrap.Col,
+                        { key: idx, xs: 12, lg: 4, sm: 9, md: 9 },
                         _react2.default.createElement(
-                            'h3',
-                            { style: { color: "white" } },
-                            ' ',
-                            speaker.year,
-                            ' '
-                        ),
-                        _react2.default.createElement('span', { className: 'glyphicon glyphicon-play-circle', id: 'youtube-icon', style: { color: cl } })
-                    )
-                );
+                            _reactBootstrap.Thumbnail,
+                            { className: cName, src: speaker.img },
+                            _react2.default.createElement(
+                                'h3',
+                                { style: { color: "white" } },
+                                ' ',
+                                speaker.name,
+                                ' '
+                            ),
+                            _react2.default.createElement(
+                                'h4',
+                                { style: { color: "white" } },
+                                ' ',
+                                speaker.year,
+                                ' '
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'icon-group' },
+                                _react2.default.createElement(
+                                    'a',
+                                    { href: link, target: '_blank', rel: 'noopener noreferrer' },
+                                    _react2.default.createElement('span', { className: 'glyphicon glyphicon-play-circle', id: 'youtube-icon', style: { color: cl, opacity: 0 } })
+                                ),
+                                _react2.default.createElement(
+                                    'a',
+                                    { href: wikilink, target: '_blank', rel: 'noopener noreferrer' },
+                                    _react2.default.createElement('span', { className: 'glyphicon glyphicon-info-sign', id: 'wiki-icon', style: { color: wikicolor } })
+                                )
+                            )
+                        )
+                    );
+                }
             });
 
             return _react2.default.createElement(
@@ -21378,9 +21429,6 @@ var Sponsors = function (_Component) {
         }, {
           name: "Curalate",
           img: "../assets/img/sponsors/startups/curalate.svg"
-        }, {
-          name: "Fornojo",
-          img: "../assets/img/sponsors/startups/fornojo.jpg"
         }, {
           name: "Granular",
           img: "../assets/img/sponsors/startups/granular.jpg"
@@ -25576,7 +25624,7 @@ exports = module.exports = __webpack_require__(20)(undefined);
 
 
 // module
-exports.push([module.i, "#About {\n  font-size: 16px;\n  min-height: 100vh;\n  overflow: hidden;\n  font-family: 'Roboto', sans-serif;\n  color: #275354;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  padding: 10vh 5vw 10vh 5vw;\n  background-color: rgba(255, 255, 255, 0.17); }\n\n.about-grid {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-pack: justify;\n  justify-content: space-between;\n  width: 100%; }\n\n.about-grid .col {\n  margin: 1em; }\n\n.ReactFlipCard {\n  height: 40vh;\n  outline: none; }\n\n.ReactFlipCard,\n.ReactFlipCard__Front,\n.ReactFlipCard__Back {\n  width: 25vw;\n  outline: none; }\n\n.ReactFlipCard__Front {\n  min-height: 15vh; }\n\n.ReactFlipCard__Front,\n.ReactFlipCard__Back {\n  -webkit-backface-visibility: hidden;\n  backface-visibility: hidden;\n  transition: transform 300ms;\n  transition-timing-function: linear;\n  vertical-align: middle; }\n\n.ReactFlipCard__Front {\n  background-color: rgba(60, 116, 113, 0.1);\n  padding: 30px;\n  text-align: center;\n  color: #cadea5;\n  border: 4px solid #cadea5;\n  font-weight: bold; }\n\n.ReactFlipCard__Back {\n  background: linear-gradient(to top right, #d3e5ae 40%, #56a09b 100%);\n  padding: 30px;\n  text-align: left;\n  font-weight: 100;\n  border: none;\n  opacity: 2;\n  margin-bottom: 10px; }\n\n.descrip {\n  font-size: 20px; }\n\n@media (max-width: 1240px) {\n  .about-grid {\n    display: block; }\n    .about-grid .col {\n      width: 100%; }\n  .ReactFlipCard,\n  .ReactFlipCard__Back {\n    width: 85vw;\n    margin: 0 auto;\n    height: 190px;\n    margin-bottom: 10px; }\n  .ReactFlipCard__Front {\n    width: 85vw;\n    margin: 0 auto;\n    min-height: 65px; } }\n\n@media (max-width: 440px) {\n  .about-grid {\n    display: block; }\n    .about-grid .col {\n      width: 100%; }\n  .ReactFlipCard,\n  .ReactFlipCard__Back {\n    width: 85vw;\n    margin: 0 auto;\n    margin-bottom: 1em;\n    min-height: 320px; }\n  .descrip {\n    font-size: 18px; } }\n", ""]);
+exports.push([module.i, "#About {\n  font-size: 16px;\n  min-height: 100vh;\n  overflow: hidden;\n  font-family: 'Roboto', sans-serif;\n  color: #275354;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  padding: 10vh 5vw 10vh 5vw;\n  background-color: rgba(255, 255, 255, 0.17); }\n\n.about-grid {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-pack: justify;\n  justify-content: space-between;\n  width: 100%; }\n\n.about-grid .col {\n  margin: 1em; }\n\n.ReactFlipCard {\n  position: relative; }\n\n.ReactFlipCard,\n.ReactFlipCard__Front,\n.ReactFlipCard__Back {\n  width: 25vw;\n  outline: none;\n  height: 270px;\n  vertical-align: middle; }\n\n.ReactFlipCard__Front,\n.ReactFlipCard__Back {\n  -webkit-backface-visibility: hidden;\n  backface-visibility: hidden;\n  transition: transform 300ms;\n  transition-timing-function: linear;\n  color: #cadea5; }\n\n.ReactFlipCard__Front {\n  background-color: rgba(60, 116, 113, 0.1);\n  padding: 0px;\n  text-align: center;\n  color: #cadea5;\n  border: 4px solid #cadea5;\n  font-weight: bold; }\n\n.ReactFlipCard__Back {\n  background-color: rgba(42, 50, 62, 0.8);\n  padding: 25px;\n  text-align: left;\n  font-weight: 100;\n  border: none;\n  opacity: 2;\n  margin-bottom: 10px; }\n\n.title {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  font-size: 26px; }\n\n.descrip {\n  font-size: 20px;\n  vertical-align: middle; }\n\n@media (max-width: 1240px) {\n  .about-grid {\n    display: block; }\n    .about-grid .col {\n      width: 100%; }\n  .ReactFlipCard,\n  .ReactFlipCard__Back {\n    width: 85vw;\n    margin: 0 auto;\n    height: 190px;\n    margin-bottom: 10px; }\n  .ReactFlipCard__Front {\n    width: 85vw;\n    margin: 0 auto;\n    min-height: 65px; } }\n\n@media (max-width: 440px) {\n  .about-grid {\n    display: block; }\n    .about-grid .col {\n      width: 100%; }\n  .ReactFlipCard,\n  .ReactFlipCard__Back {\n    width: 85vw;\n    margin: 0 auto;\n    margin-bottom: 1em;\n    min-height: 320px; }\n  .descrip {\n    font-size: 18px; } }\n", ""]);
 
 // exports
 
@@ -25618,7 +25666,7 @@ exports = module.exports = __webpack_require__(20)(undefined);
 
 
 // module
-exports.push([module.i, ".Navigation {\n  height: 12vh;\n  position: -webkit-sticky;\n  position: sticky;\n  top: -1px;\n  z-index: 1; }\n  .Navigation .navbar {\n    background-color: #252f3a; }\n    .Navigation .navbar .navbar-header {\n      min-height: 12vh; }\n    .Navigation .navbar .nav > li > a {\n      color: #ffff;\n      font-size: 19px;\n      font-family: 'Roboto Slab', serif;\n      line-height: 12vh;\n      text-transform: uppercase;\n      letter-spacing: 0.5px;\n      padding-top: 0;\n      padding-bottom: 0;\n      font-weight: bold;\n      opacity: 1; }\n    .Navigation .navbar .nav > li > a:hover {\n      color: #c9e88f;\n      text-shadow: 5px #c9e88f;\n      text-decoration: none; }\n  .Navigation__logo {\n    width: 55px; }\n\n@media (max-width: 400px) {\n  .Navigation__logo {\n    width: 40px; }\n  .Navigation .navbar .nav > li > a {\n    font-size: 1em; } }\n\n@keyframes spin {\n  100% {\n    transform: rotate(360deg); } }\n", ""]);
+exports.push([module.i, ".Navigation {\n  height: 10vh;\n  position: -webkit-sticky;\n  position: sticky;\n  top: -1px;\n  z-index: 1; }\n  .Navigation .navbar {\n    background-color: #252f3a;\n    position: relative; }\n    .Navigation .navbar .navbar-header {\n      min-height: 10vh; }\n    .Navigation .navbar .nav > li > a {\n      color: #ffff;\n      font-size: 19px;\n      font-family: 'Roboto Slab', serif;\n      line-height: 10vh;\n      text-transform: uppercase;\n      letter-spacing: 0.5px;\n      padding-top: 0;\n      padding-bottom: 0;\n      font-weight: bold;\n      opacity: 1; }\n    .Navigation .navbar .nav > li > a:hover {\n      color: #c9e88f;\n      text-shadow: 5px #c9e88f;\n      text-decoration: none; }\n  .Navigation__logo {\n    width: 55px;\n    position: absolute;\n    top: 50%;\n    transform: translateY(-50%); }\n\n@media (max-width: 400px) {\n  .Navigation__logo {\n    width: 40px; }\n  .Navigation .navbar .nav > li > a {\n    font-size: 1em; } }\n\n@keyframes spin {\n  100% {\n    transform: rotate(360deg); } }\n", ""]);
 
 // exports
 
@@ -25660,7 +25708,7 @@ exports = module.exports = __webpack_require__(20)(undefined);
 
 
 // module
-exports.push([module.i, ".Speakers {\n  padding: 5vh 5vw 10vh 5vw; }\n  .Speakers__card {\n    position: relative;\n    background-color: rgba(60, 116, 113, 0.5);\n    margin: 0.5em;\n    border: none; }\n    .Speakers__card img {\n      max-width: 100%;\n      width: auto;\n      max-height: 300px; }\n  .Speakers__header {\n    text-align: center;\n    color: #ffff;\n    margin-bottom: 1em; }\n  .Speakers__overlay {\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    background-color: rgba(60, 116, 113, 0.5);\n    color: #ffff;\n    padding: 10px;\n    overflow-y: scroll;\n    display: none;\n    z-index: 999; }\n    .Speakers__overlay p {\n      text-indent: 20px;\n      text-align: left; }\n  .Speakers h3 {\n    text-align: center;\n    font-size: 20px;\n    font-weight: light;\n    font-family: \"Roboto Slab\", serif;\n    padding: 0.2em;\n    color: #ffff; }\n  .Speakers .thumbnail {\n    padding: 0; }\n\n#youtube-icon {\n  font-size: 30px;\n  margin-left: 8px; }\n\ndiv > div.Speakers__youtube:hover {\n  background-color: rgba(60, 116, 113, 0.9);\n  opacity: 0.9;\n  box-shadow: 0 4px 8px 0 rgba(60, 116, 113, 0.5), 0 6px 20px 0 #3c7471; }\n\nh2 {\n  font-family: 'Roboto Slab', serif; }\n", ""]);
+exports.push([module.i, ".Speakers {\n  padding: 5vh 5vw 10vh 5vw; }\n  .Speakers__card {\n    position: relative;\n    background-color: rgba(60, 116, 113, 0.5);\n    margin: 0.5em;\n    border: none;\n    height: 430px; }\n    .Speakers__card img {\n      max-width: 100%;\n      width: auto;\n      max-height: 300px; }\n  .Speakers__header {\n    text-align: center;\n    color: #ffff;\n    margin-bottom: 1em; }\n  .Speakers h3 {\n    text-align: center;\n    font-size: 22px;\n    font-weight: light;\n    font-family: \"Roboto Slab\", serif;\n    padding: 0.2em;\n    color: #ffff; }\n  .Speakers h4 {\n    text-align: center;\n    font-size: 15px;\n    font-weight: light;\n    font-family: \"Roboto Slab\", serif;\n    padding: 0.4em;\n    color: #ffff; }\n  .Speakers .thumbnail {\n    padding: 5px; }\n\n#youtube-icon {\n  font-size: 30px;\n  float: left; }\n\nh2 {\n  font-family: 'Roboto Slab', serif; }\n\n#wiki-icon {\n  font-size: 30px;\n  float: right; }\n\n.icon-group {\n  padding-top: 5px; }\n", ""]);
 
 // exports
 
@@ -25702,7 +25750,7 @@ exports = module.exports = __webpack_require__(20)(undefined);
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Roboto);", ""]);
 
 // module
-exports.push([module.i, "body {\n  font-family: 'Roboto', sans-serif;\n  background-color: #28323f;\n  background-image: url(\"../../assets/svg/home_background.svg\");\n  scroll-behavior: smooth; }\n\n.Home * {\n  border: none; }\n\n.Home .caps {\n  text-transform: uppercase;\n  letter-spacing: 0.5px;\n  font-family: 'Roboto', sans-serif; }\n", ""]);
+exports.push([module.i, ".Home * {\n  border: none; }\n\n.Home .caps {\n  text-transform: uppercase;\n  letter-spacing: 0.5px;\n  font-family: 'Roboto', sans-serif; }\n", ""]);
 
 // exports
 
@@ -25814,7 +25862,7 @@ exports = module.exports = __webpack_require__(20)(undefined);
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:100,300);", ""]);
 
 // module
-exports.push([module.i, "body {\n  min-width: 200px;\n  padding: 0;\n  margin: 0;\n  width: 100vw;\n  overflow-x: hidden; }\n\nh1, h2, h3, h4, h5, h6 {\n  padding: 0;\n  margin: 0;\n  font-weight: 300; }\n\np {\n  font-family: 'Roboto Slab', serif;\n  font-weight: 100;\n  font-size: 1.2em; }\n\nbutton {\n  outline: none; }\n", ""]);
+exports.push([module.i, "body {\n  min-width: 200px;\n  padding: 0;\n  margin: 0;\n  width: 100vw;\n  overflow-x: hidden;\n  font-family: 'Roboto', sans-serif;\n  background-color: #28323f;\n  background-image: url(\"../assets/svg/home_background.svg\");\n  scroll-behavior: smooth; }\n\nh1, h2, h3, h4, h5, h6 {\n  padding: 0;\n  margin: 0;\n  font-weight: 300; }\n\np {\n  font-family: 'Roboto Slab', serif;\n  font-weight: 100;\n  font-size: 1.2em; }\n\nbutton {\n  outline: none; }\n", ""]);
 
 // exports
 

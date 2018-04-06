@@ -5,6 +5,7 @@
         background-color: rgba(60, 116, 113, 0.5);
         margin: 0.5em;
         border: none;
+        height: 430px;
         img {
             max-width: 100%;
             width: auto;
@@ -16,26 +17,9 @@
         color: #ffff;
         margin-bottom: 1em;
     }
-    &__overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(60, 116, 113, 0.5);
-        color: #ffff;
-        padding: 10px;
-        overflow-y: scroll;
-        display: none;
-        z-index: 999;
-        p {
-            text-indent: 20px;
-            text-align: left;
-        }
-    }
     h3 {
         text-align: center;
-        font-size: 20px;
+        font-size: 22px;
         font-weight: light;
         font-family: "Roboto Slab", serif;
         padding: 0.2em;
@@ -50,25 +34,29 @@
         color: #ffff;
     }
     .thumbnail {
-        padding: 0;
+        padding: 5px;
     }
 }
 
 #youtube-icon {
     font-size: 30px;
-    margin-left: 8px;
+    float: left;
 }
-// Ensures that only speaker cards with YouTube links are highlighted
-div>div.Speakers__youtube:hover {
-    background-color: rgba(60, 116, 113, 0.9);
-    opacity: 0.9;
-    box-shadow: 0 4px 8px 0 rgba(60, 116, 113, 0.5), 0 6px 20px 0 rgba(60, 116, 113, 1);
-}
+
 h2 {
     font-family: 'Roboto Slab', serif;
 }
 
 #wiki-icon {
     font-size: 30px;
-    margin-left: 70%;
+    float: right;
+}
+
+.icon-group {
+    padding-top: 5px;
+}
+
+@media (max-width: 680px) {
+    .Speakers__card {
+    }
 }

@@ -21,8 +21,7 @@
 }
 
 .ReactFlipCard {
-    height: 40vh;
-    outline: none;
+    position: relative;
 }
 
 .ReactFlipCard,
@@ -30,11 +29,9 @@
   .ReactFlipCard__Back {
     width: 25vw;
     outline: none;
+    height: 270px;
+    vertical-align: middle;
   }
-
-.ReactFlipCard__Front {
-    min-height: 15vh;
-}
 
 .ReactFlipCard__Front,
   .ReactFlipCard__Back {
@@ -46,12 +43,12 @@
     transition: transform 300ms, -webkit-transform 300ms;
     -webkit-transition-timing-function: linear;
     transition-timing-function: linear;
-    vertical-align: middle;
+    color: #cadea5;
 }
 
 .ReactFlipCard__Front {
     background-color: rgba(60, 116, 113, 0.1);
-    padding: 30px;
+    padding: 0px;
     text-align: center;
     color: #cadea5;
     border: 4px solid #cadea5;
@@ -59,8 +56,8 @@
 }
 
 .ReactFlipCard__Back {
-    background: linear-gradient(to top right, #d3e5ae 40%, #56a09b 100%);
-    padding: 30px;
+    background-color:rgba(42, 50, 62, 0.8);
+    padding: 25px;
     text-align: left;
     font-weight: 100;
     border: none;
@@ -68,8 +65,17 @@
     margin-bottom: 10px;
 }
 
+.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 26px;
+}
+
 .descrip {
     font-size: 20px;
+    vertical-align: middle;
 }
 
 @media (max-width: 1240px) {

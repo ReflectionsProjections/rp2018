@@ -16,7 +16,6 @@ class Speakers extends Component {
             {
                 'name': 'Steve Wozniak',
                 'img': '../assets/img/keynotes/steve.jpg',
-
                 'year': 'Co-founder of Apple',
                 'wikipedia': 'https://en.wikipedia.org/wiki/Steve_Wozniak'
             },
@@ -48,14 +47,13 @@ class Speakers extends Component {
             {
                 'name': 'Danielle Feinberg',
                 'img': '../assets/img/keynotes/danielle.jpg',
-                'year': 'Director of Photography for Lighting at Pixar',
+                'year': 'Director of Photography at Pixar',
                 'wikipedia': 'https://en.wikipedia.org/wiki/Danielle_Feinberg'
             },
             {
                 'name': 'Travis Oliphant',
                 'img': '../assets/img/keynotes/travis.jpg',
-
-                'year': 'Founder of Anaconda and creator of NumPy',
+                'year': 'Founder of Anaconda & Creator of NumPy',
                 'youtube': 'https://www.youtube.com/watch?v=_PDvlqbgxCU',
                 'wikipedia': 'https://en.wikipedia.org/wiki/Travis_Oliphant'
             },
@@ -68,7 +66,6 @@ class Speakers extends Component {
             {
                 'name': 'Robin Walker',
                 'img': '../assets/img/keynotes/robin.jpg',
-
                 'year': 'Co-developer of Team Fortress',
                 'wikipedia': 'https://en.wikipedia.org/wiki/Robin_Walker_(game_designer)'
             },
@@ -87,7 +84,7 @@ class Speakers extends Component {
             {
                 'name': 'Cassidy Williams',
                 'img': '../assets/img/keynotes/cassidy.jpg',
-                'year': 'Head of Developer Voice Programs at Amazon',
+                'year': 'Head of Amazon Developer Voice Programs',
                 'wikipedia': ''
             },
             {
@@ -105,7 +102,7 @@ class Speakers extends Component {
             {
                 'name': 'Roy Bhat',
                 'img': '../assets/img/keynotes/roy.jpg',
-                'year': 2016,
+                'year': 'Keynote Speaker of 2016',
                 'wikipedia': ''
             }
         ];
@@ -140,9 +137,7 @@ class Speakers extends Component {
             var link = speaker.youtube;
             var wikilink = speaker.wikipedia;
             var reveal = (link != undefined && link != null) ? "visible" : "hidden";
-            //hasLinkColor - Color of glyphicon link if the speaker's card DOES LINK to a YouTube video
             const hasLinkColor = "#c9e88f";
-            //hasNoLinkColor - Color of glyphicon link if the speaker's card DOES NOT LINK to a YouTube video
             const hasNoLinkColor = "#a4b0bc";
             var cl = (link != undefined && link != null) ? hasLinkColor : hasNoLinkColor;
             var wikicolor = "#c9e88f"
@@ -153,12 +148,14 @@ class Speakers extends Component {
                         <Thumbnail className = {cName} src = { speaker.img } >
                         <h3 style = {{ color: "white" } } > { speaker.name } </h3> 
                         <h4 style = {{ color: "white" } } > { speaker.year } </h4> 
-                        <a href= {link}>
-                            <span className = "glyphicon glyphicon-play-circle" id = "youtube-icon" style = {{ color: cl } }/>
-                        </a> 
-                        <a href= {wikilink}>
-                            <span className = "glyphicon glyphicon-info-sign" id = "wiki-icon" style = {{ color: wikicolor} }/>
-                        </a> 
+                        <div className="icon-group">
+                            <a href= {link} target="_blank" rel="noopener noreferrer">
+                                <span className = "glyphicon glyphicon-play-circle" id = "youtube-icon" style = {{ color: cl } }/>
+                            </a> 
+                            <a href= {wikilink} target="_blank" rel="noopener noreferrer">
+                                <span className = "glyphicon glyphicon-info-sign" id = "wiki-icon" style = {{ color: wikicolor} }/>
+                            </a> 
+                        </div>
                         </Thumbnail> 
                     </Col>
                 )
@@ -168,12 +165,14 @@ class Speakers extends Component {
                         <Thumbnail className = {cName} src = { speaker.img } >
                         <h3 style = {{ color: "white" } } > { speaker.name } </h3> 
                         <h4 style = {{ color: "white" } } > { speaker.year } </h4> 
-                        <a href= {link}>
-                            <span className = "glyphicon glyphicon-play-circle" id = "youtube-icon" style = {{ color: cl, opacity: 0 } }/>
-                        </a> 
-                        <a href= {wikilink}>
-                            <span className = "glyphicon glyphicon-info-sign" id = "wiki-icon" style = {{ color: wikicolor} }/>
-                        </a> 
+                        <div className="icon-group">
+                            <a href= {link} target="_blank" rel="noopener noreferrer">
+                                <span className = "glyphicon glyphicon-play-circle" id = "youtube-icon" style = {{ color: cl, opacity: 0 } }/>
+                            </a> 
+                            <a href= {wikilink} target="_blank" rel="noopener noreferrer">
+                                <span className = "glyphicon glyphicon-info-sign" id = "wiki-icon" style = {{ color: wikicolor} }/>
+                            </a> 
+                        </div>
                         </Thumbnail> 
                     </Col>
                 )
