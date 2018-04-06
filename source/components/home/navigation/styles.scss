@@ -41,9 +41,14 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 780px) {
+  .navbar {
+    position: sticky;
+  }
   .Navigation__logo {
       width: 40px;
+      position: relative;
+      top: 13px;
   }
   .Navigation {
     .navbar {
