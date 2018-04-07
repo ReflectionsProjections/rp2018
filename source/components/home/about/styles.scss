@@ -29,7 +29,7 @@
   .ReactFlipCard__Back {
     width: 25vw;
     outline: none;
-    height: 280px;
+    height: 315px;
     vertical-align: middle;
   }
 
@@ -57,7 +57,8 @@
 
 .ReactFlipCard__Back {
     background-color:rgba(42, 50, 62, 0.8);
-    padding: 25px;
+    padding-left: 30px;
+    padding-right: 30px;
     text-align: left;
     font-weight: 100;
     border: none;
@@ -74,8 +75,13 @@
 }
 
 .descrip {
+    display: table-cell;
     font-size: 20px;
     vertical-align: middle;
+    height: inherit;
+    width: inherit;
+    margin: 0 auto;
+    padding-top: 0px;
 }
 
 @media (max-width: 1240px) {

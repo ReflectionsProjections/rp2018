@@ -21099,7 +21099,7 @@ var Speakers = function (_Component) {
             }, {
                 'name': 'Peter Norvig',
                 'img': '../assets/img/keynotes/peter.jpg',
-                'year': 'Director of research at Google Inc.',
+                'year': 'Director of Research at Google Inc.',
                 'wikipedia': 'https://en.wikipedia.org/wiki/Peter_Norvig'
             }, {
                 'name': 'Danielle Feinberg',
@@ -21115,7 +21115,7 @@ var Speakers = function (_Component) {
             }, {
                 'name': 'Anna Patterson',
                 'img': '../assets/img/keynotes/anna.jpg',
-                'year': 'Co-founder of search engine Cuil',
+                'year': 'Co-founder of Search Engine Cuil',
                 'wikipedia': 'https://en.wikipedia.org/wiki/Anna_Patterson'
             }, {
                 'name': 'Robin Walker',
@@ -21126,32 +21126,32 @@ var Speakers = function (_Component) {
                 'name': 'Laura I. Gómez',
                 'img': '../assets/img/keynotes/laura.jpg',
                 'year': 'Founder and CEO of Atipica Inc.',
-                'wikipedia': ''
+                'wikipedia': 'https://www.linkedin.com/in/lauraigomez/'
             }, {
                 'name': 'Basil Alwan',
                 'img': '../assets/img/keynotes/basil.jpg',
                 'year': 'President of IP/Optical Networks at Nokia',
-                'wikipedia': ''
+                'wikipedia': 'https://www.nokia.com/en_int/investors/corporate-governance/group-leadership-team/basil-alwan-president-of-ipoptical-networks'
             }, {
                 'name': 'Cassidy Williams',
                 'img': '../assets/img/keynotes/cassidy.jpg',
                 'year': 'Head of Amazon Developer Voice Programs',
-                'wikipedia': ''
+                'wikipedia': 'https://cassidoo.co/'
             }, {
                 'name': 'Chris Gladwin',
                 'img': '../assets/img/keynotes/chris.jpg',
                 'year': 'Founder of Cleversafe',
-                'wikipedia': ''
+                'wikipedia': 'https://en.wikipedia.org/wiki/Chris_Gladwin_(engineer)'
             }, {
                 'name': 'Stefano Zacchiroli',
                 'img': '../assets/img/keynotes/stefano.jpg',
                 'year': 'Debian Project Leader',
-                'wikipedia': ''
+                'wikipedia': 'https://upsilon.cc/~zack/'
             }, {
-                'name': 'Roy Bhat',
+                'name': 'Roy Bahat',
                 'img': '../assets/img/keynotes/roy.jpg',
-                'year': 'Keynote Speaker of 2016',
-                'wikipedia': ''
+                'year': 'Head of Bloomberg Beta',
+                'wikipedia': 'https://www.linkedin.com/in/roybahat/'
             }];
 
             this.handleClick = function (evt, url, id) {
@@ -25624,7 +25624,7 @@ exports = module.exports = __webpack_require__(20)(undefined);
 
 
 // module
-exports.push([module.i, "#About {\n  font-size: 16px;\n  min-height: 100vh;\n  overflow: hidden;\n  font-family: 'Roboto', sans-serif;\n  color: #275354;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  padding: 10vh 5vw 10vh 5vw;\n  background-color: rgba(255, 255, 255, 0.17); }\n\n.about-grid {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-pack: justify;\n  justify-content: space-between;\n  width: 100%; }\n\n.about-grid .col {\n  margin: 1em; }\n\n.ReactFlipCard {\n  position: relative; }\n\n.ReactFlipCard,\n.ReactFlipCard__Front,\n.ReactFlipCard__Back {\n  width: 25vw;\n  outline: none;\n  height: 280px;\n  vertical-align: middle; }\n\n.ReactFlipCard__Front,\n.ReactFlipCard__Back {\n  -webkit-backface-visibility: hidden;\n  backface-visibility: hidden;\n  transition: transform 300ms;\n  transition-timing-function: linear;\n  color: #cadea5; }\n\n.ReactFlipCard__Front {\n  background-color: rgba(60, 116, 113, 0.1);\n  padding: 0px;\n  text-align: center;\n  color: #cadea5;\n  border: 4px solid #cadea5;\n  font-weight: bold; }\n\n.ReactFlipCard__Back {\n  background-color: rgba(42, 50, 62, 0.8);\n  padding: 25px;\n  text-align: left;\n  font-weight: 100;\n  border: none;\n  opacity: 2;\n  margin-bottom: 10px; }\n\n.title {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  font-size: 24px; }\n\n.descrip {\n  font-size: 20px;\n  vertical-align: middle; }\n\n@media (max-width: 1240px) {\n  .about-grid {\n    display: block; }\n    .about-grid .col {\n      width: 100%; }\n  .ReactFlipCard,\n  .ReactFlipCard__Back {\n    width: 85vw;\n    margin: 0 auto;\n    height: 190px;\n    margin-bottom: 10px; }\n  .ReactFlipCard__Front {\n    width: 85vw;\n    margin: 0 auto;\n    height: 190px; } }\n\n@media (max-width: 440px) {\n  .about-grid {\n    display: block; }\n    .about-grid .col {\n      width: 100%; }\n  .ReactFlipCard,\n  .ReactFlipCard__Back {\n    width: 85vw;\n    margin: 0 auto;\n    margin-bottom: 1em;\n    height: 280px; }\n  .ReactFlipCard__Front {\n    height: 280px; }\n  .descrip {\n    font-size: 18px; } }\n\n@media (max-width: 440px) {\n  .about-grid {\n    display: block; }\n    .about-grid .col {\n      width: 100%; }\n  .ReactFlipCard,\n  .ReactFlipCard__Back {\n    width: 85vw;\n    margin: 0 auto;\n    margin-bottom: 1em;\n    height: 280px; }\n  .ReactFlipCard__Front {\n    height: 280px; }\n  .descrip {\n    font-size: 18px; } }\n\n@media (max-width: 320px) {\n  .about-grid {\n    display: block; }\n    .about-grid .col {\n      width: 100%; }\n  .ReactFlipCard,\n  .ReactFlipCard__Back {\n    width: 85vw;\n    margin: 0 auto;\n    margin-bottom: 1em;\n    height: 320px; }\n  .ReactFlipCard__Front {\n    height: 320px; }\n  .descrip {\n    font-size: 18px; } }\n", ""]);
+exports.push([module.i, "#About {\n  font-size: 16px;\n  min-height: 100vh;\n  overflow: hidden;\n  font-family: 'Roboto', sans-serif;\n  color: #275354;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  padding: 10vh 5vw 10vh 5vw;\n  background-color: rgba(255, 255, 255, 0.17); }\n\n.about-grid {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-pack: justify;\n  justify-content: space-between;\n  width: 100%; }\n\n.about-grid .col {\n  margin: 1em; }\n\n.ReactFlipCard {\n  position: relative; }\n\n.ReactFlipCard,\n.ReactFlipCard__Front,\n.ReactFlipCard__Back {\n  width: 25vw;\n  outline: none;\n  height: 315px;\n  vertical-align: middle; }\n\n.ReactFlipCard__Front,\n.ReactFlipCard__Back {\n  -webkit-backface-visibility: hidden;\n  backface-visibility: hidden;\n  transition: transform 300ms;\n  transition-timing-function: linear;\n  color: #cadea5; }\n\n.ReactFlipCard__Front {\n  background-color: rgba(60, 116, 113, 0.1);\n  padding: 0px;\n  text-align: center;\n  color: #cadea5;\n  border: 4px solid #cadea5;\n  font-weight: bold; }\n\n.ReactFlipCard__Back {\n  background-color: rgba(42, 50, 62, 0.8);\n  padding-left: 30px;\n  padding-right: 30px;\n  text-align: left;\n  font-weight: 100;\n  border: none;\n  opacity: 2;\n  margin-bottom: 10px; }\n\n.title {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  font-size: 24px; }\n\n.descrip {\n  display: table-cell;\n  font-size: 20px;\n  vertical-align: middle;\n  height: inherit;\n  width: inherit;\n  margin: 0 auto;\n  padding-top: 0px; }\n\n@media (max-width: 1240px) {\n  .about-grid {\n    display: block; }\n    .about-grid .col {\n      width: 100%; }\n  .ReactFlipCard,\n  .ReactFlipCard__Back {\n    width: 85vw;\n    margin: 0 auto;\n    height: 190px;\n    margin-bottom: 10px; }\n  .ReactFlipCard__Front {\n    width: 85vw;\n    margin: 0 auto;\n    height: 190px; } }\n\n@media (max-width: 440px) {\n  .about-grid {\n    display: block; }\n    .about-grid .col {\n      width: 100%; }\n  .ReactFlipCard,\n  .ReactFlipCard__Back {\n    width: 85vw;\n    margin: 0 auto;\n    margin-bottom: 1em;\n    height: 280px; }\n  .ReactFlipCard__Front {\n    height: 280px; }\n  .descrip {\n    font-size: 18px; } }\n\n@media (max-width: 440px) {\n  .about-grid {\n    display: block; }\n    .about-grid .col {\n      width: 100%; }\n  .ReactFlipCard,\n  .ReactFlipCard__Back {\n    width: 85vw;\n    margin: 0 auto;\n    margin-bottom: 1em;\n    height: 280px; }\n  .ReactFlipCard__Front {\n    height: 280px; }\n  .descrip {\n    font-size: 18px; } }\n\n@media (max-width: 320px) {\n  .about-grid {\n    display: block; }\n    .about-grid .col {\n      width: 100%; }\n  .ReactFlipCard,\n  .ReactFlipCard__Back {\n    width: 85vw;\n    margin: 0 auto;\n    margin-bottom: 1em;\n    height: 320px; }\n  .ReactFlipCard__Front {\n    height: 320px; }\n  .descrip {\n    font-size: 18px; } }\n", ""]);
 
 // exports
 

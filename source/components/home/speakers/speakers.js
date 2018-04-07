@@ -41,7 +41,7 @@ class Speakers extends Component {
             {
                 'name': 'Peter Norvig',
                 'img': '../assets/img/keynotes/peter.jpg',
-                'year': 'Director of research at Google Inc.',
+                'year': 'Director of Research at Google Inc.',
                 'wikipedia': 'https://en.wikipedia.org/wiki/Peter_Norvig'
             },
             {
@@ -60,7 +60,7 @@ class Speakers extends Component {
             {
                 'name': 'Anna Patterson',
                 'img': '../assets/img/keynotes/anna.jpg',
-                'year': 'Co-founder of search engine Cuil',
+                'year': 'Co-founder of Search Engine Cuil',
                 'wikipedia': 'https://en.wikipedia.org/wiki/Anna_Patterson'
             },
             {
@@ -73,37 +73,37 @@ class Speakers extends Component {
                 'name': 'Laura I. Gómez',
                 'img': '../assets/img/keynotes/laura.jpg',
                 'year': 'Founder and CEO of Atipica Inc.',
-                'wikipedia': ''
+                'wikipedia': 'https://www.linkedin.com/in/lauraigomez/'
             },
             {
                 'name': 'Basil Alwan',
                 'img': '../assets/img/keynotes/basil.jpg',
                 'year': 'President of IP/Optical Networks at Nokia',
-                'wikipedia': ''
+                'wikipedia': 'https://www.nokia.com/en_int/investors/corporate-governance/group-leadership-team/basil-alwan-president-of-ipoptical-networks'
             },
             {
                 'name': 'Cassidy Williams',
                 'img': '../assets/img/keynotes/cassidy.jpg',
                 'year': 'Head of Amazon Developer Voice Programs',
-                'wikipedia': ''
+                'wikipedia': 'https://cassidoo.co/'
             },
             {
                 'name': 'Chris Gladwin',
                 'img': '../assets/img/keynotes/chris.jpg',
                 'year': 'Founder of Cleversafe',
-                'wikipedia': ''
+                'wikipedia': 'https://en.wikipedia.org/wiki/Chris_Gladwin_(engineer)'
             },
             {
                 'name': 'Stefano Zacchiroli',
                 'img': '../assets/img/keynotes/stefano.jpg',
                 'year': 'Debian Project Leader',
-                'wikipedia': ''
+                'wikipedia': 'https://upsilon.cc/~zack/'
             },
             {
-                'name': 'Roy Bhat',
+                'name': 'Roy Bahat',
                 'img': '../assets/img/keynotes/roy.jpg',
-                'year': 'Keynote Speaker of 2016',
-                'wikipedia': ''
+                'year': 'Head of Bloomberg Beta',
+                'wikipedia': 'https://www.linkedin.com/in/roybahat/'
             }
         ];
 
