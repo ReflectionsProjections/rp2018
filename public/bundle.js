@@ -21088,7 +21088,7 @@ var Speakers = function (_Component) {
             }, {
                 'name': 'Brian J. Fox',
                 'img': '../assets/img/keynotes/brian.jpg',
-                'year': 'Author of GNU Bash shell',
+                'year': 'Author of GNU Bash Shell',
                 'youtube': 'https://www.youtube.com/watch?v=itBU4F50N8Q',
                 'wikipedia': 'https://en.wikipedia.org/wiki/Brian_Fox_(computer_programmer)'
             }, {
