@@ -125,10 +125,6 @@ class Sponsors extends Component {
           img: "../assets/img/sponsors/startups/curalate.svg"
         },
         {
-          name: "Fornojo",
-          img: "../assets/img/sponsors/startups/fornojo.jpg"
-        },
-        {
           name: "Granular",
           img: "../assets/img/sponsors/startups/granular.jpg"
         },
@@ -181,7 +177,7 @@ class Sponsors extends Component {
 
     const tier2Sponsors = sponsorsList.tier2.map((sponsor, idx) => {
       return (
-        <Col key={idx} xs={12} lg={6} sm={2} md={2}>
+        <Col key={idx} xs={12} lg={6} sm={6} md={6}>
           <Panel className="Sponsors__card Sponsors__card--tier3">
             <img
               className="Sponsors__cardLogo"
@@ -195,7 +191,7 @@ class Sponsors extends Component {
 
     const tier3Sponsors = sponsorsList.tier3.map((sponsor, idx) => {
       return (
-        <Col key={idx} xs={12} sm={4} md={4}>
+        <Col key={idx} xs={6} sm={4} md={4}>
           <Panel className="Sponsors__card Sponsors__card--tier3">
             <img
               className="Sponsors__cardLogo"
@@ -209,7 +205,7 @@ class Sponsors extends Component {
 
     const tier4Sponsors = sponsorsList.tier4.map((sponsor, idx) => {
       return (
-        <Col key={idx} xs={12} sm={3} md={3}>
+        <Col key={idx} xs={6} sm={3} md={3}>
           <Panel className="Sponsors__card Sponsors__card--tier4">
             <img
               className="Sponsors__cardLogo"
