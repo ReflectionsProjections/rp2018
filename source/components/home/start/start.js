@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Jumbotron, Button, OverlayTrigger, Popover } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import styles from './styles.scss'
+import ContactForm from '../contact_form/contact_form';
 import Countdown from '../countdown/countdown'
 import Scrolldown from '../scrolldown/scrolldown'
 
@@ -34,6 +35,7 @@ class Start extends Component {
                     </div>
                     <div className="intro"> Interested in sponsoring or attending? </div>
                     <a className="btn" href="mailto:conference-chair@acm.illinois.edu">
+                        <ContactForm/>
                         <button className="contact">CONTACT US
                         {/*<span id="tooltiptext">If you are interested in attending or sponsoring!</span>*/}
                         </button>

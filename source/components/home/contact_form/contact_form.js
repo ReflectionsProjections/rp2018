@@ -50,4 +50,4 @@ class contact_form extends Component {
         );
     }
 }
-    export default Form;
+    export default contact_form;
