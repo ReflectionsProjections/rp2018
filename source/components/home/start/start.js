@@ -18,6 +18,10 @@ class Start extends Component {
     }
     
 
+    formLoad() {
+
+    }
+
     render() {
         return(
             <div className="Start">
