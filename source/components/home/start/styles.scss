@@ -14,14 +14,11 @@
 
     .caps {
         margin: 25px;
+        font-size: 1.5em;
     }
 
-    .counter {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.2em;
-        flex-direction: row;
+    #countdown {
+        font-size: 1.5em;
     }
 
     .header {
@@ -55,17 +52,45 @@
         opacity: 1;
     }
 
-    @media (max-width: 400px) {
+    @media (max-width: 1024px) {
+        .header {
+            max-width: 85%;
+        } 
+        .btn button{
+            font-size: 1.3em;
+            width: 200px;
+        }  
+        #countdown, .intro, .caps {
+            font-size: 2em;
+        }
+    }
+
+    @media (max-width: 420px) {
         .header {
             max-width: 90%;
-        } 
-        .Start {
-            font-size: 0.8em;
         } 
         .btn button{
             font-size: 0.8em;
             width: 100px;
+            height: 40px;
         }  
+        #countdown, .intro, .caps {
+            font-size: 1.2em;
+        }
+    }
+
+    @media (max-width: 320px) {
+        .header {
+            max-width: 90%;
+        } 
+        .btn button{
+            font-size: 0.8em;
+            width: 100px;
+            height: 40px;
+        }  
+        #countdown, .intro, .caps {
+            font-size: 1.0em;
+        }
     }
 }
 
@@ -111,11 +136,13 @@
 
 .intro {
     font-family: 'Roboto', sans-serif;
-    font-size: 20px;
+    font-size: 1.5em;
     font-weight: 100;
     color:#fff;
+    margin: 25px;
 }
   
+
 
 
 

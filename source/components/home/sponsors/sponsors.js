@@ -23,12 +23,12 @@ class Sponsors extends Component {
 
       tier3: [
         {
-          name: "Forcepoint",
-          img: "../assets/img/sponsors/jobfair/gigabyte/forcepoint.jpg"
-        },
-        {
           name: "Microsoft",
           img: "../assets/img/sponsors/jobfair/gigabyte/microsoft.jpg"
+        },
+        {
+          name: "Forcepoint",
+          img: "../assets/img/sponsors/jobfair/gigabyte/forcepoint.jpg"
         },
         {
           name: "IMO",
