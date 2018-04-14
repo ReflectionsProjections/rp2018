@@ -5,6 +5,7 @@ import styles from './styles.scss'
 import Countdown from '../countdown/countdown'
 import Scrolldown from '../scrolldown/scrolldown'
 
+
 const popoverBottom = (
     <Popover id="popover-positioned-bottom" style={{backgroundColor: "rgba(43, 92, 93, 0.5)", border: "2px solid #cadea5", borderRadius: 0}}>
         If you are willing to sponsor!
@@ -16,7 +17,6 @@ class Start extends Component {
     constructor() {
         super();
     }
-    
 
     render() {
         return(

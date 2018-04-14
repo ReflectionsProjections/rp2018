@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom';
-import AnimationCount from 'react-count-animation';
-import 'react-count-animation/dist/count.min.css';
-
 
 class Countdown extends Component {
+    
     constructor() {
         super();
     }
@@ -22,20 +20,16 @@ class Countdown extends Component {
             + minutes + "M " + seconds + "S ";
             if (distance < 0) {
                 clearInterval(x);
-                document.getElementById("countdown").innerHTML = "EXPIRED";
+                document.getElementById("countdown").style = "display: none";
             }
         }, 1000);
     }
 
     render() {
-        
-
         return(
           <div><span id="countdown">Coming Soon!</span></div>
         )
     }
-
-
 }
 
 export default Countdown;

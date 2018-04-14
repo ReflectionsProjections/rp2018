@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { PageHeader, Grid, Row, Alert, Button } from 'react-bootstrap'
-
 import styles from './styles.scss'
 
 class Events extends Component {

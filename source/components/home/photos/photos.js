@@ -4,6 +4,7 @@ import styles from './styles.scss'
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 
+
 const PHOTO_SET = [
   { src: '../assets/img/history/career0.jpg', alt: 'Slide 1' },
   { src: '../assets/img/history/career2.jpg', alt: 'Slide 2' },

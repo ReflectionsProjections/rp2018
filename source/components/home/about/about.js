@@ -33,7 +33,6 @@ const sponsor = {
     animation: 'up',
 };
 
-
 class About extends Component {
 
     constructor() {

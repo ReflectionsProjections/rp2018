@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Grid, Row, Col, Thumbnail, PageHeader } from 'react-bootstrap'
-
 import styles from './styles.scss'
+
 
 class Speakers extends Component {
 
@@ -144,7 +144,7 @@ class Speakers extends Component {
             var cName = (cl == hasLinkColor)? "Speakers__card js-speakercard Speakers__youtube": "Speakers__card js-speakercard";
             if (link) {
                 return ( 
-                    <Col key = { idx } xs = { 12 } lg = { 4 } sm = { 9 } md = { 9 } >
+                    <Col key = { idx } xs = { 12 } lg = { 4 } sm = { 12 } md = { 12 }>
                         <Thumbnail className = {cName} src = { speaker.img } >
                         <h3 style = {{ color: "white" } } > { speaker.name } </h3> 
                         <h4 style = {{ color: "white" } } > { speaker.year } </h4> 
@@ -161,7 +161,7 @@ class Speakers extends Component {
                 )
             } else {
                 return(
-                    <Col key = { idx } xs = { 12 } lg = { 4 } sm = { 9 } md = { 9 } >
+                    <Col key = { idx } xs = { 12 } lg = { 4 } sm = { 12 } md = { 12 }>
                         <Thumbnail className = {cName} src = { speaker.img } >
                         <h3 style = {{ color: "white" } } > { speaker.name } </h3> 
                         <h4 style = {{ color: "white" } } > { speaker.year } </h4> 
@@ -182,7 +182,7 @@ class Speakers extends Component {
         return ( 
             <div className = "Speakers" id = "Speakers" >
                 <PageHeader className = "Speakers__header" > <h2>Past Speakers </h2></PageHeader> 
-                <Grid ><Row > { speakerView } </Row> </Grid> 
+                <Grid style={{width: "100%"}}><Row> { speakerView } </Row> </Grid> 
             </div>
         )
     }

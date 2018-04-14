@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Grid, Row, Col, Panel, PageHeader } from "react-bootstrap";
-
 import styles from "./styles.scss";
+
 
 class Sponsors extends Component {
   constructor() {

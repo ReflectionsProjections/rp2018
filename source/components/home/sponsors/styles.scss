@@ -23,13 +23,13 @@
     }
 
     &__centeredCard {
-        left: 50%;
-        transform: translateX(-50%);
+        margin: auto 0;
     }
 
     &__centerContent {
         text-align: center;
         align-content: center;
+        margin: auto 0;
     }
 
     &__header {

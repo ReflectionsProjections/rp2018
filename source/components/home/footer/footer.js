@@ -1,14 +1,8 @@
 import React, { Component } from 'react'
 import { PageHeader, Grid, Row, Media, Glyphicon } from 'react-bootstrap'
-
 import styles from './styles.scss'
 const FA = require('react-fontawesome')
-
 var Modal = require('react-modal');
-
-// var appElement = document.getElementById('snapchatModal');
-
-// Modal.setAppElement(appElement);
 
 class Footer extends Component {
 
@@ -21,6 +15,7 @@ class Footer extends Component {
 		this.handleOpenModal = this.handleOpenModal.bind(this);
 		this.handleCloseModal = this.handleCloseModal.bind(this);
 	}
+	
 	handleOpenModal () {
 		this.setState({ showModal: true });
 	}
