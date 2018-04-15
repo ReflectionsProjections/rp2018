@@ -20,15 +20,6 @@ class Navigation extends Component {
             });
         };
 
-        this.burgerToggle = () => {
-            let linksEl = document.querySelector('.narrow-links');
-            if (linksEl.style.display === 'block') {
-                linksEl.style.display = 'none';
-            } else {
-                linksEl.style.display = 'block';
-            }
-        }
-
         return(
             <div className="Navigation">
                 <Navbar collapseOnSelect fixedTop>

@@ -12,15 +12,11 @@ class Scrolldown extends Component {
 
         this.scrollTo = (name) => {
             const element = document.getElementById(name);
-            element.scrollIntoView();
-            const scrolledY = window.scrollY;
-            if(scrolledY){
-                window.scroll({
-                  top: scrolledY - 10,
-                  left: 0,
-                  behavior: 'smooth',
-                });
-            }
+            var yPosition = element.offsetTop;
+            window.scrollTo({
+                top: yPosition,
+                behavior: "smooth"
+            });
         };
 
         return(

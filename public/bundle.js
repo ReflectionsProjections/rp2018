@@ -20850,15 +20850,6 @@ var Navigation = function (_Component) {
                 });
             };
 
-            this.burgerToggle = function () {
-                var linksEl = document.querySelector('.narrow-links');
-                if (linksEl.style.display === 'block') {
-                    linksEl.style.display = 'none';
-                } else {
-                    linksEl.style.display = 'block';
-                }
-            };
-
             return _react2.default.createElement(
                 'div',
                 { className: 'Navigation' },
@@ -20970,15 +20961,11 @@ var Scrolldown = function (_Component) {
 
             this.scrollTo = function (name) {
                 var element = document.getElementById(name);
-                element.scrollIntoView();
-                var scrolledY = window.scrollY;
-                if (scrolledY) {
-                    window.scroll({
-                        top: scrolledY - 10,
-                        left: 0,
-                        behavior: 'smooth'
-                    });
-                }
+                var yPosition = element.offsetTop;
+                window.scrollTo({
+                    top: yPosition,
+                    behavior: "smooth"
+                });
             };
 
             return _react2.default.createElement(
