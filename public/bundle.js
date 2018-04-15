@@ -20851,10 +20851,6 @@ var Navigation = function (_Component) {
                 }
             };
 
-            this.emailTo = function (address) {
-                location.href = address;
-            };
-
             return _react2.default.createElement(
                 'div',
                 { className: 'Navigation' },
@@ -21162,7 +21158,7 @@ var Speakers = function (_Component) {
                 if (link) {
                     return _react2.default.createElement(
                         _reactBootstrap.Col,
-                        { key: idx, xs: 12, lg: 4, sm: 12, md: 12 },
+                        { key: idx, xs: 12, lg: 4, sm: 6, md: 6 },
                         _react2.default.createElement(
                             _reactBootstrap.Thumbnail,
                             { className: cName, src: speaker.img },
@@ -21199,7 +21195,7 @@ var Speakers = function (_Component) {
                 } else {
                     return _react2.default.createElement(
                         _reactBootstrap.Col,
-                        { key: idx, xs: 12, lg: 4, sm: 12, md: 12 },
+                        { key: idx, xs: 12, lg: 4, sm: 6, md: 6 },
                         _react2.default.createElement(
                             _reactBootstrap.Thumbnail,
                             { className: cName, src: speaker.img },
@@ -25614,7 +25610,7 @@ exports = module.exports = __webpack_require__(20)(undefined);
 
 
 // module
-exports.push([module.i, ".Navigation {\n  height: 10vh;\n  position: -webkit-sticky;\n  position: sticky;\n  top: -1px;\n  z-index: 1; }\n  .Navigation .navbar {\n    background-color: #252f3a;\n    position: relative; }\n    .Navigation .navbar .navbar-header {\n      min-height: 10vh; }\n    .Navigation .navbar .nav > li > a {\n      color: #ffff;\n      font-size: 19px;\n      font-family: 'Roboto Slab', serif;\n      line-height: 10vh;\n      text-transform: uppercase;\n      letter-spacing: 0.5px;\n      padding-top: 0;\n      padding-bottom: 0;\n      font-weight: bold;\n      opacity: 1; }\n    .Navigation .navbar .nav > li > a:hover {\n      color: #c9e88f;\n      text-shadow: 5px #c9e88f;\n      text-decoration: none; }\n  .Navigation__logo {\n    width: 55px;\n    position: absolute;\n    top: 50%;\n    transform: translateY(-50%); }\n\n@media (max-width: 780px) {\n  .navbar {\n    position: -webkit-sticky;\n    position: sticky; }\n  .Navigation__logo {\n    width: 40px;\n    position: relative;\n    top: 13px; }\n  .Navigation .navbar .nav > li > a {\n    font-size: 1em; } }\n\n@keyframes spin {\n  100% {\n    transform: rotate(360deg); } }\n", ""]);
+exports.push([module.i, ".Navigation {\n  height: 10vh;\n  position: -webkit-sticky;\n  position: sticky;\n  top: -1px;\n  z-index: 1; }\n  .Navigation .navbar {\n    background-color: #252f3a;\n    position: relative; }\n    .Navigation .navbar .navbar-header {\n      min-height: 10vh; }\n    .Navigation .navbar .nav > li > a {\n      color: #ffff;\n      font-size: 19px;\n      font-family: 'Roboto Slab', serif;\n      line-height: 10vh;\n      text-transform: uppercase;\n      letter-spacing: 0.5px;\n      padding-top: 0;\n      padding-bottom: 0;\n      font-weight: bold;\n      opacity: 1; }\n    .Navigation .navbar .nav > li > a:hover {\n      color: #c9e88f;\n      text-shadow: 5px #c9e88f;\n      text-decoration: none; }\n  .Navigation__logo {\n    width: 55px;\n    position: absolute;\n    top: 50%;\n    transform: translateY(-50%); }\n\n@media (max-width: 750px) {\n  .navbar {\n    position: -webkit-sticky;\n    position: sticky; }\n  .Navigation__logo {\n    width: 40px;\n    position: relative;\n    top: 13px; }\n  .Navigation .navbar .nav > li > a {\n    font-size: 1em; } }\n", ""]);
 
 // exports
 
@@ -25656,7 +25652,7 @@ exports = module.exports = __webpack_require__(20)(undefined);
 
 
 // module
-exports.push([module.i, ".Speakers {\n  padding: 5vh 5vw 10vh 5vw; }\n  .Speakers__card {\n    position: relative;\n    background-color: rgba(60, 116, 113, 0.5);\n    margin: 0.5em;\n    border: none;\n    height: 440px; }\n    .Speakers__card img {\n      margin-top: 15px;\n      max-width: 100%;\n      width: auto;\n      max-height: 300px; }\n  .Speakers__header {\n    text-align: center;\n    color: #ffff;\n    margin-bottom: 1em; }\n  .Speakers h3 {\n    text-align: center;\n    font-size: 22px;\n    font-weight: light;\n    font-family: \"Roboto Slab\", serif;\n    padding: 0.2em;\n    color: #ffff; }\n  .Speakers h4 {\n    text-align: center;\n    font-size: 15px;\n    font-weight: light;\n    font-family: \"Roboto Slab\", serif;\n    padding: 0.4em;\n    color: #ffff; }\n  .Speakers .thumbnail {\n    padding: 5px; }\n\n#speaker_content {\n  width: 100%; }\n\n#youtube-icon {\n  font-size: 30px;\n  float: left; }\n\nh2 {\n  font-family: 'Roboto Slab', serif; }\n\n#wiki-icon {\n  font-size: 30px;\n  float: right; }\n\n.icon-group {\n  padding-top: 5px; }\n\n@media (max-width: 680px) {\n  .Speakers__card img {\n    margin-top: 0px; } }\n", ""]);
+exports.push([module.i, ".Speakers {\n  padding: 5vh 5vw 10vh 5vw; }\n  .Speakers__card {\n    position: relative;\n    background-color: rgba(60, 116, 113, 0.5);\n    margin: 0.5em;\n    border: none;\n    height: 440px; }\n    .Speakers__card img {\n      margin-top: 15px;\n      max-width: 100%;\n      width: auto;\n      max-height: 300px; }\n  .Speakers__header {\n    text-align: center;\n    color: #ffff;\n    margin-bottom: 1em; }\n  .Speakers h3 {\n    text-align: center;\n    font-size: 22px;\n    font-weight: light;\n    font-family: \"Roboto Slab\", serif;\n    padding: 0.2em;\n    color: #ffff; }\n  .Speakers h4 {\n    text-align: center;\n    font-size: 15px;\n    font-weight: light;\n    font-family: \"Roboto Slab\", serif;\n    padding: 0.4em;\n    color: #ffff; }\n  .Speakers .thumbnail {\n    padding: 5px; }\n\n#speaker_content {\n  width: 100%; }\n\n#youtube-icon {\n  font-size: 30px;\n  float: left; }\n\nh2 {\n  font-family: 'Roboto Slab', serif; }\n\n#wiki-icon {\n  font-size: 30px;\n  float: right; }\n\n.icon-group {\n  padding-top: 5px; }\n\n@media (max-width: 1026px) {\n  .Speakers__card img {\n    margin-top: 32px; } }\n\n@media (max-width: 780px) {\n  .Speakers__card img {\n    margin-top: 0px; } }\n", ""]);
 
 // exports
 

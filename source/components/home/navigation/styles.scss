@@ -41,7 +41,7 @@
   }
 }
 
-@media (max-width: 780px) {
+@media (max-width: 750px) {
   .navbar {
     position: sticky;
   }
@@ -57,21 +57,4 @@
       }
     }
   }
-}
-
-@-moz-keyframes spin { 
-  100% { 
-    -moz-transform: rotate(360deg); 
-  } 
-}
-@-webkit-keyframes spin { 
-  100% { 
-    -webkit-transform: rotate(360deg); 
-  } 
-}
-@keyframes spin { 
-  100% { 
-    -webkit-transform: rotate(360deg); 
-    transform:rotate(360deg); 
-  } 
 }

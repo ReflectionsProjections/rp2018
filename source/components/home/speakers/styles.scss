@@ -61,8 +61,15 @@ h2 {
     padding-top: 5px;
 }
 
-@media (max-width: 680px) {
+@media (max-width: 1026px) {
+    .Speakers__card img {
+        margin-top: 32px;
+    }
+}
+
+@media (max-width: 780px) {
     .Speakers__card img {
         margin-top: 0px;
     }
 }
+

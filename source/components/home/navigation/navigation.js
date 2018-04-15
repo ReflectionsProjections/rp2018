@@ -29,10 +29,6 @@ class Navigation extends Component {
             }
         }
 
-        this.emailTo = (address) => {
-            location.href = address;
-        }
-
         return(
             <div className="Navigation">
                 <Navbar collapseOnSelect fixedTop>

@@ -144,7 +144,7 @@ class Speakers extends Component {
             var cName = (cl == hasLinkColor)? "Speakers__card js-speakercard Speakers__youtube": "Speakers__card js-speakercard";
             if (link) {
                 return ( 
-                    <Col key = { idx } xs = { 12 } lg = { 4 } sm = { 12 } md = { 12 }>
+                    <Col key = { idx } xs = { 12 } lg = { 4 } sm = { 6 } md = { 6 }>
                         <Thumbnail className = {cName} src = { speaker.img } >
                         <h3 style = {{ color: "white" } } > { speaker.name } </h3> 
                         <h4 style = {{ color: "white" } } > { speaker.year } </h4> 
@@ -161,7 +161,7 @@ class Speakers extends Component {
                 )
             } else {
                 return(
-                    <Col key = { idx } xs = { 12 } lg = { 4 } sm = { 12 } md = { 12 }>
+                    <Col key = { idx } xs = { 12 } lg = { 4 } sm = { 6 } md = { 6 }>
                         <Thumbnail className = {cName} src = { speaker.img } >
                         <h3 style = {{ color: "white" } } > { speaker.name } </h3> 
                         <h4 style = {{ color: "white" } } > { speaker.year } </h4> 
