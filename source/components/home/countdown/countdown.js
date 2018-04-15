@@ -1,6 +1,13 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom';
 
+
+Number.prototype.pad = function(size) {
+    var s = String(this);
+    while (s.length < (size || 2)) {s = "0" + s;}
+    return s;
+}
+
 class Countdown extends Component {
     
     constructor() {
@@ -13,11 +20,11 @@ class Countdown extends Component {
             var now = new Date().getTime();
             var distance = countDownDate - now;
             var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            document.getElementById("countdown").innerHTML = days + "D " + hours + "H "
-            + minutes + "M " + seconds + "S ";
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).pad(2);
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).pad(2);
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000).pad(2);
+            document.getElementById("countdown").innerHTML = days + "D  " + hours + "H  "
+            + minutes + "M  " + seconds + "S  ";
             if (distance < 0) {
                 clearInterval(x);
                 document.getElementById("countdown").style = "display: none";

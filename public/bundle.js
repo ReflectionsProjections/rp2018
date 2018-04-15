@@ -20419,6 +20419,14 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+Number.prototype.pad = function (size) {
+    var s = String(this);
+    while (s.length < (size || 2)) {
+        s = "0" + s;
+    }
+    return s;
+};
+
 var Countdown = function (_Component) {
     _inherits(Countdown, _Component);
 
@@ -20436,10 +20444,10 @@ var Countdown = function (_Component) {
                 var now = new Date().getTime();
                 var distance = countDownDate - now;
                 var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                var hours = Math.floor(distance % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
-                var minutes = Math.floor(distance % (1000 * 60 * 60) / (1000 * 60));
-                var seconds = Math.floor(distance % (1000 * 60) / 1000);
-                document.getElementById("countdown").innerHTML = days + "D " + hours + "H " + minutes + "M " + seconds + "S ";
+                var hours = Math.floor(distance % (1000 * 60 * 60 * 24) / (1000 * 60 * 60)).pad(2);
+                var minutes = Math.floor(distance % (1000 * 60 * 60) / (1000 * 60)).pad(2);
+                var seconds = Math.floor(distance % (1000 * 60) / 1000).pad(2);
+                document.getElementById("countdown").innerHTML = days + "D  " + hours + "H  " + minutes + "M  " + seconds + "S  ";
                 if (distance < 0) {
                     clearInterval(x);
                     document.getElementById("countdown").style = "display: none";
@@ -21611,7 +21619,7 @@ var Start = function (_Component) {
                     _react2.default.createElement(
                         'div',
                         { className: 'caps' },
-                        'September 17 - 22nd, 2018'
+                        'September 17th - 22nd, 2018'
                     ),
                     _react2.default.createElement(_countdown2.default, { className: 'counter' }),
                     _react2.default.createElement(
