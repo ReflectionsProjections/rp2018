@@ -20141,11 +20141,14 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 // Redirects
 var SponsorLetter = function SponsorLetter() {
+    window.location.href.split('#')[0];
     window.location = './assets/files/sponsor.pdf';
+    window.location.href.split('#')[0];
     return null;
 };
 
 var StartupLetter = function StartupLetter() {
+    window.location.href.split('#')[0];
     window.location = './assets/files/startup.pdf';
     return null;
 };

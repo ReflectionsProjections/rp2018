@@ -9,11 +9,14 @@ import Landing from './components/landing/landing';
 
 // Redirects
 const SponsorLetter = () => {
+    window.location.href.split('#')[0]
     window.location = './assets/files/sponsor.pdf';
+    window.location.href.split('#')[0]
     return null;
 };
 
 const StartupLetter = () => {
+    window.location.href.split('#')[0]
     window.location = './assets/files/startup.pdf';
     return null;
 };
