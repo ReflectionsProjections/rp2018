@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Jumbotron, Button, OverlayTrigger, Popover } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import styles from './styles.scss'
+import ContactForm from '../contact_form/contact_form';
 import Countdown from '../countdown/countdown'
 import Scrolldown from '../scrolldown/scrolldown'
 
@@ -18,6 +19,10 @@ class Start extends Component {
         super();
     }
 
+    formLoad() {
+
+    }
+
     render() {
         return(
             <div className="Start">
@@ -28,6 +33,7 @@ class Start extends Component {
                     {/*<div style={{margin: "15px", paddingBottom: "10px", fontSize: "18px"}}>DAYS&nbsp; LEFT</div>*/}
                     <div className="intro"> Interested in sponsoring or attending? </div>
                     <a className="btn" href="mailto:conference-chair@acm.illinois.edu">
+                        <ContactForm/>
                         <button className="contact">CONTACT US
                         </button>
                     </a>

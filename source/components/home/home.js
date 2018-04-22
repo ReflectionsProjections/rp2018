@@ -10,6 +10,7 @@ import Tracks from './tracks/tracks'
 import Sponsors from './sponsors/sponsors'
 import Footer from './footer/footer'
 import Photos from './photos/photos'
+import contact_form from './contact_form/contact_form'
 
 
 class Home extends Component {
