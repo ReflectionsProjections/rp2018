@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom';
+import $ from 'jquery'
 import styles from './styles.scss'
 
 Number.prototype.pad = function (size) {
@@ -23,10 +24,46 @@ class Countdown extends Component {
             var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).pad(2);
             var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).pad(2);
             var seconds = Math.floor((distance % (1000 * 60)) / 1000).pad(2);
-            document.getElementById("days").innerHTML = days + " D ";
-            document.getElementById("hours").innerHTML = hours + " H  ";
-            document.getElementById("minutes").innerHTML = minutes + " M  ";
-            document.getElementById("seconds").innerHTML = seconds + " S ";
+            if($("#days").text().split(" ")[0] != days)
+            {
+                $("#days").fadeOut(500, "linear", function() {
+                    $(this).text(days + " D ").fadeIn();
+                });
+            }
+            else
+            {
+                $("#days").val(days + " D ");
+            }
+            if($("#hours").text().split(" ")[0] != hours)
+            {
+                $("#hours").fadeOut(500, "linear", function() {
+                    $(this).text(hours + " H ").fadeIn();
+                });
+            }
+            else
+            {
+                $("#hours").val(hours + " H ");
+            }
+            if($("#minutes").text().split(" ")[0] != minutes)
+            {
+                $("#minutes").fadeOut(500, "linear", function() {
+                    $(this).text(minutes + " M ").fadeIn();
+                });
+            }
+            else
+            {
+                $("#minutes").val(minutes + " M ");
+            }
+            if($("#seconds").text().split(" ")[0] != seconds)
+            {
+                $("#seconds").fadeOut(500, "linear", function() {
+                    $(this).text(seconds + " S ").fadeIn();
+                });
+            }
+            else
+            {
+                $("#seconds").val(seconds + " S ");
+            }
             if (distance < 0) {
                 clearInterval(x);
                 // document.getElementById("countdown").style = "display: none";
@@ -38,12 +75,12 @@ class Countdown extends Component {
         return (
             <div>
                 <div class="countdown">
-                    <button id="days" className="bordered" disabled>Coming Soon!</button>
-                    <button id="hours" className="bordered" disabled>Coming Soon!</button>
+                    <button className="bordered" disabled><span id="days">Coming Soon!</span></button>
+                    <button className="bordered" disabled><span id="hours">Coming Soon!</span></button>
                 </div>
                 <div class="countdown">
-                    <button id="minutes" className="bordered" disabled>Coming Soon!</button>
-                    <button id="seconds" className="bordered" disabled>Coming Soon!</button>
+                    <button className="bordered" disabled><span id="minutes">Coming Soon!</span></button>
+                    <button className="bordered" disabled><span id="seconds">Coming Soon!</span></button>
                 </div>
             </div>
         )
