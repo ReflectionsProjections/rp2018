@@ -30,19 +30,11 @@ class Countdown extends Component {
                     $(this).text(days + " D ").fadeIn();
                 });
             }
-            else
-            {
-                $("#days").val(days + " D ");
-            }
             if($("#hours").text().split(" ")[0] != hours)
             {
                 $("#hours").fadeOut(500, "linear", function() {
                     $(this).text(hours + " H ").fadeIn();
                 });
-            }
-            else
-            {
-                $("#hours").val(hours + " H ");
             }
             if($("#minutes").text().split(" ")[0] != minutes)
             {
@@ -50,19 +42,11 @@ class Countdown extends Component {
                     $(this).text(minutes + " M ").fadeIn();
                 });
             }
-            else
-            {
-                $("#minutes").val(minutes + " M ");
-            }
             if($("#seconds").text().split(" ")[0] != seconds)
             {
                 $("#seconds").fadeOut(500, "linear", function() {
                     $(this).text(seconds + " S ").fadeIn();
                 });
-            }
-            else
-            {
-                $("#seconds").val(seconds + " S ");
             }
             if (distance < 0) {
                 clearInterval(x);
