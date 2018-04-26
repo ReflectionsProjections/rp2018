@@ -4,6 +4,7 @@ import {HashRouter as Router, Route, Link} from 'react-router-dom'
 
 // Components
 import Home from './components/home/home';
+import FAQ from './components/faq/faq';
 import Landing from './components/landing/landing';
 
 
@@ -44,11 +45,12 @@ render(
     <Router>
         <div>
             <Route exact path="/" component={Home}/>
-            <Route path="/sponsor" component={SponsorLetter} />
-            <Route path="/startup" component={StartupLetter} />
-            <Route path="/home" component={Home} />
-            <Route path="/fugger" component={Fugger} />
-            <Route path="/fugger-signup" component={FuggerSignup} />
+            <Route exact path="/faq" component={FAQ}/>
+            {/* <Route path="/sponsor" component={SponsorLetter} /> */}
+            {/* <Route path="/startup" component={StartupLetter} /> */}
+            {/* <Route path="/home" component={Home} /> */}
+            {/* <Route path="/fugger" component={Fugger} /> */}
+            {/* <Route path="/fugger-signup" component={FuggerSignup} /> */}
         </div>
     </Router>,
     document.getElementById('app')
