@@ -61,8 +61,6 @@ class Countdown extends Component {
                 <div class="countdown">
                     <button className="bordered" disabled><span id="days">Coming Soon!</span></button>
                     <button className="bordered" disabled><span id="hours">Coming Soon!</span></button>
-                </div>
-                <div class="countdown">
                     <button className="bordered" disabled><span id="minutes">Coming Soon!</span></button>
                     <button className="bordered" disabled><span id="seconds">Coming Soon!</span></button>
                 </div>
