@@ -47,7 +47,14 @@
     }
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 1024px) and (max-width:1366px) {
+    .navbar {
+        position: sticky;
+        .nav>li>a {
+            color: #ffff;
+            font-size: 1.4em!important;
+        }
+    }
     .Navigation__logo {
         transform: translateY(-50%) !important;
     }
