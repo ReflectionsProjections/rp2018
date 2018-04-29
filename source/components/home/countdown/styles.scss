@@ -6,5 +6,10 @@
     border-radius: 50%;
     margin: 1vh;
     background-color: transparent;
-    font-size: 1.3em;
+    font-size: 1.2em;
+}
+@media (max-width: 480px) {
+    .bordered {
+        font-size: 0.9em;
+    }
 }
