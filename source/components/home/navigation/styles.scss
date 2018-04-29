@@ -16,7 +16,7 @@
 
     .nav > li > a {
         color: #ffff;
-        font-size: 19px;
+        font-size: 1em;
         font-family: 'Roboto Slab', serif;
         line-height: $nav-height;
         text-transform: uppercase;
@@ -37,18 +37,31 @@
       width: 55px;
       position: absolute;
       top: 50%;
-      transform: translateY(-50%);
+      transform: translateY(-50%)!important;
+    }
   }
-}
-
-@media (max-width: 750px) {
-  .navbar {
-    position: sticky;
+  @media(min-width: 768px) and (max-width:1024px) {
+    .navbar {
+      position: sticky;
+      .nav > li > a {
+        color: #ffff;
+        font-size: 1em!important;
+      }
+    }
   }
-  .Navigation__logo {
+  @media (max-width: 750px) {
+    .navbar {
+      position: sticky;
+      .nav > li > a {
+        color: #ffff;
+        font-size: 1em;
+      }
+    }
+    .Navigation__logo {
       width: 40px;
       position: relative;
-      top: 13px;
+      top: 13px!important;
+      transform: translateY(-33%)!important;
   }
   .Navigation {
     .navbar {
@@ -57,4 +70,36 @@
       }
     }
   }
+}
+@media (max-width: 1024px) {
+    .Navigation__logo {
+      transform: translateY(-41.33%)!important;
+    }
+    button.collapsed {
+      transform: translateY(30%)!important;
+    }
+}
+@media (max-width: 750px) {
+    .Navigation__logo {
+      transform: translateY(-41.33%)!important;
+    }
+    button.collapsed {
+      transform: translateY(25%)!important;
+    }
+}
+ @media (max-width: 600px) {
+    .Navigation__logo {
+      transform: translateY(-40%)!important;
+    }
+    button.collapsed {
+      transform: translateY(25%)!important;
+    }
+}
+ @media (max-width: 350px) {
+    .Navigation__logo {
+      transform: translateY(-16.67%)!important;
+    }
+    button.collapsed {
+      transform: translateY(50%)!important;
+    }
 }
