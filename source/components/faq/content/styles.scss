@@ -22,9 +22,9 @@
     
     #QuestionListContainer {
         margin:auto;
-        padding: 10vh 5vw;
-        padding-top: 5vh;
-        width: 75vw;
+        padding: 8vh 4vw;
+        padding-top: 4vh;
+        width: 70vw;
         background-color: white;
         color: yellowgreen;
         display: block;
@@ -76,6 +76,9 @@
         }  
         #countdown, .intro, .caps {
             font-size: 1.2em;
+        }
+        #QuestionListContainer {
+            width: 80vw;
         }
     }
 
