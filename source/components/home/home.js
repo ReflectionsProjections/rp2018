@@ -11,7 +11,6 @@ import Sponsors from './sponsors/sponsors'
 import Footer from './footer/footer'
 import Photos from './photos/photos'
 
-
 class Home extends Component {
 
     constructor() {

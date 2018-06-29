@@ -28,6 +28,11 @@ const FuggerSignup = () => {
     return null;
 };
 
+const PuzzleBang = () => {
+    window.location = './puzzlebang';
+    return null;
+};
+
 require('normalize.css');
 require('./styles/main.scss');
 
@@ -48,6 +53,7 @@ render(
             <Route path="/home" component={Home} />
             <Route path="/fugger" component={Fugger} />
             <Route path="/fugger-signup" component={FuggerSignup} />
+            <Route path="/puzzlebang" component={PuzzleBang}/>
         </div>
     </Router>,
     document.getElementById('app')
