@@ -37,12 +37,6 @@ class Navigation extends Component {
                         <NavItem onClick={() => this.scrollTo('About')} eventKey={1} className="Navigation__item--active">About</NavItem>
                         <NavItem onClick={() => this.scrollTo('Speakers')} eventKey={2} >Past Speakers</NavItem>
                         <NavItem onClick={() => this.scrollTo('Sponsors')} eventKey={3} >Past Sponsors</NavItem>
-                        {/* <LinkContainer to="/puzzlebang">
-                            <NavItem eventKey={4} >PuzzleBang</NavItem>
-                        </LinkContainer> */}
-                        {/* <NavItem eventKey={4} onClick={ e => this.props.history.push("/puzzlebang") } >
-                            PuzzleBang
-                        </NavItem> */}
                         <MenuItem href="#puzzlebang" eventKey={4}>PuzzleBang</MenuItem>
                         <NavItem onClick={() => this.scrollTo('Footer')} eventKey={5} >Contact Us</NavItem>
                     </Nav>

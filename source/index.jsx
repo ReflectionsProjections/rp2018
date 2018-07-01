@@ -4,6 +4,7 @@ import {HashRouter as Router, Route, Link} from 'react-router-dom'
 
 // Components
 import Home from './components/home/home';
+import PuzzleBang from './components/home/puzzlebang/puzzlebang'
 import Landing from './components/landing/landing';
 
 
@@ -28,10 +29,6 @@ const FuggerSignup = () => {
     return null;
 };
 
-const PuzzleBang = () => {
-    window.location = './puzzlebang';
-    return null;
-};
 
 require('normalize.css');
 require('./styles/main.scss');
