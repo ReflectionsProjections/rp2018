@@ -41,7 +41,7 @@ class Footer extends Component {
 							<a><FA name='phone'/> +1 (217) 333-5828 </a><br />
 							<a href="mailto:conference-chair@acm.illinois.edu"><FA name='envelope'/> conference-chair@acm.illinois.edu </a> <br/>
 							<a href="https://www.facebook.com/acmrp/" target="_blank" rel="noopener noreferrer"><FA name='facebook' /> ACM Reflections|Projections Conference </a> <br/>
-							<a href="https://medium.com/@reflectionsprojections" target="_blank" rel="noopener noreferrer"><FA name='medium' /> Reflections|Projections </a> <br/>
+							<a href="https://medium.com/reflections-projections" target="_blank" rel="noopener noreferrer"><FA name='medium' /> Reflections|Projections </a> <br/>
 							<a href="https://twitter.com/uiuc_rp" target="_blank" rel="noopener noreferrer"><FA name='twitter'/> @uiuc_rp </a>
 							<a href="https://www.reddit.com/user/uiuc_rp" target="_blank" rel="noopener noreferrer"><FA name='reddit' /> uiuc_rp </a><br/>
 							<a href="https://www.instagram.com/uiuc_rp/" target="_blank" rel="noopener noreferrer"><FA name='instagram' /> @uiuc_rp </a>

@@ -15,7 +15,6 @@ const SponsorLetter = () => {
 };
 
 const StartupLetter = () => {
-    window.location.href.split('#')[0]
     window.location = './assets/files/startup.pdf';
     return null;
 };
