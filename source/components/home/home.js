@@ -23,10 +23,12 @@ class Home extends Component {
             <div className="Home">
                 <Navigation />
                 <Start />
-                <About />
-                <Speakers />
-                <Sponsors />
-                <Footer />
+                <div className="overlayed">
+                    <About />
+                    <Speakers />
+                    <Sponsors />
+                    <Footer />
+                </div>
             </div>
         )
     }

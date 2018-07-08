@@ -10,7 +10,6 @@ body {
   overflow-x: hidden;
   font-family: 'Roboto', sans-serif;
   background-color: #28323f;
-  background-image: url('../assets/svg/home_background.svg');
   scroll-behavior: smooth;
 }
 
@@ -28,4 +27,8 @@ p {
 
 button {
   outline: none;
+}
+
+.overlayed {
+  background-image: url('../assets/svg/home_background.svg');
 }

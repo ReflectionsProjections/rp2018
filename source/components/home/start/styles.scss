@@ -1,11 +1,13 @@
 .Start {
-    margin-top: 10vh;
-    height: 100vh; 
+    margin-top: 0vh;
+    height: 100vh;
     font-family: 'Roboto', sans-serif;
     font-size: 1em;
     font-weight: bold;
 
+
     .jumbotron {
+        height: inherit;
         background-color: inherit;
         color: white;
         text-align: center;
@@ -22,9 +24,10 @@
     }
 
     .header {
+      margin-top: 10vh;
         max-width: 50%;
     }
-    
+
     .btn {
         border: none;
         margin: 10px;
@@ -40,26 +43,43 @@
         border: 3px solid #cadea5;
         text-align: center;
         position: relative;
-        background-color:rgb(42, 50, 62);    
+        background-color:rgb(42, 50, 62);
     }
-    
+
     .btn button:hover {
         border-color: #97c88c;
-    } 
+    }
 
     .btn button:hover #tooltiptext {
         visibility: visible;
         opacity: 1;
     }
 
+    #carousel_container {
+      margin-top: -5vh;
+      height: inherit;
+      overflow: hidden;
+      position: absolute;
+      z-index: -99;
+      #images_container{
+        #carousel_image {
+
+          filter: grayscale(80%);
+          opacity: 0.5;
+        }
+      }
+    }
+
+
+
     @media (max-width: 1024px) {
         .header {
             max-width: 85%;
-        } 
+        }
         .btn button{
             font-size: 1.3em;
             width: 200px;
-        }  
+        }
         #countdown, .intro, .caps {
             font-size: 2em;
         }
@@ -68,12 +88,12 @@
     @media (max-width: 420px) {
         .header {
             max-width: 90%;
-        } 
+        }
         .btn button{
             font-size: 0.8em;
             width: 100px;
             height: 40px;
-        }  
+        }
         #countdown, .intro, .caps {
             font-size: 1.2em;
         }
@@ -82,17 +102,21 @@
     @media (max-width: 320px) {
         .header {
             max-width: 90%;
-        } 
+        }
         .btn button{
             font-size: 0.8em;
             width: 100px;
             height: 40px;
-        }  
+        }
         #countdown, .intro, .caps {
             font-size: 1.0em;
         }
     }
+
+
+
 }
+
 
 #tooltiptext {
     visibility: hidden;
@@ -112,7 +136,7 @@
     border-radius: 0;
     background-color: rgba(35, 44, 56, 0.85);
 }
-  
+
 #tooltiptext::after {
     position: absolute;
     top: 100%;
@@ -126,11 +150,11 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    width: 0; 
-    height: 0; 
+    width: 0;
+    height: 0;
     border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent; 
-    border-left: 10px solid transparent; 
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid transparent;
     border-right:10px solid rgba(79, 247, 238, 0.6)
 }
 
@@ -141,10 +165,3 @@
     color:#fff;
     margin: 25px;
 }
-  
-
-
-
-
-
-
