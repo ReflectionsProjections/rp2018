@@ -34,8 +34,8 @@ class Navigation extends Component {
                     <Navbar.Collapse>
                     <Nav pullRight>
                         <NavItem onClick={() => this.scrollTo('About')} eventKey={1} className="Navigation__item--active">About</NavItem>
-                        <NavItem onClick={() => this.scrollTo('Speakers')} eventKey={2} >Speakers</NavItem>
-                        <NavItem onClick={() => this.scrollTo('Sponsors')} eventKey={3} >Sponsors</NavItem>
+                        <NavItem onClick={() => this.scrollTo('Speakers')} eventKey={2} >Past Speakers</NavItem>
+                        <NavItem onClick={() => this.scrollTo('Sponsors')} eventKey={3} >Past Sponsors</NavItem>
                         <NavItem onClick={() => this.scrollTo('Footer')} eventKey={4} >Contact Us</NavItem>
                         <NavItem onClick={() => location.href = "/#/rp2017"} eventKey={5} >Past R|Ps</NavItem>
                     </Nav>
