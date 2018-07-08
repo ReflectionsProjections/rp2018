@@ -1,0 +1,65 @@
+.PuzzleBang {
+	font-size: 16px;
+    min-height: 100vh;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.17);
+	padding: 8em 0;
+	padding-left: 2.5%;
+	@media (max-width: 768px) {
+		padding: 2em 0;
+	}
+
+	&__itemHeader {
+		margin-bottom: 1em;
+	}
+	.centered-faq-big{
+		text-align: left;
+	}
+	button {
+		width: 100%;
+	}
+
+	.BottomItem {
+		padding-left: 2.5%;
+	}
+
+	&_list {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		&_column {
+			flex: 1;
+			max-width: 90%;
+		}
+
+		@media (min-width: 768px) {
+			&_column {
+				flex: 1;
+				max-width: 96%;
+				padding-right: 5%;
+			}
+		}
+	}
+
+	@media (min-width: 768px) {
+		&_list {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		.centered-faq-big {
+			text-align: center;
+		}
+	}
+
+}
+
+.PuzzleBangItem {
+	margin-bottom: 4em;
+  padding-left: 0px !important;
+}

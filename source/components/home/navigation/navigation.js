@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap'
-import { LinkContainer } from 'react-router-dom';
+import { Link, LinkContainer } from 'react-router-dom';
 import styles from './styles.scss'
 
 
@@ -34,11 +34,11 @@ class Navigation extends Component {
                     </Navbar.Header>
                     <Navbar.Collapse>
                     <Nav pullRight>
-                        <NavItem onClick={() => this.scrollTo('About')} eventKey={1} className="Navigation__item--active">About</NavItem>
-                        <NavItem onClick={() => this.scrollTo('Speakers')} eventKey={2} >Past Speakers</NavItem>
-                        <NavItem onClick={() => this.scrollTo('Sponsors')} eventKey={3} >Past Sponsors</NavItem>
+                        <NavItem href="#" onClick={() => this.scrollTo('About')} eventKey={1} className="Navigation__item--active">About</NavItem>
+                        <NavItem href="#" onClick={() => this.scrollTo('Speakers')} eventKey={2} >Past Speakers</NavItem>
+                        <NavItem href="#" onClick={() => this.scrollTo('Sponsors')} eventKey={3} >Past Sponsors</NavItem>
                         <MenuItem href="#puzzlebang" eventKey={4}>PuzzleBang</MenuItem>
-                        <NavItem onClick={() => this.scrollTo('Footer')} eventKey={5} >Contact Us</NavItem>
+                        <NavItem href="#" onClick={() => this.scrollTo('Footer')} eventKey={5} >Contact Us</NavItem>
                     </Nav>
                     </Navbar.Collapse>
                 </Navbar>
