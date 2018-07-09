@@ -1,0 +1,33 @@
+.bordered {
+    width: 12vh;
+    height: 12vh;
+    padding: 1.5vh;
+    border: 0.7vh outset yellowgreen;
+    border-radius: 50%;
+    margin: 1vh;
+    background-color: transparent;
+    font-size: 2.4vh;
+}
+
+@media (max-width: 1366px) {
+    .bordered {
+        width: 10vh;
+        height: 10vh;
+        font-size: 1.5vh;
+        padding: 1.5vh;
+    }
+}
+
+@media (max-width: 720px) {
+    .bordered {
+        font-size: 1.8vh;
+        padding: 1.3vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .bordered {
+        font-size: 1vh;
+        padding: 0.7vh;
+    }
+}
