@@ -13,6 +13,12 @@ class Speakers extends Component {
 
         const speakerList = [
              // Keynotes
+             {
+                'name': 'Siraj Raval',
+                'img': '../assets/img/keynotes/siraj.jpg',
+                'year': 'YouTuber - Accessible CS education',
+                'wikipedia': 'https://twitter.com/sirajraval?lang=en'
+            },
             {
                 'name': 'Steve Wozniak',
                 'img': '../assets/img/keynotes/steve.jpg',
