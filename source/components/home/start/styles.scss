@@ -21,10 +21,6 @@
         font-size: 1.5em;
     }
 
-    .header {
-        max-width: 50%;
-    }
-    
     .btn {
         border: none;
         margin: 10px;
@@ -53,9 +49,6 @@
     }
 
     @media (max-width: 1024px) {
-        .header {
-            max-width: 85%;
-        } 
         .btn button{
             font-size: 1.3em;
             width: 200px;
@@ -66,9 +59,6 @@
     }
 
     @media (max-width: 420px) {
-        .header {
-            max-width: 90%;
-        } 
         .btn button{
             font-size: 0.8em;
             width: 100px;
