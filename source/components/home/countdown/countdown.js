@@ -24,28 +24,24 @@ class Countdown extends Component {
             var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).pad(2);
             var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).pad(2);
             var seconds = Math.floor((distance % (1000 * 60)) / 1000).pad(2);
-            if($("#days").text().split(" ")[0] != days)
-            {
-                $("#days").fadeOut(500, "linear", function() {
-                    $(this).text(days + " D ").fadeIn();
+            if ($("#days").text().split(" ")[0] != days) {
+                $("#days").fadeOut(500, "linear", function () {
+                    $(this).text(days).fadeIn();
                 });
             }
-            if($("#hours").text().split(" ")[0] != hours)
-            {
-                $("#hours").fadeOut(500, "linear", function() {
-                    $(this).text(hours + " H ").fadeIn();
+            if ($("#hours").text().split(" ")[0] != hours) {
+                $("#hours").fadeOut(500, "linear", function () {
+                    $(this).text(hours).fadeIn();
                 });
             }
-            if($("#minutes").text().split(" ")[0] != minutes)
-            {
-                $("#minutes").fadeOut(500, "linear", function() {
-                    $(this).text(minutes + " M ").fadeIn();
+            if ($("#minutes").text().split(" ")[0] != minutes) {
+                $("#minutes").fadeOut(500, "linear", function () {
+                    $(this).text(minutes).fadeIn();
                 });
             }
-            if($("#seconds").text().split(" ")[0] != seconds)
-            {
-                $("#seconds").fadeOut(500, "linear", function() {
-                    $(this).text(seconds + " S ").fadeIn();
+            if ($("#seconds").text().split(" ")[0] != seconds) {
+                $("#seconds").fadeOut(500, "linear", function () {
+                    $(this).text(seconds).fadeIn();
                 });
             }
             if (distance < 0) {
@@ -57,13 +53,57 @@ class Countdown extends Component {
 
     render() {
         return (
-            <div>
-                <div class="countdown">
-                    <button className="bordered" disabled><span id="days">Coming Soon!</span></button>
-                    <button className="bordered" disabled><span id="hours">Coming Soon!</span></button>
-                    <button className="bordered" disabled><span id="minutes">Coming Soon!</span></button>
-                    <button className="bordered" disabled><span id="seconds">Coming Soon!</span></button>
-                </div>
+            <div classname="countdown">
+                <ul>
+                    <li className="time-square">
+                        <ul>
+                            <li>
+                                <div className="bordered">
+                                    <div id="days">Coming Soon!</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div id="time-label">DAYS</div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li className="time-square">
+                        <ul>
+                            <li>
+                                <div className="bordered">
+                                    <div id="hours">Coming Soon!</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div id="time-label">HOURS</div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li className="time-square">
+                        <ul>
+                            <li>
+                                <div className="bordered">
+                                    <div id="minutes">Coming Soon!</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div id="time-label">MINUTES</div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li className="time-square">
+                        <ul>
+                            <li>
+                                <div className="bordered">
+                                    <div id="seconds">Coming Soon!</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div id="time-label">SECONDS</div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         )
     }
