@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
   "name": "rp2018",
-=======
-  "name": "RP2018",
->>>>>>> 65a4cb80d37998e4b553ee3ccb24c0dfbbe51032
   "version": "1.0.0",
   "description": "",
   "main": "index.jsx",
