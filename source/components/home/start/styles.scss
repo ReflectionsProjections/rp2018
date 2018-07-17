@@ -4,36 +4,30 @@
     font-family: 'Roboto', sans-serif;
     font-size: 1em;
     font-weight: bold;
-
-
     .jumbotron {
+        margin: 0;
         height: inherit;
         background-color: inherit;
         color: white;
         text-align: center;
         font-family: inherit;
     }
-
     .caps {
         margin: 25px;
         font-size: 1.5em;
     }
-
     #countdown {
         font-size: 1.5em;
     }
-
     .header {
-      margin-top: 10vh;
+        margin-top: 10vh;
         max-width: 50%;
     }
-
     .btn {
         border: none;
         margin: 10px;
     }
-
-    .btn button{
+    .btn button {
         background: none;
         height: 50px;
         width: 150px;
@@ -43,80 +37,78 @@
         border: 3px solid #cadea5;
         text-align: center;
         position: relative;
-        background-color:rgb(42, 50, 62);
+        background-color: rgb(42, 50, 62);
     }
-
     .btn button:hover {
         border-color: #97c88c;
     }
-
     .btn button:hover #tooltiptext {
         visibility: visible;
         opacity: 1;
     }
-
-    #carousel_container {
-      margin-top: -5vh;
-      height: inherit;
-      overflow: hidden;
-      position: absolute;
-      z-index: -99;
-      #images_container{
-        #carousel_image {
-
-          filter: grayscale(80%);
-          opacity: 0.5;
-        }
-      }
+    #carousel-overlay {
+        align-items: center;
     }
-
-
-
+    #carousel_container {
+        margin-top: -6vh;
+        max-height: 90vh;
+        overflow: hidden;
+        width: 100vw;
+        position: absolute;
+        z-index: -1;
+        display: block;
+        #images_container {
+            #carousel_image {
+                filter: grayscale(80%);
+                opacity: 0.5;
+            }
+        }
+    }
     @media (max-width: 1024px) {
         .header {
             max-width: 85%;
         }
-        .btn button{
+        .btn button {
             font-size: 1.3em;
             width: 200px;
         }
-        #countdown, .intro, .caps {
+        #countdown,
+        .intro,
+        .caps {
             font-size: 2em;
         }
     }
-
     @media (max-width: 420px) {
         .header {
             max-width: 90%;
         }
-        .btn button{
+        .btn button {
             font-size: 0.8em;
             width: 100px;
             height: 40px;
         }
-        #countdown, .intro, .caps {
+        #countdown,
+        .intro,
+        .caps {
             font-size: 1.2em;
         }
     }
-
     @media (max-width: 320px) {
         .header {
             max-width: 90%;
         }
-        .btn button{
+        .btn button {
             font-size: 0.8em;
             width: 100px;
             height: 40px;
         }
-        #countdown, .intro, .caps {
+        #countdown,
+        .intro,
+        .caps {
             font-size: 1.0em;
         }
     }
-
-
-
 }
-
 
 #tooltiptext {
     visibility: hidden;
@@ -155,13 +147,13 @@
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
     border-left: 10px solid transparent;
-    border-right:10px solid rgba(79, 247, 238, 0.6)
+    border-right: 10px solid rgba(79, 247, 238, 0.6)
 }
 
 .intro {
     font-family: 'Roboto', sans-serif;
     font-size: 1.5em;
     font-weight: 100;
-    color:#fff;
+    color: #fff;
     margin: 25px;
 }
