@@ -28,18 +28,11 @@
         margin: 0 !important;
         transform: translateY(-120%);
     }
-    .navbar-collapse {
-        transform: translateY(1.5vh);
-    }
     .navbar {
         background-color: #252f3a;
         position: relative;
         .navbar-header {
             min-height: $nav-height;
-        }
-        .nav {
-            width:100vw;
-            transform: translateY(0vh);
         }
         .nav>li>a {
             color: #ffff;
@@ -52,7 +45,6 @@
             padding-bottom: 0;
             font-weight: bold;
             opacity: 1;
-            background-color: #252f3a!important;
         }
         .nav>li>a:hover {
             color: #c9e88f;
