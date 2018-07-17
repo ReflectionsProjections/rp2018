@@ -13,164 +13,164 @@ class Sponsors extends Component {
       tier2: [
         {
           name: "Nvidia",
-          img: "../assets/img/sponsors/jobfair/petabyte/nvidia.jpg"
+          img: "../assets/img/sponsors/sponsors2017/jobfair/petabyte/nvidia.jpg"
         },
         {
           name: "RetailMeNot",
-          img: "../assets/img/sponsors/jobfair/terabyte/retailmenot.svg"
+          img: "../assets/img/sponsors/sponsors2017/jobfair/terabyte/retailmenot.svg"
         }
       ],
 
       tier3: [
         {
           name: "Microsoft",
-          img: "../assets/img/sponsors/jobfair/gigabyte/microsoft.jpg"
+          img: "../assets/img/sponsors/sponsors2017/jobfair/gigabyte/microsoft.jpg"
         },
         {
           name: "Forcepoint",
-          img: "../assets/img/sponsors/jobfair/gigabyte/forcepoint.jpg"
+          img: "../assets/img/sponsors/sponsors2017/jobfair/gigabyte/forcepoint.jpg"
         },
         {
           name: "IMO",
-          img: "../assets/img/sponsors/jobfair/gigabyte/imo.svg"
+          img: "../assets/img/sponsors/sponsors2017/jobfair/gigabyte/imo.svg"
         },
         {
           name: "Northern Trust",
-          img: "../assets/img/sponsors/jobfair/gigabyte/northerntrust.jpg"
+          img: "../assets/img/sponsors/sponsors2017/jobfair/gigabyte/northerntrust.jpg"
         },
         {
           name: "Qualtrics",
-          img: "../assets/img/sponsors/jobfair/gigabyte/qualtrics.jpg"
+          img: "../assets/img/sponsors/sponsors2017/jobfair/gigabyte/qualtrics.jpg"
         },
         {
           name: "Bank of America",
-          img: "../assets/img/sponsors/jobfair/gigabyte/bankofamerica.jpg"
+          img: "../assets/img/sponsors/sponsors2017/jobfair/gigabyte/bankofamerica.jpg"
         }
       ],
 
       tier4: [
         {
           name: "Facebook",
-          img: "../assets/img/sponsors/jobfair/megabyte/facebook.jpg"
+          img: "../assets/img/sponsors/sponsors2017/jobfair/megabyte/facebook.jpg"
         },
         {
           name: "Google",
-          img: "../assets/img/sponsors/jobfair/megabyte/google.jpg"
+          img: "../assets/img/sponsors/sponsors2017/jobfair/megabyte/google.jpg"
         },
         {
           name: "Indeed",
-          img: "../assets/img/sponsors/jobfair/megabyte/indeed.jpg"
+          img: "../assets/img/sponsors/sponsors2017/jobfair/megabyte/indeed.jpg"
         },
         {
           name: "Pinterest",
-          img: "../assets/img/sponsors/jobfair/megabyte/pinterest.jpg"
+          img: "../assets/img/sponsors/sponsors2017/jobfair/megabyte/pinterest.jpg"
         },
         {
           name: "CME Group",
-          img: "../assets/img/sponsors/jobfair/megabyte/cmegroup.png"
+          img: "../assets/img/sponsors/sponsors2017/jobfair/megabyte/cmegroup.png"
         },
         {
           name: "Uber",
-          img: "../assets/img/sponsors/jobfair/megabyte/uber.jpg"
+          img: "../assets/img/sponsors/sponsors2017/jobfair/megabyte/uber.jpg"
         },
         {
           name: "Yelp",
-          img: "../assets/img/sponsors/jobfair/megabyte/yelp.jpg"
+          img: "../assets/img/sponsors/sponsors2017/jobfair/megabyte/yelp.jpg"
         },
         {
           name: "Amobee",
-          img: "../assets/img/sponsors/jobfair/megabyte/amobee.jpg"
+          img: "../assets/img/sponsors/sponsors2017/jobfair/megabyte/amobee.jpg"
         },
         {
           name: "Riverbed",
-          img: "../assets/img/sponsors/jobfair/megabyte/riverbed.jpg"
+          img: "../assets/img/sponsors/sponsors2017/jobfair/megabyte/riverbed.jpg"
         },
         {
           name: "Gartner",
-          img: "../assets/img/sponsors/jobfair/megabyte/gartner.jpg"
+          img: "../assets/img/sponsors/sponsors2017/jobfair/megabyte/gartner.jpg"
         },
         {
           name: "NccGroup",
-          img: "../assets/img/sponsors/jobfair/megabyte/nccgroup.jpg"
+          img: "../assets/img/sponsors/sponsors2017/jobfair/megabyte/nccgroup.jpg"
         },
         {
           name: "Navtalent",
-          img: "../assets/img/sponsors/jobfair/megabyte/navtalent.jpg"
+          img: "../assets/img/sponsors/sponsors2017/jobfair/megabyte/navtalent.jpg"
         },
         {
           name: "Sandia",
-          img: "../assets/img/sponsors/jobfair/megabyte/sandia.jpg"
+          img: "../assets/img/sponsors/sponsors2017/jobfair/megabyte/sandia.jpg"
         },
         {
           name: "Morningstar",
-          img: "../assets/img/sponsors/jobfair/megabyte/morningstar.jpg"
+          img: "../assets/img/sponsors/sponsors2017/jobfair/megabyte/morningstar.jpg"
         },
 
         // startups
 
         {
           name: "a16z",
-          img: "../assets/img/sponsors/startups/andreessenhorowitz.jpg"
+          img: "../assets/img/sponsors/sponsors2017/startups/andreessenhorowitz.jpg"
         },
         {
           name: "Buildout",
-          img: "../assets/img/sponsors/startups/buildout.jpg"
+          img: "../assets/img/sponsors/sponsors2017/startups/buildout.jpg"
         },
         {
           name: "Cloudflare",
-          img: "../assets/img/sponsors/startups/cloudflare.svg"
+          img: "../assets/img/sponsors/sponsors2017/startups/cloudflare.svg"
         },
         {
           name: "Curalate",
-          img: "../assets/img/sponsors/startups/curalate.svg"
+          img: "../assets/img/sponsors/sponsors2017/startups/curalate.svg"
         },
         {
           name: "Granular",
-          img: "../assets/img/sponsors/startups/granular.jpg"
+          img: "../assets/img/sponsors/sponsors2017/startups/granular.jpg"
         },
         {
           name: "Liferay",
-          img: "../assets/img/sponsors/startups/liferay.jpg"
+          img: "../assets/img/sponsors/sponsors2017/startups/liferay.jpg"
         },
         {
           name: "Mixmax",
-          img: "../assets/img/sponsors/startups/mixmax.jpg"
+          img: "../assets/img/sponsors/sponsors2017/startups/mixmax.jpg"
         },
         {
           name: "Ocient",
-          img: "../assets/img/sponsors/startups/ocient.jpg"
+          img: "../assets/img/sponsors/sponsors2017/startups/ocient.jpg"
         },
         {
           name: "Rubrik",
-          img: "../assets/img/sponsors/startups/rubrik.jpg"
+          img: "../assets/img/sponsors/sponsors2017/startups/rubrik.jpg"
         },
         {
           name: "Samsara",
-          img: "../assets/img/sponsors/startups/samsara.jpg"
+          img: "../assets/img/sponsors/sponsors2017/startups/samsara.jpg"
         },
         {
           name: "Sprout Social",
-          img: "../assets/img/sponsors/startups/sproutsocial.jpg"
+          img: "../assets/img/sponsors/sponsors2017/startups/sproutsocial.jpg"
         },
         {
           name: "Jane Street",
-          img: "../assets/img/sponsors/jobfair/megabyte/janestreet.jpg"
+          img: "../assets/img/sponsors/sponsors2017/jobfair/megabyte/janestreet.jpg"
         },
         {
           name: "Capital One",
-          img: "../assets/img/sponsors/jobfair/megabyte/capitalone.png"
+          img: "../assets/img/sponsors/sponsors2017/jobfair/megabyte/capitalone.png"
         },
         {
           name: "Huawei",
-          img: "../assets/img/sponsors/jobfair/megabyte/huawei.jpg"
+          img: "../assets/img/sponsors/sponsors2017/jobfair/megabyte/huawei.jpg"
         },
         {
           name: "West Monroe",
-          img: "../assets/img/sponsors/jobfair/megabyte/westmonroe.jpg"
+          img: "../assets/img/sponsors/sponsors2017/jobfair/megabyte/westmonroe.jpg"
         },
         {
           name: "Think BIG",
-          img: "../assets/img/sponsors/startups/thinkbig.jpg"
+          img: "../assets/img/sponsors/sponsors2017/startups/thinkbig.jpg"
         }
       ]
     };

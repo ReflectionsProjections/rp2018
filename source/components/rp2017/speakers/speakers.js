@@ -13,12 +13,6 @@ class Speakers extends Component {
 
         const speakerList = [
              // Keynotes
-             {
-                'name': 'Siraj Raval',
-                'img': '../assets/img/keynotes/siraj.jpg',
-                'year': 'YouTuber - Accessible CS education',
-                'wikipedia': 'https://twitter.com/sirajraval?lang=en'
-            },
             {
                 'name': 'Steve Wozniak',
                 'img': '../assets/img/keynotes/steve.jpg',
@@ -187,7 +181,7 @@ class Speakers extends Component {
 
         return (
             <div className = "Speakers" id = "Speakers" >
-                <PageHeader className = "Speakers__header" > <h2>Past Speakers</h2></PageHeader> 
+                <PageHeader className = "Speakers__header" > <h2>Past Speakers</h2></PageHeader>
                 <Grid style={{width: "100%"}}><Row> { speakerView } </Row> </Grid>
             </div>
         )
