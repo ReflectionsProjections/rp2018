@@ -1,7 +1,7 @@
-.Start {
-    margin-top: 8vh;
+.QuestionList {
+    margin-top: -5vh;
     height: 100vh; 
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Slab', sans-serif;
     font-size: 1em;
     font-weight: bold;
 
@@ -21,9 +21,8 @@
         font-size: 1.5em;
     }
 
-    .btn {
-        border: none;
-        margin: 10px;
+    .header {
+        max-width: 50%;
     }
 
     .btn button{
@@ -49,6 +48,9 @@
     }
 
     @media (max-width: 1024px) {
+        .header {
+            max-width: 85%;
+        } 
         .btn button{
             font-size: 1.3em;
             width: 200px;
@@ -59,6 +61,9 @@
     }
 
     @media (max-width: 420px) {
+        .header {
+            max-width: 90%;
+        } 
         .btn button{
             font-size: 0.8em;
             width: 100px;
@@ -130,4 +135,18 @@
     font-weight: 100;
     color:#fff;
     margin: 0.6vh;
+}
+
+.question {
+    margin-top: 3vh;
+    color: black;
+    font-weight: 700;
+    font-size:2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.answer {
+    font-size:1.4em;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
