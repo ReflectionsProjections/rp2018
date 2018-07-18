@@ -99,37 +99,37 @@ class Speakers extends Component {
             var wikicolor = "#c9e88f"
             var cName = (cl == hasLinkColor)? "Speakers__card js-speakercard Speakers__youtube": "Speakers__card js-speakercard";
             if (wikilink) {
-                return ( 
-                    <Col key = { idx } xs = { 12 } lg = { 4 } sm = { 6 } md = { 6 }>
+                return (
+                    <Col key = { idx } xs = { 12 } lg = { 3 } sm = { 6 } md = { 6 }>
                         <Thumbnail className = {cName} src = { speaker.img } >
-                        <h3 style = {{ color: "white" } } > { speaker.name } </h3> 
-                        <h4 style = {{ color: "white" } } > { speaker.year } </h4> 
+                        <h3 style = {{ color: "white" } } > { speaker.name } </h3>
+                        <h4 style = {{ color: "white" } } > { speaker.year } </h4>
                         <div className="icon-group">
                             <a href= {wikilink} target="_blank" rel="noopener noreferrer">
                                 <span className = "glyphicon glyphicon-info-sign" id = "wiki-icon" style = {{ color: wikicolor} }/>
-                            </a> 
+                            </a>
                         </div>
-                        </Thumbnail> 
+                        </Thumbnail>
                     </Col>
                 )
             } else {
                 return(
-                    <Col key = { idx } xs = { 12 } lg = { 4 } sm = { 6 } md = { 6 }>
+                    <Col key = { idx } xs = { 12 } lg = { 3 } sm = { 6 } md = { 6 }>
                         <Thumbnail className = {cName} src = { speaker.img } >
-                        <h3 style = {{ color: "white" } } > { speaker.name } </h3> 
-                        <h4 style = {{ color: "white" } } > { speaker.year } </h4> 
+                        <h3 style = {{ color: "white" } } > { speaker.name } </h3>
+                        <h4 style = {{ color: "white" } } > { speaker.year } </h4>
                         <div className="icon-group">
                         </div>
-                        </Thumbnail> 
+                        </Thumbnail>
                     </Col>
                 )
             }
         });
 
-        return ( 
+        return (
             <div className = "Speakers" id = "Speakers" >
-                <PageHeader className = "Speakers__header" > <h2>Speakers </h2></PageHeader> 
-                <Grid style={{width: "100%"}}><Row> { speakerView } </Row> </Grid> 
+                <PageHeader className = "Speakers__header" > <h1>Speakers </h1></PageHeader>
+                <Grid className="Speakers__back" style={{width: "100%"}}><Row> { speakerView } </Row> </Grid>
             </div>
         )
     }

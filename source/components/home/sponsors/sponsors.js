@@ -42,12 +42,16 @@ class Sponsors extends Component {
           img: "../assets/img/sponsors/sponsors2018/jobfair/megabyte/amobee_full.jpeg"
         },
         {
-          name: "Sandia",
+          name: "Sandia National Laboratories",
           img: "../assets/img/sponsors/sponsors2018/jobfair/megabyte/sandia.jpg"
         },
         {
         	name: "PricewaterhouseCoopers",
         	img: "../assets/img/sponsors/sponsors2018/jobfair/megabyte/pwc.jpg"
+        },
+        {
+        	name: "Granular",
+        	img: "../assets/img/sponsors/sponsors2018/jobfair/megabyte/granular.svg"
         },
 
         // startups
@@ -79,7 +83,7 @@ class Sponsors extends Component {
       return (
         <Col key={idx} xs={12} lg={12} sm={6} md={6} className="Sponsors__centeredCard">
           <Panel className="Sponsors__card Sponsors__card--tier1">
-            <img className="Sponsors__cardLogo" src={sponsor.img} alt={sponsor.name}/>
+            <img className="Sponsors__cardLogo" src={sponsor.img} alt={sponsor.name} title={sponsor.name}/>
           </Panel>{" "}
         </Col>
       );
@@ -89,7 +93,7 @@ class Sponsors extends Component {
       return (
         <Col key={idx} xs={6} sm={4} md={4} className="Sponsors__centeredCard">
           <Panel className="Sponsors__card Sponsors__card--tier2">
-            <img className="Sponsors__cardLogo" src={sponsor.img} alt={sponsor.name}/>
+            <img className="Sponsors__cardLogo" src={sponsor.img} alt={sponsor.name} title={sponsor.name}/>
           </Panel>{" "}
         </Col>
       );
@@ -99,7 +103,7 @@ class Sponsors extends Component {
       return (
         <Col key={idx} xs={6} sm={3} md={3} className="Sponsors__centeredCard">
           <Panel className="Sponsors__card Sponsors__card--tier3">
-            <img className="Sponsors__cardLogo" src={sponsor.img} alt={sponsor.name}/>
+            <img className="Sponsors__cardLogo" src={sponsor.img} alt={sponsor.name} title={sponsor.name}/>
           </Panel>
         </Col>
       );
@@ -107,7 +111,7 @@ class Sponsors extends Component {
 
     return (
       <div className="Sponsors" id="Sponsors">
-        <PageHeader className="Sponsors__header"> <h2>Sponsors</h2> </PageHeader>{" "}
+        <PageHeader className="Sponsors__header"> <h1>Sponsors</h1> </PageHeader>{" "}
         <div className="Sponsors__back">
           <Grid>
             <Row className="Sponsors__centerContent"> {tier1Sponsors} </Row>{" "}
