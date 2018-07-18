@@ -59,7 +59,7 @@ class Countdown extends Component {
                         <ul>
                             <li>
                                 <div className="bordered">
-                                    <div id="days">Coming Soon!</div>
+                                    <div id="days">∞</div>
                                 </div>
                             </li>
                             <li>
@@ -71,7 +71,7 @@ class Countdown extends Component {
                         <ul>
                             <li>
                                 <div className="bordered">
-                                    <div id="hours">Coming Soon!</div>
+                                    <div id="hours">∞</div>
                                 </div>
                             </li>
                             <li>
@@ -83,7 +83,7 @@ class Countdown extends Component {
                         <ul>
                             <li>
                                 <div className="bordered">
-                                    <div id="minutes">Coming Soon!</div>
+                                    <div id="minutes">∞</div>
                                 </div>
                             </li>
                             <li>
@@ -95,7 +95,7 @@ class Countdown extends Component {
                         <ul>
                             <li>
                                 <div className="bordered">
-                                    <div id="seconds">Coming Soon!</div>
+                                    <div id="seconds">∞</div>
                                 </div>
                             </li>
                             <li>
