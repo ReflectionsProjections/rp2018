@@ -1,7 +1,7 @@
-.Start {
-    margin-top: 8vh;
+.QuestionList {
+    margin-top: -5vh;
     height: 100vh; 
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Slab', sans-serif;
     font-size: 1em;
     font-weight: bold;
 
@@ -23,11 +23,6 @@
 
     .header {
         max-width: 50%;
-    }
-    
-    .btn {
-        border: none;
-        margin: 10px;
     }
 
     .btn button{
@@ -140,4 +135,18 @@
     font-weight: 100;
     color:#fff;
     margin: 0.6vh;
+}
+
+.question {
+    margin-top: 3vh;
+    color: black;
+    font-weight: 700;
+    font-size:2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.answer {
+    font-size:1.4em;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
