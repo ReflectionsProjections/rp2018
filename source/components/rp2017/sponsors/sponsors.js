@@ -11,34 +11,22 @@ class Sponsors extends Component {
   render() {
     const sponsorsList = {
       tier2: [
-      	{
-          name: "Microsoft",
-          img: "../assets/img/sponsors/jobfair/gigabyte/microsoft.jpg"
-        },
-        /*{
+        {
           name: "Nvidia",
           img: "../assets/img/sponsors/jobfair/petabyte/nvidia.jpg"
         },
         {
           name: "RetailMeNot",
           img: "../assets/img/sponsors/jobfair/terabyte/retailmenot.svg"
-        }*/
+        }
       ],
 
       tier3: [
         {
-          name: "Northern Trust",
-          img: "../assets/img/sponsors/jobfair/gigabyte/northerntrust.jpg"
+          name: "Microsoft",
+          img: "../assets/img/sponsors/jobfair/gigabyte/microsoft.jpg"
         },
         {
-          name: "Cloudflare",
-          img: "../assets/img/sponsors/startups/cloudflare.svg"
-        },
-        {
-        	name: "Salesforce",
-        	img: "../assets/img/sponsors/startups/Salesforce.jpg"
-        }
-        /*{
           name: "Forcepoint",
           img: "../assets/img/sponsors/jobfair/gigabyte/forcepoint.jpg"
         },
@@ -47,35 +35,27 @@ class Sponsors extends Component {
           img: "../assets/img/sponsors/jobfair/gigabyte/imo.svg"
         },
         {
+          name: "Northern Trust",
+          img: "../assets/img/sponsors/jobfair/gigabyte/northerntrust.jpg"
+        },
+        {
           name: "Qualtrics",
           img: "../assets/img/sponsors/jobfair/gigabyte/qualtrics.jpg"
         },
         {
           name: "Bank of America",
           img: "../assets/img/sponsors/jobfair/gigabyte/bankofamerica.jpg"
-        }*/
+        }
       ],
 
       tier4: [
         {
-          name: "Google",
-          img: "../assets/img/sponsors/jobfair/megabyte/google.jpg"
-        },
-        {
-          name: "Amobee",
-          img: "../assets/img/sponsors/jobfair/megabyte/amobee.jpg"
-        },
-        {
-          name: "Sandia",
-          img: "../assets/img/sponsors/jobfair/megabyte/sandia.jpg"
-        },
-        {
-        	name: "PricewaterhouseCoopers",
-        	img: "../assets/img/sponsors/jobfair/megabyte/pwc.jpg"
-        }
-        /*{
           name: "Facebook",
           img: "../assets/img/sponsors/jobfair/megabyte/facebook.jpg"
+        },
+        {
+          name: "Google",
+          img: "../assets/img/sponsors/jobfair/megabyte/google.jpg"
         },
         {
           name: "Indeed",
@@ -98,6 +78,10 @@ class Sponsors extends Component {
           img: "../assets/img/sponsors/jobfair/megabyte/yelp.jpg"
         },
         {
+          name: "Amobee",
+          img: "../assets/img/sponsors/jobfair/megabyte/amobee.jpg"
+        },
+        {
           name: "Riverbed",
           img: "../assets/img/sponsors/jobfair/megabyte/riverbed.jpg"
         },
@@ -114,6 +98,10 @@ class Sponsors extends Component {
           img: "../assets/img/sponsors/jobfair/megabyte/navtalent.jpg"
         },
         {
+          name: "Sandia",
+          img: "../assets/img/sponsors/jobfair/megabyte/sandia.jpg"
+        },
+        {
           name: "Morningstar",
           img: "../assets/img/sponsors/jobfair/megabyte/morningstar.jpg"
         },
@@ -127,6 +115,10 @@ class Sponsors extends Component {
         {
           name: "Buildout",
           img: "../assets/img/sponsors/startups/buildout.jpg"
+        },
+        {
+          name: "Cloudflare",
+          img: "../assets/img/sponsors/startups/cloudflare.svg"
         },
         {
           name: "Curalate",
@@ -179,7 +171,7 @@ class Sponsors extends Component {
         {
           name: "Think BIG",
           img: "../assets/img/sponsors/startups/thinkbig.jpg"
-        }*/
+        }
       ]
     };
 
@@ -227,7 +219,7 @@ class Sponsors extends Component {
 
     return (
       <div className="Sponsors" id="Sponsors">
-        <PageHeader className="Sponsors__header"> <h2>Sponsors</h2> </PageHeader>{" "}
+        <PageHeader className="Sponsors__header"> <h2>R|P 2017 Sponsors</h2> </PageHeader>{" "}
         <Grid>
           <Row> {tier2Sponsors} </Row>{" "}
           <Row className="Sponsors_centerContent"> {tier3Sponsors} </Row>{" "}

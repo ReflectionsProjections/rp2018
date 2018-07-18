@@ -13,58 +13,17 @@ class Speakers extends Component {
 
         const speakerList = [
              // Keynotes
-            {
+             {
                 'name': 'Siraj Raval',
                 'img': '../assets/img/keynotes/siraj.jpg',
                 'year': 'YouTuber - Accessible CS education',
-                'wikipedia': 'https://twitter.com/sirajraval'
+                'wikipedia': 'https://twitter.com/sirajraval?lang=en'
             },
             {
-                'name': 'Saad Ali',
-                'img': '../assets/img/keynotes/saad.jpg',
-                'year': 'Senior Software Engineer at Google',
-                'wikipedia': 'https://twitter.com/the_saad_ali'
-            },
-            {
-                'name': 'Jay Gambetta',
-                'img': '../assets/img/keynotes/jay_g.jpg',
-                'year': 'Quantum Computing Researcher at IBM',
-                'wikipedia': 'https://en.wikipedia.org/wiki/Jay_Gambetta'
-            },
-            {
-                'name': 'Simon Adler',
-                'img': '../assets/img/keynotes/simon.jpg',
-                'year': 'Producter at Radiolab',
-                'wikipedia': 'https://www.wnycstudios.org/people/simon-adler/'
-            },
-            {
-                'name': 'Brian Hoffman',
-                'img': '../assets/img/keynotes/brain_h.jpg',
-                'year': 'CEO/Founder OpenBazaar',
-                'wikipedia': 'https://twitter.com/brianchoffman'
-            },
-            {
-                'name': 'Forrest Iandola',
-                'img': '../assets/img/keynotes/forrest.jpg',
-                'year': 'CEO Deepscale.ai',
-                'wikipedia': 'https://en.wikipedia.org/wiki/Forrest_Iandola'
-            },
-            {
-                'name': 'Romain Paulus',
-                'img': '../assets/img/keynotes/romain.jpg',
-                'year': 'Chief ML Scientist at Salesforce',
-                'wikipedia': 'https://www.linkedin.com/in/romainpaulus/?locale=en_US'
-            },
-            {
-                'name': 'Zac Lipton',
-                'img': '../assets/img/keynotes/zac.jpg',
-                'year': 'ML Scientist at Amazon AI Labs, Professor CMU',
-                'wikipedia': 'http://zacklipton.com'
-            },
-            {
-                'name': ' ',
-                'img': '../assets/img/keynotes/past.png',
-                'year': ' ',
+                'name': 'Steve Wozniak',
+                'img': '../assets/img/keynotes/steve.jpg',
+                'year': 'Co-founder of Apple',
+                'wikipedia': 'https://en.wikipedia.org/wiki/Steve_Wozniak'
             },
             {
                 'name': 'Alexis Ohanian',
@@ -189,38 +148,47 @@ class Speakers extends Component {
             var cl = (link != undefined && link != null) ? hasLinkColor : hasNoLinkColor;
             var wikicolor = "#c9e88f"
             var cName = (cl == hasLinkColor)? "Speakers__card js-speakercard Speakers__youtube": "Speakers__card js-speakercard";
-            if (wikilink) {
-                return ( 
+            if (link) {
+                return (
                     <Col key = { idx } xs = { 12 } lg = { 4 } sm = { 6 } md = { 6 }>
                         <Thumbnail className = {cName} src = { speaker.img } >
-                        <h3 style = {{ color: "white" } } > { speaker.name } </h3> 
-                        <h4 style = {{ color: "white" } } > { speaker.year } </h4> 
+                        <h3 style = {{ color: "white" } } > { speaker.name } </h3>
+                        <h4 style = {{ color: "white" } } > { speaker.year } </h4>
                         <div className="icon-group">
+                            <a href= {link} target="_blank" rel="noopener noreferrer">
+                                <span className = "glyphicon glyphicon-play-circle" id = "youtube-icon" style = {{ color: cl } }/>
+                            </a>
                             <a href= {wikilink} target="_blank" rel="noopener noreferrer">
                                 <span className = "glyphicon glyphicon-info-sign" id = "wiki-icon" style = {{ color: wikicolor} }/>
-                            </a> 
+                            </a>
                         </div>
-                        </Thumbnail> 
+                        </Thumbnail>
                     </Col>
                 )
             } else {
                 return(
                     <Col key = { idx } xs = { 12 } lg = { 4 } sm = { 6 } md = { 6 }>
                         <Thumbnail className = {cName} src = { speaker.img } >
-                        <h3 style = {{ color: "white" } } > { speaker.name } </h3> 
-                        <h4 style = {{ color: "white" } } > { speaker.year } </h4> 
+                        <h3 style = {{ color: "white" } } > { speaker.name } </h3>
+                        <h4 style = {{ color: "white" } } > { speaker.year } </h4>
                         <div className="icon-group">
+                            <a href= {link} target="_blank" rel="noopener noreferrer">
+                                <span className = "glyphicon glyphicon-play-circle" id = "youtube-icon" style = {{ color: cl, opacity: 0 } }/>
+                            </a>
+                            <a href= {wikilink} target="_blank" rel="noopener noreferrer">
+                                <span className = "glyphicon glyphicon-info-sign" id = "wiki-icon" style = {{ color: wikicolor} }/>
+                            </a>
                         </div>
-                        </Thumbnail> 
+                        </Thumbnail>
                     </Col>
                 )
             }
         });
 
-        return ( 
+        return (
             <div className = "Speakers" id = "Speakers" >
-                <PageHeader className = "Speakers__header" > <h2>Speakers </h2></PageHeader> 
-                <Grid style={{width: "100%"}}><Row> { speakerView } </Row> </Grid> 
+                <PageHeader className = "Speakers__header" > <h2>Past Speakers</h2></PageHeader> 
+                <Grid style={{width: "100%"}}><Row> { speakerView } </Row> </Grid>
             </div>
         )
     }

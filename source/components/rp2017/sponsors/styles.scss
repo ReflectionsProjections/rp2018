@@ -1,0 +1,49 @@
+.Sponsors {
+    padding: 10vh 5vw 10vh 5vw;
+    background-color: rgba(225, 225, 225, 0.3);    
+    &__card {
+        text-align: center;
+        position: relative;
+        min-height: 150px;
+        background: none;
+        border: none;
+
+        img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 100%;
+            max-height: 100%;
+            padding: 7px;
+        }
+    }
+    &__gridRow {
+        text-align: center;
+    }
+
+    &__centeredCard {
+        margin: auto 0;
+    }
+
+    &__centerContent {
+        text-align: center;
+        align-content: center;
+        margin: auto 0;
+    }
+
+    &__header {
+        color: white;
+        text-align: center;
+        border: none;
+    }
+}
+h2
+{
+    font-family:'Roboto Slab', serif;
+}
+.panel {
+    box-shadow: unset!important;
+    -webkit-box-shadow: unset!important;
+    -moz-box-shadow: unset!important;
+}

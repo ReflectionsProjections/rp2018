@@ -6,6 +6,7 @@ import {HashRouter as Router, Route, Link} from 'react-router-dom'
 import Home from './components/home/home';
 import FAQ from './components/faq/faq';
 import Landing from './components/landing/landing';
+import rp2017 from './components/rp2017/rp2017';
 
 
 // Redirects
@@ -44,12 +45,11 @@ render(
     <Router>
         <div>
             <Route exact path="/" component={Home}/>
+            <Route exact path="/rp2017" component={rp2017}/>
+            <Route path="/sponsor" component={SponsorLetter} />
+            <Route path="/startup" component={StartupLetter} />
+            <Route path="/home" component={Home} />
             <Route exact path="/faq" component={FAQ}/>
-            {/* <Route path="/sponsor" component={SponsorLetter} /> */}
-            {/* <Route path="/startup" component={StartupLetter} /> */}
-            {/* <Route path="/home" component={Home} /> */}
-            {/* <Route path="/fugger" component={Fugger} /> */}
-            {/* <Route path="/fugger-signup" component={FuggerSignup} /> */}
         </div>
     </Router>,
     document.getElementById('app')
