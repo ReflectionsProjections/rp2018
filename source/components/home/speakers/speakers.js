@@ -101,7 +101,7 @@ class Speakers extends Component {
             if (wikilink) {
                 return ( 
                     <Col key = { idx } xs = { 12 } lg = { 4 } sm = { 6 } md = { 6 }>
-                        <Thumbnail className = {cName} src = { speaker.img } class="img-circle" >
+                        <Thumbnail className = {cName} src = { speaker.img } >
                         <h3 style = {{ color: "white" } } > { speaker.name } </h3> 
                         <h4 style = {{ color: "white" } } > { speaker.year } </h4> 
                         <div className="icon-group">
