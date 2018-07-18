@@ -64,9 +64,27 @@
             }
         }
     }
+    h2.image-caption {
+        font-size: 2.5em;
+        width: 80%;
+        color: greenyellow;
+        background: black;
+        font-family: "PT Sans Caption", sans-serif;
+        position: absolute;
+        z-index: 2;
+        top: 75vh;
+        text-align: left;
+        padding: 0;
+        margin-left: 8vw;
+        margin-right: 8vw;
+    }
     @media (max-width: 1024px) {
         .header {
             max-width: 85%;
+        }
+        h2.image-caption {
+            font-size: 1.5em;
+            top:75vh;
         }
         .btn button {
             font-size: 1.3em;
@@ -78,9 +96,18 @@
             font-size: 2em;
         }
     }
+    @media (max-width: 768px) {
+        h2.image-caption {
+            font-size: 1.9em;
+            top:70vh;
+        }
+    }
     @media (max-width: 420px) {
         .header {
             max-width: 90%;
+        }
+        h2.image-caption {
+            font-size: 1.5em;
         }
         .btn button {
             font-size: 0.8em;
@@ -96,6 +123,10 @@
     @media (max-width: 320px) {
         .header {
             max-width: 90%;
+        }
+        h2.image-caption {
+            font-size: 1.5em;
+            top:50vh;
         }
         .btn button {
             font-size: 0.8em;

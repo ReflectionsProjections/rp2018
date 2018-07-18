@@ -19,6 +19,17 @@ const PHOTO_SET = [
   { src: '../../../assets/img/history/career5.jpg', alt: 'Slide 8' }
 ];
 
+const SUBTITLES = [
+    "This is a long Subtitle 1, made long to see effect...........long long long text.. does this wrap? Keep wrapping......",
+    "This is a long Subtitle 2, made long to see effect...........long long long text.. does this wrap? Keep wrapping......",
+    "Speaker Subtitle 3, made long to see effect...........long long long text.. does this wrap? Keep wrapping.............",
+    "Mechmania,     Subtitle 4, made long to see effect...........long long long text.. does this wrap? Keep wrapping......",
+    "Speaker        Subtitle 5, made long to see effect...........long long long text.. does this wrap? Keep wrapping......",
+    "This is a long Subtitle 6, made long to see effect...........long long long text.. does this wrap? Keep wrapping......",
+    "This is a long Subtitle 7, made long to see effect...........long long long text.. does this wrap? Keep wrapping......",
+    "This is a long Subtitle 8, made long to see effect...........long long long text.. does this wrap? Keep wrapping......"
+]
+
 const popoverBottom = (
     <Popover id="popover-positioned-bottom" style={{backgroundColor: "rgba(43, 92, 93, 0.5)", border: "2px solid #cadea5", borderRadius: 0}}>
         If you are willing to sponsor!
@@ -48,6 +59,7 @@ class Start extends Component {
                         <Slider  {...settings}>
                                 {PHOTO_SET.map((item, index) => (
                                     <div id="images_container">
+                                        <h2 className="image-caption">{SUBTITLES[index]}</h2>
                                         <img id="carousel_image" src={item.src} alt={item.alt}/>
                                     </div>
                                 ))}
