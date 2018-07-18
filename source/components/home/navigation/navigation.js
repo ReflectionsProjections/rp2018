@@ -20,20 +20,17 @@ class Navigation extends Component {
             });
         };
 
-        return (
+        return(
             <div className="Navigation">
                 <Navbar collapseOnSelect fixedTop>
                     <Navbar.Header>
                         <Navbar.Brand>
-                            <div class="logo-container">
-                                <a href="#" style={{ opacity: 1 }}>
-                                    <img className="Navigation__logo" src="../assets/svg/logo.svg" />
-                                    <img className="header" src="../assets/svg/home_header.svg" />
-                                </a>
-                            </div>
+                            <a href="#" style={{opacity: 1}}>
+                                <img className="Navigation__logo" src="../assets/svg/logo.svg" />
+                            </a>
                         </Navbar.Brand>
+                        <Navbar.Toggle />
                     </Navbar.Header>
-                    <Navbar.Toggle />
                     <Navbar.Collapse>
                         <Nav pullRight>
                             <NavItem onClick={() => this.scrollTo('About')} eventKey={1} className="Navigation__item--active">About</NavItem>
