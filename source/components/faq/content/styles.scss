@@ -1,33 +1,33 @@
-.Start {
-    margin-top: 8vh;
-    height: 100vh; 
-    font-family: 'Roboto', sans-serif;
-    font-size: 1em;
-    font-weight: bold;
-
-    .jumbotron {
-        background-color: inherit;
-        color: white;
-        text-align: center;
-        font-family: inherit;
-    }
-
+.Content {
     .caps {
         margin: 25px;
         font-size: 1.5em;
     }
 
-    #countdown {
-        font-size: 1.5em;
-    }
-
-    .header {
+    #header {
         max-width: 50%;
+        margin-top: 20vh;
+        font-family: 'Roboto Slab', sans-serif;
+        font-size: 1em;
+        font-weight: bold;
+        display: block;
+        margin: auto;
+    }
+    #header h1 {
+        font-size: 3em;
+        text-align: center;
+        padding: 5vh 5vw;
+        color: white;
     }
     
-    .btn {
-        border: none;
-        margin: 10px;
+    #QuestionListContainer {
+        margin:auto;
+        padding: 8vh 4vw;
+        padding-top: 4vh;
+        width: 70vw;
+        background-color: white;
+        color: yellowgreen;
+        display: block;
     }
 
     .btn button{
@@ -76,6 +76,9 @@
         }  
         #countdown, .intro, .caps {
             font-size: 1.2em;
+        }
+        #QuestionListContainer {
+            width: 80vw;
         }
     }
 
