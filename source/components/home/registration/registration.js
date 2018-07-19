@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { FormControl, FormGroup, FieldGroup } from 'react-bootstrap'
+import { FormControl, FormGroup, ControlLabel } from 'react-bootstrap'
 
 class Registration extends Component {
     constructor() {
@@ -47,9 +47,25 @@ class Registration extends Component {
                         label="Upload Resume"
                         help="Upload resume"
                     />
-                    <FormGroup>
-                    
+                    <FormGroup controlId="dietaryRestrictions">
+                        <ControlLabel>Dietary Restrictions</ControlLabel>
+                        <Checkbox inline>Vegetarian</Checkbox>
+                        <Checkbox inline>Halal</Checkbox>
+                        <Checkbox inline>Vegan</Checkbox>
+                        <Checkbox inline>Other</Checkbox>
                     </FormGroup>
+                    <FormGroup controlId="shirtSize">
+                        <ControlLabel>T-shirt size</ControlLabel>
+                        <FormControl componentClass="select" placeholder="select">
+                            <opetion value="select">select</option>
+                            <opetion value="S">S</option>
+                            <opetion value="M">M</option>
+                            <opetion value="L">L</option>
+                            <opetion value="XL">XL</option>
+                            <opetion value="XXL">XXL</option>
+                        </FormControl>
+                    </FormGroup>
+                    <Button type'"submit">Submit</Button>
                 </form>
             </div>
         )
