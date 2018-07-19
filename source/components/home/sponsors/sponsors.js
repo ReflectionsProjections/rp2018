@@ -29,6 +29,10 @@ class Sponsors extends Component {
         {
         	name: "Salesforce",
         	img: "../assets/img/sponsors/sponsors2018/jobfair/gigabyte/sf_placeholder.png"
+        },
+        {
+        	name: "Braintree",
+        	img: "../assets/img/sponsors/sponsors2018/jobfair/gigabyte/braintree.png"
         }
       ],
 
@@ -43,7 +47,7 @@ class Sponsors extends Component {
         },
         {
           name: "Sandia National Laboratories",
-          img: "../assets/img/sponsors/sponsors2018/jobfair/megabyte/sandia.jpg"
+          img: "../assets/img/sponsors/sponsors2018/jobfair/megabyte/sandia.png"
         },
         {
         	name: "PricewaterhouseCoopers",
@@ -95,7 +99,7 @@ class Sponsors extends Component {
 
     const tier2Sponsors = sponsorsList.tier2.map((sponsor, idx) => {
       return (
-        <Col key={idx} xs={6} sm={4} md={4} className="Sponsors__centeredCard">
+        <Col key={idx} xs={6} sm={6} md={6} className="Sponsors__centeredCard">
           <Panel className="Sponsors__card Sponsors__card--tier2">
             <img className="Sponsors__cardLogo" src={sponsor.img} alt={sponsor.name} title={sponsor.name}/>
           </Panel>{" "}
@@ -118,9 +122,9 @@ class Sponsors extends Component {
         <PageHeader className="Sponsors__header"> <h1>Sponsors</h1> </PageHeader>{" "}
         <div className="Sponsors__back">
           <Grid>
-            <Row className="Sponsors__centerContent"> {tier1Sponsors} </Row>{" "}
-            <Row className="Sponsors__centerContent"> {tier2Sponsors} </Row>{" "}
-            <Row> {tier3Sponsors} </Row>{" "}
+            <Row className="Sponsors__centerContent"> {tier1Sponsors} </Row>
+            <Row className="Sponsors__centerContent"> {tier2Sponsors} </Row>
+            <Row> {tier3Sponsors} </Row>
           </Grid>{" "}
         </div>
       </div>
