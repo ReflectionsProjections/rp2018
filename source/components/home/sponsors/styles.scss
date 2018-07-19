@@ -1,6 +1,6 @@
 .Sponsors {
     padding: 10vh 5vw 10vh 5vw;
-    background-color: rgba(225, 225, 225, 0.3);
+    background-color: rgba(225, 225, 225, 0.1);
 
     &__back {
         border-radius: 4%;
@@ -29,9 +29,6 @@
 
     &__card--tier1 {
         min-height: 300px!important;
-        img {
-          min-height: 100%;
-        }
     }
 
     &__card--tier2 {

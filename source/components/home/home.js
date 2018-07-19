@@ -25,6 +25,7 @@ class Home extends Component {
                 <Start />
                 <About />
                 <Speakers />
+                <hr/>
                 <Sponsors />
                 <Footer />
             </div>
