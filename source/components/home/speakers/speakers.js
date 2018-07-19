@@ -34,7 +34,7 @@ class Speakers extends Component {
             {
                 'name': 'Simon Adler',
                 'img': '../assets/img/keynotes/simon.jpg',
-                'year': 'Producter at Radiolab',
+                'year': 'Producer at Radiolab',
                 'wikipedia': 'https://www.wnycstudios.org/people/simon-adler/'
             },
             {
@@ -56,9 +56,9 @@ class Speakers extends Component {
                 'wikipedia': 'https://www.linkedin.com/in/romainpaulus/?locale=en_US'
             },
             {
-                'name': 'Zac Lipton',
+                'name': 'Zachary Lipton',
                 'img': '../assets/img/keynotes/zac.jpg',
-                'year': 'ML Scientist at Amazon AI Labs, Professor CMU',
+                'year': 'ML Scientist at Amazon AI Labs, Assistant Professor CMU',
                 'wikipedia': 'http://zacklipton.com'
             }
         ];

@@ -20,7 +20,7 @@ class Sponsors extends Component {
       tier2: [
         {
           name: "Cloudflare",
-          img: "../assets/img/sponsors/sponsors2018/jobfair/gigabyte/cloudflare_full.ai"
+          img: "../assets/img/sponsors/sponsors2018/jobfair/gigabyte/cf_placeholder.png"
         },
         {
           name: "Northern Trust",
@@ -28,7 +28,7 @@ class Sponsors extends Component {
         },
         {
         	name: "Salesforce",
-        	img: "../assets/img/sponsors/sponsors2018/jobfair/gigabyte/salesforce.ai"
+        	img: "../assets/img/sponsors/sponsors2018/jobfair/gigabyte/sf_placeholder.png"
         }
       ],
 
@@ -58,11 +58,11 @@ class Sponsors extends Component {
 
         {
           name: "DeepScale",
-          img: "../assets/img/sponsors/sponsors2018/startup/deepscale.eps"
+          img: "../assets/img/sponsors/sponsors2018/startup/ds_placeholder.png"
         },
         {
           name: "Flexport",
-          img: "../assets/img/sponsors/sponsors2018/startup/flexport_single.pdf"
+          img: "../assets/img/sponsors/sponsors2018/startup/fp_placeholder.png"
         },
         {
           name: "Ocient",
@@ -70,11 +70,15 @@ class Sponsors extends Component {
         },
         {
           name: "Polsky Center",
-          img: "../assets/img/sponsors/sponsors2018/startup/microsoft.jpeg"
+          img: "../assets/img/sponsors/sponsors2018/startup/pc_placeholder.png"
         },
         {
           name: "Reconstruct",
           img: "../assets/img/sponsors/sponsors2018/startup/reconstruct_full.jpg"
+        },
+        {
+          name: "Sentry",
+          img: "../assets/img/sponsors/sponsors2018/startup/sentry.png"
         }
       ]
     };
