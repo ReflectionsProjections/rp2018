@@ -65,9 +65,11 @@ class Registration extends Component {
                             <opetion value="XXL">XXL</option>
                         </FormControl>
                     </FormGroup>
-                    <Button type'"submit">Submit</Button>
+                    <Button type"submit">Submit</Button>
                 </form>
             </div>
         )
     }
 }
+
+export default Registration
