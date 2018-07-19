@@ -44,12 +44,10 @@ render(
     <Router>
         <div>
             <Route exact path="/" component={Home}/>
+            <Route path="/sponsor" component={SponsorLetter} />
+            <Route path="/startup" component={StartupLetter} />
+            <Route path="/home" component={Home} />
             <Route exact path="/faq" component={FAQ}/>
-            {/* <Route path="/sponsor" component={SponsorLetter} /> */}
-            {/* <Route path="/startup" component={StartupLetter} /> */}
-            {/* <Route path="/home" component={Home} /> */}
-            {/* <Route path="/fugger" component={Fugger} /> */}
-            {/* <Route path="/fugger-signup" component={FuggerSignup} /> */}
         </div>
     </Router>,
     document.getElementById('app')

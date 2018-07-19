@@ -1,6 +1,12 @@
 .Sponsors {
     padding: 10vh 5vw 10vh 5vw;
-    background-color: rgba(225, 225, 225, 0.3);    
+    background-color: rgba(225, 225, 225, 0.1);
+
+    &__back {
+        border-radius: 4%;
+        background: white;
+    }
+
     &__card {
         text-align: center;
         position: relative;
@@ -9,6 +15,8 @@
         border: none;
 
         img {
+            font-family: inherit;
+            font-size: 5vh;
             position: absolute;
             left: 50%;
             top: 50%;
@@ -18,6 +26,23 @@
             padding: 7px;
         }
     }
+
+    &__card--tier1 {
+        min-height: 300px!important;
+    }
+
+    &__card--tier2 {
+        min-height: 250px!important;
+    }
+
+    &__card--tier3 {
+        min-height: 150px!important;
+    }
+
+    &__card--tier4 {
+        min-height: 100px!important;
+    }
+
     &__gridRow {
         text-align: center;
     }
@@ -38,7 +63,7 @@
         border: none;
     }
 }
-h2
+h1
 {
     font-family:'Roboto Slab', serif;
 }
@@ -46,4 +71,11 @@ h2
     box-shadow: unset!important;
     -webkit-box-shadow: unset!important;
     -moz-box-shadow: unset!important;
+}
+
+@media (max-width: 750px) {
+    .Sponsors__back {
+      border-radius: 0;
+      background: white;
+    }
 }
