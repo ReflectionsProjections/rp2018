@@ -27,6 +27,7 @@ class Navigation extends Component {
                         <Navbar.Brand>
                             <a href="#" style={{opacity: 1}}>
                                 <img className="Navigation__logo" src="../assets/svg/logo.svg" />
+                                <img className="header" src="../assets/svg/home_header.svg" />
                             </a>
                         </Navbar.Brand>
                         <Navbar.Toggle />
