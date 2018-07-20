@@ -1,30 +1,28 @@
 import React, { Component } from 'react'
-import { FormControl, FormGroup, ControlLabel } from 'react-bootstrap'
+import { FormControl, FormGroup } from 'react-bootstrap'
 
 class Registration extends Component {
     constructor() {
         super();
-        this.handleChange = this.handleChange.bind(this);
-        this.state = {
-            value: ''
-        };
     }
 
-    function FieldGroup({ id, label, help, ...props }) {
-        return (
-            <FormGroup controlId={id}>
-                <ControlLabel>{label}</ControlLabel>
-                <FormControl {...props} />
-                {help && <HelpBlock>{help}</HelpBlock>}
-            </FormGroup>
-        );
-    }
+    
 
     handleChange(e) {
         this.setState({ value: e.target.value });
     }
 
     render() {
+        /*FieldGroup({ id, label, help, ...props }) {
+            return (
+                <FormGroup controlId={id}>
+                    <ControlLabel>{label}</ControlLabel>
+                    <FormControl {...props} />
+                    {help && <HelpBlock>{help}</HelpBlock>}
+                </FormGroup>
+            );
+        }*/
+
         return (
             <div className = "Registration">
                 <form>
@@ -57,15 +55,15 @@ class Registration extends Component {
                     <FormGroup controlId="shirtSize">
                         <ControlLabel>T-shirt size</ControlLabel>
                         <FormControl componentClass="select" placeholder="select">
-                            <opetion value="select">select</option>
-                            <opetion value="S">S</option>
-                            <opetion value="M">M</option>
-                            <opetion value="L">L</option>
-                            <opetion value="XL">XL</option>
-                            <opetion value="XXL">XXL</option>
+                            <option value="select">select</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                            <option value="XXL">XXL</option>
                         </FormControl>
                     </FormGroup>
-                    <Button type"submit">Submit</Button>
+                    <Button type="submit">Submit</Button>
                 </form>
             </div>
         )
