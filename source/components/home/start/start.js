@@ -46,7 +46,7 @@ class Start extends Component {
       var settings = {
           autoplay: true,
           autoplaySpeed: 3500,
-          fade: true,
+          fade: false,
           speed: 2000,
           arrows: false,
           pauseOnHover: false
