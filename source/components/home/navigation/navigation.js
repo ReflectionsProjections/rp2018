@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap'
+import { Navbar, Nav, NavItem, NavDropdown, MenuItem, Button } from 'react-bootstrap'
+import Registration from '../registration/registration'
 import styles from './styles.scss'
 
 
@@ -20,6 +21,10 @@ class Navigation extends Component {
             });
         };
 
+        function handleSelect(selectedKey) {
+            alert(`selected ${selectedKey}`);
+        }
+
         return(
             <div className="Navigation">
                 <Navbar collapseOnSelect fixedTop>
@@ -32,11 +37,14 @@ class Navigation extends Component {
                         <Navbar.Toggle />
                     </Navbar.Header>
                     <Navbar.Collapse>
-                    <Nav pullLeft>
+                    <Nav>
                         <NavItem onClick={() => this.scrollTo('About')} eventKey={1} className="Navigation__item--active">About</NavItem>
                         <NavItem onClick={() => this.scrollTo('Speakers')} eventKey={2} >Past Speakers</NavItem>
                         <NavItem onClick={() => this.scrollTo('Sponsors')} eventKey={3} >Past Sponsors</NavItem>
                         <NavItem onClick={() => this.scrollTo('Footer')} eventKey={4} >Contact Us</NavItem>
+                    </Nav>
+                    <Nav bsStyle="pills" pullRight>
+                        <Button onClick={() => render(<Registration/>)} bsStyle="success" bsSize="large">Register</Button>
                     </Nav>
                     </Navbar.Collapse>
                 </Navbar>
