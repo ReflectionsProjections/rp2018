@@ -30,6 +30,13 @@
         display: block;
     }
 
+    .faq-heading {
+        text-align: left;
+        font-family: 'Roboto Slab', sans-serif;
+        font-weight: 800;
+        font-size: 3em;
+    }
+
     .btn button{
         background: none;
         height: 50px;
@@ -42,7 +49,27 @@
         position: relative;
         background-color:rgb(42, 50, 62);    
     }
-    
+
+    a {
+        color: blue;
+        padding: 0;
+        margin: 0;
+    }
+
+    section.faq-columns {
+        display: flex;
+        padding: 0;
+    }
+
+    .column, .sub-column {
+        margin: 5vh;
+        overflow: hidden;
+    }
+
+    div.column {
+        display: flex;
+    }
+
     .btn button:hover {
         border-color: #97c88c;
     } 
@@ -53,8 +80,25 @@
     }
 
     @media (max-width: 1024px) {
+        .faq-columns {
+            flex-direction: column;
+        }
+        .column, .sub-column {
+            margin: 0;
+        }
+        .faq-heading {
+            margin-top: 3vh;
+        }
+        .column:first-child .faq-heading {
+            margin-top: 0;
+        }
+        div#QuestionListContainer {
+            // Controls whether the layout appears as a card on mobile, or with full width.
+            // width: 100vw;
+        }
         .header {
             max-width: 85%;
+            margin: 0;
         } 
         .btn button{
             font-size: 1.3em;
@@ -95,6 +139,10 @@
             font-size: 1.0em;
         }
     }
+}
+
+div::after, section::after {
+    content: none;
 }
 
 #tooltiptext {
