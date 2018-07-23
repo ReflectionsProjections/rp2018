@@ -20,6 +20,10 @@ class Navigation extends Component {
             });
         };
 
+        function handleSelect(selectedKey) {
+            alert(`selected ${selectedKey}`);
+        }
+
         return(
             <div className="Navigation">
                 <Navbar collapseOnSelect fixedTop>
@@ -32,11 +36,14 @@ class Navigation extends Component {
                         <Navbar.Toggle />
                     </Navbar.Header>
                     <Navbar.Collapse>
-                    <Nav pullLeft>
+                    <Nav>
                         <NavItem onClick={() => this.scrollTo('About')} eventKey={1} className="Navigation__item--active">About</NavItem>
                         <NavItem onClick={() => this.scrollTo('Speakers')} eventKey={2} >Past Speakers</NavItem>
                         <NavItem onClick={() => this.scrollTo('Sponsors')} eventKey={3} >Past Sponsors</NavItem>
                         <NavItem onClick={() => this.scrollTo('Footer')} eventKey={4} >Contact Us</NavItem>
+                    </Nav>
+                    <Nav bsStyle="pills" pullRight>
+                        <NavItem href="">Register</NavItem>
                     </Nav>
                     </Navbar.Collapse>
                 </Navbar>
