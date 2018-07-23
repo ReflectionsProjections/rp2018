@@ -24,7 +24,7 @@
         margin:auto;
         padding: 8vh 4vw;
         padding-top: 4vh;
-        width: 75vw;
+        width: 90vw;
         filter: drop-shadow(0px 5px 10px black);
         background-color: white;
         border-radius: 5vh;
@@ -83,8 +83,7 @@
 
     @media (max-width: 1024px) {
         #QuestionListContainer {
-            border-radius: 5vh;
-            width: 90vw;
+            border-radius: calc(2vh + 2vw);
         }
         .faq-columns {
             flex-direction: column;
