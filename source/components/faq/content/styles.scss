@@ -24,8 +24,10 @@
         margin:auto;
         padding: 8vh 4vw;
         padding-top: 4vh;
-        width: 70vw;
+        width: 75vw;
+        filter: drop-shadow(0px 5px 10px black);
         background-color: white;
+        border-radius: 5vh;
         color: yellowgreen;
         display: block;
     }
@@ -80,6 +82,10 @@
     }
 
     @media (max-width: 1024px) {
+        #QuestionListContainer {
+            border-radius: 5vh;
+            width: 90vw;
+        }
         .faq-columns {
             flex-direction: column;
         }
@@ -91,10 +97,6 @@
         }
         .column:first-child .faq-heading {
             margin-top: 0;
-        }
-        div#QuestionListContainer {
-            // Controls whether the layout appears as a card on mobile, or with full width.
-            // width: 100vw;
         }
         .header {
             max-width: 85%;
@@ -120,9 +122,6 @@
         }  
         #countdown, .intro, .caps {
             font-size: 1.2em;
-        }
-        #QuestionListContainer {
-            width: 80vw;
         }
     }
 
