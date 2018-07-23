@@ -21,6 +21,10 @@ class PuzzleBang extends Component {
             </div>
         )
     }
+
+    componentDidMount() {
+        window.scrollTo(0, 0)
+      }
 }
 
 export default PuzzleBang
