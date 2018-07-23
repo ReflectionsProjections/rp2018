@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap'
+import { Navbar, Nav, NavItem, NavDropdown, MenuItem, Button } from 'react-bootstrap'
+import Registration from '../registration/registration'
 import styles from './styles.scss'
 
 
@@ -43,7 +44,7 @@ class Navigation extends Component {
                         <NavItem onClick={() => this.scrollTo('Footer')} eventKey={4} >Contact Us</NavItem>
                     </Nav>
                     <Nav bsStyle="pills" pullRight>
-                        <NavItem href="">Register</NavItem>
+                        <Button onClick={() => render(<Registration/>)} bsStyle="success" bsSize="large">Register</Button>
                     </Nav>
                     </Navbar.Collapse>
                 </Navbar>
