@@ -6,7 +6,7 @@ import Content from './content/content'
 import Footer from './footer/footer'
 
 
-class FAQ extends Component {
+class PuzzleBang extends Component {
 
     constructor() {
         super()
@@ -14,7 +14,7 @@ class FAQ extends Component {
 
     render() {
         return(
-            <div className="FAQ">
+            <div className="PuzzleBang">
                 <Navigation />
                 <Content />
                 <Footer />
@@ -24,7 +24,7 @@ class FAQ extends Component {
 
     componentDidMount() {
         window.scrollTo(0, 0)
-    }
+      }
 }
 
-export default FAQ
+export default PuzzleBang
