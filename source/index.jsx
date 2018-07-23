@@ -45,13 +45,11 @@ render(
     <Router>
         <div>
             <Route exact path="/" component={Home}/>
-            <Route exact path="/faq" component={FAQ}/>
             <Route exact path="/puzzlebang" component={PuzzleBang}/>
             <Route path="/sponsor" component={SponsorLetter} />
             <Route path="/startup" component={StartupLetter} />
             <Route path="/home" component={Home} />
-            <Route path="/fugger" component={Fugger} />
-            <Route path="/fugger-signup" component={FuggerSignup} />
+            <Route exact path="/faq" component={FAQ}/>
         </div>
     </Router>,
     document.getElementById('app')

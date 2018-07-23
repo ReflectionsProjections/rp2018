@@ -1,14 +1,51 @@
-.bordered {
-    width: 12vh;
-    height: 12vh;
-    padding: 1.5vh;
-    border: 0.7vh outset yellowgreen;
-    border-radius: 50%;
-    margin: 1vh;
-    background-color: transparent;
-    font-size: 2.4vh;
+.countdown {
+    display: flex;
+    flex-direction: column;
 }
 
+.countdown div {
+    display: inline-block !important;
+}
+
+.bordered {
+    display: inline-block;
+    background-color: rgba(10, 10, 10, 0.432);
+    margin: 1.25vh;
+    padding: 2vh 4vh;
+    margin-bottom: 1vh;
+}
+
+.time-square {
+    display: inline-block;
+}
+
+li#time-labels {
+    display: inline-block;
+}
+
+li {
+    list-style-type: none!important;
+}
+
+#seconds {
+    color:#ff0040;
+}
+
+#time-label {
+    font-size: 3.2vh;
+    margin: 3%;
+    display: inline-block;
+}
+
+// The actual numbers
+.bordered div {
+    font-size: 8vh;
+    margin: 0 auto;
+    display: inline-block;
+    vertical-align: auto;
+}
+
+/*
 @media (max-width: 1366px) {
     .bordered {
         width: 10vh;
@@ -30,4 +67,4 @@
         font-size: 1vh;
         padding: 0.7vh;
     }
-}
+}*/
