@@ -1,18 +1,27 @@
 import React, { Component } from 'react'
-import { Modal, FormControl, FormGroup, ControlLabel, Button } from 'react-bootstrap'
+import { Modal, FormControl, FormGroup, ControlLabel, Button, Checkbox } from 'react-bootstrap'
 
 class Registration extends Component {
     constructor(props, context) {
         super(props, context);
 
         this.state = {
-            show: false
+            show: true
         };
+
+        this.handleClose = this.handleClose.bind(this);
+        this.handleOpen = this.handleOpen.bind(this);
     }
+
 
     handleClose() {
         this.setState({ show: false });
     }
+
+    handleOpen() {
+        this.setState({ show: true });
+    }
+
 
     render() {
         return (
@@ -40,7 +49,7 @@ class Registration extends Component {
 
                         <FormGroup controlId="dietaryRestrictions">
                             <ControlLabel>Dietary Restrictions</ControlLabel>
-                            <Checkbox inline>Vegetarian</Checkbox>
+                            <Checkbox>Vegetarian</Checkbox>
                             <Checkbox inline>Halal</Checkbox>
                             <Checkbox inline>Vegan</Checkbox>
                             <Checkbox inline>Other</Checkbox>
