@@ -2,7 +2,7 @@
     padding: 5vh 5vw 10vh 5vw;
     &__card {
         position: relative;
-        background-color: rgba(165, 209, 135, 0);
+        background-color: rgba(256, 256, 256, 0);
         margin: 0.5em;
         border: none;
         height: 440px;
@@ -16,6 +16,11 @@
             border-radius: 50%;
             box-shadow: 0 12px 16px 0 rgba(0,0,0,.52);
         }
+    }
+    &__back {
+        width: 200%;
+        //box-shadow: 0px 0px 5px black;
+        background-color: rgba(60, 116, 113, 0.5);
     }
     &__header {
         text-align: center;
@@ -41,6 +46,12 @@
     .thumbnail {
         padding: 5px;
     }
+    .thumbnail img {
+        width: 30vh;
+        height: 30vh;
+        box-shadow: 0px 0px 10px black;
+        border-radius: 50%;
+    }
 }
 
 #speaker_content {
@@ -52,7 +63,7 @@
     float: left;
 }
 
-h2 {
+h1 {
     font-family: 'Roboto Slab', serif;
 }
 
@@ -66,14 +77,23 @@ h2 {
 }
 
 @media (max-width: 1026px) {
-    .Speakers__card img {
+    .Speakers__back {
+      background-color: rgba(256, 256, 256, 0);
+    }
+    .Speakers .thumbnail img {
+        width: 50vh;
+        height: 50vh;
         margin-top: 32px;
     }
 }
 
 @media (max-width: 780px) {
-    .Speakers__card img {
+    .Speakers__back {
+      background-color: rgba(256, 256, 256, 0);
+    }
+    .Speakers .thumbnail img {
+        width: 40vh;
+        height: 40vh;
         margin-top: 0px;
     }
 }
-
