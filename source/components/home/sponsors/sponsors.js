@@ -57,6 +57,10 @@ class Sponsors extends Component {
         	name: "Granular",
         	img: "../assets/img/sponsors/sponsors2018/jobfair/megabyte/granular.svg"
         },
+        {
+        	name: "MongoDB",
+        	img: "../assets/img/sponsors/sponsors2018/jobfair/megabyte/mongodb_full.png"
+        },
 
         // startups
 
