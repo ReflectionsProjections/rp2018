@@ -20,17 +20,17 @@ class QuestionList extends Component {
             },
             {
                 "index": 2,
-                "question": "What you will need to have",
+                "question": "What will I need to have?",
                 "answer": "Access to a functional human brain, an internet connection (ideally at or better than 28.8kb), and a computer with a good web browser. A mobile device (smartphone, laptop, tablet, dumbphone with a friend at a computer on the other end, etc) with internet capabilities might be useful for Friday and Saturday."
             },
             {
                 "index": 3,
-                "question": "What you need to know",
+                "question": "What will I need to know?",
                 "answer": "Everything! No, just kidding. Wikipedia's classical cipher's page might be useful. Number of letters in the alphabet, number of cards in a deck, all the US state abbreviations, and silly other things that you've probably run across in your daily life. Some awareness of the recent memes and popular culture will probably be helpful. Knowledge of current events at UIUC and the campus layout will be really helpful."
             },
             {
                 "index": 4,
-                "question": "What you need not know",
+                "question": "What DON'T I need to know?",
                 "answer": "How to code. It might be useful to be able to write a script to print out all the ways you can rearrange a set of letters, or apply different ciphers to them, but in general, you should be able to do everything by hand, or ask Google and find a tool online to do it for you"
             }
         ];
