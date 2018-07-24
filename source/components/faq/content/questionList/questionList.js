@@ -9,8 +9,8 @@ class QuestionList extends Component {
     render() {
         return (
             <section className="faq-columns">
+                    <h2 className="faq-heading">About</h2>
                     <ul className="column">
-                        <h2 className="faq-heading">About</h2>
                         <li>
                             <div className="question">
                                 What is Reflections | Projections?
@@ -68,8 +68,8 @@ class QuestionList extends Component {
                             </div>
                         </li>
                     </ul>
+                    <h2 className="faq-heading">Events</h2>
                     <ul className="column">
-                        <h2 className="faq-heading">Events</h2>
                         <li>
                             <div className="question">
                                 Do I need to register for MechMania?
@@ -113,8 +113,8 @@ class QuestionList extends Component {
                             </div>
                         </li>
                     </ul>
+                    <h2 className="faq-heading">Travel</h2>
                     <ul className="column">
-                        <h2 className="faq-heading">Travel</h2>
                         <li>
                             <div className="question">
                                 Coming from Willard Airport

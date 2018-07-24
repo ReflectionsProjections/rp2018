@@ -137,8 +137,14 @@
     margin: 0.6vh;
 }
 
+.question, .answer {
+    margin-right: 2vw;
+    display: inline-block;
+}
+
 .question {
     margin-top: 3vh;
+    
     color: black;
     font-weight: 700;
     font-size:1.3em;
