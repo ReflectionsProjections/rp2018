@@ -65,9 +65,9 @@
     }
 
     .column {
-        overflow: hidden;
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
     }
 
     .btn button:hover {

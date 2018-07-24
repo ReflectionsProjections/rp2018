@@ -104,14 +104,14 @@ class QuestionList extends Component {
                                 Have a look at the <a href="https://github.com/ReflectionsProjections/blog/blob/master/README.md">README</a> for our <a href="https://github.com/ReflectionsProjections/blog">GitHub repository</a>!
                             </div>
                         </li>
-                        <li>
+                        {/* <li>
                             <div className="question">
                                 For more information…
                             </div>
                             <div className="answer">
                                 You can find out more about us on our website! Please feel free to reach out with questions or comments to <a href="mailto:conference-chair@acm.illinois.edu">conference-chair@acm.illinois.edu</a>!
                             </div>
-                        </li>
+                        </li> */}
                     </ul>
                     <h2 className="faq-heading">Travel</h2>
                     <ul className="column">
