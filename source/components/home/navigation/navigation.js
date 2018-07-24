@@ -1,13 +1,21 @@
 import React, { Component } from 'react'
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem, Button } from 'react-bootstrap'
-import Registration from '../registration/registration'
 import styles from './styles.scss'
+import Registration from '../registration/registration'
 
 
 class Navigation extends Component {
 
     constructor() {
         super();
+        this.state = {
+            showComponent: false
+        };
+        this._onButtonClick = this._onButtonClick.bind(this);
+    }
+
+    _onButtonClick() {
+        this.setState({ showComponent: true });
     }
 
     render() {
@@ -44,7 +52,10 @@ class Navigation extends Component {
                         <NavItem onClick={() => this.scrollTo('Footer')} eventKey={4} >Contact Us</NavItem>
                     </Nav>
                     <Nav bsStyle="pills" pullRight>
-                        <Button onClick={() => render(<Registration/>)} bsStyle="success" bsSize="large">Register</Button>
+                        <Button onClick={this._onButtonClick} bsStyle="success" bsSize="large">Register</Button>
+                        {
+                            this.state.showComponent ? <Registration /> : null
+                        }
                     </Nav>
                     </Navbar.Collapse>
                 </Navbar>
