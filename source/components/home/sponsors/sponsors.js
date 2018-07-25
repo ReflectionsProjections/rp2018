@@ -10,180 +10,102 @@ class Sponsors extends Component {
 
   render() {
     const sponsorsList = {
+      tier1: [
+      	{
+          name: "Microsoft",
+          img: "../assets/img/sponsors/sponsors2018/jobfair/petabyte/microsoft.jpeg"
+        }
+      ],
+
       tier2: [
         {
-          name: "Nvidia",
-          img: "../assets/img/sponsors/jobfair/petabyte/nvidia.jpg"
+          name: "Cloudflare",
+          img: "../assets/img/sponsors/sponsors2018/jobfair/gigabyte/cf_placeholder.png"
         },
         {
-          name: "RetailMeNot",
-          img: "../assets/img/sponsors/jobfair/terabyte/retailmenot.svg"
+          name: "Northern Trust",
+          img: "../assets/img/sponsors/sponsors2018/jobfair/gigabyte/northern_trust.jpg"
+        },
+        {
+        	name: "Salesforce",
+        	img: "../assets/img/sponsors/sponsors2018/jobfair/gigabyte/sf_placeholder.png"
+        },
+        {
+        	name: "Braintree",
+        	img: "../assets/img/sponsors/sponsors2018/jobfair/gigabyte/braintree.png"
         }
       ],
 
       tier3: [
         {
-          name: "Microsoft",
-          img: "../assets/img/sponsors/jobfair/gigabyte/microsoft.jpg"
-        },
-        {
-          name: "Forcepoint",
-          img: "../assets/img/sponsors/jobfair/gigabyte/forcepoint.jpg"
-        },
-        {
-          name: "IMO",
-          img: "../assets/img/sponsors/jobfair/gigabyte/imo.svg"
-        },
-        {
-          name: "Northern Trust",
-          img: "../assets/img/sponsors/jobfair/gigabyte/northerntrust.jpg"
-        },
-        {
-          name: "Qualtrics",
-          img: "../assets/img/sponsors/jobfair/gigabyte/qualtrics.jpg"
-        },
-        {
-          name: "Bank of America",
-          img: "../assets/img/sponsors/jobfair/gigabyte/bankofamerica.jpg"
-        }
-      ],
-
-      tier4: [
-        {
-          name: "Facebook",
-          img: "../assets/img/sponsors/jobfair/megabyte/facebook.jpg"
-        },
-        {
           name: "Google",
-          img: "../assets/img/sponsors/jobfair/megabyte/google.jpg"
-        },
-        {
-          name: "Indeed",
-          img: "../assets/img/sponsors/jobfair/megabyte/indeed.jpg"
-        },
-        {
-          name: "Pinterest",
-          img: "../assets/img/sponsors/jobfair/megabyte/pinterest.jpg"
-        },
-        {
-          name: "CME Group",
-          img: "../assets/img/sponsors/jobfair/megabyte/cmegroup.png"
-        },
-        {
-          name: "Uber",
-          img: "../assets/img/sponsors/jobfair/megabyte/uber.jpg"
-        },
-        {
-          name: "Yelp",
-          img: "../assets/img/sponsors/jobfair/megabyte/yelp.jpg"
+          img: "../assets/img/sponsors/sponsors2018/jobfair/megabyte/google.png"
         },
         {
           name: "Amobee",
-          img: "../assets/img/sponsors/jobfair/megabyte/amobee.jpg"
+          img: "../assets/img/sponsors/sponsors2018/jobfair/megabyte/amobee_full.jpeg"
         },
         {
-          name: "Riverbed",
-          img: "../assets/img/sponsors/jobfair/megabyte/riverbed.jpg"
+          name: "Sandia National Laboratories",
+          img: "../assets/img/sponsors/sponsors2018/jobfair/megabyte/sandia.png"
         },
         {
-          name: "Gartner",
-          img: "../assets/img/sponsors/jobfair/megabyte/gartner.jpg"
+        	name: "PricewaterhouseCoopers",
+        	img: "../assets/img/sponsors/sponsors2018/jobfair/megabyte/pwc.jpg"
         },
         {
-          name: "NccGroup",
-          img: "../assets/img/sponsors/jobfair/megabyte/nccgroup.jpg"
+        	name: "Granular",
+        	img: "../assets/img/sponsors/sponsors2018/jobfair/megabyte/granular.svg"
         },
         {
-          name: "Navtalent",
-          img: "../assets/img/sponsors/jobfair/megabyte/navtalent.jpg"
-        },
-        {
-          name: "Sandia",
-          img: "../assets/img/sponsors/jobfair/megabyte/sandia.jpg"
-        },
-        {
-          name: "Morningstar",
-          img: "../assets/img/sponsors/jobfair/megabyte/morningstar.jpg"
+        	name: "MongoDB",
+        	img: "../assets/img/sponsors/sponsors2018/jobfair/megabyte/mongodb_full.png"
         },
 
         // startups
 
         {
-          name: "a16z",
-          img: "../assets/img/sponsors/startups/andreessenhorowitz.jpg"
+          name: "DeepScale",
+          img: "../assets/img/sponsors/sponsors2018/startup/ds_placeholder.png"
         },
         {
-          name: "Buildout",
-          img: "../assets/img/sponsors/startups/buildout.jpg"
-        },
-        {
-          name: "Cloudflare",
-          img: "../assets/img/sponsors/startups/cloudflare.svg"
-        },
-        {
-          name: "Curalate",
-          img: "../assets/img/sponsors/startups/curalate.svg"
-        },
-        {
-          name: "Granular",
-          img: "../assets/img/sponsors/startups/granular.jpg"
-        },
-        {
-          name: "Liferay",
-          img: "../assets/img/sponsors/startups/liferay.jpg"
-        },
-        {
-          name: "Mixmax",
-          img: "../assets/img/sponsors/startups/mixmax.jpg"
+          name: "Flexport",
+          img: "../assets/img/sponsors/sponsors2018/startup/fp_placeholder.png"
         },
         {
           name: "Ocient",
-          img: "../assets/img/sponsors/startups/ocient.jpg"
+          img: "../assets/img/sponsors/sponsors2018/startup/ocient_full.png"
         },
         {
-          name: "Rubrik",
-          img: "../assets/img/sponsors/startups/rubrik.jpg"
+          name: "Polsky Center",
+          img: "../assets/img/sponsors/sponsors2018/startup/pc_placeholder.png"
         },
         {
-          name: "Samsara",
-          img: "../assets/img/sponsors/startups/samsara.jpg"
+          name: "Reconstruct",
+          img: "../assets/img/sponsors/sponsors2018/startup/reconstruct_full.jpg"
         },
         {
-          name: "Sprout Social",
-          img: "../assets/img/sponsors/startups/sproutsocial.jpg"
-        },
-        {
-          name: "Jane Street",
-          img: "../assets/img/sponsors/jobfair/megabyte/janestreet.jpg"
-        },
-        {
-          name: "Capital One",
-          img: "../assets/img/sponsors/jobfair/megabyte/capitalone.png"
-        },
-        {
-          name: "Huawei",
-          img: "../assets/img/sponsors/jobfair/megabyte/huawei.jpg"
-        },
-        {
-          name: "West Monroe",
-          img: "../assets/img/sponsors/jobfair/megabyte/westmonroe.jpg"
-        },
-        {
-          name: "Think BIG",
-          img: "../assets/img/sponsors/startups/thinkbig.jpg"
+          name: "Sentry",
+          img: "../assets/img/sponsors/sponsors2018/startup/sentry.png"
         }
       ]
     };
 
+    const tier1Sponsors = sponsorsList.tier1.map((sponsor, idx) => {
+      return (
+        <Col key={idx} xs={12} lg={12} sm={6} md={6} className="Sponsors__centeredCard">
+          <Panel className="Sponsors__card Sponsors__card--tier1">
+            <img className="Sponsors__cardLogo" src={sponsor.img} alt={sponsor.name} title={sponsor.name}/>
+          </Panel>{" "}
+        </Col>
+      );
+    });
+
     const tier2Sponsors = sponsorsList.tier2.map((sponsor, idx) => {
       return (
-        <Col key={idx} xs={12} lg={6} sm={6} md={6}>
-          <Panel className="Sponsors__card Sponsors__card--tier3">
-            <img
-              className="Sponsors__cardLogo"
-              src={sponsor.img}
-              alt={sponsor.name}
-            />{" "}
+        <Col key={idx} xs={6} sm={6} md={6} className="Sponsors__centeredCard">
+          <Panel className="Sponsors__card Sponsors__card--tier2">
+            <img className="Sponsors__cardLogo" src={sponsor.img} alt={sponsor.name} title={sponsor.name}/>
           </Panel>{" "}
         </Col>
       );
@@ -191,40 +113,24 @@ class Sponsors extends Component {
 
     const tier3Sponsors = sponsorsList.tier3.map((sponsor, idx) => {
       return (
-        <Col key={idx} xs={6} sm={4} md={4}>
+        <Col key={idx} xs={6} sm={3} md={3} className="Sponsors__centeredCard">
           <Panel className="Sponsors__card Sponsors__card--tier3">
-            <img
-              className="Sponsors__cardLogo"
-              src={sponsor.img}
-              alt={sponsor.name}
-            />{" "}
-          </Panel>{" "}
-        </Col>
-      );
-    });
-
-    const tier4Sponsors = sponsorsList.tier4.map((sponsor, idx) => {
-      return (
-        <Col key={idx} xs={6} sm={3} md={3}>
-          <Panel className="Sponsors__card Sponsors__card--tier4">
-            <img
-              className="Sponsors__cardLogo"
-              src={sponsor.img}
-              alt={sponsor.name}
-            />{" "}
-          </Panel>{" "}
+            <img className="Sponsors__cardLogo" src={sponsor.img} alt={sponsor.name} title={sponsor.name}/>
+          </Panel>
         </Col>
       );
     });
 
     return (
       <div className="Sponsors" id="Sponsors">
-        <PageHeader className="Sponsors__header"> <h2>Past Sponsors</h2> </PageHeader>{" "}
-        <Grid>
-          <Row> {tier2Sponsors} </Row>{" "}
-          <Row className="Sponsors_centerContent"> {tier3Sponsors} </Row>{" "}
-          <Row> {tier4Sponsors} </Row>{" "}
-        </Grid>{" "}
+        <PageHeader className="Sponsors__header"> <h1>Sponsors</h1> </PageHeader>{" "}
+        <div className="Sponsors__back">
+          <Grid>
+            <Row className="Sponsors__centerContent"> {tier1Sponsors} </Row>
+            <Row className="Sponsors__centerContent"> {tier2Sponsors} </Row>
+            <Row> {tier3Sponsors} </Row>
+          </Grid>{" "}
+        </div>
       </div>
     );
   }
