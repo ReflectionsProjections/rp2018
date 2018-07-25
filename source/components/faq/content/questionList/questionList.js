@@ -32,7 +32,7 @@ class QuestionList extends Component {
                                 Do I need to register?
                             </div>
                             <div className="answer">
-                                Nope! But registering is the only way you'll be guaranteed a T-shirt. Register <a href="/">here</a>.
+                                Nope! But registering is the only way you'll be guaranteed a T-shirt. Registration coming soon!
                             </div>
                         </li>
                         <li>
@@ -48,7 +48,7 @@ class QuestionList extends Component {
                                 Will food be provided?
                             </div>
                             <div className="answer">
-                                All food at the conference will be free the entire weekend.
+                                All food at the conference will be free for registered attendees.
                             </div>
                         </li>
                         <li>
@@ -56,7 +56,7 @@ class QuestionList extends Component {
                                 I'm a company! I have questions!
                             </div>
                             <div className="answer">
-                                Please email us at <a href="mailto:corporate@acm.illinois.edu">corporate@acm.illinois.edu</a>.
+                                Please email us at <a href="mailto:rp-corporate-l@acm.illinois.edu">rp-corporate-l@acm.illinois.edu</a>.
                             </div>
                         </li>
                         <li>
@@ -64,20 +64,20 @@ class QuestionList extends Component {
                                 I want to volunteer! How do I get involved?
                             </div>
                             <div className="answer">
-                                Please join our <a href="https://path/to/facebook/event">Facebook event</a>.
+                                Please email us at <a href="mailto:conference-chair@acm.illinois.edu">conference-chair@acm.illinois.edu</a>.
+                            </div>
+                        </li>
+                        <li>
+                            <div className="question">
+                                Interested in writing a blog post?
+                            </div>
+                            <div className="answer">
+                                Have a look at the <a href="https://github.com/ReflectionsProjections/blog/blob/master/README.md">README</a> for our <a href="https://github.com/ReflectionsProjections/blog">GitHub repository</a>!
                             </div>
                         </li>
                     </ul>
                     <h2 className="faq-heading">Events</h2>
                     <ul className="column">
-                        <li>
-                            <div className="question">
-                                Do I need to register for MechMania?
-                            </div>
-                            <div className="answer">
-                                Yes! Go to the MechMania tab under the Events dropdown to register.
-                            </div>
-                        </li>
                         <li>
                             <div className="question">
                                 What's the difference between Tech Talks and Speaker Talks?
@@ -91,17 +91,16 @@ class QuestionList extends Component {
                                 What's the difference between the Startup Fair and the Career Fair?
                             </div>
                             <div className="answer">
-                                The Startup Fair is for startup companies, and the Career Fair is for established companies. 
-
+                                The Startup Fair is for startup companies, and the Career Fair is for established companies.
                                 The difference between startup and established companies is determined by conference staff.
                             </div>
                         </li>
                         <li>
                             <div className="question">
-                                Interested in writing a blog post?
+                                Do I need to register for MechMania?
                             </div>
                             <div className="answer">
-                                Have a look at the <a href="https://github.com/ReflectionsProjections/blog/blob/master/README.md">README</a> for our <a href="https://github.com/ReflectionsProjections/blog">GitHub repository</a>!
+                                Yes! Go to the MechMania tab under the Events dropdown to register.
                             </div>
                         </li>
                         {/* <li>
