@@ -47,19 +47,6 @@
         opacity: 1;
     }
 
-    @media (max-width: 1024px) {
-        .header {
-            max-width: 85%;
-        } 
-        .btn button{
-            font-size: 1.3em;
-            width: 200px;
-        }  
-        #countdown, .intro, .caps {
-            font-size: 2em;
-        }
-    }
-
     @media (max-width: 420px) {
         .header {
             max-width: 90%;
@@ -137,8 +124,19 @@
     margin: 0.6vh;
 }
 
+.column li {
+    flex-wrap: wrap;
+    min-width: 10vw;
+    max-width: 18vw;
+    margin-right: 2vw;
+}
+
+.question, .answer {
+    display: inline-block;
+}
+
 .question {
-    margin-top: 3vh;
+    margin-top: 3vh;   
     color: black;
     font-weight: 700;
     font-size:1.3em;
@@ -149,4 +147,22 @@
     font-size:1.2em;
     color: black;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media (max-width: 1024px) {
+    .header {
+        max-width: 85%;
+    }
+    .btn button{
+        font-size: 1.3em;
+        width: 200px;
+    }
+    .column li {
+        min-width: inherit;
+        max-width: inherit;
+        margin-right: 0;
+    }  
+    #countdown, .intro, .caps {
+        font-size: 2em;
+    }
 }

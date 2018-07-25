@@ -61,15 +61,13 @@
     section.faq-columns {
         display: flex;
         padding: 0;
+        flex-direction: column;
     }
 
-    .column, .sub-column {
-        margin: 5vh;
-        overflow: hidden;
-    }
-
-    div.column {
+    .column {
         display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
     .btn button:hover {
@@ -88,8 +86,9 @@
         .faq-columns {
             flex-direction: column;
         }
-        .column, .sub-column {
+        .column {
             margin: 0;
+            flex-direction: column;
         }
         .faq-heading {
             margin-top: 3vh;

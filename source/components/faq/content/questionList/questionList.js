@@ -9,8 +9,8 @@ class QuestionList extends Component {
     render() {
         return (
             <section className="faq-columns">
+                    <h2 className="faq-heading">About</h2>
                     <ul className="column">
-                        <h2 className="faq-heading">About</h2>
                         <li>
                             <div className="question">
                                 What is Reflections | Projections?
@@ -68,8 +68,8 @@ class QuestionList extends Component {
                             </div>
                         </li>
                     </ul>
+                    <h2 className="faq-heading">Events</h2>
                     <ul className="column">
-                        <h2 className="faq-heading">Events</h2>
                         <li>
                             <div className="question">
                                 Do I need to register for MechMania?
@@ -104,17 +104,17 @@ class QuestionList extends Component {
                                 Have a look at the <a href="https://github.com/ReflectionsProjections/blog/blob/master/README.md">README</a> for our <a href="https://github.com/ReflectionsProjections/blog">GitHub repository</a>!
                             </div>
                         </li>
-                        <li>
+                        {/* <li>
                             <div className="question">
                                 For more information…
                             </div>
                             <div className="answer">
                                 You can find out more about us on our website! Please feel free to reach out with questions or comments to <a href="mailto:conference-chair@acm.illinois.edu">conference-chair@acm.illinois.edu</a>!
                             </div>
-                        </li>
+                        </li> */}
                     </ul>
+                    <h2 className="faq-heading">Travel</h2>
                     <ul className="column">
-                        <h2 className="faq-heading">Travel</h2>
                         <li>
                             <div className="question">
                                 Coming from Willard Airport
