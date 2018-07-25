@@ -24,10 +24,19 @@
         margin:auto;
         padding: 8vh 4vw;
         padding-top: 4vh;
-        width: 70vw;
+        width: 90vw;
+        filter: drop-shadow(0px 5px 10px black);
         background-color: white;
+        border-radius: 5vh;
         color: yellowgreen;
         display: block;
+    }
+
+    .faq-heading {
+        text-align: left;
+        font-family: 'Roboto Slab', sans-serif;
+        font-weight: 800;
+        font-size: 3em;
     }
 
     .btn button{
@@ -42,7 +51,25 @@
         position: relative;
         background-color:rgb(42, 50, 62);    
     }
-    
+
+    a {
+        color: blue;
+        padding: 0;
+        margin: 0;
+    }
+
+    section.faq-columns {
+        display: flex;
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .column {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
     .btn button:hover {
         border-color: #97c88c;
     } 
@@ -53,8 +80,25 @@
     }
 
     @media (max-width: 1024px) {
+        #QuestionListContainer {
+            border-radius: calc(2vh + 2vw);
+        }
+        .faq-columns {
+            flex-direction: column;
+        }
+        .column {
+            margin: 0;
+            flex-direction: column;
+        }
+        .faq-heading {
+            margin-top: 3vh;
+        }
+        .column:first-child .faq-heading {
+            margin-top: 0;
+        }
         .header {
             max-width: 85%;
+            margin: 0;
         } 
         .btn button{
             font-size: 1.3em;
@@ -77,9 +121,6 @@
         #countdown, .intro, .caps {
             font-size: 1.2em;
         }
-        #QuestionListContainer {
-            width: 80vw;
-        }
     }
 
     @media (max-width: 320px) {
@@ -95,6 +136,10 @@
             font-size: 1.0em;
         }
     }
+}
+
+div::after, section::after {
+    content: none;
 }
 
 #tooltiptext {

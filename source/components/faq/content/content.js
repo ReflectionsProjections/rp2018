@@ -17,7 +17,7 @@ class Content extends Component {
                     </h1>
                 </div>
                 <div id="QuestionListContainer">
-                    <QuestionList />
+                    <QuestionList/>
                 </div>
             </div>
         )
