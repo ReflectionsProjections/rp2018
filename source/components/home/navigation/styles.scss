@@ -38,6 +38,21 @@
     }
 }
 
+.dropdown-menu {
+    background-color: #252f3a;
+}
+
+.dropdown-menu>li>a {
+    color: #ffff;
+}
+
+.caret {
+    border-top: 4px dashed !important;
+    border-top: 4px solid\9 !important;
+    border-right: 4px solid transparent !important;
+    border-left: 4px solid transparent !important;
+}
+
 @media(min-width: 768px) and (max-width:1024px) {
     .navbar {
         position: sticky;
@@ -71,6 +86,9 @@
             color: #ffff;
             font-size: 1em;
         }
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu>li>a {
+        color: #ffff;
     }
     .Navigation__logo {
         position: relative;
