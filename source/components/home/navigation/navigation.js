@@ -9,7 +9,7 @@ class Navigation extends Component {
     constructor() {
         super();
         this.state = {
-            showComponent: false
+            showComponent: true
         };
         this._onButtonClick = this._onButtonClick.bind(this);
     }
@@ -52,8 +52,8 @@ class Navigation extends Component {
                         <NavItem onClick={() => location.href="https://blog.reflectionsprojections.org"} eventKey={4}>Blog</NavItem>
                         <NavItem onClick={() => location.href="/#/faq"} eventKey={5}>FAQ</NavItem>
                     </Nav>
-                    <Nav bsStyle="pills" pullRight>
-                        <Button onClick={this._onButtonClick} bsStyle="success" bsSize="large">Register</Button>
+                    <Nav pullRight>
+                        <Button className="regbutton" onClick={this._onButtonClick} bsStyle="success" bsSize="large">Register</Button>
                         {
                             this.state.showComponent ? <Registration /> : null
                         }
