@@ -3,14 +3,14 @@ import { Jumbotron, Button, OverlayTrigger, Popover } from 'react-bootstrap'
 import QuestionList from './questionList/questionList'
 import styles from './styles.scss'
 
-class Content extends Component {
+class FAQ extends Component {
 
     constructor() {
         super();
     }
     render() {
         return (
-            <div className="Content">
+            <div className="FAQ" id="FAQ">
                 <div id="header">
                     <h1>
                         FAQ
@@ -24,4 +24,4 @@ class Content extends Component {
     }
 }
 
-export default Content
+export default FAQ
