@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Jumbotron, Button, OverlayTrigger, Popover } from 'react-bootstrap'
 import QuestionList from './questionList/questionList'
 import styles from './styles.scss'
+import Carousel from '../mechmania-carousel/carousel';
 
 class Content extends Component {
 
@@ -16,6 +17,7 @@ class Content extends Component {
                     MechMania
                     </h1>
                 </div>
+                <Carousel />
                 <div id="QuestionListContainer">
                     <QuestionList />
                 </div>

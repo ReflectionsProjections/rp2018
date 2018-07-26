@@ -4,6 +4,7 @@ import styles from './styles.scss'
 import Navigation from './navigation/navigation'
 import Content from './content/content'
 import Footer from './footer/footer'
+import Carousel from './mechmania-carousel/carousel';
 
 
 class MechMania extends Component {
