@@ -7,6 +7,9 @@ class Navigation extends Component {
 
     constructor() {
         super();
+        this.state = {
+            show: false
+        }
     }
 
     render() {
@@ -34,8 +37,13 @@ class Navigation extends Component {
                     <Navbar.Collapse>
                     <Nav pullRight>
                         <NavItem onClick={() => {location.href="/"}} eventKey={1} >Home</NavItem>
-                        <NavItem onClick={() => location.href="https://blog.reflectionsprojections.org"} eventKey={5} >Blog</NavItem>
-                        <NavItem onClick={() => location.href="/#/puzzlebang"} eventKey={6}>PuzzleBang</NavItem>
+                        <NavItem onClick={() => location.href="https://blog.reflectionsprojections.org"}>Blog</NavItem>
+                        <NavDropdown  title="Events" id="basic-nav-dropdown"  onMouseEnter={(e) => this.setState({ show: true })}
+                        onMouseLeave={(e) => this.setState({ show: false })} open={this.state.show}>
+                            <MenuItem onClick={() => location.href="/#/puzzlebang"}>PuzzleBang</MenuItem>
+                            <MenuItem onClick={() => location.href="/#/mechmania"}>MechMania</MenuItem>
+                            <MenuItem onClick={() => location.href="/#/symposium"}>ACM Symposium</MenuItem>
+                        </NavDropdown>
                     </Nav>
                     </Navbar.Collapse>
                 </Navbar>
