@@ -107,7 +107,7 @@ class Speakers extends Component {
             var cName = (cl == hasLinkColor)? "Speakers__card js-speakercard Speakers__youtube": "Speakers__card js-speakercard";
             if (wikilink) {
                 return (
-                    <Col key = { idx } xs = { 12 } lg = { 3 } sm = { 6 } md = { 6 }>
+                    <Col key = { idx } xs = { 12 } lg = { 4 } sm = { 6 } md = { 6 } >
                         <Thumbnail className = {cName} src = { speaker.img } >
                         <h3 style = {{ color: "white" } } > { speaker.name } </h3>
                         <h4 style = {{ color: "white" } } > { speaker.title } </h4>
@@ -121,7 +121,7 @@ class Speakers extends Component {
                 )
             } else {
                 return(
-                    <Col key = { idx } xs = { 12 } lg = { 3 } sm = { 6 } md = { 6 }>
+                    <Col key = { idx } xs = { 12 } lg = { 4 } sm = { 6 } md = { 6 }>
                         <Thumbnail className = {cName} src = { speaker.img } >
                         <h3 style = {{ color: "white" } } > { speaker.name } </h3>
                         <h4 style = {{ color: "white" } } > { speaker.title } </h4>
@@ -135,7 +135,7 @@ class Speakers extends Component {
 
         return (
             <div className = "Speakers" id = "Speakers" >
-                <PageHeader className = "Speakers__header" > <h1>Speakers </h1></PageHeader>
+                <PageHeader className = "Speakers__header" > <h1>Speakers </h1> <h3 className='coming__soon'> More Coming Soon! </h3  ></PageHeader>
                 <Grid className="Speakers__back" style={{width: "100%"}}><Row> { speakerView } </Row> </Grid>
             </div>
         )
