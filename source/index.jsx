@@ -49,12 +49,9 @@ render(
             <Route path="/sponsor" component={SponsorLetter} />
             <Route path="/startup" component={StartupLetter} />
             <Route path="/home" component={Home} />
-<<<<<<< HEAD
             <Route exact path="/puzzlebang" component={PuzzleBang}/>
             <Route exact path="/mechmania" component={MechMania}/>
             <Route exact path="/faq" component={FAQ}/>
-=======
->>>>>>> master
         </div>
     </Router>,
     document.getElementById('app')
