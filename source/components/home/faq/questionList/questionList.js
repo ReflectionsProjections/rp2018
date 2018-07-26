@@ -9,7 +9,7 @@ class QuestionList extends Component {
     render() {
         return (
             <section className="faq-columns">
-                    <h2 className="faq-heading">About</h2>
+                    <h2 className="faq-heading">General</h2>
                     <ul className="column">
                         <li>
                             <div className="question">
