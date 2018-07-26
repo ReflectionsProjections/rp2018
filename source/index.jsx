@@ -4,7 +4,6 @@ import {HashRouter as Router, Route, Link} from 'react-router-dom'
 
 // Components
 import Home from './components/home/home';
-import FAQ from './components/faq/faq';
 import PuzzleBang from './components/puzzlebang/puzzlebang'
 import MechMania from './components/mechmania/mechmania'
 import Landing from './components/landing/landing';
@@ -51,7 +50,6 @@ render(
             <Route path="/home" component={Home} />
             <Route exact path="/puzzlebang" component={PuzzleBang}/>
             <Route exact path="/mechmania" component={MechMania}/>
-            <Route exact path="/faq" component={FAQ}/>
         </div>
     </Router>,
     document.getElementById('app')

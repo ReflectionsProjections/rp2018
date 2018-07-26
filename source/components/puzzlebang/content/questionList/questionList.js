@@ -37,8 +37,8 @@ class QuestionList extends Component {
         const questionMap = questions.map((element, idx) => {
             return (
                 <div key={idx}>
-                    <div className={"question " + "question#" + element.index}>{element.question}</div>
-                    <div className={"answer " + "answer#" + element.index}>{element.answer}</div>
+                    <div className={"question__pb " + "question#" + element.index}>{element.question}</div>
+                    <div className={"answer__pb " + "answer#" + element.index}>{element.answer}</div>
                 </div>
             );
         });

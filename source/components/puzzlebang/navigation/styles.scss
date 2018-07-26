@@ -9,14 +9,14 @@
   .navbar {
     background-color: #252f3a;
     position: relative;
-  
+
     .navbar-header {
         min-height: $nav-height;
     }
 
     .nav > li > a {
         color: #ffff;
-        font-size: 19px;
+        font-size: 1.5em;
         font-family: 'Roboto Slab', serif;
         line-height: $nav-height;
         text-transform: uppercase;
