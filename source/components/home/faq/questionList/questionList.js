@@ -9,7 +9,7 @@ class QuestionList extends Component {
     render() {
         return (
             <section className="faq-columns">
-                    <h2 className="faq-heading">About</h2>
+                    <h2 className="faq-heading">General</h2>
                     <ul className="column">
                         <li>
                             <div className="question">
@@ -37,10 +37,10 @@ class QuestionList extends Component {
                         </li>
                         <li>
                             <div className="question">
-                                Is the conference free?
+                                Is the conference free to attend?
                             </div>
                             <div className="answer">
-                                Yes! Reflections | Projections is completely free! This includes MechMania and other events.
+                                Yes! Reflections | Projections is completely free to attend! This includes MechMania and other events.
                             </div>
                         </li>
                         <li>
@@ -83,7 +83,7 @@ class QuestionList extends Component {
                                 What's the difference between Tech Talks and Speaker Talks?
                             </div>
                             <div className="answer">
-                                Tech Talks are given by our diamond level sponsors during lunch and dinner meals. Speaker Talks are on specific technical or personal topics.
+                                Tech Talks are given by sponsor representatives who wish to spotlight their company and talk about new products/technologies. Speaker Talks are given by experts in the tech community and are about specific technical or personal topics.
                             </div>
                         </li>
                         <li>
@@ -100,7 +100,7 @@ class QuestionList extends Component {
                                 Do I need to register for MechMania?
                             </div>
                             <div className="answer">
-                                Yes! Go to the MechMania tab under the Events dropdown to register.
+                                Yes! Keep an eye out for our MechMania tab for competition registration! Coming soon.
                             </div>
                         </li>
                         {/* <li>
