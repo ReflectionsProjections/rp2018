@@ -1,4 +1,8 @@
-.Content {
+.FAQ {
+    
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+
     .caps {
         margin: 25px;
         font-size: 1.5em;
@@ -14,7 +18,7 @@
         margin: auto;
     }
     #header h1 {
-        font-size: 3em;
+        font-size: 4em;
         text-align: center;
         padding: 5vh 5vw;
         color: white;
@@ -25,7 +29,6 @@
         padding: 8vh 4vw;
         padding-top: 4vh;
         width: 90vw;
-        filter: drop-shadow(0px 5px 10px black);
         background-color: white;
         border-radius: 5vh;
         color: yellowgreen;
@@ -80,6 +83,9 @@
     }
 
     @media (max-width: 1024px) {
+        padding-top: 6vh;
+        padding-bottom: 6vh;
+
         #QuestionListContainer {
             border-radius: calc(2vh + 2vw);
         }
