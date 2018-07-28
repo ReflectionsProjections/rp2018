@@ -1,21 +1,12 @@
 import React, { Component } from 'react'
-import { Navbar, Nav, NavItem, NavDropdown, MenuItem, Button } from 'react-bootstrap'
+import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap'
 import styles from './styles.scss'
-import Registration from '../registration/registration'
 
 
 class Navigation extends Component {
 
     constructor() {
         super();
-        this.state = {
-            showComponent: false
-        };
-        this._onButtonClick = this._onButtonClick.bind(this);
-    }
-
-    _onButtonClick() {
-        this.setState({ showComponent: true });
     }
 
     render() {
@@ -29,10 +20,6 @@ class Navigation extends Component {
             });
         };
 
-        function handleSelect(selectedKey) {
-            alert(`selected ${selectedKey}`);
-        }
-
         return(
             <div className="Navigation">
                 <Navbar collapseOnSelect fixedTop>
@@ -45,18 +32,12 @@ class Navigation extends Component {
                         <Navbar.Toggle />
                     </Navbar.Header>
                     <Navbar.Collapse>
-                    <Nav>
+                    <Nav pullRight>
                         <NavItem onClick={() => this.scrollTo('About')} eventKey={1} className="Navigation__item--active">About</NavItem>
                         <NavItem onClick={() => this.scrollTo('Speakers')} eventKey={2} >Speakers</NavItem>
-                        <NavItem onClick={() => this.scrollTo('Sponsors')} eventKey={3} >Sponsors</NavItem>
-                        <NavItem onClick={() => location.href="https://blog.reflectionsprojections.org"} eventKey={4}>Blog</NavItem>
-                        <NavItem onClick={() => location.href="/#/faq"} eventKey={5}>FAQ</NavItem>
-                    </Nav>
-                    <Nav bsStyle="pills" pullRight>
-                        <Button onClick={this._onButtonClick} bsStyle="success" bsSize="large">Register</Button>
-                        {
-                            this.state.showComponent ? <Registration /> : null
-                        }
+                        <NavItem onClick={() => this.scrollTo('FAQ')} eventKey={3}>FAQ</NavItem>
+                        <NavItem onClick={() => this.scrollTo('Sponsors')} eventKey={4} >Sponsors</NavItem>
+                        <NavItem onClick={() => location.href="https://blog.reflectionsprojections.org"} eventKey={5}>Blog</NavItem>
                     </Nav>
                     </Navbar.Collapse>
                 </Navbar>
