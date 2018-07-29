@@ -5,6 +5,7 @@ import {HashRouter as Router, Route, Link} from 'react-router-dom'
 // Components
 import Home from './components/home/home';
 import Landing from './components/landing/landing';
+import Registration from './components/registration/registration';
 
 
 // Redirects
@@ -46,6 +47,7 @@ render(
             <Route path="/sponsor" component={SponsorLetter} />
             <Route path="/startup" component={StartupLetter} />
             <Route path="/home" component={Home} />
+            <Route path='/register' component={Registration} />
         </div>
     </Router>,
     document.getElementById('app')
