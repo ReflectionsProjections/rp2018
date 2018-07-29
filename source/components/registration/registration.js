@@ -14,7 +14,6 @@ class Registration extends Component {
     render() {
         return(
             <div className="Registration">
-                <Navigation />
                 <Form />
                 <Footer />
             </div>
