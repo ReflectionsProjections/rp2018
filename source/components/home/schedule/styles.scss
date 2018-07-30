@@ -27,11 +27,14 @@
     color: white;
 }
 
-.content {
+.content-container {
     margin: auto;
     padding: 8vh 4vw;
     padding-top: 4vh;
     background-color: rgb(255, 255, 255);
+}
+
+.content {
     display: flex;
     flex-wrap: wrap;
 }
@@ -75,6 +78,83 @@
     margin-bottom: 2vh;
 }
 
+div.switch-container {
+    margin: auto;
+    text-align: center;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    width: 24vw;
+    height: 6vh;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: greenyellow;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 6vh;
+    width: 6vh;
+    left: 0;
+    bottom: 0;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(24vw);
+    -ms-transform: translateX(24vw);
+    transform: translateX(24vw);
+}
+
+/* Toggle switch label */
+
+.label {
+    display: inline-block;
+    margin: auto;
+    font-size: 1.3em;
+    transform: translateY(1vh);
+    color: black;
+}
+
+/* Rounded sliders */
+
+.slider.round {
+    border-radius: 6vh;
+    color: black;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+    border: 0.1vh solid rgb(190, 226, 255);
+}
+
 @media(max-width: 1024px) {
     .header h1 {
         font-size: 2em;
@@ -82,6 +162,19 @@
         margin: auto;
         padding: 0;
         padding-bottom: 5vh;
+    }
+    .switch {
+        width: 80vw;
+        height: 6vh;
+    }
+    input:checked+.slider:before {
+        -webkit-transform: translateX(75vw);
+        -ms-transform: translateX(75vw);
+        transform: translateX(75vw);
+    }
+    .label {
+        font-size: 0.8em;
+        transform: translateY(0vh);
     }
     .col {
         flex-direction: row;
@@ -93,5 +186,20 @@
     }
     .col li {
         width: 75vw;
+    }
+}
+@media (max-width: 640px) {
+    .switch {
+        width: 80vw;
+        height: 6vh;
+    }
+    .label {
+        font-size: 0.8em;
+        transform: translateY(0.8vh);
+    }
+    input:checked+.slider:before {
+        -webkit-transform: translateX(72vw);
+        -ms-transform: translateX(72vw);
+        transform: translateX(72vw);
     }
 }
