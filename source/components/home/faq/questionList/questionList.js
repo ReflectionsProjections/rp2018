@@ -119,7 +119,7 @@ class QuestionList extends Component {
                                 Coming from Willard Airport
                             </div>
                             <div className="answer">
-                                Willard Airport is located south of UIUC. If driving, head north from the airport on the 45 and turn right onto Springfield – you'll soon find yourself on UIUC campus! Alternatively, you can catch a cab from the airport to the building or the 27N/270N Airbus will take you from Willard to the corner of Goodwin St and Clark St just outside the building.
+                                Willard Airport is located south of UIUC. If driving, head north from the airport on the 45 and turn right onto Springfield – you'll soon find yourself on UIUC campus! Alternatively, you can catch a cab from the airport to the building.
                             </div>
                         </li>
                         <li>
@@ -127,7 +127,7 @@ class QuestionList extends Component {
                                 Coming from Amtrak Station
                             </div>
                             <div className="answer">
-                                Siebel Center is located 1 mile from the Champaign Amtrak Station. Most buses will take you to campus. The 100S and 120E run every few minutes. Ride one of these buses to the intersection of Wright St and White St, then walk east on Stoughton and you will find yourself at the Siebel Center!
+                                Siebel Center is located 1 mile from the Champaign Amtrak Station. Most buses will take you to campus. The 1S/100S and 12E/120E run every few minutes. Ride one of these buses to the intersection of Wright St and White St, then walk east on Stoughton and you will find yourself at the Siebel Center!
                             </div>
                         </li>
                         <li>
