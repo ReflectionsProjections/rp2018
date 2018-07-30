@@ -13,11 +13,18 @@ class Sponsors extends Component {
       tier1: [
       	{
           name: "Microsoft",
-          img: "../assets/img/sponsors/sponsors2018/jobfair/petabyte/microsoft.jpeg"
+          img: "../assets/img/sponsors/sponsors2018/jobfair/petabyte/microsoft_full.png"
         }
       ],
 
       tier2: [
+        {
+          name: "IMO Intelligent Medical Objects",
+          img: "../assets/img/sponsors/sponsors2018/jobfair/terabyte/imo_full.png"
+        },
+      ],
+
+      tier3: [
         {
           name: "Cloudflare",
           img: "../assets/img/sponsors/sponsors2018/jobfair/gigabyte/cf_placeholder.png"
@@ -36,7 +43,7 @@ class Sponsors extends Component {
         }
       ],
 
-      tier3: [
+      tier4: [
         {
           name: "Google",
           img: "../assets/img/sponsors/sponsors2018/jobfair/megabyte/google.png"
@@ -60,6 +67,10 @@ class Sponsors extends Component {
         {
         	name: "MongoDB",
         	img: "../assets/img/sponsors/sponsors2018/jobfair/megabyte/mongodb_full.png"
+        },
+        {
+        	name: "Uber",
+        	img: "../assets/img/sponsors/sponsors2018/jobfair/megabyte/uber_full.png"
         },
 
         // startups
@@ -103,7 +114,7 @@ class Sponsors extends Component {
 
     const tier2Sponsors = sponsorsList.tier2.map((sponsor, idx) => {
       return (
-        <Col key={idx} xs={6} sm={6} md={6} className="Sponsors__centeredCard">
+        <Col key={idx} xs={12} lg={12} sm={6} md={6} className="Sponsors__centeredCard">
           <Panel className="Sponsors__card Sponsors__card--tier2">
             <img className="Sponsors__cardLogo" src={sponsor.img} alt={sponsor.name} title={sponsor.name}/>
           </Panel>{" "}
@@ -113,8 +124,18 @@ class Sponsors extends Component {
 
     const tier3Sponsors = sponsorsList.tier3.map((sponsor, idx) => {
       return (
-        <Col key={idx} xs={6} sm={3} md={3} className="Sponsors__centeredCard">
+        <Col key={idx} xs={6} sm={6} md={6} className="Sponsors__centeredCard">
           <Panel className="Sponsors__card Sponsors__card--tier3">
+            <img className="Sponsors__cardLogo" src={sponsor.img} alt={sponsor.name} title={sponsor.name}/>
+          </Panel>{" "}
+        </Col>
+      );
+    });
+
+    const tier4Sponsors = sponsorsList.tier4.map((sponsor, idx) => {
+      return (
+        <Col key={idx} xs={6} sm={3} md={3} className="Sponsors__centeredCard">
+          <Panel className="Sponsors__card Sponsors__card--tier4">
             <img className="Sponsors__cardLogo" src={sponsor.img} alt={sponsor.name} title={sponsor.name}/>
           </Panel>
         </Col>
@@ -129,6 +150,8 @@ class Sponsors extends Component {
             <Row className="Sponsors__centerContent"> {tier1Sponsors} </Row>
             <Row className="Sponsors__centerContent"> {tier2Sponsors} </Row>
             <Row> {tier3Sponsors} </Row>
+            <Row> {tier4Sponsors} </Row>
+
           </Grid>{" "}
         </div>
       </div>

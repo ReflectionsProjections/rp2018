@@ -3,7 +3,7 @@
     background-color: rgba(225, 225, 225, 0.1);
 
     &__back {
-        border-radius: 4%;
+        border-radius: 5vh;
         background: white;
     }
 
@@ -28,19 +28,21 @@
     }
 
     &__card--tier1 {
-        min-height: 300px!important;
+        min-height: 500px;
     }
 
     &__card--tier2 {
-        min-height: 250px!important;
+        margin: auto;
+        min-height: 350px;
+
     }
 
     &__card--tier3 {
-        min-height: 150px!important;
+        min-height: 350px;
     }
 
     &__card--tier4 {
-        min-height: 100px!important;
+        min-height: 200px;
     }
 
     &__gridRow {
@@ -73,9 +75,25 @@ h1
     -moz-box-shadow: unset!important;
 }
 
-@media (max-width: 750px) {
+@media (max-height: 750px) {
     .Sponsors__back {
       border-radius: 0;
       background: white;
+    }
+    &__card--tier1 {
+        background: red;
+        height: 400px!important;
+    }
+
+    &__card--tier2 {
+        min-height: 150px!important;
+    }
+
+    &__card--tier3 {
+        min-height: 100px!important;
+    }
+
+    &__card--tier4 {
+        min-height: 50px!important;
     }
 }
