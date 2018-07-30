@@ -26,7 +26,7 @@ class Schedule extends Component {
     render() {
         if(this.state.scheduleType === "Corporate Events") {
             return (
-                <div className="Schedule">
+                <div id="Schedule" className="Schedule">
                     <div className="header">
                         <h1>
                             Schedule
@@ -89,7 +89,7 @@ class Schedule extends Component {
             );
         } else if(this.state.scheduleType === "Conference Events") {
             return (
-                <div className="Schedule">
+                <div id="Schedule" className="Schedule">
                     <div className="header">
                         <h1>
                             This is supposed to be a different schedule.
