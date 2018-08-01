@@ -1,5 +1,6 @@
 .Speakers {
     padding: 5vh 5vw 10vh 5vw;
+    font-family: "Roboto Slab", serif!important;
     &__card {
         position: relative;
         background-color: rgba(256, 256, 256, 0);
@@ -60,7 +61,7 @@
 }
 
 h1 {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Roboto Slab', serif!important;
 }
 
 #wiki-icon {

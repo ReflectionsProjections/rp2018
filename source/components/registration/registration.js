@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { } from 'react-bootstrap'
+import { Jumbotron } from 'react-bootstrap'
 import styles from './styles.scss'
 import Navigation from './navigation/navigation'
 import Footer from './footer/footer'
@@ -14,8 +14,11 @@ class Registration extends Component {
     render() {
         return(
             <div className="Registration">
+            <Jumbotron>
+                <img className="header" src="../assets/svg/home_header.svg" />
+                <div className="caps">September 17th - 22nd, 2018</div>
+            </Jumbotron>
                 <Form />
-                <Footer />
             </div>
         )
     }

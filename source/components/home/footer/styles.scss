@@ -1,7 +1,7 @@
 .Footer {
 
     &__header {
-        color: white;
+        color: white!important;
         text-align: center;
     }
 
@@ -18,11 +18,13 @@
         }
     }
     padding: 2em 0;
+    a {
+        color: white!important;
+        padding: 6px;
+    }
 }
 
-a {
-    padding: 6px;
-}
+
 
 .Footer__contact a:hover {
     color: #c9e88f;
@@ -37,7 +39,7 @@ a {
 #snapshot .tooltiptext {
     left: 0%;
   }
-  
+
 #snapshot:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
@@ -61,7 +63,7 @@ a {
     transition: opacity 0.3s;
     font-size: 16px;
 }
-  
+
 .tooltiptext::after {
     position: absolute;
     top: 100%;
@@ -70,7 +72,7 @@ a {
     border-style: solid;
     border-color: #555 transparent transparent transparent;
 }
-  
+
 .ReactModal__Body--open{
     background-color: rgba(20, 20, 20, 0.85) !important;
 }

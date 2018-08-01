@@ -9,9 +9,10 @@ body {
   margin: 0;
   width: 100vw;
   overflow-x: hidden;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif!important;
   background-color: #28323f;
   background-image: url('../assets/svg/home_background.svg');
+  background-size: 100%;
   scroll-behavior: smooth;
 }
 
