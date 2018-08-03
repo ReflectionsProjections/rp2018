@@ -93,6 +93,7 @@ class Schedule extends Component {
                                     <h3>Thu, Sep 20</h3>
                                     <li><small>4:00p - 5:00p</small>Speaker: TBA<span>2405</span></li>
                                     <li><small>5:00p - 7:00p</small>Experience: TBA<span>2405</span></li>
+                                    <li><small>7:00p</small>Dinner<span>Atrium</span></li>
                                 </ul>
                                 <ul>
                                     <h3>Fri, Sep 21</h3>
@@ -120,7 +121,6 @@ class Schedule extends Component {
                                     <li><small>4:00p - 5:00p</small>Speaker: TBA<span>2405</span></li>
                                     <li><small>5:00p - 7:00p</small>ACM Symposium<span>2405</span></li>
                                     <li><small>7:00p</small>Dinner<span>Atrium</span></li>
-                                    <li><small>8:00p</small>Speaker Socials<span>TBD</span></li>
                                     <li><small>8:00p</small>PuzzleBang Closing Ceremony<span>2405</span></li>
                                     <li><small>9:00p</small>MechMania Closing Ceremony<span>1404</span></li>
                                 </ul>
