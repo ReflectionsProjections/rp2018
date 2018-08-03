@@ -1,6 +1,6 @@
 .Start {
     margin-top: 8vh;
-    height: 100vh; 
+    height: 120vh;
     font-family: 'Roboto', sans-serif;
     font-size: 1em;
     font-weight: bold;
@@ -24,7 +24,18 @@
     .header {
         max-width: 50%;
     }
-    
+
+    .title_sponsor {
+        margin-top: 5vh;
+        text-align: center;
+        font-style: italic;
+        height: 20vh;
+        img {
+            margin: 1vh;
+            height: 15vh;
+        }
+    }
+
     .btn {
         border: none;
         margin: 10px;
@@ -40,12 +51,12 @@
         border: 3px solid #cadea5;
         text-align: center;
         position: relative;
-        background-color:rgb(42, 50, 62);    
+        background-color:rgb(42, 50, 62);
     }
-    
+
     .btn button:hover {
         border-color: #97c88c;
-    } 
+    }
 
     .btn button:hover #tooltiptext {
         visibility: visible;
@@ -55,11 +66,11 @@
     @media (max-width: 1024px) {
         .header {
             max-width: 85%;
-        } 
+        }
         .btn button{
             font-size: 1.3em;
             width: 200px;
-        }  
+        }
         #countdown, .intro, .caps {
             font-size: 2em;
         }
@@ -68,12 +79,12 @@
     @media (max-width: 420px) {
         .header {
             max-width: 90%;
-        } 
+        }
         .btn button{
             font-size: 0.8em;
             width: 100px;
             height: 40px;
-        }  
+        }
         #countdown, .intro, .caps {
             font-size: 1.2em;
         }
@@ -82,12 +93,12 @@
     @media (max-width: 320px) {
         .header {
             max-width: 90%;
-        } 
+        }
         .btn button{
             font-size: 0.8em;
             width: 100px;
             height: 40px;
-        }  
+        }
         #countdown, .intro, .caps {
             font-size: 1.0em;
         }
@@ -112,7 +123,7 @@
     border-radius: 0;
     background-color: rgba(35, 44, 56, 0.85);
 }
-  
+
 #tooltiptext::after {
     position: absolute;
     top: 100%;
@@ -126,11 +137,11 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    width: 0; 
-    height: 0; 
+    width: 0;
+    height: 0;
     border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent; 
-    border-left: 10px solid transparent; 
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid transparent;
     border-right:10px solid rgba(79, 247, 238, 0.6)
 }
 

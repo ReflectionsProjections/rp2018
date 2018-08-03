@@ -23,6 +23,10 @@ class Start extends Component {
             <div className="Start">
                 <Jumbotron>
                     <img className="header" src="../assets/svg/home_header.svg" />
+                    <div className="title_sponsor">
+                        <h3>Title Sponsor:</h3>
+                        <img className="title_sponsor_img" src="../assets/img/sponsors/sponsors2018/jobfair/petabyte/microsoft_full.png" />
+                    </div>
                     <div className="caps">September 17th - 22nd, 2018</div>
                     <Countdown className="counter"/>
                     {/*<div style={{margin: "15px", paddingBottom: "10px", fontSize: "18px"}}>DAYS&nbsp; LEFT</div>*/}
@@ -38,4 +42,4 @@ class Start extends Component {
     }
 }
 
-export default Start 
+export default Start
