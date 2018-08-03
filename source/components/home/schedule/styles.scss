@@ -53,7 +53,8 @@
     width: 35vw;
     border-bottom: 0.01px solid green;
     padding: 1.2vh;
-    color: blue;
+    //font-weight: bold;
+    color: black;
 }
 
 .col small {
@@ -67,10 +68,13 @@
 .col span {
     float: right;
     text-align: right;
-    color: red;
+    font-weight: normal;
+    color: black;
 }
 
-.col h4 {
+.col h3 {
+    color: #075c60;
+    text-align: center;
     margin-bottom: 2vh;
 }
 
@@ -82,6 +86,7 @@
 }
 
 .tab {
+    text-align: center;
     padding: 2vh;
     background-color: rgb(37, 37, 37);
     opacity: 0.8;
@@ -94,10 +99,11 @@
 }
 
 .active {
-    background-color: yellowgreen;
+    background-color: #5ab57b;
     opacity: 1;
     filter: contrast(1.1);
 }
+
 
 @media(max-width: 1024px) {
     .header h1 {
@@ -108,7 +114,7 @@
     }
     .col {
         flex-direction: row;
-        font-size: 0.7em;
+        font-size: 0.8em;
         width: 75vw;
     }
     .col small {
