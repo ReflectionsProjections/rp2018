@@ -112,8 +112,8 @@ class Schedule extends Component {
                                 <ul>
                                     <h3>Sat, Sep 22</h3>
                                     <li><small>8:00a</small>Breakfast<span>Atrium</span></li>
-                                    <li><small>10:00a - 2:00a</small>Speaker: TBA<span>2405</span></li>
-                                    <li><small>11:00a - 2:00p</small>Speaker: TBA<span>2405</span></li>
+                                    <li><small>10:00a - 11:00a</small>Speaker: TBA<span>2405</span></li>
+                                    <li><small>11:00a - 12:00p</small>Speaker: TBA<span>2405</span></li>
                                     <li><small>12:00p</small>Lunch<span>Atrium</span></li>
                                     <li><small>1:00p - 3:00p</small>Experience: TBA<span>2405</span></li>
                                     <li><small>3:00p - 4:00p</small>Speaker: TBA<span>2405</span></li>
