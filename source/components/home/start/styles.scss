@@ -1,6 +1,6 @@
 .Start {
     margin-top: 8vh;
-    height: 120vh;
+    height: 125vh;
     font-family: 'Roboto', sans-serif;
     font-size: 1em;
     font-weight: bold;
@@ -101,6 +101,21 @@
         }
         #countdown, .intro, .caps {
             font-size: 1.0em;
+        }
+    }
+
+    @media (max-height: 700px) {
+        height: 150vh;
+    }
+
+    @media (max-height: 500px) {
+        height: 170vh;
+    }
+
+    @media (max-width: 300px) and (min-height: 700px) {
+        height: 170vh;
+        #countdown, .intro, .caps {
+            font-size: 1em;
         }
     }
 }
