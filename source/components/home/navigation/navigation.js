@@ -34,10 +34,11 @@ class Navigation extends Component {
                     <Navbar.Collapse>
                     <Nav pullRight>
                         <NavItem onClick={() => this.scrollTo('About')} eventKey={1} className="Navigation__item--active">About</NavItem>
-                        <NavItem onClick={() => this.scrollTo('Speakers')} eventKey={2} >Speakers</NavItem>
-                        <NavItem onClick={() => this.scrollTo('FAQ')} eventKey={3}>FAQ</NavItem>
-                        <NavItem onClick={() => this.scrollTo('Sponsors')} eventKey={4} >Sponsors</NavItem>
-                        <NavItem onClick={() => location.href="https://blog.reflectionsprojections.org"} eventKey={5}>Blog</NavItem>
+                        <NavItem onClick={() => this.scrollTo('Schedule')} eventKey={2}>Schedule</NavItem>
+                        <NavItem onClick={() => this.scrollTo('Speakers')} eventKey={3} >Speakers</NavItem>
+                        <NavItem onClick={() => this.scrollTo('FAQ')} eventKey={4}>FAQ</NavItem>
+                        <NavItem onClick={() => this.scrollTo('Sponsors')} eventKey={5} >Sponsors</NavItem>
+                        <NavItem onClick={() => location.href="https://blog.reflectionsprojections.org"} eventKey={6}>Blog</NavItem>
                     </Nav>
                     </Navbar.Collapse>
                 </Navbar>
