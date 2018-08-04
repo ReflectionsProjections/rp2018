@@ -29,13 +29,13 @@ class Speakers extends Component {
             {
                 'name': 'Brian Hoffman',
                 'img': '../assets/img/keynotes/brain_h.jpg',
-                'title': 'CEO/Founder OpenBazaar',
+                'title': 'CEO and Co-founder at OpenBazaar',
                 'wikipedia': 'https://twitter.com/brianchoffman'
             },
             {
                 'name': 'Forrest Iandola',
                 'img': '../assets/img/keynotes/forrest.jpg',
-                'title': 'CEO Deepscale.ai',
+                'title': 'CEO and Co-founder at Deepscale.ai',
                 'wikipedia': 'https://en.wikipedia.org/wiki/Forrest_Iandola'
             },
             {
@@ -59,7 +59,7 @@ class Speakers extends Component {
             {
                 'name': 'Romain Paulus',
                 'img': '../assets/img/keynotes/romain.jpg',
-                'title': 'Chief ML Scientist at Salesforce',
+                'title': 'Lead Research Scientist at Salesforce',
                 'wikipedia': 'https://www.linkedin.com/in/romainpaulus/?locale=en_US'
             },
             {
