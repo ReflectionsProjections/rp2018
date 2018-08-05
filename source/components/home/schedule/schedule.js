@@ -105,7 +105,7 @@ class Schedule extends Component {
                                     <li><small>6:00p - 7:00p</small>Speaker: TBA<span>2405</span></li>
                                     <li><small>7:00p</small>Dinner<span>Atrium</span></li>
                                     <li><small>9:00p</small>MechMania Opening Ceremony<span>1404</span><br/><center>Sponsored by DeepScale</center></li>
-                                    <li><small>10:00p</small>Speaker Socials<span>TBD</span></li>
+                                    <li><small>9:00p</small>Speaker Socials<span>TBD</span></li>
                                     <li><small>11:00p</small>Late Night Snack<span>Atrium</span></li>
                                 </ul>
                             </div>
