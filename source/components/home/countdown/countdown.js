@@ -53,7 +53,7 @@ class Countdown extends Component {
 
     render() {
         return (
-            <div classname="countdown">
+            <div className="countdown">
                 <ul>
                     <li className="time-square">
                         <ul>

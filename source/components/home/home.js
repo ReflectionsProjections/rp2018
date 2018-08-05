@@ -11,6 +11,7 @@ import Sponsors from './sponsors/sponsors'
 import Footer from './footer/footer'
 import Photos from './photos/photos'
 import FAQ from './faq/faq.js'
+import Schedule from './schedule/schedule.js'
 
 class Home extends Component {
 
@@ -24,9 +25,9 @@ class Home extends Component {
                 <Navigation />
                 <Start />
                 <About />
+                <Schedule />
                 <Speakers />
                 <FAQ />
-                <hr/>
                 <Sponsors />
                 <Footer />
             </div>
