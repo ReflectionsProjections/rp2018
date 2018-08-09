@@ -3,30 +3,6 @@ const personal_fields = [
     width: 8,
     fieldType: 'input',
     inputType: 'text',
-    id: 'email',
-    required: false,
-    placeholder: 'hacker@hacker.org',
-    title: 'EMAIL',
-    validate: (input) => {
-      return true;
-    }
-  },
-  {
-    width: 8,
-    fieldType: 'input',
-    inputType: 'text',
-    id: 'github',
-    required: false,
-    placeholder: 'octocat',
-    title: 'GITHUB USERNAME',
-    validate: (input) => {
-      return true;
-    }
-  },
-  {
-    width: 8,
-    fieldType: 'input',
-    inputType: 'text',
     id: 'firstName',
     required: true,
     placeholder: 'First',
@@ -51,28 +27,54 @@ const personal_fields = [
     width: 8,
     fieldType: 'input',
     inputType: 'text',
-    id: 'major',
-    required: true,
-    placeholder: 'What is your major?',
-    title: 'MAJOR',
+    id: 'email',
+    required: false,
+    placeholder: 'hacker@hacker.org',
+    title: 'EMAIL',
     validate: (input) => {
-      return input.length > 0 && input.length <= 255;
+      return true;
     }
   },
   {
     width: 8,
     fieldType: 'input',
-    inputType: 'number',
-    id: 'graduationYear',
-    required: true,
-    placeholder: 'When do you graduate?',
-    title: 'GRAD YEAR',
+    inputType: 'text',
+    id: 'phoneNumber',
+    required: false,
+    placeholder: 'What is your phone number?',
+    title: 'PHONE NUMBER (OPTIONAL)',
     validate: (input) => {
-      let year = Number(input);
-      if (year == NaN) {
-        return false;
+      if (input != null) {
+        return input.length <= 15;
+      } else {
+        return true;
       }
-      return year >= 2017 && year <= 2024;
+    }
+  },
+  {
+    width: 8,
+    fieldType: 'select',
+    inputType: 'text',
+    id: 'gender',
+    required: true,
+    options: [{key: 'FEMALE', text: 'Female', value: 'FEMALE'}, {key: 'MALE', text: 'Male', value: 'MALE'}, {key: 'NON_BINARY', text: 'Non-binary', value: 'NON_BINARY'}, {key: 'OTHER', text: 'Prefer not to disclose', value: 'OTHER'}],
+    placeholder: 'What gender do you identify as?',
+    title: 'GENDER',
+    validate: (input) => {
+      return true;
+    }
+  },
+  {
+    width: 8,
+    fieldType: 'select',
+    inputType: 'text',
+    id: 'student',
+    required: true,
+    options: [{key: 'YES_UNDERGRAD', text: 'Yes, I am an undergraduate student', value:'YES_UNDERGRAD'}, {key: 'YES_GRAD', text: 'Yes, I am a graduate student', value:'YES_GRAD'}, {key: 'NO', text: 'No, I am not a student', value:'NO'}, {key: 'OTHER', text: 'Prefer not to disclose', value:'OTHER'}],
+    placeholder: 'What type of student are you?',
+    title: 'STUDENT STATUS',
+    validate: (input) => {
+      return true;
     }
   },
   {
@@ -86,6 +88,18 @@ const personal_fields = [
     title: 'SCHOOL',
     validate: (input) => {
       return true;
+    }
+  },
+  {
+    width: 8,
+    fieldType: 'input',
+    inputType: 'text',
+    id: 'major',
+    required: true,
+    placeholder: 'What is your major?',
+    title: 'MAJOR',
+    validate: (input) => {
+      return input.length > 0 && input.length <= 255;
     }
   },
   {
@@ -129,13 +143,29 @@ const personal_fields = [
   },
   {
     width: 8,
+    fieldType: 'input',
+    inputType: 'number',
+    id: 'graduationYear',
+    required: true,
+    placeholder: 'When do you graduate?',
+    title: 'GRAD YEAR',
+    validate: (input) => {
+      let year = Number(input);
+      if (year == NaN) {
+        return false;
+      }
+      return year >= 2018 && year <= 2028;
+    }
+  },
+  {
+    width: 8,
     fieldType: 'select',
     inputType: 'text',
-    id: 'gender',
+    id: 'professionalInterest',
     required: true,
-    options: [{key: 'FEMALE', text: 'Female', value: 'FEMALE'}, {key: 'MALE', text: 'Male', value: 'MALE'}, {key: 'NON_BINARY', text: 'Non-binary', value: 'NON_BINARY'}, {key: 'OTHER', text: 'Prefer not to disclose', value: 'OTHER'}],
-    placeholder: 'What gender do you identify as?',
-    title: 'GENDER',
+    options: [{key: 'INTERNSHIP', text: 'Internship', value: 'INTERNSHIP'}, {key: 'FULLTIME', text: 'Full-Time', value: 'FULLTIME'}, {key: 'CO_OP', text: 'Co-Op', value: 'CO_OP'}, {key: 'CITY_SCHOLARS', text: 'City Scholars', value: 'CITY_SCHOLARS'}],
+    placeholder: 'What kind of professional role are you pursuing?',
+    title: 'PROFESSIONAL INTERESTS',
     validate: (input) => {
       return true;
     }
@@ -143,35 +173,16 @@ const personal_fields = [
   {
     width: 8,
     fieldType: 'input',
-    inputType: 'number',
-    id: 'age',
+    inputType: 'file',
+    id: 'resume',
     required: true,
-    placeholder: 'How old are you?',
-    title: 'AGE',
+    title: 'RESUME (PDF)',
     validate: (input) => {
-      let age = Number(input);
-      if (age == NaN) {
-        return false;
-      }
-      return age >= 13 && age <= 115;
+      return true;
     }
   },
-  {
-    width: 16,
-    fieldType: 'input',
-    inputType: 'text',
-    id: 'phoneNumber',
-    required: false,
-    placeholder: 'What is your phone number?',
-    title: 'PHONE NUMBER (OPTIONAL)',
-    validate: (input) => {
-      if (input != null) {
-        return input.length <= 15;
-      } else {
-        return true;
-      }
-    }
-  },
+
+
 ]
 
 const professional_fields = [
@@ -188,17 +199,7 @@ const professional_fields = [
       return true;
     }
   },
-  {
-    width: 8,
-    fieldType: 'input',
-    inputType: 'file',
-    id: 'resume',
-    required: true,
-    title: 'RESUME (PDF)',
-    validate: (input) => {
-      return true;
-    }
-  },
+
   {
     width: 8,
     fieldType: 'input',
@@ -211,19 +212,7 @@ const professional_fields = [
       return input.length > 0 && input.length <= 50;
     }
   },
-  {
-    width: 8,
-    fieldType: 'select',
-    inputType: 'text',
-    id: 'professionalInterest',
-    required: true,
-    options: [{key: 'NONE', text: 'None', value: 'NONE'}, {key: 'INTERNSHIP', text: 'Internship', value: 'INTERNSHIP'}, {key: 'FULLTIME', text: 'Full-Time', value: 'FULLTIME'}, {key: 'BOTH', text: 'Both', value: 'BOTH'}],
-    placeholder: 'What kind of professional role are you pursuing?',
-    title: 'PROFESSIONAL INTERESTS',
-    validate: (input) => {
-      return true;
-    }
-  },
+
   {
     width: 16,
     fieldType: 'input',

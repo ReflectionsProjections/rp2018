@@ -78,12 +78,8 @@ export default class RegisterForm extends Component {
 
     return(
       <Grid stackable>
-        <img className="leftSquiggly" src='../assets/2018logo.png' />
         <Grid.Row columns={2}>
-          <Grid.Column mobile={16} tablet={4} computer={3}>
-            <RegisterNav step={step}/>
-          </Grid.Column>
-          <Grid.Column mobile={16} tablet={12} computer={13}>
+          <Grid.Column mobile={16} tablet={12} computer={16}>
             <Transition animation='shake' duration='300' visible={visible}>
               <Form size='small'>
                 <Grid className='formContainer' doubling columns={2}>

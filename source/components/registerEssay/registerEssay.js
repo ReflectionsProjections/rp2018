@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Grid, TextArea, Form, Transition} from 'semantic-ui-react';
+import { Checkbox, Label } from 'semantic-ui-react';
 
 import styles from './registerEssay.scss'
 

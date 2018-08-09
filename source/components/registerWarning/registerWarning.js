@@ -47,8 +47,6 @@ export default class RegisterWarning extends Component {
 
     return(
       <Grid stackable textAlign='center' verticalAlign='middle'>
-        <img className="leftSquiggly" src='./assets/img/png/squiggly_left.png' />
-        <img className="rightSquiggly" src='./assets/img/png/squiggly_right.png' />
         <Grid.Row columns={2}>
           <Grid.Column mobile={16} tablet={4} computer={3}>
             <RegisterNav step={step}/>
@@ -69,7 +67,7 @@ export default class RegisterWarning extends Component {
             </Grid.Row>
           </Grid.Column>
         </Grid.Row>
-        <RegisterButtons previousStep={() => previousStep(warning)} submitForm={() => validateStep(submitForm)} nextStep={() => validateStep(nextStep)} />
+        <RegisterButtons previousStep={() => previousStep(warning)} submitForm={() => validateStep(submitForm)} />
       </Grid>
     )
   }

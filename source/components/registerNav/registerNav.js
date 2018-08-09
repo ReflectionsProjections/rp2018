@@ -12,7 +12,7 @@ class RegisterNav extends Component {
       <ul className="navBar">
         <li className={ step == 0 ? 'active' : null}>
           <div className="nav_title">
-            PERSONAL INFORMATION
+            GENERAL INFORMATION
           </div>
         </li>
         <li className={ step == 1 ? 'active' : null}>
@@ -22,17 +22,7 @@ class RegisterNav extends Component {
         </li>
         <li className={ step == 2 ? 'active' : null}>
           <div className="nav_title">
-            TEAM
-          </div>
-        </li>
-        <li className={ step == 3 ? 'active' : null}>
-          <div className="nav_title">
             CODE OF CONDUCT
-          </div>
-        </li>
-        <li className={ step == 4 ? 'active' : null}>
-          <div className="nav_title">
-            OPTIONAL INFORMATION
           </div>
         </li>
       </ul>

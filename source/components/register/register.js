@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 // Components
 import RegisterForm from '../registerForm/registerForm';
-import RegisterTeam from '../registerTeam/registerTeam';
 import RegisterWarning from '../registerWarning/registerWarning';
 import RegisterEssay from '../registerEssay/registerEssay';
 import RegisterSuccess from '../registerSuccess/registerSuccess';
@@ -209,7 +208,7 @@ export default class Register extends Component {
 
     return(
       <div className="registerContainer">
-        
+
         {
           [
             <RegisterForm
@@ -217,35 +216,8 @@ export default class Register extends Component {
               step={state.step}
               data={state.personal}
               previousStep={null}
-              nextStep={nextStep('personal')}
-              forms={personal_fields}
-            />,
-            <RegisterForm
-              key={state.step}
-              step={state.step}
-              data={state.professional}
-              previousStep={previousStep('professional')}
-              nextStep={nextStep('professional')}
-              forms={professional_fields}
-            />,
-            <RegisterTeam
-              step={state.step}
-              data={state.collaborators}
-              previousStep={previousStep('collaborators')}
-              nextStep={nextStep('collaborators')}
-            />,
-            <RegisterWarning
-              step={state.step}
-              data={state.warning}
-              previousStep={previousStep('warning')}
-              nextStep={nextStep('warning')}
               submitForm={submitForm('warning')}
-            />,
-            <RegisterEssay
-              step={state.step}
-              data={state.longForm}
-              previousStep={previousStep('longForm')}
-              submitForm={submitForm('longForm')}
+              forms={personal_fields}
             />,
             <RegisterSuccess />,
           ][state.step]
