@@ -36,13 +36,13 @@ class Navigation extends Component {
                     </Navbar.Header>
                     <Navbar.Collapse>
                     <Nav pullRight>
-                        <NavItem onClick={() => this.scrollTo('About')} eventKey={1} className="Navigation__item--active">About</NavItem>
-                        <NavDropdown eventKey={2} title="Events" id="basic-nav-dropdown"  onMouseEnter={(e) => this.setState({ show: true })}
+                        <NavDropdown eventKey={1} title="About" id="basic-nav-dropdown"  onClick={() => this.scrollTo('About')} onMouseEnter={(e) => this.setState({ show: true })}
                         onMouseLeave={(e) => this.setState({ show: false })} open={this.state.show}>
                             <MenuItem onClick={() => location.href="/#/puzzlebang"} eventKey={2.1}>PuzzleBang</MenuItem>
                             <MenuItem onClick={() => location.href="/#/mechmania"} eventKey={2.2}>MechMania</MenuItem>
                             <MenuItem onClick={() => location.href="/#/symposium"} eventKey={2.3}>ACM Symposium</MenuItem>
                         </NavDropdown>
+                        <NavItem onClick={() => this.scrollTo('Schedule')} eventKey={2}>Schedule</NavItem>
                         <NavItem onClick={() => this.scrollTo('Speakers')} eventKey={3} >Speakers</NavItem>
                         <NavItem onClick={() => this.scrollTo('FAQ')} eventKey={4}>FAQ</NavItem>
                         <NavItem onClick={() => this.scrollTo('Sponsors')} eventKey={5} >Sponsors</NavItem>
