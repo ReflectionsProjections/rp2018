@@ -1,3 +1,11 @@
+/*
+  NAVIGATION COMPONENT ON SIDE
+
+  NOT CURRENTLY IN USE OR PLANNED TO BE IN USE. KEPT IN CASE NEEDED FOR AESTHETIC APPEAL
+
+
+*/
+
 import React, { Component } from 'react'
 
 import styles from './registerNav.scss'

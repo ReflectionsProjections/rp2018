@@ -1,3 +1,11 @@
+/*
+  PREVIOUS, NEXT, SUBMIT BUTTONS ON BOTTOM
+
+  PREVIOUS + NEXT BUTTONS NOT REALLY NEEDED AS IT'S A SINGLE PAGE FORM
+  ONLY SUBMIT IS IMPORTANT
+
+
+*/
 import React, { Component } from 'react'
 import { Grid, Button, Icon} from 'semantic-ui-react';
 import styles from './registerButtons.scss'

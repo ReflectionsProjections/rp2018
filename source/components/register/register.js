@@ -1,3 +1,8 @@
+/*
+
+  DECLARES REGISTRATION CONTROL FLOW
+
+*/
 import React, { Component } from 'react';
 // Components
 import RegisterForm from '../registerForm/registerForm';

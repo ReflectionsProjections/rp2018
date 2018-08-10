@@ -1,3 +1,11 @@
+/*
+  CODE OF CONDUCT PAGE (COC)
+
+  CURRENTLY IN USE, WILL NOT BE USED IN FINAL.
+  KEPT IN CASE COC SHOULD BE ON SEPARATE PAGE.
+
+
+*/
 import React, { Component } from 'react'
 import { Grid, Checkbox, Transition, Label } from 'semantic-ui-react';
 import styles from './registerWarning.scss'

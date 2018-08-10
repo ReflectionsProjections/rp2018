@@ -1,3 +1,8 @@
+/*
+
+  ACTUAL FORM WE WILL BE USING. SEE register/registerFielsConfig.js FOR EXACT FIELDS
+
+*/
 import React, { Component } from 'react';
 // Components
 import RegisterNav from '../registerNav/registerNav';

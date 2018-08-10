@@ -1,3 +1,12 @@
+/*
+  OPTIONAL INFORMATION ESSAY COMPONENT
+
+  CURRENTLY IN USE, WILL NOT BE USED IN FINAL.
+  KEPT TO CONFIRM HOW TO APPROPRIATELY SUBMIT FORM CONTENTS
+  THIS WAS THE OPTIONAL FINAL REGISTRATION STEP FOR HI.
+
+
+*/
 import React, { Component } from 'react'
 import { Grid, TextArea, Form, Transition} from 'semantic-ui-react';
 import { Checkbox, Label } from 'semantic-ui-react';

@@ -1,3 +1,8 @@
+/*
+
+    COMPONENT DESIGNS FOR EACH TYPE OF INPUT FIELD
+
+*/
 import React, { Component } from 'react'
 import { Grid, Form, Select, Icon, Input } from 'semantic-ui-react'
 

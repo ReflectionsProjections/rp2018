@@ -70,7 +70,7 @@ const personal_fields = [
     inputType: 'text',
     id: 'student',
     required: true,
-    options: [{key: 'YES_UNDERGRAD', text: 'Yes, I am an undergraduate student', value:'YES_UNDERGRAD'}, {key: 'YES_GRAD', text: 'Yes, I am a graduate student', value:'YES_GRAD'}, {key: 'NO', text: 'No, I am not a student', value:'NO'}, {key: 'OTHER', text: 'Prefer not to disclose', value:'OTHER'}],
+    options: [{key: 'HIGH_SCHOOL', text: 'High School', value:'HIGH_SCHOOL'}, {key: 'UNDERGRAD', text: 'Undergraduate', value:'UNDERGRAD'}, {key: 'GRAD', text: 'Graduate', value:'GRAD'}, {key: 'POST_GRAD', text: 'Post-Graduate', value:'POST_GRAD'}, {key: 'ALUMNI', text: 'Alumni', value:'ALUMNI'}, {key: 'NOT_STUDENT', text: 'I am not a student', value:'NOT_STUDENT'}],
     placeholder: 'What type of student are you?',
     title: 'STUDENT STATUS',
     validate: (input) => {
@@ -108,7 +108,7 @@ const personal_fields = [
     inputType: 'text',
     id: 'transportation',
     required: true,
-    options: [{key: 'NOT_NEEDED', text: 'On Campus', value:'NOT_NEEDED'}, {key: 'BUS_REQUESTED', text: 'Bus', value:'BUS_REQUESTED'}, {key: 'IN_STATE', text: 'Driving', value:'IN_STATE'}, {key: 'OUT_OF_STATE', text: 'Flying', value:'OUT_OF_STATE'}],
+    options: [{key: 'NOT_NEEDED', text: 'On Campus', value:'NOT_NEEDED'}, {key: 'BUS_REQUESTED', text: 'Bus', value:'BUS_REQUESTED'}, {key: 'GAS_YES', text: 'Driving (Gas Reimbursements Needed)', value:'GAS_YES'}, {key: 'GAS_NO', text: 'Driving (Gas Reimbursements Not Needed)', value:'GAS_NO'}],
     placeholder: 'How do you plan to get here?',
     title: 'TRANSPORTATION',
     validate: (input) => {
@@ -121,7 +121,7 @@ const personal_fields = [
     inputType: 'text',
     id: 'shirtSize',
     required: true,
-    options: [{key: 'S', text: 'S', value: 'S'}, {key: 'M', text: 'M', value: 'M'}, {key: 'L', text: 'L', value: 'L'}, {key: 'XL', text: 'XL', value: 'XL'}],
+    options: [{key: 'S', text: 'S', value: 'S'}, {key: 'M', text: 'M', value: 'M'}, {key: 'L', text: 'L', value: 'L'}, {key: 'XL', text: 'XL', value: 'XL'}, {key: 'XXL', text: 'XXL', value: 'XXL'}],
     placeholder: 'What t-shirt size would you like?',
     title: 'SHIRT SIZE',
     validate: (input) => {
@@ -185,33 +185,8 @@ const personal_fields = [
 
 ]
 
+//WILL NOT BE USING
 const professional_fields = [
-  {
-    width: 8,
-    fieldType: 'select',
-    inputType: 'bool',
-    id: 'isNovice',
-    required: true,
-    options: [{key: 'NO', text: 'NO', value: 'false'}, {key: 'YES', text: 'YES', value: 'true'}],
-    placeholder: 'Are you a beginner?',
-    title: 'ARE YOU A BEGINNER?',
-    validate: (input) => {
-      return true;
-    }
-  },
-
-  {
-    width: 8,
-    fieldType: 'input',
-    inputType: 'text',
-    id: 'linkedin',
-    required: true,
-    placeholder: 'What\'s your LinkedIn username?',
-    title: 'LINKEDIN USERNAME',
-    validate: (input) => {
-      return input.length > 0 && input.length <= 50;
-    }
-  },
 
   {
     width: 16,
@@ -227,44 +202,6 @@ const professional_fields = [
       } else {
         return true;
       }
-    }
-  },
-  {
-    width: 16,
-    fieldType: 'select',
-    inputType: 'bool',
-    id: 'hasLightningInterest',
-    required: true,
-    options: [{key: 'NO', text: 'NO', value: 'false'}, {key: 'YES', text: 'YES', value: 'true'}],
-    placeholder: '',
-    title: 'Are you interested in giving a short (<5 min) lightning talk on a topic of your choice ?',
-    validate: (input) => {
-      return true;
-    }
-  },
-  {
-    width: 16,
-    fieldType: 'select',
-    inputType: 'bool',
-    id: 'isPrivate',
-    required: true,
-    options: [{key: 'YES', text: 'YES', value: 'true'}, {key: 'NO', text: 'NO', value: 'false'}],
-    placeholder: '',
-    title: 'We\'d love to connect you to awesome opportunities with our sponsors. Is it okay if we share your information with them?',
-    validate: (input) => {
-      return true;
-    }
-  },
-  {
-    width: 16,
-    fieldType: 'input',
-    inputType: 'text',
-    id: 'osContributors',
-    required: false,
-    placeholder: 'Contact info/Github username - what they do',
-    title: 'Are there any Open Source contributors you would like to see at HackIllinois? (Optional)',
-    validate: (input) => {
-      return true;
     }
   },
 ]
