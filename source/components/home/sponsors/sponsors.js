@@ -125,10 +125,18 @@ class Sponsors extends Component {
         }
       ]
     };
+    // According to the Boostrap grid template, there are five tiers / types of columns
+    // xs - extra small, sm - small, md - medium, lg - large, xl - extra large
+    // For a given row, the sum of each entry's column weight should sum to 12 units
+    // Note that this is not the sum of values in each tier for a single item
+    // Moreover, the weight can be adjusted based on device viewport using the above five tiers
 
+    // Since we have only one tier 1 sponsor, it should be given full weight, that is 12 on every viewport
+    // Similarly, since we have two tier 2 sponsor, they should each have half the total weight, that is 6 each
+    // Use this method to determine the weight for each tier, and adjust based on viewport
     const tier1Sponsors = sponsorsList.tier1.map((sponsor, idx) => {
       return (
-        <Col key={idx} xs={12} lg={12} sm={6} md={6} className="Sponsors__centeredCard">
+        <Col key={idx} xs={12} sm={12} md={12} lg={12} className="Sponsors__centeredCard">
           <Panel className="Sponsors__card Sponsors__card--tier1">
             <img className="Sponsors__cardLogo" src={sponsor.img} alt={sponsor.name} title={sponsor.name}/>
           </Panel>{" "}
@@ -138,7 +146,7 @@ class Sponsors extends Component {
 
     const tier2Sponsors = sponsorsList.tier2.map((sponsor, idx) => {
       return (
-        <Col key={idx} xs={12} lg={6} sm={6} md={6} className="Sponsors__centeredCard">
+        <Col key={idx} xs={6} sm={6} md={6} lg={6} className="Sponsors__centeredCard">
           <Panel className="Sponsors__card Sponsors__card--tier2">
             <img className="Sponsors__cardLogo" src={sponsor.img} alt={sponsor.name} title={sponsor.name}/>
           </Panel>{" "}
@@ -148,7 +156,7 @@ class Sponsors extends Component {
 
     const tier3Sponsors = sponsorsList.tier3.map((sponsor, idx) => {
       return (
-        <Col key={idx} xs={6} lg = {4} sm={4} md={6} className="Sponsors__centeredCard">
+        <Col key={idx} xs={4} sm={4} md={3} lg = {4} className="Sponsors__centeredCard">
           <Panel className="Sponsors__card Sponsors__card--tier3">
             <img className="Sponsors__cardLogo" src={sponsor.img} alt={sponsor.name} title={sponsor.name}/>
           </Panel>{" "}
@@ -158,7 +166,7 @@ class Sponsors extends Component {
 
     const tier4Sponsors = sponsorsList.tier4.map((sponsor, idx) => {
       return (
-        <Col key={idx} xs={6} sm={3} md={3} className="Sponsors__centeredCard">
+        <Col key={idx} xs={4} sm={3} md={3} className="Sponsors__centeredCard">
           <Panel className="Sponsors__card Sponsors__card--tier4">
             <img className="Sponsors__cardLogo" src={sponsor.img} alt={sponsor.name} title={sponsor.name}/>
           </Panel>
