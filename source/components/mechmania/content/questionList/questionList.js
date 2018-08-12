@@ -17,12 +17,12 @@ class QuestionList extends Component {
             {
                 "index": 1,
                 "question": "Who's eligible?",
-                "answer": nl2br("We accept teams of up to three people in two brackets: the student competition and the corporate competition.\nStudent Competition: Our student competition accepts up to twenty teams and pits them against each other in one final battle. Teams do not need to be comprised of all students from the same school, but all participants must be actively enrolled in a college or university.\nCorporate Competition: The corporate competition is open to teams representing companies. Be sure to contact us if your company is interested in participating in this year's competition. There are no prizes (other than the joy of winning) for corporate competitors.")
+                "answer": nl2br("We accept teams of up to four students. Our student competition accepts up to forty teams and pits them against each other in one final battle. Teams do not need to be comprised of all students from the same school, but all participants must be actively enrolled in a college or university.")
             },
             {
                 "index": 2,
                 "question": "What you need to know",
-                "answer": "At least one, and preferably all, members of each team will need general familiarity with a Linux shell (bash, zsh, and csh are all provided on our workstations). All members should be proficient in the programming language their team intends to use. The API will use JSON messages passed over HTTP, so we recommend having knowledge of a JSON library in your chosen language."
+                "answer": "All members should be proficient in the programming language their team intends to use. The API will use JSON messages passed over HTTP, so we recommend having knowledge of a JSON library in your chosen language."
             },
             {
                 "index": 3,
@@ -32,7 +32,7 @@ class QuestionList extends Component {
             {
                 "index": 4,
                 "question": "What you can bring",
-                "answer": "You can bring any reference manual(s) you wish, whether it be the Art of Computer Programming or the Art of War. But absolutely no outside code. You may, however, bring non-code items like rc files, build scripts, notes, etc. Competitors are allowed to bring their own laptops, though the code you write must be capable of running on our systems."
+                "answer": "You can bring any reference manual(s) you wish, whether it be the Art of Computer Programming or the Art of War. But absolutely no outside code. You may, however, bring non-code items like rc files, build scripts, notes, etc. Competitors are required to bring their own laptops, though the code you write must be capable of running on our systems."
             },
             {
                 "index": 5,

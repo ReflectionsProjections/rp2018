@@ -13,7 +13,7 @@ class Content extends Component {
             <div className="Content">
                 <div id="header">
                     <h1>
-                    PuzzleBang
+                    ACM Symposium
                     </h1>
                 </div>
                 
