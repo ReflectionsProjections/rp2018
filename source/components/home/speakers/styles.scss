@@ -64,9 +64,10 @@ h1 {
     font-family: 'Roboto Slab', serif;
 }
 
-#wiki-icon {
+.wiki-icon {
     font-size: 30px;
     float: right;
+    color: $yellowGreenAccentHover;
 }
 
 .coming__soon {
@@ -83,6 +84,8 @@ h1 {
       background-color: rgba(256, 256, 256, 0);
     }
     .Speakers .thumbnail img {
+        width: unset;
+        height: unset;
         margin-top: 32px;
     }
 }
