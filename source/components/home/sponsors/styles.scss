@@ -1,10 +1,17 @@
 .Sponsors {
-    padding: 10vh 5vw 10vh 5vw;
+    padding: 10vh 5vw;
     background-color: rgba(225, 225, 225, 0.1);
+    
+    // The following property is essential to image alignment
+    // It ensures that the sponsor grid and Speaker_back align together.
+    .container {
+        width: unset;
+        padding: 10vh 5vw;
+    }
 
     &__back {
-        border-radius: 5vh;
         background: white;
+        overflow: hidden;
     }
 
     &__card {
@@ -23,26 +30,28 @@
             transform: translate(-50%, -50%);
             max-width: 100%;
             max-height: 100%;
-            padding: 7px;
+            padding: 1.75vh;
         }
     }
 
     &__card--tier1 {
-        min-height: 500px;
+        min-height: 45vh;
+        margin: -20vw;
     }
 
     &__card--tier2 {
         margin: auto;
-        min-height: 350px;
-
+        min-height: 40vh;
+        margin-bottom: 15vh!important;
     }
 
     &__card--tier3 {
-        min-height: 350px;
+        min-height: 28vh;
+        margin-bottom: 15vh!important;
     }
 
     &__card--tier4 {
-        min-height: 150px;
+        min-height: 12vh;
     }
 
     &__gridRow {
@@ -75,25 +84,8 @@ h1
     -moz-box-shadow: unset!important;
 }
 
-@media (max-height: 750px) {
-    .Sponsors__back {
-      border-radius: 0;
-      background: white;
-    }
-    &__card--tier1 {
-        background: red;
-        height: 400px!important;
-    }
-
-    &__card--tier2 {
-        min-height: 150px!important;
-    }
-
-    &__card--tier3 {
-        min-height: 100px!important;
-    }
-
-    &__card--tier4 {
-        min-height: 50px!important;
-    }
+.panel-default {
+    height: 25%!important;
+    margin: 0;
+    padding: 0;
 }

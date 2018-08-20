@@ -115,6 +115,12 @@
         }
     }
 
+    @media (max-width: 750px) {
+        #QuestionListContainer {
+            border-radius: 0;
+        }
+    }
+
     @media (max-width: 420px) {
         .header {
             max-width: 90%;
