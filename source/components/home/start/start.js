@@ -25,7 +25,9 @@ class Start extends Component {
                     <img className="header" src="../assets/svg/home_header.svg" />
                     <div className="title_sponsor">
                         <h3>Title Sponsor:</h3>
-                        <img className="title_sponsor_img" src="../assets/img/sponsors/sponsors2018/jobfair/petabyte/microsoft_full_white.png" />
+                        <a href="https://microsoft.com/" target="_blank">
+                            <img className="title_sponsor_img" src="../assets/img/sponsors/sponsors2018/jobfair/petabyte/microsoft_full_white.png" />
+                        </a>
                     </div>
                     <div className="caps">September 17th - 22nd, 2018</div>
                     <Countdown className="counter"/>

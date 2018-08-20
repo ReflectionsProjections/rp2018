@@ -30,7 +30,6 @@
         padding-top: 4vh;
         width: 90vw;
         background-color: white;
-        border-radius: 5vh;
         color: yellowgreen;
         display: block;
     }
@@ -86,9 +85,6 @@
         padding-top: 6vh;
         padding-bottom: 6vh;
 
-        #QuestionListContainer {
-            border-radius: calc(2vh + 2vw);
-        }
         .faq-columns {
             flex-direction: column;
         }
@@ -112,12 +108,6 @@
         }  
         #countdown, .intro, .caps {
             font-size: 2em;
-        }
-    }
-
-    @media (max-width: 750px) {
-        #QuestionListContainer {
-            border-radius: 0;
         }
     }
 
