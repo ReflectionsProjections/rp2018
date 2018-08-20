@@ -67,6 +67,18 @@ class Speakers extends Component {
                 'img': '../assets/img/keynotes/zac.jpg',
                 'title': 'ML Scientist at Amazon AI Labs, Assistant Professor CMU',
                 'wikipedia': 'http://zacklipton.com'
+            },
+            {
+                'name': 'Jonah Horowitz',
+                'img': '../assets/img/keynotes/jonah.jpg',
+                'title': 'Senior Site Reliability Engineer at Apple',
+                'wikipedia': 'https://jonahhorowitz.com/'
+            },
+            {
+                'name': 'Josh Benaloh',
+                'img': '../assets/img/keynotes/josh.jpg',
+                'title': 'Senior Cryptographer at Microsoft Research',
+                'wikipedia': 'https://www.microsoft.com/en-us/research/people/benaloh/'
             }
         ];
 
