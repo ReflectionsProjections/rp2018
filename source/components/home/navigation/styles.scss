@@ -33,10 +33,10 @@
     &__logo {
         width: 7.5vh !important;
         position: absolute;
-        transform: translateY(-17%) !important;
+        transform: translateY(-7.5%) !important;
     }
-    button.collapsed {
-        transform: translateY(27%) !important;
+    .navbar-toggle {
+        margin: calc(1.8vw + 1.8vh) calc(1.8vw + 1.8vh) 0 0;
     }
 }
 
