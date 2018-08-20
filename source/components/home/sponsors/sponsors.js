@@ -51,6 +51,11 @@ class Sponsors extends Component {
         	name: "Braintree",
         	img: "../assets/img/sponsors/sponsors2018/jobfair/gigabyte/braintree.png",
           webPage: "http://braintree.com/"
+        },
+        {
+          name: "Qualtrics",
+          img: "../assets/img/sponsors/sponsors2017/jobfair/gigabyte/qualtrics.jpg",
+          webPage: "https://www.qualtrics.com/"
         }
       ],
 
