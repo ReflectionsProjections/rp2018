@@ -26,7 +26,8 @@ class Sponsors extends Component {
         },
         {
           name: "Zillow Group",
-          img: "../assets/img/sponsors/sponsors2018/jobfair/terabyte/zillow_group_full.png"
+          img: "../assets/img/sponsors/sponsors2018/jobfair/terabyte/zillow_group_full.png",
+          webPage: "https://www.zillowgroup.com/"
         }
       ],
 
@@ -42,10 +43,6 @@ class Sponsors extends Component {
           webPage: "https://www.northerntrust.com/"
         },
         {
-          name: "Qualtrics",
-          img: "../assets/img/sponsors/sponsors2018/jobfair/gigabyte/qualtrics_full.png"
-        },
-        {
         	name: "Salesforce",
         	img: "../assets/img/sponsors/sponsors2018/jobfair/gigabyte/sf_placeholder.png",
           webPage: "https://www.salesforce.com/"
@@ -54,11 +51,6 @@ class Sponsors extends Component {
         	name: "Braintree",
         	img: "../assets/img/sponsors/sponsors2018/jobfair/gigabyte/braintree.png",
           webPage: "http://braintree.com/"
-        },
-        {
-          name: "Qualtrics",
-          img: "../assets/img/sponsors/sponsors2017/jobfair/gigabyte/qualtrics.jpg",
-          webPage: "https://www.qualtrics.com/"
         }
       ],
 
@@ -100,7 +92,7 @@ class Sponsors extends Component {
         },
         {
           name: "Riverbed",
-          img: "../assets/img/sponsors/sponsors2017/jobfair/megabyte/riverbad.jpg",
+          img: "../assets/img/sponsors/sponsors2018/jobfair/megabyte/riverbed_full.png",
           webPage: "https://www.riverbed.com/"
         },
         {
@@ -109,23 +101,17 @@ class Sponsors extends Component {
           webPage: "https://www.facebook.com/"
         },
         {
-          name: "Facebook",
-          img: "../assets/img/sponsors/sponsors2018/jobfair/megabyte/facebook_full.jpg"
-        },
-        {
-          name: "Riverbed",
-          img: "../assets/img/sponsors/sponsors2018/jobfair/megabyte/riverbed_full.png"
-        },
-        {
           name: "Pinterest",
-          img: "../assets/img/sponsors/sponsors2018/jobfair/megabyte/pinterest_full.jpg"
+          img: "../assets/img/sponsors/sponsors2018/jobfair/megabyte/pinterest_full.jpg",
+          webPage: "https://www.pinterest.com/"
         },
         {
           name: "Nav Talent",
-          img: "../assets/img/sponsors/sponsors2018/jobfair/megabyte/nav_talent_full.png"
+          img: "../assets/img/sponsors/sponsors2018/jobfair/megabyte/nav_talent_full.png",
+          webPage: "https://navtalent.com/"
         },
 
-        // startups
+        // Startups
 
         {
           name: "DeepScale",
@@ -190,7 +176,7 @@ class Sponsors extends Component {
 
     const tier3Sponsors = sponsorsList.tier3.map((sponsor, idx) => {
       return (
-        <Col key={idx} xs={4} sm={4} md={3} lg = {4} className="Sponsors__centeredCard">
+        <Col key={idx} xs={6} sm={4} md={3} lg = {4} className="Sponsors__centeredCard">
           <Panel className="Sponsors__card Sponsors__card--tier3">
             <a href={sponsor.webPage} target="_blank"><img className="Sponsors__cardLogo" src={sponsor.img} alt={sponsor.name} title={sponsor.name}/></a>
           </Panel>{" "}
