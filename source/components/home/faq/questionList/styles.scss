@@ -50,6 +50,10 @@
     margin: 2.5vh 0vh;
 }
 
+.faq-columns::after {
+    display: none;
+}
+
 .column li {
     flex-wrap: wrap;
     min-width: 10vw;
