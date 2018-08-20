@@ -1,6 +1,7 @@
+@import '../../../styles/constants';
+
 .Sponsors {
     padding: 10vh 5vw;
-    background-color: rgba(225, 225, 225, 0.1);
     
     // The following property is essential to image alignment
     // It ensures that the sponsor grid and Speaker_back align together.
@@ -10,7 +11,7 @@
     }
 
     &__back {
-        background: white;
+        background: $cardBackground;
         overflow: hidden;
     }
 
@@ -69,7 +70,7 @@
     }
 
     &__header {
-        color: white;
+        color: $primary;
         text-align: center;
         border: none;
     }

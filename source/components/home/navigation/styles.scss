@@ -1,22 +1,26 @@
+@import '../../../styles/constants';
+
 .Navigation {
-    $nav-height: 10vh;
-    height: $nav-height;
+    height: $navigationBarHeight;
     position: -webkit-sticky;
     position: sticky;
     top: -1px;
     z-index: 1;
+
     .navbar {
         filter: drop-shadow(0px 2px 5px black);
-        background-color: #252f3a;
+        background-color: $pageBackground;
         position: relative;
+
         .navbar-header {
-            min-height: $nav-height;
+            min-height: $navigationBarHeight;
         }
+
         .nav>li>a {
-            color: #ffff;
+            color: $primary;
             font-size: 1.5em;
             font-family: 'Roboto Slab', serif;
-            line-height: $nav-height;
+            line-height: $navigationBarHeight;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             padding-top: 0;
@@ -25,16 +29,18 @@
             opacity: 1;
         }
         .nav>li>a:hover {
-            color: #c9e88f;
-            text-shadow: 5px #c9e88f;
+            color: $active;
+            text-shadow: 5px $active;
             text-decoration: none;
         }
     }
+
     &__logo {
         width: 7.5vh !important;
         position: absolute;
         transform: translateY(-7.5%) !important;
     }
+    
     .navbar-toggle {
         margin: calc(1.8vw + 1.8vh) calc(1.8vw + 1.8vh) 0 0;
     }
@@ -42,9 +48,7 @@
 
 @media(min-width: 768px) and (max-width:1024px) {
     .navbar {
-        position: sticky;
         .nav>li>a {
-            color: #ffff;
             font-size: 1em !important;
         }
     }
@@ -52,9 +56,7 @@
 
 @media (min-width: 1024px) and (max-width:1366px) {
     .navbar {
-        position: sticky;
         .nav>li>a {
-            color: #ffff;
             font-size: 1.4em!important;
         }
     }
@@ -62,9 +64,7 @@
 
 @media (max-width: 750px) {
     .navbar {
-        position: sticky;
         .nav>li>a {
-            color: #ffff;
             font-size: 1em;
         }
     }
