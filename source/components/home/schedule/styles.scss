@@ -1,9 +1,10 @@
+@import '../../../styles/constants';
+
 .Schedule {
     font-size: 16px;
     min-height: 100vh;
     overflow: hidden;
     font-family: 'Roboto', sans-serif;
-    color: #275354;
     display: flex;
     flex-direction: column;
     padding: 7vh 5vw 7vh 5vw;
@@ -20,14 +21,14 @@
 
 .header h1 {
     font-size: 4em;
-    color: white;
+    color: $primary;
 }
 
 .content-container {
     margin: auto;
-    padding: 8vh 4vw;
-    padding-top: 4vh;
-    background-color: rgb(255, 255, 255);
+    padding: 6vh 3vw;
+    padding-top: 3vh;
+    background-color: $cardBackground;
 }
 
 .content {
@@ -51,15 +52,12 @@
 
 .col li {
     width: 35vw;
-    border-bottom: 0.01px solid green;
     padding: 1.2vh;
-    //font-weight: bold;
-    color: black;
 }
 
 .col small {
     float: left;
-    color: grey;
+    color: $finePrintForeground;
     font-weight: lighter;
     font-size: 0.9em;
     width: 10vw;
@@ -73,7 +71,7 @@
 }
 
 .col h3 {
-    color: #075c60;
+    color: $accentForeground;
     text-align: center;
     margin-bottom: 2vh;
 }
@@ -88,9 +86,9 @@
 .tab {
     text-align: center;
     padding: 2vh;
-    background-color: rgb(37, 37, 37);
+    background-color: $inactive;
     opacity: 0.8;
-    color:white;
+    color:$primary;
 }
 
 .tab:hover {
@@ -99,13 +97,13 @@
 }
 
 .active {
-    background-color: #5ab57b;
+    background-color: $active;
     opacity: 1;
     filter: contrast(1.1);
 }
 
 
-@media(max-width: 1024px) {
+@media(max-width: 1366px) {
     .header h1 {
         font-size: 3em;
     }
@@ -114,7 +112,7 @@
     }
     .col {
         flex-direction: row;
-        font-size: 0.8em;
+        font-size: 1.75em;
         width: 75vw;
     }
     .col small {
@@ -122,5 +120,15 @@
     }
     .col li {
         width: 75vw;
+    }
+}
+
+@media (max-width: 640px) {
+    .col {
+        font-size: 0.9em;
+    }
+    .content-container {
+        padding: 0;
+        margin: 0;
     }
 }

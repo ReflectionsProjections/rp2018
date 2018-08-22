@@ -1,8 +1,10 @@
+@import '../../../styles/constants';
+
 .Speakers {
     padding: 5vh 5vw 10vh 5vw;
     &__card {
         position: relative;
-        background-color: rgba(256, 256, 256, 0);
+        background-color: $transparent;
         margin: 0.5em;
         border: none;
         height: 440px;
@@ -15,12 +17,11 @@
     }
     &__back {
         width: 200%;
-        //box-shadow: 0px 0px 5px black;
-        background-color: rgba(60, 116, 113, 0.5);
+        background-color: $translucentBackground;
     }
     &__header {
         text-align: center;
-        color: #ffff;
+        color: $primary;
         margin-bottom: 1em;
     }
     h3 {
@@ -29,7 +30,7 @@
         font-weight: light;
         font-family: "Roboto Slab", serif;
         padding: 0.2em;
-        color: #ffff;
+        color: $primary;
     }
     h4 {
         text-align: center;
@@ -37,7 +38,7 @@
         font-weight: light;
         font-family: "Roboto Slab", serif;
         padding: 0.4em;
-        color: #ffff;
+        color: $primary;
     }
     .thumbnail {
         padding: 5px;
@@ -63,9 +64,10 @@ h1 {
     font-family: 'Roboto Slab', serif;
 }
 
-#wiki-icon {
+.wiki-icon {
     font-size: 30px;
     float: right;
+    color: $yellowGreenAccentHover;
 }
 
 .coming__soon {
@@ -82,6 +84,8 @@ h1 {
       background-color: rgba(256, 256, 256, 0);
     }
     .Speakers .thumbnail img {
+        width: unset;
+        height: unset;
         margin-top: 32px;
     }
 }

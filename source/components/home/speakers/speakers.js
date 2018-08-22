@@ -67,6 +67,18 @@ class Speakers extends Component {
                 'img': '../assets/img/keynotes/zac.jpg',
                 'title': 'ML Scientist at Amazon AI Labs, Assistant Professor CMU',
                 'wikipedia': 'http://zacklipton.com'
+            },
+            {
+                'name': 'Jonah Horowitz',
+                'img': '../assets/img/keynotes/jonah.jpg',
+                'title': 'Senior Site Reliability Engineer at Apple',
+                'wikipedia': 'https://jonahhorowitz.com/'
+            },
+            {
+                'name': 'Josh Benaloh',
+                'img': '../assets/img/keynotes/josh.jpg',
+                'title': 'Senior Cryptographer at Microsoft Research',
+                'wikipedia': 'https://www.microsoft.com/en-us/research/people/benaloh/'
             }
         ];
 
@@ -103,7 +115,6 @@ class Speakers extends Component {
             const hasLinkColor = "#c9e88f";
             const hasNoLinkColor = "#a4b0bc";
             var cl = (link != undefined && link != null) ? hasLinkColor : hasNoLinkColor;
-            var wikicolor = "#c9e88f"
             var cName = (cl == hasLinkColor)? "Speakers__card js-speakercard Speakers__youtube": "Speakers__card js-speakercard";
             if (wikilink) {
                 return (
@@ -113,7 +124,7 @@ class Speakers extends Component {
                         <h4 style = {{ color: "white" } } > { speaker.title } </h4>
                         <div className="icon-group">
                             <a href= {wikilink} target="_blank" rel="noopener noreferrer">
-                                <span className = "glyphicon glyphicon-info-sign" id = "wiki-icon" style = {{ color: wikicolor} }/>
+                                <span className = "glyphicon glyphicon-info-sign wiki-icon"/>
                             </a>
                         </div>
                         </Thumbnail>
