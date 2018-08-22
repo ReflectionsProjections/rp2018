@@ -2,7 +2,7 @@
 
 .Sponsors {
     padding: 10vh 5vw;
-    
+
     // The following property is essential to image alignment
     // It ensures that the sponsor grid and Speaker_back align together.
     .container {
@@ -37,18 +37,16 @@
 
     &__card--tier1 {
         min-height: 45vh;
-        margin: -20vw;
     }
 
     &__card--tier2 {
         margin: auto;
         min-height: 40vh;
-        margin-bottom: 15vh!important;
     }
 
     &__card--tier3 {
+        margin: -3vh auto;
         min-height: 28vh;
-        margin-bottom: 15vh!important;
     }
 
     &__card--tier4 {
@@ -85,8 +83,74 @@ h1
     -moz-box-shadow: unset!important;
 }
 
+.tier1 {
+    margin-bottom: 10vh;
+}
+
+.tier2 {
+    margin-bottom: 10vh;
+}
+
+.tier3 {
+    margin-bottom: 10vh;
+}
+
 .panel-default {
     height: 25%!important;
     margin: 0;
     padding: 0;
+}
+
+@media (max-width: 620px) and (min-height: 760px){
+    .Sponsors {
+        &__card--tier1  {
+          margin: -20vh auto;
+        }
+        &__card--tier2 {
+            margin: -15vh auto;
+        }
+        &__card--tier3 {
+            margin: -7vh -2.5vh;
+        }
+        &__card--tier4 {
+            margin: auto -2vh;
+        }
+    }
+    .tier1 {
+        margin-bottom: 10vh;
+    }
+    .tier2 {
+        margin-bottom: 5vh;
+    }
+    .tier3 {
+        margin-bottom: 5vh;
+    }
+}
+
+@media (max-width: 400px) {
+    .Sponsors {
+        &__card--tier1 {
+            margin: -20vh auto;
+            margin-bottom: -40vh;
+        }
+        &__card--tier2 {
+            margin-bottom: -15vh;
+        }
+        &__card--tier3 {
+            min-height: 15vh;
+            margin: -1vh -3vh;
+        }
+        &__card--tier4 {
+            margin: -0.5vh -3vh;
+        }
+    }
+}
+
+@media (max-height: 500px) {
+    .Sponsors {
+        &__card--tier4 {
+            min-width: 10vh;
+            margin: auto -2vh;
+        }
+    }
 }

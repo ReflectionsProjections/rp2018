@@ -54,8 +54,23 @@ class Sponsors extends Component {
         },
         {
           name: "Qualtrics",
-          img: "../assets/img/sponsors/sponsors2017/jobfair/gigabyte/qualtrics.jpg",
+          img: "../assets/img/sponsors/sponsors2018/jobfair/gigabyte/qualtrics_full.png",
           webPage: "https://www.qualtrics.com/"
+        },
+        {
+          name: "Quora",
+          img: "../assets/img/sponsors/sponsors2018/jobfair/gigabyte/quora_full.png",
+          webPage: "https://www.quora.com/"
+        },
+        {
+          name: "Lyft",
+          img: "../assets/img/sponsors/sponsors2018/jobfair/gigabyte/lyft_full.png",
+          webPage: "https://www.lyft.com/"
+        },
+        {
+          name: "Amazon",
+          img: "../assets/img/sponsors/sponsors2018/jobfair/gigabyte/amazon_full.png",
+          webPage: "https://www.amazon.com/"
         }
       ],
 
@@ -102,7 +117,7 @@ class Sponsors extends Component {
         },
         {
           name: "Facebook",
-          img: "../assets/img/sponsors/sponsors2017/jobfair/megabyte/facebook.jpg",
+          img: "../assets/img/sponsors/sponsors2018/jobfair/megabyte/facebook_full.jpg",
           webPage: "https://www.facebook.com/"
         },
         {
@@ -147,6 +162,16 @@ class Sponsors extends Component {
           name: "Sentry",
           img: "../assets/img/sponsors/sponsors2018/startup/sentry.png",
           webPage: "http://www.sentry.io"
+        },
+        {
+          name: "Sift Science",
+          img: "../assets/img/sponsors/sponsors2018/startup/sift_science_full.png",
+          webPage: "https://siftscience.com/"
+        },
+        {
+          name: "Samsara",
+          img: "../assets/img/sponsors/sponsors2018/startup/samsara_full.png",
+          webPage: "http://www.samsara.com"
         }
       ]
     };
@@ -204,10 +229,10 @@ class Sponsors extends Component {
         <PageHeader className="Sponsors__header"> <h1>Sponsors</h1> </PageHeader>{" "}
         <div className="Sponsors__back">
           <Grid>
-            <Row className="Sponsors__centerContent"> {tier1Sponsors} </Row>
-            <Row className="Sponsors__centerContent"> {tier2Sponsors} </Row>
-            <Row> {tier3Sponsors} </Row>
-            <Row> {tier4Sponsors} </Row>
+            <Row className="Sponsors__centerContent tier1"> {tier1Sponsors} </Row>
+            <Row className="Sponsors__centerContent tier2"> {tier2Sponsors} </Row>
+            <Row className="Sponsors__centerContent tier3"> {tier3Sponsors} </Row>
+            <Row className="Sponsors__centerContent tier4"> {tier4Sponsors} </Row>
 
           </Grid>{" "}
         </div>
