@@ -51,7 +51,7 @@ render(
             <Route path="/home" component={Home} />
             <Route exact path="/puzzlebang" component={PuzzleBang}/>
             <Route exact path="/mechmania" component={MechMania}/>
-            <Route exact path="/acm_symposium" component={ACMSymposium}/>
+            <Route exact path="/symposium" component={ACMSymposium}/>
         </div>
     </Router>,
     document.getElementById('app')
