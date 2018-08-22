@@ -163,11 +163,13 @@ class QuestionList extends Component {
                     <ul className="column">
                         <li>
                             <div className="question">
-                                How do I ask for a reimbursement? 
+                                How do I ask for a reimbursement?
                             </div>
                             <div className="answer">
-                                -The registration form has a transportation question that asks the user how they intend on getting to campus, one of the options being (Driving and will need Gas Reimbursements) <br/>
-                                -We are offering reimbursements to the first 200 attendees that sign up for one. Afterwards, reimbursements will be case by case, with RP staff having final say.
+                            <ul>
+                                <li>The registration form has a transportation question that asks the user how they intend on getting to campus, one of the options being (Driving and will need Gas Reimbursements) </li>
+                                <li>We are offering reimbursements to the first 200 attendees that sign up for one. Afterwards, reimbursements will be case by case, with Reflections|Projections staff having final say.</li>
+                            </ul>
                             </div>
                         </li>
                         <li>
@@ -175,11 +177,13 @@ class QuestionList extends Component {
                                 How much money does an attendee get?
                             </div>
                             <div className="answer">
-                                -$15 per attendee if location is beyond 160 miles <br/> 
-                                -$10 per attendee if location is between 60 and 160 miles <br/> 
-                                -$5 per attendee if location is within 60 miles of campus <br/> 
-                                -All distances are as the crow flies and RP staff has final say on which radius level your departure location is in <br/> 
-                                -These numbers are per attendee so they incentivize attendees to carpool
+                            <ul>
+                                <li><strong> $15 </strong> per attendee if location is beyond 160 miles </li> 
+                                <li><strong> $10 </strong> per attendee if location is between 60 and 160 miles </li> 
+                                <li><strong> $5  </strong> per attendee if location is within 60 miles of campus </li> 
+                                <li>All distances are as the crow flies and RP staff has final say on which radius level your departure location falls in </li> 
+                                <li>These numbers are per attendee so they incentivize attendees to carpool </li>
+                            </ul>
                             </div>
                         </li>
                         <li>
@@ -187,7 +191,7 @@ class QuestionList extends Component {
                                 How will I know if I'm within the first 200 people to sign up for GR?
                             </div>
                             <div className="answer">
-                                Assuming you've registered, we will send you an email by Sept. 17th notifying you of your status. If you sign up after that date, we will do our best to notify you asap but cannot guarantee immediate confirmation
+                                Assuming you have registered, we will send you an email by September 17th notifying you of your status. If you sign up after that date, we will do our best to notify you as soon as possible but cannot guarantee immediate confirmation
                             </div>
                         </li>
                         <li>
@@ -195,9 +199,11 @@ class QuestionList extends Component {
                                 How do I collect my reimbursement?
                             </div>
                             <div className="answer">
-                                -We will hold a gas reimbursements booth on Fri (or Sat or both, tbd). You must have registered and explicitly noted that you need reimbursements to be given money. <br/> 
-                                -You MUST have your School ID as proof that you are from the school you claim to be. <br/> 
-                                -We will be reimbursing via Venmo and cash
+                            <ul>
+                                <li>We will hold a gas reimbursements booth on both Friday and Saturday. You must have explicitly requested reimbursements on your registration to be given money </li> 
+                                <li>You MUST have your School ID as proof that you are from the school you claim to be from. </li>
+                                <li>We will be reimbursing via Venmo and cash </li>
+                            </ul>
                             </div>
                         </li>
                     </ul>
