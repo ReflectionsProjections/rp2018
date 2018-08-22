@@ -1,3 +1,5 @@
+@import '../../../styles/constants';
+
 .countdown {
     display: flex;
     flex-direction: column;
@@ -9,7 +11,7 @@
 
 .bordered {
     display: inline-block;
-    background-color: rgba(10, 10, 10, 0.432);
+    background-color: $countdownBackground;
     margin: 1.25vh;
     padding: 6vh 4vh 4vh 4vh;
     margin-bottom: 1vh;
@@ -28,7 +30,7 @@ li {
 }
 
 #seconds {
-    color:#ff0040;
+    color:$active;
 }
 
 #time-label {
@@ -44,27 +46,3 @@ li {
     display: inline-block;
     vertical-align: auto;
 }
-
-/*
-@media (max-width: 1366px) {
-    .bordered {
-        width: 10vh;
-        height: 10vh;
-        font-size: 1.5vh;
-        padding: 1.5vh;
-    }
-}
-
-@media (max-width: 720px) {
-    .bordered {
-        font-size: 1.8vh;
-        padding: 1.3vh;
-    }
-}
-
-@media (max-width: 480px) {
-    .bordered {
-        font-size: 1vh;
-        padding: 0.7vh;
-    }
-}*/

@@ -5,7 +5,19 @@ class QuestionList extends Component {
 
     constructor() {
         super();
+        this.scrollToTagWithId = this.scrollToTagWithId.bind(this);
     }
+
+    /*
+        Scrolls to the element specified by the given id.
+        Note: `id`s are unique.
+    */
+    scrollToTagWithId(id) {
+        let element = document.getElementById(id);
+        let targetScrollHeight = element.offsetTop;
+        window.scrollTo(0, targetScrollHeight);
+    }
+
     render() {
         return (
             <section className="faq-columns">
@@ -16,7 +28,7 @@ class QuestionList extends Component {
                                 What is Reflections | Projections?
                             </div>
                             <div className="answer">
-                                Reflections | Projections is an annual technology conference organized and run by students at the University of Illinois at Urbana-Champaign, drawing students, speakers, and companies from around the world.
+                                Reflections | Projections is an annual technology conference organized and run by students at the University of Illinois at Urbana-Champaign, drawing students, speakers, and companies from around the world. The conference features speaker talks, workshops, career and startup job fairs, a hackathon, and more!
                             </div>
                         </li>
                         <li>
@@ -25,6 +37,14 @@ class QuestionList extends Component {
                             </div>
                             <div className="answer">
                                 Reflections | Projections is free and open to anyone regardless of age, major, or affiliation with the University of Illinois. Come join a discussion led by some of the brightest minds in the business about the bleeding edge of the tech industry!
+                            </div>
+                        </li>
+                        <li>
+                            <div className="question">
+                                When should I come?
+                            </div>
+                            <div className="answer">
+                                Check out the posted <a onClick={() => this.scrollToTagWithId("Schedule")}>R|P schedule</a>! You don’t have to attend every event, but be sure to stop by the events you are most interested in!
                             </div>
                         </li>
                         <li>
@@ -48,7 +68,15 @@ class QuestionList extends Component {
                                 Will food be provided?
                             </div>
                             <div className="answer">
-                                All food at the conference will be free for registered attendees.
+                                A large variety of meals, snacks, and drinks will be provided throughout the week, that will be free for registered attendees. If you have a dietary restriction, please mention it in the online registration that will be released in Fall 2018.
+                            </div>
+                        </li>
+                        <li>
+                            <div className="question">
+                                What should I bring?
+                            </div>
+                            <div className="answer">
+                                You don’t need to bring anything in particular. It mainly depends on the events you will be attending. If you plan to compete in our AI hackathon, MechMania, you should bring a laptop. If you want to talk to companies at the career fair, you should bring a couple copies of your resume. We will not print résumés.
                             </div>
                         </li>
                         <li>
@@ -103,17 +131,17 @@ class QuestionList extends Component {
                                 Yes! Keep an eye out for our MechMania tab for competition registration! Coming soon.
                             </div>
                         </li>
-                        {/* <li>
-                            <div className="question">
-                                For more information…
-                            </div>
-                            <div className="answer">
-                                You can find out more about us on our website! Please feel free to reach out with questions or comments to <a href="mailto:conference-chair@acm.illinois.edu">conference-chair@acm.illinois.edu</a>!
-                            </div>
-                        </li> */}
                     </ul>
                     <h2 className="faq-heading">Travel</h2>
                     <ul className="column faq_column">
+                        <li>
+                            <div className="question">
+                                Are there travel reimbursements?
+                            </div>
+                            <div className="answer">
+                                We are currently reaching out to universities and community colleges in the midwest for interest in travel. If enough interest is shown from a certain area, we will gladly provide free transportation to UIUC for R|P! Please reach out to <a href="mailto://conference-chair@acm.illinois.edu">conference-chair@acm.illinois.edu</a> if you or your members are interested in attending R|P 2018.
+                            </div>
+                        </li>
                         <li>
                             <div className="question">
                                 Coming from Willard Airport

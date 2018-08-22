@@ -1,12 +1,14 @@
+@import '../../../styles/constants';
+
 .Footer {
 
     &__header {
-        color: white!important;
+        color: $primary!important;
         text-align: center;
     }
 
     &__contact {
-        color: white;
+        color: $primary;
         font-family: "Roboto Slab", serif;
         font-size: 18px;
         font-weight: 300;
@@ -24,11 +26,13 @@
     }
 }
 
-
+.fa {
+    margin: 1vh;
+}
 
 .Footer__contact a:hover {
-    color: #c9e88f;
-    text-shadow: 2px #c9e88f;
+    color: $yellowGreenAccentHover;
+    text-shadow: 2px $yellowGreenAccentHover;
     text-decoration: none !important;
 }
 
@@ -38,7 +42,7 @@
 
 #snapshot .tooltiptext {
     left: 0%;
-  }
+}
 
 #snapshot:hover .tooltiptext {
     visibility: visible;
@@ -49,8 +53,7 @@
     visibility: hidden;
     width: auto;
     max-width: 150%;
-    background-color: #555;
-    color: #fff;
+    background-color: $countdownBackground;
     text-align: center;
     border-radius: 25px;
     padding: 7px;
@@ -73,12 +76,8 @@
     border-color: #555 transparent transparent transparent;
 }
 
-.ReactModal__Body--open{
-    background-color: rgba(20, 20, 20, 0.85) !important;
-}
-
-.ReactModal__Overlay .ReactModal__Overlay--after-open{
-    background-color: black;
+p.Footer__contact p {
+    margin: 0.05vh;
 }
 
 @media (max-width: 440px) {

@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,300');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
-
-$bg: #0c202b;
+@import 'constants';
 
 body {
   min-width: 200px;
@@ -9,11 +7,14 @@ body {
   margin: 0;
   width: 100vw;
   overflow-x: hidden;
-  font-family: 'Roboto', sans-serif!important;
-  background-color: #28323f;
+  font-family: 'Roboto', sans-serif;
+  background-color: $pageBackground;
   background-image: url('../assets/svg/home_background.svg');
   background-size: 100%;
   scroll-behavior: smooth;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: unset;
 }
 
 h1, h2, h3, h4, h5, h6 {

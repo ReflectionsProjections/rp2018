@@ -1,13 +1,14 @@
+@import '../../../styles/constants';
+
 #About {
     font-size: 16px;
     min-height: 100vh;
     overflow: hidden;
     font-family: 'Roboto', sans-serif;
-    color: #275354;
     display: flex;
     flex-direction: column;
     padding: 10vh 5vw 10vh 5vw;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: $translucentBackground;
 }
 
 .about-grid {
@@ -43,20 +44,20 @@
     transition: transform 300ms, -webkit-transform 300ms;
     -webkit-transition-timing-function: linear;
     transition-timing-function: linear;
-    color: #cadea5;
+    color: $yellowGreenAccent;
 }
 
 .ReactFlipCard__Front {
     background-color:rgba(42, 50, 62, 0.7);
     padding: 0px;
     text-align: center;
-    color: #cadea5;
-    border: 4px solid #cadea5;
+    color: $yellowGreenAccent;
+    border: 4px solid $yellowGreenAccent;
     font-weight: bold;
 }
 
 .ReactFlipCard__Back {
-    background-color:rgba(42, 50, 62, 0.9);
+    background-color:$pageBackground;
     padding-left: 30px;
     padding-right: 30px;
     text-align: left;

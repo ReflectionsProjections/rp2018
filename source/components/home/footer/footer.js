@@ -2,31 +2,16 @@ import React, { Component } from 'react'
 import { PageHeader, Grid, Row, Media, Glyphicon } from 'react-bootstrap'
 import styles from './styles.scss'
 const FA = require('react-fontawesome')
-var Modal = require('react-modal');
 
 class Footer extends Component {
 
 	constructor() {
 		super()
-		this.state = {
-			showModal: false
-		};
-		
-		this.handleOpenModal = this.handleOpenModal.bind(this);
-		this.handleCloseModal = this.handleCloseModal.bind(this);
-	}
-	
-	handleOpenModal () {
-		this.setState({ showModal: true });
-	}
-	
-	handleCloseModal () {
-		this.setState({ showModal: false });
 	}
 
 	render() {
 		var logoStyle = {
-			width: "120px", 
+			width: "120px",
 			height: "120px",
 			margin: "-10px 0 0 0"
 		};
@@ -49,7 +34,6 @@ class Footer extends Component {
 						</p>
 					</Media.Body>
 				</Media>
-
 			</div>
 		)
 	}
