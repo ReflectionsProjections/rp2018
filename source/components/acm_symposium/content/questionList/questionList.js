@@ -42,7 +42,7 @@ class QuestionList extends Component {
             },
             {
                 "index": 6,
-                "question": "This sounds amazing! How do I sign up",
+                "question": "This sounds amazing! How do I sign up?",
                 "answer": ["The ACM Symposium invites members from ACM Chapters (or your University’s equivalent organizations) to the ACM Symposium. If your ACM Chapter is interested in registering and/or attending please reach out with questions or ideas to ", <a href='mailto:conference-chair@acm.illinois.edu' target='_blank'>conference-chair@acm.illinois.edu</a>, ". The official registration form for the Symposium is coming soon to our website! We look forward to seeing you at R|P 2018!"]
             }
         ];

@@ -40,7 +40,7 @@ class Navigation extends Component {
                         onMouseLeave={(e) => this.setState({ show: false })} open={this.state.show}>
                             <MenuItem onClick={() => location.href="/#/puzzlebang"} eventKey={2.1}>PuzzleBang</MenuItem>
                             <MenuItem onClick={() => location.href="/#/mechmania"} eventKey={2.2}>MechMania</MenuItem>
-                            <MenuItem onClick={() => location.href="/#/acm_symposium"} eventKey={2.3}>ACM Symposium</MenuItem>
+                            <MenuItem onClick={() => location.href="/#/symposium"} eventKey={2.3}>ACM Symposium</MenuItem>
                         </NavDropdown>
                         <NavItem onClick={() => this.scrollTo('Schedule')} eventKey={2}>Schedule</NavItem>
                         <NavItem onClick={() => this.scrollTo('Speakers')} eventKey={3} >Speakers</NavItem>
