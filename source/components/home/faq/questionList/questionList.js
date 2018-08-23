@@ -166,10 +166,8 @@ class QuestionList extends Component {
                                 How do I ask for a reimbursement?
                             </div>
                             <div className="answer">
-                            <ul>
-                                <li>The registration form has a transportation question that asks the user how they intend on getting to campus, one of the options being (Driving and will need Gas Reimbursements) </li>
-                                <li>We are offering reimbursements to the first 200 attendees that sign up for one. Afterwards, reimbursements will be case by case, with Reflections | Projections staff having final say.</li>
-                            </ul>
+                              The registration form has a transportation question that asks the user how they intend on getting to campus. Simply select the "Driving and will need Gas Reimbursements" option to ask for a reimbursement.
+                              Please note that we are only offering reimbursements to the first <strong>200</strong> attendees that ask for one.
                             </div>
                         </li>
                         <li>
@@ -177,14 +175,18 @@ class QuestionList extends Component {
                                 How much will I be reimbursed?
                             </div>
                             <div className="answer">
-                            <ul>
-                                <li> The amount varies depending on where you are driving from: </li>
-                                <li><strong> $15 </strong> per attendee if location is beyond 160 miles </li>
-                                <li><strong> $10 </strong> per attendee if location is between 60 and 160 miles </li>
-                                <li><strong> $5  </strong> per attendee if location is within 60 miles of campus </li>
-                                <li>All distances are as the crow flies and R|P staff has the final say on which radius level your departure location falls in. </li>
-                                <li>Note that these numbers are per attendee to incentivize attendees to carpool. </li>
-                            </ul>
+                              The amount varies depending on where you are driving from:
+                            </div>
+                            <div className="answer">
+                                <ul>
+                                  <li><strong> $15 </strong> per attendee if location is beyond 160 miles </li>
+                                  <li><strong> $10 </strong> per attendee if location is between 60 and 160 miles </li>
+                                  <li><strong> $5  </strong> per attendee if location is within 60 miles of campus </li>
+                                </ul>
+                            </div>
+                            <div className="answer">
+                                All distances are as the crow flies and R|P staff has the final say on which radius level your departure location falls in.
+                                Note that these numbers are per attendee to incentivize attendees to carpool.
                             </div>
                         </li>
                         <li>
@@ -200,11 +202,9 @@ class QuestionList extends Component {
                                 How do I collect my reimbursement?
                             </div>
                             <div className="answer">
-                            <ul>
-                                <li>We will hold a gas reimbursements booth on both Friday and Saturday. You must have explicitly requested reimbursements on your registration to be given money. </li>
-                                <li>You MUST have your School ID as proof that you are from the school you claim to be from. </li>
-                                <li>We will be reimbursing via Venmo and cash.</li>
-                            </ul>
+                                We will hold a gas reimbursements booth on both Friday and Saturday. You must have explicitly requested reimbursements on your registration to be given money.
+                                You MUST have your School ID as proof that you are from the school you claim to be from.
+                                We will be reimbursing via Venmo and cash.
                             </div>
                         </li>
                     </ul>
