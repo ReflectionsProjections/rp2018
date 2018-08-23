@@ -167,8 +167,8 @@ class QuestionList extends Component {
                             </div>
                             <div className="answer">
                             <ul>
-                                <li>The registration form has a transportation question that asks the user how they intend on getting to campus. Simply select the "Driving and will need Gas Reimbursements" option to ask for a reimbursement. </li>
-                                <li> Please note that we are only offering reimbursements to the first <strong>200</strong> attendees that ask for one.</li>
+                                <li>The registration form has a transportation question that asks the user how they intend on getting to campus, one of the options being (Driving and will need Gas Reimbursements) </li>
+                                <li>We are offering reimbursements to the first 200 attendees that sign up for one. Afterwards, reimbursements will be case by case, with Reflections | Projections staff having final say.</li>
                             </ul>
                             </div>
                         </li>
