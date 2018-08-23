@@ -58,7 +58,7 @@
     flex-wrap: wrap;
     min-width: 10vw;
     max-width: 25vw;
-    margin-right: 2vw;
+    margin-left: 2vw;
 }
 
 .question, .answer {
@@ -67,6 +67,7 @@
 
 .question {
     margin-top: 3vh;
+    margin-bottom: 1.5vh;
     color: black;
     font-weight: 700;
     font-size:1.3em;
@@ -79,14 +80,20 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.answer li {
+    list-style-type: unset!important;
+}
+
 @media (max-width: 1024px) {
     .header {
         max-width: 85%;
     }
+    .answer li {
+        margin-left: 5vw;
+    }
     .column li {
         min-width: inherit;
         max-width: inherit;
-        margin-right: 0;
     }
     #countdown, .intro, .caps {
         font-size: 2em;
