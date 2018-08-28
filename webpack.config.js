@@ -58,7 +58,8 @@ const config = {
         new webpack.optimize.CommonsChunkPlugin({
             name: 'vendor',
             minChunks: Infinity,
-            filename: 'vendor.bundle.js'
+            filename: 'vendor.bundle.js',
+            publicPath: '/'
         })
     ]
 };

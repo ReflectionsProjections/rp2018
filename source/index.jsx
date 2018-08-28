@@ -1,11 +1,12 @@
 import React from 'react';
 import {render} from 'react-dom';
 import {HashRouter as Router, Route, Link} from 'react-router-dom'
-
+import {browserHistory} from 'react-router';
 // Components
 import Home from './components/home/home';
 import Landing from './components/landing/landing';
 import Register from './components/register/register';
+import Auth from './components/register/auth';
 import RegisterStart from './components/registerStart/registerStart';
 
 
@@ -42,7 +43,7 @@ class App extends React.Component {
 }
 
 render(
-    <Router>
+    <Router history={browserHistory}>
         <div>
             <Route exact path="/" component={Home}/>
             <Route path="/sponsor" component={SponsorLetter} />
@@ -51,6 +52,7 @@ render(
 
             <Route exact path="/start" component={RegisterStart}/>
             <Route exact path="/register" component={Register}/>
+            <Route exact path="/auth" component={Auth}/>
         </div>
     </Router>,
     document.getElementById('app')
