@@ -4,6 +4,7 @@
 
 */
 import React, { Component } from 'react';
+import qs from 'qs';
 // Components
 import styles from './auth.scss';
 import axios from 'axios';
@@ -22,7 +23,7 @@ import queryString from 'query-string';
 // OAuth authorization code.
 // We will then make a call to the API, exchanging it for the JWT,
 // with which we can get user info for the email.
-export default class AuthA extends Component {
+export default class Auth extends Component {
   constructor(props) {
     super(props);
     this.apiUrl = "http://localhost:8000";
@@ -34,28 +35,30 @@ export default class AuthA extends Component {
     sessionStorage.setItem("Authorization-Code", authorizationCode);
     const HTTP_STATUS_OK = 200;
 
-    const requestData = {
-      headers: {
-        Access-Control-Allow-Origin: "*",
-        Access-Control-Allow-Origin: "http://localhost:8080"
-      },
-      body: {
-        "code": authorizationCode
-      }
+    console.log("OAuth Code: " + authorizationCode);
+    authorizationCode.concat("#");
+
+    const body = { code: authorizationCode };
+    const url = this.apiUrl + "/auth/code/google/?redirect_uri=http://localhost:8080/auth";
+    const options = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Origin': '*' },
+      data: body,
+      url
     };
-    axios.post(this.apiUrl + "/auth/code/google/?redirect_uri=localhost:8080/register",
-      requestData
-    )
+    axios(options)
     .then(function (response) {
       if(HTTP_STATUS_OK === response.status) {
         let apiJwt = response.data.token;
+        alert("API call succeeded.");
         sessionStorage.setItem("Authorization", apiJwt);
-        window.location = "localhost:8080/register"
+        window.location = "http://localhost:8080/register"
       }
+      console.log(response);
     })
     .catch(function (error) {
       console.log("API call had errors.")
-      console.log(error);
+      console.log(error.response);
     });
   }
 

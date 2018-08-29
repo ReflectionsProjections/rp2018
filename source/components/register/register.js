@@ -10,11 +10,21 @@ import RegisterWarning from '../registerWarning/registerWarning';
 import RegisterEssay from '../registerEssay/registerEssay';
 import RegisterSuccess from '../registerSuccess/registerSuccess';
 
+import RegisterButtons from '../registerButtons/registerButtons';
+
 import { Grid, Dimmer, Loader } from 'semantic-ui-react';
 import { personal_fields, professional_fields } from './registerFieldsConfig';
 import {uploadAttendeeData, uploadResumeFile, getGithubData, getAttendeeData} from './registerHelper';
 import styles from './register.scss'
 import axios from 'axios';
+
+// Components
+import RegisterNav from '../registerNav/registerNav';
+import InputField from '../inputField/inputField';
+
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+import faCaretLeft from '@fortawesome/fontawesome-free-solid/faCaretLeft'
+import faCaretRight from '@fortawesome/fontawesome-free-solid/faCaretRight'
 
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -29,7 +39,7 @@ import axios from 'axios';
 export default class Register extends Component {
   constructor(props) {
     super(props);
-
+    this.apiUrl = "http://localhost:8000";
     this.state = {
       step: 0,
       personal: {},
@@ -42,6 +52,7 @@ export default class Register extends Component {
       loading: true,
       attendeeEmail: ''
     };
+    this.submitForm = this.submitForm.bind(this);
   };
 
   componentWillMount() {
@@ -60,6 +71,31 @@ export default class Register extends Component {
 
   componentDidMount() {
     this.setState({ loading: true });
+
+    let emailToBePrefilled = "";
+    const jwt = sessionStorage.getItem("Authorization");
+    const HTTP_STATUS_OK = 200;
+    const url = this.apiUrl + "/user/";
+    const options = {
+      method: 'GET',
+      headers: { 'Authorization': jwt, 'Content-Type': 'application/json'},
+      // data: body,
+      url
+    };
+    axios(options)
+    .then(function (response) {
+      if(HTTP_STATUS_OK === response.status) {
+        emailToBePrefilled = response.data.email;
+        alert("API call succeeded.", emailToBePrefilled);
+      }
+      console.log(emailToBePrefilled);
+    })
+    .catch(function (error) {
+      console.log("API call had errors.")
+      console.log(error.response);
+    });
+    let emailField = document.querySelector("[name^=email");
+    emailField.value = emailToBePrefilled;
 
     let {personal, professional} = this.state;
     /*
@@ -141,58 +177,64 @@ export default class Register extends Component {
     }
   }
 
-  submitForm = prop => data => {
-    const { step } = this.state;
-    this.setState({ [prop]: data }, () => {
-      this.setState({ loading: true });
+  submitForm () {
 
-      const { attendeeData, resumeFile } = this.convertDataForAPI();
-      const { newRegistration, resumeInfo } = this.state;
-      const attendeeMethod = newRegistration ? 'post' : 'put';
-      // POST attendee
-      /*
-      uploadAttendeeData(attendeeMethod, attendeeData).then(response => {
-        if (resumeInfo == null || resumeFile != resumeInfo.key) {
-          let reader = new FileReader();
-          reader.onload = (event) => {
-            const resumeData    = event.target.result;
-            const resumeId      = resumeInfo == null ? '' : resumeInfo.id ;
-            const resumeMethod  = resumeInfo == null ? 'post' : 'put';
-            const resumeType    = resumeFile.type;
-            // POST resume
-            /*
-            uploadResumeFile(resumeMethod, resumeData, resumeId, resumeType).then(response => {
-              this.setState({ loading: false, step: 5});
-            })
-            .catch(error => {
-              this.setState({ loading: false });
-              if (ga) {
-                ga('send', 'exception', {
-                  'exDescription': '/attendee resume upload: ' + this.state.attendeeEmail + " " + JSON.stringify(error),
-                  'exFatal': true
-                })
-              }
-              this.props.history.push("/error");
-            });
-          };
-          reader.readAsArrayBuffer(resumeFile);
-        }
-        else {
-          // Dont need to upload resume because there is already a resume uploaded or user havent changed it.
-          this.setState({ loading: false, step: 5});
-        }
-      })
-      .catch(error => {
-        this.setState({ loading: false });
-        if (ga) {
-          ga('send', 'exception', {
-            'exDescription': '/attendee attendee data: ' + this.state.attendeeEmail + " " + JSON.stringify(error),
-            'exFatal': true
-          })
-        }
-        this.props.history.push("/error");
-      });
-      */
+    console.log("submitted");
+    const firstName = document.querySelector("[name^=firstName");
+    const lastName = document.querySelector("[name^=lastName");
+    const email = document.querySelector("[name^=email");
+    const phoneNumber = document.querySelector("[name^=phoneNumber");
+    const gender = document.querySelector("[name^=gender");
+    const studentStatus = document.querySelector("[name^=student");
+    const school = document.querySelector("[name^=school");
+    const major = document.querySelector("[name^=major");
+    const transportation = document.querySelector("[name^=transportation");
+    const shirtSize = document.querySelector("[name^=shirtSize");
+    const dietaryRestrictions = document.querySelector("[name^=diet");
+    const gradYear = document.querySelector("[name^=graduationYear");
+    const professionalInterest = document.querySelector("[name^=professionalInterest");
+    const jobInterest = document.querySelector("[name^=jobInterest");
+    const heardFrom = document.querySelector("[name^=heardFrom");
+    const rpInterest = document.querySelector("[name^=rpInterest");
+    const file = document.querySelector("[name^=resume").files[0];
+
+    // Missing rpInterest, heardFrom, and jobInterest
+    const requestBody = {
+        "phone": "Phone number",//phoneNumber,
+      	"gender": "MALE",//gender,
+        "studentType": "HIGHSCHOOL",//studentStatus,
+        "major": "A major",//major
+        "school": "A school",//school,
+        "transportation": "ONCAMPUS",//transportation,
+      	"shirtSize": "S",//shirtSize,
+        "diet": "NONE",//dietaryRestrictions,
+        "graduationClass": "FA18",//gradYear,
+        "jobInterest": ["INTERNSHIP"],//jobInterest,
+        "professionalInterest": ["AI"],//professionalInterests,
+        "heardFrom": "FB",//heardFrom,
+      	"rpInterest": ["SPEAKERS"]/*rpInterest*/,
+    };
+    const jwt = sessionStorage.getItem("Authorization");
+    const HTTP_STATUS_OK = 200;
+    const url = this.apiUrl + "/registration/";
+    const options = {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json', 'Authorization': jwt},
+      data: requestBody,
+      url
+    };
+    axios(options)
+    .then(function (response) {
+      if(HTTP_STATUS_OK === response.status) {
+        emailToBePrefilled = response.data.email;
+        alert("Registering a user succeeded.", body);
+      }
+      window.location = "/register/success";
+      console.log(body);
+    })
+    .catch(function (error) {
+      console.log("API call had errors.")
+      console.log(error.response);
     });
   };
 
@@ -210,7 +252,8 @@ export default class Register extends Component {
     const previousStep  = this.previousStep;
     const submitForm    = this.submitForm;
     const state         = this.state;
-
+    console.log(submitForm);
+    // submitForm();
     return(
       <div className="registerContainer">
 
@@ -221,8 +264,8 @@ export default class Register extends Component {
               step={state.step}
               data={state.personal}
               previousStep={null}
-              submitForm={submitForm('warning')}
               forms={personal_fields}
+              submitForm={submitForm}
             />,
             <RegisterSuccess />,
           ][state.step]

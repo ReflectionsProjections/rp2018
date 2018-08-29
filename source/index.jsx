@@ -6,8 +6,9 @@ import {browserHistory} from 'react-router';
 import Home from './components/home/home';
 import Landing from './components/landing/landing';
 import Register from './components/register/register';
-import Auth from './components/register/auth';
+import Auth from './components/auth/auth';
 import RegisterStart from './components/registerStart/registerStart';
+import RegisterSuccess from './components/registerSuccess/registerSuccess';
 
 
 // Redirects
@@ -51,6 +52,7 @@ render(
             <Route path="/home" component={Home} />
 
             <Route exact path="/start" component={RegisterStart}/>
+            <Route exact path="/register/success" component={RegisterSuccess}/>
             <Route exact path="/register" component={Register}/>
             <Route exact path="/auth" component={Auth}/>
         </div>

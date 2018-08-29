@@ -18,6 +18,7 @@ export default class RegisterButtons extends Component {
   render() {
     // Variables setup
     const submitForm = this.props.submitForm;
+    console.log(submitForm);
     const previousStep = this.props.previousStep;
     const nextStep = this.props.nextStep;
 
@@ -34,11 +35,11 @@ export default class RegisterButtons extends Component {
         <FontAwesomeIcon icon={faCaretRight} size="2x"/>
       </Button> : null;
 
-    let submitButton    = submitForm ?
+    let submitButton    =
       <Button icon size='small' labelPosition='right' floated='right' onClick={submitForm}>
         <span className="labelText opposite">SUBMIT</span>
         <FontAwesomeIcon icon={faCaretRight} size="2x"/>
-      </Button> : null;
+      </Button>;
 
     return(
       <Grid.Row className='buttonContainer'>

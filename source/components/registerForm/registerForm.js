@@ -8,7 +8,12 @@ import React, { Component } from 'react';
 import RegisterNav from '../registerNav/registerNav';
 import InputField from '../inputField/inputField';
 import RegisterButtons from '../registerButtons/registerButtons';
-import { Grid, Form, Transition } from 'semantic-ui-react';
+import { Grid, Form, Transition, Button } from 'semantic-ui-react';
+
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+import faCaretLeft from '@fortawesome/fontawesome-free-solid/faCaretLeft'
+import faCaretRight from '@fortawesome/fontawesome-free-solid/faCaretRight'
+
 
 import styles from './registerForm.scss'
 
@@ -80,7 +85,9 @@ export default class RegisterForm extends Component {
     const previousStep    = this.props.previousStep ? () => this.props.previousStep(data) : null;
     const validateStep    = this.validateStep;
     const handleChange    = this.handleChange;
-
+    const submitForm      = this.props.submitForm;
+    console.log("Register form ", submitForm);
+    // submitForm();
     return(
       <Grid stackable>
         <Grid.Row columns={2}>
@@ -98,7 +105,10 @@ export default class RegisterForm extends Component {
             </Transition>
           </Grid.Column>
         </Grid.Row>
-        <RegisterButtons previousStep={previousStep} nextStep={validateStep} />
+        <Button icon size='small' labelPosition='right' floated='right' onClick={submitForm}>
+          <span className="labelText opposite">SUBMIT</span>
+          <FontAwesomeIcon icon={faCaretRight} size="2x"/>
+        </Button>;
       </Grid>
     )
   }

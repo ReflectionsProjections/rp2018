@@ -40,6 +40,7 @@
     "@fortawesome/react-fontawesome": "0.0.17",
     "jquery": "^3.3.1",
     "normalize.css": "^6.0.0",
+    "qs": "^6.5.2",
     "query-string": "^5.0.1",
     "react": "^16.4.1",
     "react-bootstrap": "^0.31.5",
