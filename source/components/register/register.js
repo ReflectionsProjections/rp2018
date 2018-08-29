@@ -229,7 +229,7 @@ export default class Register extends Component {
         // emailToBePrefilled = response.data.email; // why is this here?
         alert("Registering a user succeeded.");
       }
-      window.location = "/register/success";
+      window.location = "/registersuccess";
     })
     .catch(function (error) {
       console.log("API call had errors.")
