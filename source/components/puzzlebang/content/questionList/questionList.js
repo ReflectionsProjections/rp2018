@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import nl2br from 'react-newline-to-break'
 import styles from './styles.scss'
 
 class QuestionList extends Component {
@@ -11,7 +12,7 @@ class QuestionList extends Component {
             {
                 "index": 0,
                 "question": "What is PuzzleBang?",
-                "answer": ["PuzzleBang is an puzzle contest that takes place over the course of a week.  Puzzles are released online at ",<a href='https://puzzlebang.com' target='_blank'>puzzlebang.com</a>," roughly one per day until Saturday, when we release several hard puzzles and a physical, on-campus metapuzzle that pulls everything together.  In the last two years, PuzzleBang also included a real life escape room (themed to, but otherwise unrelated to the puzzlebang.com puzzles)."]
+                "answer": ["PuzzleBang is an puzzle contest that takes place over the course of a week. Puzzles are released online at",<a href='https://puzzlebang.com' target='_blank'>puzzlebang.com</a>," roughly one per day until Saturday, when we release several hard puzzles and a physical, on-campus metapuzzle that pulls everything together.  In the last two years, PuzzleBang also included a real life escape room (themed to, but otherwise unrelated to the puzzlebang.com puzzles)."]
             },
             {
                 "index": 1,
