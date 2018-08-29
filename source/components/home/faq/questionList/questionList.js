@@ -136,14 +136,6 @@ class QuestionList extends Component {
                     <ul className="column faq_column">
                         <li>
                             <div className="question">
-                                Are there travel reimbursements?
-                            </div>
-                            <div className="answer">
-                                We are currently reaching out to universities and community colleges in the midwest for interest in travel. If enough interest is shown from a certain area, we will gladly provide free transportation to UIUC for R|P! Please reach out to <a href="mailto://conference-chair@acm.illinois.edu">conference-chair@acm.illinois.edu</a> if you or your members are interested in attending R|P 2018.
-                            </div>
-                        </li>
-                        <li>
-                            <div className="question">
                                 Coming from Willard Airport
                             </div>
                             <div className="answer">
@@ -164,6 +156,55 @@ class QuestionList extends Component {
                             </div>
                             <div className="answer">
                                 Most amenities are available within walking distance of the Siebel Center. However, if walking isn't for you then Champaign-Urbana's public transit system can take you where you need to go. Routes can be mapped using Google Maps or the CUMTD app and each ride will cost you $1. No change is given on the buses, so bring exact fare with you!
+                            </div>
+                        </li>
+                    </ul>
+                    <h2 className="faq-heading">Attendee Gas Reimbursements</h2>
+                    <ul className="column">
+                        <li>
+                            <div className="question">
+                                How do I ask for a reimbursement?
+                            </div>
+                            <div className="answer">
+                              The registration form has a transportation question that asks the user how they intend on getting to campus. Simply select the "Driving and will need Gas Reimbursements" option to ask for a reimbursement.
+                              Please note that we are only offering reimbursements to the first <strong>200</strong> attendees that ask for one.
+                            </div>
+                        </li>
+                        <li>
+                            <div className="question">
+                                How much will I be reimbursed?
+                            </div>
+                            <div className="answer">
+                              The amount varies depending on where you are driving from:
+                            </div>
+                            <div className="answer">
+                                <ul>
+                                  <li><strong> $15 </strong> per attendee if location is beyond 160 miles </li>
+                                  <li><strong> $10 </strong> per attendee if location is between 60 and 160 miles </li>
+                                  <li><strong> $5  </strong> per attendee if location is within 60 miles of campus </li>
+                                </ul>
+                            </div>
+                            <div className="answer">
+                                All distances are as the crow flies and R|P staff has the final say on which radius level your departure location falls in.
+                                Note that these numbers are per attendee to incentivize attendees to carpool.
+                            </div>
+                        </li>
+                        <li>
+                            <div className="question">
+                                How will I know if I'm within the first 200 people to sign up for a reimbursement?
+                            </div>
+                            <div className="answer">
+                                Assuming you have registered, we will send you an email by September 17th notifying you of your status. If you register after that date, we will do our best to notify you as soon as possible but cannot guarantee immediate confirmation.
+                            </div>
+                        </li>
+                        <li>
+                            <div className="question">
+                                How do I collect my reimbursement?
+                            </div>
+                            <div className="answer">
+                                We will hold a gas reimbursements booth on both Friday and Saturday. You must have explicitly requested reimbursements on your registration to be given money.
+                                You MUST have your School ID as proof that you are from the school you claim to be from.
+                                We will be reimbursing via Venmo and cash.
                             </div>
                         </li>
                     </ul>
