@@ -17,7 +17,6 @@ class Content extends Component {
                     MechMania
                     </h1>
                 </div>
-                <Carousel />
                 <div id="QuestionListContainer">
                     <QuestionList />
                 </div>
