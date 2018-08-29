@@ -1,6 +1,6 @@
 import React from 'react';
 import {render} from 'react-dom';
-import {HashRouter as Router, Route, Link} from 'react-router-dom'
+import {HashRouter as Router, Route, Link, BrowserRouter} from 'react-router-dom'
 
 // Components
 import Home from './components/home/home';
@@ -35,7 +35,7 @@ class App extends React.Component {
 }
 
 render(
-    <Router>
+    <BrowserRouter>
         <div>
             <Route exact path="/" component={Home}/>
             <Route path="/sponsor" component={SponsorLetter} />
@@ -43,6 +43,6 @@ render(
             <Route path="/volunteer" component={VolunteerSignup} />
             <Route path="/home" component={Home} />
         </div>
-    </Router>,
+    </BrowserRouter>,
     document.getElementById('app')
 );
