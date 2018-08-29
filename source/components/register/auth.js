@@ -36,21 +36,21 @@ export default class Auth extends Component {
 
     const requestData = {
       headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Origin": "http://localhost:8000"
+        Access-Control-Allow-Origin: "*",
+        Access-Control-Allow-Origin: "http://localhost:8080"
       },
       body: {
         "code": authorizationCode
       }
     };
-    axios.post(this.apiUrl + "/auth/code/google/?redirect_uri=localhost:8080/#/register",
+    axios.post(this.apiUrl + "/auth/code/google/?redirect_uri=localhost:8080/register",
       requestData
     )
     .then(function (response) {
       if(HTTP_STATUS_OK === response.status) {
         let apiJwt = response.data.token;
         sessionStorage.setItem("Authorization", apiJwt);
-        window.location = "localhost:8080/#/register"
+        window.location = "localhost:8080/register"
       }
     })
     .catch(function (error) {
