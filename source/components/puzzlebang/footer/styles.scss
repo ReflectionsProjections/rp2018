@@ -1,0 +1,90 @@
+.Footer {
+
+    &__header {
+        color: white;
+        text-align: center;
+    }
+
+    &__contact {
+        color: white;
+        font-family: "Roboto Slab", serif;
+        font-size: 18px;
+        font-weight: 300;
+
+        .glyphicon {
+            top: 3px;
+            left: 3px;
+            margin-right: 0.5em;
+        }
+    }
+    padding: 2em 0;
+}
+
+a {
+    padding: 6px;
+}
+
+.Footer__contact a:hover {
+    color: #c9e88f;
+    text-shadow: 2px #c9e88f;
+    text-decoration: none !important;
+}
+
+#snapshot {
+    position: relative;
+}
+
+#snapshot .tooltiptext {
+    left: 0%;
+  }
+  
+#snapshot:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltiptext {
+    visibility: hidden;
+    width: auto;
+    max-width: 150%;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 25px;
+    padding: 7px;
+    position: absolute;
+    z-index: 1;
+    bottom: 20%;
+    left: 170%;
+    margin-left: 100px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 16px;
+}
+  
+.tooltiptext::after {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+  
+.ReactModal__Body--open{
+    background-color: rgba(20, 20, 20, 0.85) !important;
+}
+
+.ReactModal__Overlay .ReactModal__Overlay--after-open{
+    background-color: black;
+}
+
+@media (max-width: 440px) {
+    .Footer__contact {
+        font-size: 16px;
+    }
+    .tooltiptext {
+        bottom: 100%;
+        margin-left: -50px;
+    }
+}
