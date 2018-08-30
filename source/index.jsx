@@ -52,7 +52,7 @@ render(
             <Route path="/home" component={Home} />
 
             <Route exact path="/start" component={RegisterStart}/>
-            <Route exact path="/register/success" component={RegisterSuccess}/>
+            <Route exact path="/registersuccess" component={RegisterSuccess}/>
             <Route exact path="/register" component={Register}/>
             <Route exact path="/auth" component={Auth}/>
         </div>
