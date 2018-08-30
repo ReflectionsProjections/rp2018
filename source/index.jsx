@@ -21,13 +21,13 @@ const StartupLetter = () => {
     return null;
 };
 
-const Fugger = () => {
-    window.location = 'https://docs.google.com/document/d/1yIJBJIemNGIDZb5DfH84_gR0-56z-gUHHPM3t2GIDYE/edit?usp=sharing';
+const VolunteerSignup = () => {
+    window.location = 'https://docs.google.com/forms/d/e/1FAIpQLSc0vkipQVsw9VIdaAKCoOsrchrWPm3tOK8SwccchLFa8qeAcg/viewform?usp=sf_link';
     return null;
 };
 
-const FuggerSignup = () => {
-    window.location = 'https://docs.google.com/forms/d/e/1FAIpQLSdTVtjEyBhrDqH9PU9B9vz1s4_accHnAR1xkYY7DMROukCHwA/viewform';
+const SymposiumSignup = () => {
+    window.location = 'https://acmrp.typeform.com/to/fuUghb';
     return null;
 };
 
@@ -48,6 +48,8 @@ render(
             <Route exact path="/" component={Home}/>
             <Route path="/sponsor" component={SponsorLetter} />
             <Route path="/startup" component={StartupLetter} />
+            <Route path="/volunteer" component={VolunteerSignup} />
+            <Route path="/symposium/register" component={SymposiumSignup} />
             <Route path="/home" component={Home} />
             <Route exact path="/puzzlebang" component={PuzzleBang}/>
             <Route exact path="/mechmania" component={MechMania}/>

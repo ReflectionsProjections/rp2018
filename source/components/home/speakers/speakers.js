@@ -15,7 +15,7 @@ class Speakers extends Component {
              // Keynotes
             {
                 'name': 'Marianna Tessel',
-                'img': '../assets/img/keynotes/marianna.jpeg',
+                'img': '../assets/img/keynotes/marianna_tessel.jpg',
                 'title': 'Chief Product Development Officer at Intuit',
                 'wikipedia': 'https://twitter.com/mtessel12',
                 'track': 'keynote'
