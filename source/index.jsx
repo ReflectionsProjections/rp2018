@@ -4,9 +4,6 @@ import {HashRouter as Router, Route, Link} from 'react-router-dom'
 
 // Components
 import Home from './components/home/home';
-import PuzzleBang from './components/puzzlebang/puzzlebang'
-import MechMania from './components/mechmania/mechmania'
-import ACMSymposium from './components/acm_symposium/acm_symposium'
 import Landing from './components/landing/landing';
 
 
@@ -51,9 +48,6 @@ render(
             <Route path="/volunteer" component={VolunteerSignup} />
             <Route path="/symposium/register" component={SymposiumSignup} />
             <Route path="/home" component={Home} />
-            <Route exact path="/puzzlebang" component={PuzzleBang}/>
-            <Route exact path="/mechmania" component={MechMania}/>
-            <Route exact path="/symposium" component={ACMSymposium}/>
         </div>
     </Router>,
     document.getElementById('app')
