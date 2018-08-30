@@ -44,7 +44,7 @@ class QuestionList extends Component {
             {
                 "index": 6,
                 "question": "This sounds amazing! How do I sign up?",
-                "answer": ["Sign up ", <a className="sym_register" href="/symposium/register" target="_blank">here</a>, "! We look forward to seeing you at R|P 2018!"]
+                "answer": ["Sign up ", <a className="sym_register" href="/#/symposium/register" target="_blank">here</a>, "! We look forward to seeing you at R|P 2018!"]
             }
         ];
         const questionMap = questions.map((element, idx) => {
