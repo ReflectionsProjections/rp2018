@@ -47,7 +47,7 @@ class Speakers extends Component {
                 'title': 'Chief Product Development Officer at Intuit',
                 'externalLink': 'https://twitter.com/mtessel12',
                 'track': 'keynote',
-                'bio': ''
+                'bio': 'Marianna Tessel is a Chief Product Development Officer at Intuit (and soon to be Chief Technology Officer), where she oversees the development of QuickBooks, an accounting software developed for small to medium-sized businesses. Previously, she was the Senior Vice President of Engineering at Docker and Vice President of Engineering at VMware, where she helped develop subsystems for the vSphere virtualization platform.'
             },
             {
                 'name': 'Saad Ali',
@@ -110,14 +110,14 @@ class Speakers extends Component {
                 'img': '../assets/img/keynotes/jonah.jpg',
                 'title': 'Senior Site Reliability Engineer at Apple',
                 'externalLink': 'https://jonahhorowitz.com/',
-                'bio': ''
+                'bio': 'Jonah Horowitz is a Site Reliability Manager at Apple, and has previously worked in similar roles for Stripe, Netflix, and Quantcast. During his time with these companies, he has implemented large scalable production infrastructures and ensured their reliability. Through this, he maintained the performance of his companies products even under strenuous circumstances. Horowitz’s talk focuses on Site Reliability Engineering and role in ultra-scalable systems.'
             },
             {
                 'name': 'Josh Benaloh',
                 'img': '../assets/img/keynotes/josh.jpg',
                 'title': 'Senior Cryptographer at Microsoft Research',
                 'externalLink': 'https://www.microsoft.com/en-us/research/people/benaloh/',
-                'bio': ''
+                'bio': 'Josh Benaloh is a Senior Cryptographer at Microsoft Research and is responsible for introducing homomorphic encryption to the field of cryptography, which allows operations to be performed on encrypted data. He is also on the Board of Directors for the International Association for Cryptologic Research, and is part of the Committee on the Future of Voting run by the National Academies of Science, Engineering, and Medicine, where he has investigated the possibilities of verifiable internet voting.'
             }
         ];
 
