@@ -129,43 +129,6 @@ class Speakers extends Component {
         };
 
         const speakerView = speakerList.map((speaker, idx) => {
-<<<<<<< HEAD
-            let hex = "";
-            switch (speaker.track) {
-                case 'data':
-                    hex = "#02B2CA";
-                    break;
-                case 'hci':
-                    hex = "#85C494"
-                    break;
-                case 'security':
-                    hex = "#EC7F48"
-                    break;
-                case 'systems':
-                    hex = "#E4222B"
-                    break;
-                case 'keynote':
-                    hex = "#9a6fb0"
-                    break;
-            }
-            var hexStr = "6px solid " + hex;
-            var link = speaker.youtube;
-            var wikilink = speaker.wikipedia;
-            var reveal = (link != undefined && link != null) ? "visible" : "hidden";
-            const hasLinkColor = "#c9e88f";
-            const hasNoLinkColor = "#a4b0bc";
-            var cl = (link != undefined && link != null) ? hasLinkColor : hasNoLinkColor;
-            var cName = (cl == hasLinkColor)? "Speakers__card js-speakercard Speakers__youtube": "Speakers__card js-speakercard";
-            if (wikilink) {
-                return (
-                    <Col key = { idx } xs = { 12 } lg = { 4 } sm = { 6 } md = { 6 } >
-                        <Thumbnail className = {cName} src = { speaker.img } >
-                        <h3 style = {{ color: "white" } } > { speaker.name } </h3>
-                        <h4 style = {{ color: "white" } } > { speaker.title } </h4>
-                        <div className="icon-group">
-                            <a href= {wikilink} target="_blank" rel="noopener noreferrer">
-                                <span className = "glyphicon glyphicon-info-sign wiki-icon"/>
-=======
             let externalLink = speaker.externalLink;
             let externalLinkButtonColor = "#c9e88f"
             let thumbnailClassName = "Speakers__card js-speakercard";
@@ -177,7 +140,6 @@ class Speakers extends Component {
                         <div className="icon-group">
                             <a href={externalLink} target="_blank" rel="noopener noreferrer">
                                 <span className="glyphicon glyphicon-info-sign" id="wiki-icon" style={{ color: externalLinkButtonColor }} />
->>>>>>> Added bios for 8 speakers using Bootstrap Modals.
                             </a>
                         </div>
                     </Thumbnail>
