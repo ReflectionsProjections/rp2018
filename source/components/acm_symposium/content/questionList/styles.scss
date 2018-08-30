@@ -49,6 +49,8 @@
         opacity: 1;
     }
 
+
+
     @media (max-width: 1024px) {
         .header {
             max-width: 85%;
@@ -138,24 +140,29 @@
     color:#fff;
     margin: 0.6vh;
 }
-
+.sym_register {
+  font-weight: bold;
+  color: #5ba57b !important;
+}
 .question__sym {
     margin-top: 3vh;
     color: black;
     font-weight: 700;
     font-size:2em;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Roboto Slab', sans-serif;
 }
 
 .answer__sym {
-    font-size: 1.2em;
+    font-size: 1.3em;
     color: black;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Roboto Slab', sans-serif;
 }
 
 .headline__sym {
     margin-top: 3vh;
-    font-size: 1.3em;
-    color: grey;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.6em;
+    text-align: center;
+    font-weight: bold;
+    color: #5ba57b;
+    font-family: 'Roboto Slab', sans-serif;
 }

@@ -39,12 +39,12 @@ class QuestionList extends Component {
             {
                 "index": 5,
                 "question": "When and Where?",
-                "answer": nl2br("Date: Saturday, September 22nd, 2018\nTime: 4 - 6 PM\nLocation: Thomas M Siebel Center, University of Illinois at Urbana-Champaign")
+                "answer": nl2br("Date: Saturday, September 22nd, 2018\nTime: 5 - 7 PM\nLocation: Thomas M Siebel Center, University of Illinois at Urbana-Champaign")
             },
             {
                 "index": 6,
                 "question": "This sounds amazing! How do I sign up?",
-                "answer": ["The ACM Symposium invites members from ACM Chapters (or your University’s equivalent organizations) to the ACM Symposium. If your ACM Chapter is interested in registering and/or attending please reach out with questions or ideas to",<a href='mailto:conference-chair@acm.illinois.edu' target='_blank'>conference-chair@acm.illinois.edu</a>," The official registration form for the Symposium is coming soon to our website! We look forward to seeing you at R|P 2018!"]
+                "answer": ["Sign up ", <a className="sym_register" href="/symposium/register" target="_blank">here</a>, "! We look forward to seeing you at R|P 2018!"]
             }
         ];
         const questionMap = questions.map((element, idx) => {
