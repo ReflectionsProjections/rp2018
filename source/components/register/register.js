@@ -180,37 +180,39 @@ export default class Register extends Component {
   submitForm () {
 
     console.log("submitted");
-    const firstName = document.querySelector("[name^=firstName");
-    const lastName = document.querySelector("[name^=lastName");
-    const email = document.querySelector("[name^=email");
-    const phoneNumber = document.querySelector("[name^=phoneNumber");
-    const gender = document.querySelector("[name^=gender");
-    const studentStatus = document.querySelector("[name^=student");
-    const school = document.querySelector("[name^=school");
-    const major = document.querySelector("[name^=major");
-    const transportation = document.querySelector("[name^=transportation");
-    const shirtSize = document.querySelector("[name^=shirtSize");
-    const dietaryRestrictions = document.querySelector("[name^=diet");
-    const gradYear = document.querySelector("[name^=graduationYear");
-    const professionalInterest = document.querySelector("[name^=professionalInterest");
+    const firstName = document.querySelector("[name^=firstName").innerText;
+    const lastName = document.querySelector("[name^=lastName").innerText;
+    const email = document.querySelector("[name^=email").innerText;
+    const phoneNumber = document.querySelector("[name^=phoneNumber").value;
+    const gender = document.querySelector("[name^=gender").innerText;
+    const studentStatus = document.querySelector("[name^=student").innerText;
+    const school = document.querySelector("[name^=school").value;
+    const major = document.querySelector("[name^=major").value;
+    const transportation = document.querySelector("[name^=transportation").innerText;
+    const shirtSize = document.querySelector("[name^=shirtSize").innerText;
+    const dietaryRestrictions = document.querySelector("[name^=diet").innerText;
+    const gradYear = document.querySelector("[name^=graduationYear").innerText;
+    const professionalInterest = Array.from(document.querySelector("[name^=professionalInterest").getElementsByClassName("ui label"));
     const jobInterest = document.querySelector("[name^=jobInterest");
     const heardFrom = document.querySelector("[name^=heardFrom");
     const rpInterest = document.querySelector("[name^=rpInterest");
     const file = document.querySelector("[name^=resume").files[0];
+    let professionalInterestArray = [];
+    professionalInterest.forEach(element => {professionalInterestArray.push(element.innerText)});
 
     // Missing rpInterest, heardFrom, and jobInterest
     const requestBody = {
-        "phone": "Phone number",//phoneNumber,
-      	"gender": "MALE",//gender,
-        "studentType": "HIGHSCHOOL",//studentStatus,
-        "major": "A major",//major
-        "school": "A school",//school,
-        "transportation": "ONCAMPUS",//transportation,
-      	"shirtSize": "S",//shirtSize,
-        "diet": "NONE",//dietaryRestrictions,
-        "graduationClass": "FA18",//gradYear,
+        "phone": phoneNumber,
+      	"gender": gender,
+        "studentType": studentStatus,
+        "major": major,
+        "school": school,
+        "transportation": transportation,
+      	"shirtSize": shirtSize,
+        "diet": dietaryRestrictions,
+        "graduationClass": gradYear,
         "jobInterest": ["intern"],
-        "professionalInterest": professionalInterest,
+        "professionalInterest": professionalInterestArray,
         "heardFrom": "FB",//heardFrom,
       	"rpInterest": ["SPEAKERS"]/*rpInterest*/,
     };
