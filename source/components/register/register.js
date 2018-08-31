@@ -95,7 +95,7 @@ export default class Register extends Component {
       console.log(error.response);
     });
     let emailField = document.querySelector("[name^=email");
-    emailField.value = emailToBePrefilled;
+    // emailField.value = emailToBePrefilled; //emailToBePrefilled is out of scope here
 
     let {personal, professional} = this.state;
     /*
@@ -217,7 +217,7 @@ export default class Register extends Component {
     console.log(requestBody);
     const jwt = sessionStorage.getItem("Authorization");
     const HTTP_STATUS_OK = 200;
-    const url = this.apiUrl + "/registration/";
+    const url = this.apiUrl + "/registration/attendee/";
     const options = {
       method: 'POST',
       headers: {'Content-Type': 'application/json', 'Authorization': jwt},
@@ -227,15 +227,14 @@ export default class Register extends Component {
     axios(options)
     .then(function (response) {
       if(HTTP_STATUS_OK === response.status) {
-        emailToBePrefilled = response.data.email;
-        alert("Registering a user succeeded.", body);
+        // emailToBePrefilled = response.data.email; // why is this here?
+        alert("Registering a user succeeded.");
       }
-      window.location = "/register/success";
-      console.log(body);
+      window.location = "/registersuccess";
     })
     .catch(function (error) {
       console.log("API call had errors.")
-      console.log(error.response);
+      console.log(error);
     });
   };
 
