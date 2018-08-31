@@ -192,7 +192,7 @@ export default class Register extends Component {
     const shirtSize = document.querySelector("[name^=shirtSize");
     const dietaryRestrictions = document.querySelector("[name^=diet");
     const gradYear = document.querySelector("[name^=graduationYear");
-    const professionalInterest = document.querySelector("[name^=professionalInterest");
+    const professionalInterest = document.querySelector("[name^=professionalInterest").dropdown('get value');
     const jobInterest = document.querySelector("[name^=jobInterest");
     const heardFrom = document.querySelector("[name^=heardFrom");
     const rpInterest = document.querySelector("[name^=rpInterest");
@@ -209,11 +209,12 @@ export default class Register extends Component {
       	"shirtSize": "S",//shirtSize,
         "diet": "NONE",//dietaryRestrictions,
         "graduationClass": "FA18",//gradYear,
-        "jobInterest": ["INTERNSHIP"],//jobInterest,
-        "professionalInterest": ["AI"],//professionalInterests,
+        "jobInterest": ["intern"],
+        "professionalInterest": professionalInterest,
         "heardFrom": "FB",//heardFrom,
       	"rpInterest": ["SPEAKERS"]/*rpInterest*/,
     };
+    console.log(requestBody);
     const jwt = sessionStorage.getItem("Authorization");
     const HTTP_STATUS_OK = 200;
     const url = this.apiUrl + "/registration/";

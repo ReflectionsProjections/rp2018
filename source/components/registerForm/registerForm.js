@@ -8,7 +8,7 @@ import React, { Component } from 'react';
 import RegisterNav from '../registerNav/registerNav';
 import InputField from '../inputField/inputField';
 import RegisterButtons from '../registerButtons/registerButtons';
-import { Grid, Form, Transition, Button } from 'semantic-ui-react';
+import { Grid, Form, Transition, Button, Dropdown } from 'semantic-ui-react';
 
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import faCaretLeft from '@fortawesome/fontawesome-free-solid/faCaretLeft'
@@ -108,7 +108,7 @@ export default class RegisterForm extends Component {
         <Button icon size='small' labelPosition='right' floated='right' onClick={submitForm}>
           <span className="labelText opposite">SUBMIT</span>
           <FontAwesomeIcon icon={faCaretRight} size="2x"/>
-        </Button>;
+        </Button>
       </Grid>
     )
   }

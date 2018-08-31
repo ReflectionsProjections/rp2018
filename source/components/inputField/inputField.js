@@ -26,6 +26,8 @@ export default class InputField extends Component {
     const value         = String(this.props.value) == 'null' ? '' : String(this.props.value);
     const iconCheck = <FontAwesomeIcon className="resumeIcon" icon={faCheck} />;
     const iconMinus = <FontAwesomeIcon className="resumeIcon" icon={faTimes}/>;
+    const boop = [{key: 'INTERNSHIP', text: 'Internship', value: 'INTERNSHIP'}, {key: 'FULLTIME', text: 'Full-Time', value: 'FULLTIME'}, {key: 'COOP', text: 'Co-Op', value: 'COOP'}, {key: 'CITYSCHOLAR', text: 'City Scholars', value: 'CITYSCHOLAR' }, {key: 'NA', text: 'None', value: 'NA'} ];
+
     let field = null;
 
     if (fieldType == 'input' && inputType =='file') {
@@ -66,6 +68,17 @@ export default class InputField extends Component {
           type={inputType}
           options={options}
           value={value}
+          name={id}
+          onChange={handleChange}
+          placeholder={placeholder}
+        />;
+    }
+    if (fieldType == 'dropdown') {
+      field =
+        <Form.Dropdown fluid multiple selection
+          className="selectField"
+          control={Select}
+          options={options}
           name={id}
           onChange={handleChange}
           placeholder={placeholder}
