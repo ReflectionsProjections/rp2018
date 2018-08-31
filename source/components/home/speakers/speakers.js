@@ -8,13 +8,16 @@ class Speakers extends Component {
 
     constructor() {
         super()
-        this.showModal = this.showModal.bind(this);
-        this.hideModal = this.hideModal.bind(this);
 
         // Update when number of speakers changes.
-        const numSpeakers = 11;
+        this.numSpeakers = 11;
+
+        this.showModal = this.showModal.bind(this);
+        this.hideModal = this.hideModal.bind(this);
+        this.hideAllModals = this.hideAllModals.bind(this);
+
         this.visibilities = [];
-        _.times(numSpeakers, () => {
+        _.times(this.numSpeakers, () => {
             this.visibilities.push("hidden");
         });
 
@@ -35,6 +38,25 @@ class Speakers extends Component {
         this.setState({
             visibility: this.visibilities
         });
+    }
+
+    hideAllModals() {
+      for(let i = 0; i < this.numSpeakers; i++) {
+        this.visibilities[i] = "hidden";
+      }
+      this.setState({
+          visibility: this.visibilities
+      });
+    }
+
+    componentDidMount() {
+      let classContext = this;
+      document.addEventListener('keydown', function(event) {
+          const ESCAPE_KEY = 27;
+          if(event.keyCode == ESCAPE_KEY) {
+              classContext.hideAllModals();
+          }
+      });
     }
 
     render() {
