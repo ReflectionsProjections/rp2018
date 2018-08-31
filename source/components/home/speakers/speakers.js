@@ -139,7 +139,7 @@ class Speakers extends Component {
                         <h4 style={{ color: "white" }} > {speaker.title} </h4>
                         <div className="icon-group">
                             <a href={externalLink} target="_blank" rel="noopener noreferrer">
-                                <span className="glyphicon glyphicon-info-sign" id="wiki-icon" style={{ color: externalLinkButtonColor }} />
+                                <span className="glyphicon glyphicon-info-sign wiki-icon" style={{ color: externalLinkButtonColor }} />
                             </a>
                         </div>
                     </Thumbnail>
