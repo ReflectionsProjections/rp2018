@@ -45,7 +45,7 @@ class About extends Component {
           isFlipped: false
         };
       }
-    
+
     showBack() {
         this.setState({
             isFlipped: true
@@ -113,13 +113,13 @@ The conference is free and open to anyone regardless of age, major, job, or affi
                 <Row>
                     <Col md={4} className="text-center">
                         <Image className="about-image" src="../assets/img/about/mechmania.jpg" responsive/>
-                        <h3>Mech Mania</h3>
+                        <h3>MechMania</h3>
                         <p>Compete for glory in this AI Hackathon</p>
                     </Col>
 
                     <Col md={4} className="text-center">
                         <Image className="about-image" src="../assets/img/about/puzzlebang.jpg" responsive/>
-                        <h3>Puzzle Bang</h3>
+                        <h3>PuzzleBang</h3>
                         <p>Challenge your mind with puzzles</p>
                     </Col>
 
