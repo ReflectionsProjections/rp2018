@@ -192,7 +192,7 @@ export default class Register extends Component {
     const shirtSize = document.querySelector("[name^=shirtSize");
     const dietaryRestrictions = document.querySelector("[name^=diet");
     const gradYear = document.querySelector("[name^=graduationYear");
-    const professionalInterest = document.querySelector("[name^=professionalInterest").dropdown('get value');
+    const professionalInterest = document.querySelector("[name^=professionalInterest");
     const jobInterest = document.querySelector("[name^=jobInterest");
     const heardFrom = document.querySelector("[name^=heardFrom");
     const rpInterest = document.querySelector("[name^=rpInterest");
