@@ -7,8 +7,8 @@
     font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
-    padding: 10vh 5vw 10vh 5vw;
-    background-color: $translucentBackground;
+    background-color: white;
+    margin: 0 5%;
 }
 
 .about-grid {
@@ -19,6 +19,30 @@
 
 .about-grid .col{
     margin: 1em;
+}
+
+.about-header {
+  font-weight: bold;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  border-bottom: 2px solid #2F0529;
+  padding: 2%;
+}
+
+.about-text {
+  font-weight: bold;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2%;
+}
+
+.about-image {
+  height: 200px;
+  width: 300px;
+  display: block;
+  margin: 0 auto;
+  padding: 2% 0;
 }
 
 .ReactFlipCard {
