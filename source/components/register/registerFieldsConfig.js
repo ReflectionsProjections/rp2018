@@ -170,6 +170,45 @@ const personal_fields = [
   },
   {
     width: 8,
+    fieldType: 'dropdown',
+    inputType: 'text',
+    id: 'heardFrom',
+    required: true,
+    options: [{key: 'FB', text: 'Facebook', value: 'FB'}, {key: 'TWTR', text: 'Twitter', value: 'TWTR'}, {key: 'POSTERS', text: 'Posters/Flyers', value: 'POSTERS'}, {key: 'EMAIL', text: 'Email', value: 'EMAIL'}, {key: 'FRIEND', text: 'Friend', value: 'FRIEND'}, {key: 'ACM', text: 'ACM', value: 'ACM'}, {key: 'WEBSITE', text: 'Website', value: 'WEBSITE'}, {key: 'QUAD', text: 'Quad Day', value: 'QUAD'}, {key: 'ACMOPEN', text: 'ACM Open House', value: 'ACMOPEN'}, {key: 'INCLASS', text: 'In-Class Pitch', value: 'INCLASS'}, {key: 'OTHER', text: 'Other', value: 'OTHER'} ],
+    placeholder: 'How did you hear about us?',
+    title: 'Heard From',
+    validate: (input) => {
+      return true;
+    }
+  },
+  {
+    width: 8,
+    fieldType: 'dropdown',
+    inputType: 'text',
+    id: 'rpInterest',
+    required: true,
+    options: [{key: 'SPEAKERS', text: 'Speakers', value: 'SPEAKERS'}, {key: 'EXPERIENCES', text: 'Experiences', value: 'EXPERIENCES'}, {key: 'STARTUPFAIR', text: 'Startup Fair', value: 'STARTUPFAIR'}, {key: 'CAREERFAIR', text: 'Career Fair', value: 'CAREERFAIR'}, {key: 'MECHMANIA', text: 'MechMania', value: 'MECHMANIA'}, {key: 'ACMSYMPOSIUM', text: 'ACM Symposium', value: 'ACMSYMPOSIUM'}, {key: 'PUZZLEBANG', text: 'PuzzleBang', value: 'PUZZLEBANG'}, {key: 'ESCAPEROOM', text: 'Escape Rooms', value: 'ESCAPEROOM'} ],
+    placeholder: 'What parts of R|P are you most interested in?',
+    title: 'R|P INTERESTS',
+    validate: (input) => {
+      return true;
+    }
+  },
+  {
+    width: 8,
+    fieldType: 'dropdown',
+    inputType: 'text',
+    id: 'jobInterest',
+    required: true,
+    options: [{key: 'AI', text: 'Artificial Intelligence', value: 'AI'}, {key: 'SECURITY', text: 'Security', value: 'SECURITY'}, {key: 'PARALLEL', text: 'Parallel and Distributed Computing', value: 'PARALLEL'}, {key: 'DATA', text: 'Data Analysis', value: 'DATA'}, {key: 'HCI', text: 'Human and Computer Interaction', value: 'HCI'}, {key: 'GFX', text: 'Graphics', value: 'GFX'}, {key: 'ALGO', text: 'Algorithms', value: 'ALGO'}, {key: 'THEORY', text: 'Theory of Computation', value: 'THEORY'}, {key: 'HW', text: 'Hardware', value: 'HW'}, {key: 'NUMANALYSIS', text: 'Numerical Analysis', value: 'NUMANALYSIS'}, {key: 'ML', text: 'Machine Learning', value: 'ML'}, {key: 'SWE', text: 'Software Engineering', value: 'SWE'}, {key: 'CV', text: 'Computer Vision', value: 'CV'}, {key: 'QUANTUM', text: 'Quantum Computing', value: 'QUANTUM'}, {key: 'CSO', text: 'Computer System Organization', value: 'CSO'}, {key: 'NETWORKING', text: 'Networking', value: 'NETWORKING'}, {key: 'IS', text: 'Information Systems', value: 'IS'}, {key: 'VIDEOGAME', text: 'Video Game Development', value: 'VIDEOGAME'} ],
+    placeholder: 'What concentrations in technology are you most interested in?',
+    title: 'TECH INTERESTS',
+    validate: (input) => {
+      return true;
+    }
+  },
+  {
+    width: 8,
     fieldType: 'input',
     inputType: 'file',
     id: 'resume',
@@ -178,7 +217,8 @@ const personal_fields = [
     validate: (input) => {
       return true;
     }
-  },
+  }
+
 
 
 ]
