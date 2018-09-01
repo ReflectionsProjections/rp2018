@@ -52,6 +52,10 @@
     }
 }
 
+.modal-dialog {
+    top: 35vh;
+}
+
 #speaker_content {
     width: 100%;
 }
@@ -99,6 +103,9 @@ h1 {
         width: 30vh;
         height: 30vh;
         margin-top: 0px;
+    }
+    .modal-dialog {
+        top: 10vh;
     }
 }
 
