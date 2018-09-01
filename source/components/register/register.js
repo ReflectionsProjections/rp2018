@@ -86,7 +86,9 @@ export default class Register extends Component {
     .then(function (response) {
       if(HTTP_STATUS_OK === response.status) {
         emailToBePrefilled = response.data.email;
-        alert("API call succeeded.", emailToBePrefilled);
+        //alert(emailToBePrefilled);
+        document.querySelector("[name^=email").value = emailToBePrefilled;
+        //alert("API call succeeded.", emailToBePrefilled);
       }
       console.log(emailToBePrefilled);
     })
@@ -94,8 +96,6 @@ export default class Register extends Component {
       console.log("API call had errors.")
       console.log(error.response);
     });
-    let emailField = document.querySelector("[name^=email");
-    // emailField.value = emailToBePrefilled; //emailToBePrefilled is out of scope here
 
     let {personal, professional} = this.state;
     /*
