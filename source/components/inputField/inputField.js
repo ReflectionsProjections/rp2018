@@ -26,8 +26,7 @@ export default class InputField extends Component {
     const value         = String(this.props.value) == 'null' ? '' : String(this.props.value);
     const iconCheck = <FontAwesomeIcon className="resumeIcon" icon={faCheck} />;
     const iconMinus = <FontAwesomeIcon className="resumeIcon" icon={faTimes}/>;
-    const boop = [{key: 'INTERNSHIP', text: 'Internship', value: 'INTERNSHIP'}, {key: 'FULLTIME', text: 'Full-Time', value: 'FULLTIME'}, {key: 'COOP', text: 'Co-Op', value: 'COOP'}, {key: 'CITYSCHOLAR', text: 'City Scholars', value: 'CITYSCHOLAR' }, {key: 'NA', text: 'None', value: 'NA'} ];
-
+    
     let field = null;
 
     if (fieldType == 'input' && inputType =='file') {
