@@ -159,11 +159,11 @@ const personal_fields = [
     width: 8,
     fieldType: 'dropdown',
     inputType: 'text',
-    id: 'professionalInterest',
+    id: 'jobInterest',
     required: true,
     options: [{key: 'INTERNSHIP', text: 'Internship', value: 'INTERNSHIP'}, {key: 'FULLTIME', text: 'Full-Time', value: 'FULLTIME'}, {key: 'COOP', text: 'Co-Op', value: 'COOP'}, {key: 'CITYSCHOLAR', text: 'City Scholars', value: 'CITYSCHOLAR'}, {key: 'NA', text: 'None', value: 'NA'} ],
-    placeholder: 'What kind of professional role are you pursuing?',
-    title: 'PROFESSIONAL INTERESTS',
+    placeholder: 'What kind of jobs are you pursuing?',
+    title: 'Job INTERESTS',
     validate: (input) => {
       return true;
     }
@@ -198,7 +198,7 @@ const personal_fields = [
     width: 8,
     fieldType: 'dropdown',
     inputType: 'text',
-    id: 'jobInterest',
+    id: 'professionalInterest',
     required: true,
     options: [{key: 'AI', text: 'Artificial Intelligence', value: 'AI'}, {key: 'SECURITY', text: 'Security', value: 'SECURITY'}, {key: 'PARALLEL', text: 'Parallel and Distributed Computing', value: 'PARALLEL'}, {key: 'DATA', text: 'Data Analysis', value: 'DATA'}, {key: 'HCI', text: 'Human and Computer Interaction', value: 'HCI'}, {key: 'GFX', text: 'Graphics', value: 'GFX'}, {key: 'ALGO', text: 'Algorithms', value: 'ALGO'}, {key: 'THEORY', text: 'Theory of Computation', value: 'THEORY'}, {key: 'HW', text: 'Hardware', value: 'HW'}, {key: 'NUMANALYSIS', text: 'Numerical Analysis', value: 'NUMANALYSIS'}, {key: 'ML', text: 'Machine Learning', value: 'ML'}, {key: 'SWE', text: 'Software Engineering', value: 'SWE'}, {key: 'CV', text: 'Computer Vision', value: 'CV'}, {key: 'QUANTUM', text: 'Quantum Computing', value: 'QUANTUM'}, {key: 'CSO', text: 'Computer System Organization', value: 'CSO'}, {key: 'NETWORKING', text: 'Networking', value: 'NETWORKING'}, {key: 'IS', text: 'Information Systems', value: 'IS'}, {key: 'VIDEOGAME', text: 'Video Game Development', value: 'VIDEOGAME'} ],
     placeholder: 'What concentrations in technology are you most interested in?',
