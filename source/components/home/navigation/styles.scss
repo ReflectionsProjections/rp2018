@@ -16,8 +16,7 @@
             min-height: $navigationBarHeight;
         }
 
-        .nav>li>a {
-            color: $primary;
+        .nav {
             font-size: 1.5em;
             font-family: 'Roboto Slab', serif;
             line-height: $navigationBarHeight;
@@ -26,12 +25,20 @@
             padding-top: 0;
             padding-bottom: 0;
             font-weight: bold;
-            opacity: 1;
+            display: flex;
+            margin: 0;
         }
-        .nav>li>a:hover {
+        a {
+          color: $primary;
+          opacity: 1;
+          text-decoration: none;
+          flex-direction: row;
+          margin: 0 0.5vw;
+        }
+        li:hover a {
             color: $active;
             text-shadow: 5px $active;
-            text-decoration: none;
+            text-decoration: none
         }
     }
 
@@ -40,9 +47,22 @@
         position: absolute;
         transform: translateY(-7.5%) !important;
     }
-    
+
     .navbar-toggle {
         margin: calc(1.8vw + 1.8vh) calc(1.8vw + 1.8vh) 0 0;
+    }
+
+    @media (max-width: 1024px) {
+        .nav a {
+            margin: 0;
+            padding: 0;
+        }
+        a li{
+            display: block!important
+        }
+        .nav {
+            display: unset!important;
+        }
     }
 }
 
@@ -72,39 +92,39 @@
     border-left: 4px solid transparent !important;
 }
 
-@media(min-width: 768px) and (max-width:1024px) {
-    .navbar {
-        .nav>li>a {
-            font-size: 1em !important;
-        }
+@media (min-width: 1024px) and (max-width:1366px) {
+  .navbar {
+    .nav>li>a {
+      font-size: 1.4em!important;
     }
+  }
 }
 
-@media (min-width: 1024px) and (max-width:1366px) {
-    .navbar {
-        .nav>li>a {
-            font-size: 1.4em!important;
-        }
+@media(min-width: 768px) and (max-width:1024px) {
+  .navbar {
+    .nav>li>a {
+      font-size: 1em !important;
     }
+  }
 }
 
 @media (max-width: 750px) {
+  .navbar {
+    .nav>li>a {
+      font-size: 1em;
+    }
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu>li>a {
+    color: #ffff;
+  }
+  .Navigation__logo {
+    position: relative;
+  }
+  .Navigation {
     .navbar {
-        .nav>li>a {
-            font-size: 1em;
-        }
+      .nav>li>a {
+        font-size: 1em;
+      }
     }
-    .navbar-default .navbar-nav .open .dropdown-menu>li>a {
-        color: #ffff;
-    }
-    .Navigation__logo {
-        position: relative;
-    }
-    .Navigation {
-        .navbar {
-            .nav>li>a {
-                font-size: 1em;
-            }
-        }
-    }
+  }
 }

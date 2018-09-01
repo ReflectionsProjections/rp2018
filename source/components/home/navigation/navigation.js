@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap'
+import {HashLink as Link} from 'react-router-hash-link'
 import styles from './styles.scss'
 
 
@@ -23,6 +24,14 @@ class Navigation extends Component {
             });
         };
 
+        // Close menu when a menu button is clicked.
+        this.hideMenu = () => {
+            const navbarToggle = document.querySelector(".navbar-toggle");
+            if(navbarToggle.style.display != "none") {
+                navbarToggle.click();
+            }
+        }
+
         return(
             <div className="Navigation">
                 <Navbar collapseOnSelect fixedTop>
@@ -36,12 +45,26 @@ class Navigation extends Component {
                     </Navbar.Header>
                     <Navbar.Collapse>
                     <Nav pullRight>
-                        <NavItem onClick={() => this.scrollTo('About')} eventKey={1}>About</NavItem>
-                        <NavItem onClick={() => this.scrollTo('Schedule')} eventKey={2}>Schedule</NavItem>
-                        <NavItem onClick={() => this.scrollTo('Speakers')} eventKey={3} >Speakers</NavItem>
-                        <NavItem onClick={() => this.scrollTo('FAQ')} eventKey={4}>FAQ</NavItem>
-                        <NavItem onClick={() => this.scrollTo('Sponsors')} eventKey={5} >Sponsors</NavItem>
-                        <NavItem onClick={() => location.href="https://blog.reflectionsprojections.org"} eventKey={6}>Blog</NavItem>
+                        <Link to="#About" onClick={() => this.hideMenu()}>
+                            <NavItem eventKey={1}>About</NavItem>
+                        </Link>
+                        <Link to="#Schedule" onClick={() => this.hideMenu()}>
+                            <NavItem eventKey={2}>Schedule</NavItem>
+                        </Link>
+                        <Link to="#Speakers" nClick={() => this.hideMenu()}>
+                            <NavItem eventKey={3}>Speakers</NavItem>
+                        </Link>
+                        <Link to="#FAQ" onClick={() => this.hideMenu()}>
+                            <NavItem eventKey={4}>FAQ</NavItem>
+                        </Link>
+                        <Link to="#Sponsors" onClick={() => this.hideMenu()}>
+                            <NavItem eventKey={5}>Sponsors</NavItem>
+                        </Link>
+                        <Link to="" onClick={() =>
+                            window.open("https://blog.reflectionsprojections.org")
+                        }>
+                            <NavItem href="https://blog.reflectionsprojections.org" eventKey={6}>Blog</NavItem>
+                        </Link>
                     </Nav>
                     </Navbar.Collapse>
                 </Navbar>
