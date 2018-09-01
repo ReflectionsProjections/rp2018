@@ -100,7 +100,7 @@ class About extends Component {
                     <Row>
                         <Col md={4} className="text-center">
                             <Image className="about-image" src="../assets/img/about/jobfair.jpg" responsive/>
-                            <h3>Job Fair</h3>
+                            <h3>Career Fair</h3>
                             <p>Meet some of the best companies in the country</p>
                         </Col>
 
