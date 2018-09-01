@@ -27,6 +27,11 @@ const VolunteerSignup = () => {
     return null;
 };
 
+const SymposiumSignup = () => {
+    window.location = 'https://acmrp.typeform.com/to/fuUghb';
+    return null;
+};
+
 require('normalize.css');
 require('./styles/main.scss');
 
@@ -45,6 +50,7 @@ render(
             <Route path="/sponsor" component={SponsorLetter} />
             <Route path="/startup" component={StartupLetter} />
             <Route path="/volunteer" component={VolunteerSignup} />
+            <Route path="/symposium/register" component={SymposiumSignup} />
             <Route path="/home" component={Home} />
 
             <Route exact path="/start" component={RegisterStart}/>

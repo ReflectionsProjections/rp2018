@@ -211,41 +211,58 @@ export default class Register extends Component {
   };
 
   createRegistration = jwt => {
-    const firstName = document.querySelector("[name^=firstName");
-    const lastName = document.querySelector("[name^=lastName");
-    const email = document.querySelector("[name^=email");
-    const phoneNumber = document.querySelector("[name^=phoneNumber");
-    const gender = document.querySelector("[name^=gender");
-    const studentStatus = document.querySelector("[name^=student");
-    const school = document.querySelector("[name^=school");
-    const major = document.querySelector("[name^=major");
-    const transportation = document.querySelector("[name^=transportation");
-    const shirtSize = document.querySelector("[name^=shirtSize");
-    const dietaryRestrictions = document.querySelector("[name^=diet");
-    const gradYear = document.querySelector("[name^=graduationYear");
-    const professionalInterest = document.querySelector(
-      "[name^=professionalInterest"
-    );
-    const jobInterest = document.querySelector("[name^=jobInterest");
-    const heardFrom = document.querySelector("[name^=heardFrom");
-    const rpInterest = document.querySelector("[name^=rpInterest");
+    const firstName = document.querySelector("[name^=firstName").innerText;
+    const lastName = document.querySelector("[name^=lastName").innerText;
+    const email = document.querySelector("[name^=email").innerText;
+    const phoneNumber = document.querySelector("[name^=phoneNumber").value;
+    const gender = document.querySelector("[name^=gender").innerText;
+    const genderTemp = personal_fields[4].options.filter(element => {return element.text === gender})[0];
+    const genderKey = (genderTemp) ? genderTemp.key : gender;
+    const studentStatus = document.querySelector("[name^=student").innerText;
+    const studentTemp = personal_fields[5].options.filter(element => {return element.text === studentStatus})[0];
+    const studentKey = (studentTemp) ? studentTemp.key : studentStatus;
+    const school = document.querySelector("[name^=school").value;
+    const major = document.querySelector("[name^=major").value;
+    const transportation = document.querySelector("[name^=transportation").innerText;
+    const transportTemp = personal_fields[8].options.filter(element => {return element.text === transportation})[0];
+    const transportKey = (transportTemp) ? transportTemp.key : transportation;
+    const shirtSize = document.querySelector("[name^=shirtSize").innerText;
+    const shirtTemp = personal_fields[9].options.filter(element => {return element.text === shirtSize})[0];
+    const shirtKey = (shirtTemp) ? shirtTemp.key : shirtSize;
+    const dietaryRestrictions = document.querySelector("[name^=diet").innerText;
+    const dietaryTemp = personal_fields[10].options.filter(element => {return element.text === dietaryRestrictions})[0];
+    const dietaryKey = (dietaryTemp) ? dietaryTemp.key : dietaryRestrictions;
+    const gradYear = document.querySelector("[name^=graduationYear").innerText;
+    const gradTemp = personal_fields[11].options.filter(element => {return element.text === gradYear})[0];
+    const gradKey = (gradTemp) ? gradTemp.key : gradYear;
+    const professionalInterest = Array.from(document.querySelector("[name^=professionalInterest").getElementsByClassName("ui label"));
+    const jobInterest =  Array.from(document.querySelector("[name^=jobInterest").getElementsByClassName("ui label"));
+    const heardFrom =  Array.from(document.querySelector("[name^=heardFrom").getElementsByClassName("ui label"));
+    const rpInterest =  Array.from(document.querySelector("[name^=rpInterest").getElementsByClassName("ui label"));
     const file = document.querySelector("[name^=resume").files[0];
-
+    let professionalInterestArray = [];
+    professionalInterest.forEach(element => {professionalInterestArray.push(element.attributes.value.nodeValue)});
+    let jobInterestArray = [];
+    jobInterest.forEach(element => {jobInterestArray.push(element.attributes.value.nodeValue)});
+    let heardFromArray = [];
+    heardFrom.forEach(element => {heardFromArray.push(element.attributes.value.nodeValue)});
+    let rpInterestArray = [];
+    rpInterest.forEach(element => {rpInterestArray.push(element.attributes.value.nodeValue)});
     // Missing rpInterest, heardFrom, and jobInterest
     const registrationRequestBody = {
-      phone: "Phone number", //phoneNumber,
-      gender: "MALE", //gender,
-      studentType: "HIGHSCHOOL", //studentStatus,
-      major: "A major", //major
-      school: "A school", //school,
-      transportation: "ONCAMPUS", //transportation,
-      shirtSize: "S", //shirtSize,
-      diet: "NONE", //dietaryRestrictions,
-      graduationClass: "FA18", //gradYear,
-      jobInterest: ["intern"],
-      professionalInterest: professionalInterest,
-      heardFrom: "FB", //heardFrom,
-      rpInterest: ["SPEAKERS"] /*rpInterest*/
+        "phone": phoneNumber,
+      	"gender": genderKey,
+        "studentType": studentKey,
+        "major": major,
+        "school": school,
+        "transportation": transportKey,
+      	"shirtSize": shirtKey,
+        "diet": dietaryKey,
+        "graduationClass": gradKey,
+        "jobInterest": jobInterestArray,
+        "professionalInterest": professionalInterestArray,
+        "heardFrom": heardFromArray,//heardFrom,
+      	"rpInterest": rpInterestArray/*rpInterest*/,
     };
     console.log(registrationRequestBody);
 

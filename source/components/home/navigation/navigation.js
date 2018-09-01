@@ -7,6 +7,9 @@ class Navigation extends Component {
 
     constructor() {
         super();
+        this.state = {
+            show: false
+        }
     }
 
     render() {
@@ -33,7 +36,7 @@ class Navigation extends Component {
                     </Navbar.Header>
                     <Navbar.Collapse>
                     <Nav pullRight>
-                        <NavItem onClick={() => this.scrollTo('About')} eventKey={1} className="Navigation__item--active">About</NavItem>
+                        <NavItem onClick={() => this.scrollTo('About')} eventKey={1}>About</NavItem>
                         <NavItem onClick={() => this.scrollTo('Schedule')} eventKey={2}>Schedule</NavItem>
                         <NavItem onClick={() => this.scrollTo('Speakers')} eventKey={3} >Speakers</NavItem>
                         <NavItem onClick={() => this.scrollTo('FAQ')} eventKey={4}>FAQ</NavItem>
