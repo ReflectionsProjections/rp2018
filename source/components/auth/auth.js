@@ -50,7 +50,6 @@ export default class Auth extends Component {
     .then(function (response) {
       if(HTTP_STATUS_OK === response.status) {
         let apiJwt = response.data.token;
-        alert("API call succeeded.");
         sessionStorage.setItem("Authorization", apiJwt);
         window.location = "http://localhost:8080/register"
       }

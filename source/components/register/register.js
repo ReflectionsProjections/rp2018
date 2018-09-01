@@ -61,6 +61,7 @@ export const HTTP_BAD_REQUEST = 400;
 export default class Register extends Component {
   constructor(props) {
     super(props);
+    this.axios = axios;
     this.apiUrl = "http://localhost:8000";
     this.state = {
       step: 0,
@@ -75,6 +76,9 @@ export default class Register extends Component {
       attendeeEmail: ""
     };
     this.submitForm = this.submitForm.bind(this);
+    this.uploadResume = this.uploadResume.bind(this);
+    this.createRegistration = this.createRegistration.bind(this);
+    this.prefillEmail = this.prefillEmail.bind(this);
   }
 
   componentWillMount() {
@@ -92,7 +96,7 @@ export default class Register extends Component {
   }
 
   // Gets the authenticated user's email and sets the field with it
-  prefillEmail = () => {
+  prefillEmail() {
     let emailToBePrefilled = "";
     const jwt = sessionStorage.getItem("Authorization");
     const HTTP_STATUS_OK = 200;
@@ -159,7 +163,7 @@ export default class Register extends Component {
   };
 
   // Uploads resume on form submit. Resume is not required.
-  uploadResume = jwt => {
+  uploadResume(jwt) {
     const resumeFile = document.querySelector("[name^=resume").files[0];
 
     if (resumeFile === undefined) {
@@ -177,28 +181,29 @@ export default class Register extends Component {
 
     let reader = new FileReader();
     reader.onloadend = () => {
-      this.makeUploadApiCall(jwt, reader.result);
+      this.makeUploadApiCall(jwt, reader.result, resumeFile.type);
     };
     reader.readAsBinaryString(resumeFile);
   };
 
   // Makes the upload call to the API
-  makeUploadApiCall = (jwt, rawResumeFile) => {
+  makeUploadApiCall(jwt, rawResumeFile, mimeType) {
     console.log("Raw binary data: ", rawResumeFile);
     const resumeUploadUrl = this.apiUrl + "/upload/resume/";
     const resumeUploadOptions = {
       method: "PUT",
-      headers: { "Content-Type": "application/json", Authorization: jwt },
+      headers: { "Content-Type": "application/pdf", Authorization: jwt },
       data: rawResumeFile,
-      resumeUploadUrl
+      url: resumeUploadUrl
     };
+
+    console.log(resumeUploadOptions);
 
     axios(resumeUploadOptions)
       .then(function(response) {
         if (HTTP_STATUS_OK === response.status) {
-          alert("Registering a user succeeded.");
+          alert("Resume upload succeeded.");
         }
-        window.location = "/registersuccess";
       })
       .catch(function(error) {
         if (error.status == HTTP_BAD_REQUEST) {
@@ -272,7 +277,7 @@ export default class Register extends Component {
       method: "POST",
       headers: { "Content-Type": "application/json", Authorization: jwt },
       data: registrationRequestBody,
-      registrationUrl
+      url: registrationUrl
     };
     axios(registrationOptions)
       .then(function(response) {
