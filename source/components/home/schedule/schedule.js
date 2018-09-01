@@ -65,6 +65,11 @@ class Schedule extends Component {
                                     <li><small>6:00p - 7:00p</small>Tech Talk: Microsoft<span>2405</span></li>
                                     <li><small>7:00p - 8:00p</small>Corporate Social: Pinterest<span>2405</span></li>
                                 </ul>
+                                <ul>
+                                    <h3>Thu, Sep 20</h3>
+                                    <li><small>12:00p - 1:00p</small>Tech Talk: Quora<span>2405</span></li>
+                                    <li><small>8:00p - 9:00p</small>Corporate Social: Lyft<span>TBD</span></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -91,7 +96,6 @@ class Schedule extends Component {
                             <div className="col">
                                 <ul>
                                     <h3>Thu, Sep 20</h3>
-                                    <li><small>12:00p - 1:00p</small>Tech Talk: Quora<span>2405</span></li>
                                     <li><small>4:00p - 5:00p</small>Speaker: Josh Benaloh<span>2405</span></li>
                                     <li><small>5:00p - 7:00p</small>Experience: Saad Ali<span>2405</span></li>
                                     <li><small>7:00p</small>Dinner<span>Atrium</span></li>
