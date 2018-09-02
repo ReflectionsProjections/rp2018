@@ -120,40 +120,40 @@ class About extends Component {
                     <Row>
                         <Col md={4} className="text-center">
                             <Image className="about-image" src="../assets/img/about/mechmania.jpg" responsive/>
-                            <h3>MechMania</h3>
-                            <p>Compete for glory in this AI Hackathon</p>
+                            <h3>Mechmania</h3>
+                            <p>Mechmania is our 24 hour AI hackathon that runs from Friday (9/21) - Saturday (9/22). Build your own AI bot to compete. The best part? No prior experience needed. This year’s Mechmania is sponsored by DeepScale!</p>
                         </Col>
 
                         <Col md={4} className="text-center">
                             <Image className="about-image" src="../assets/img/about/puzzlebang.jpg" responsive/>
                             <h3>PuzzleBang</h3>
-                            <p>Challenge your mind with puzzles</p>
+                            <p>Compete in a week-long puzzle contest hosted by two UIUC Alums to win exciting prizes. This year’s PuzzleBang is sponsored by IMO! Be sure to checkout our 2 pop-up escape rooms in Siebel on Saturday, 9/22!</p>
                         </Col>
 
                         <Col md={4} className="text-center">
                             <Image className="about-image" src="../assets/img/about/alumni.jpg" responsive/>
                             <h3>ACM Symposium</h3>
-                            <p>More info coming soon</p>
+                            <p>R|P 2018 is proud to introduce the first-ever installment of the ACM Symposium a way for ACM chapters across the Midwest to network and interact by showcasing their project and research work.</p>
                         </Col>
                     </Row>
                     <h1 className="about-header">Special Events</h1>
                     <Row>
                         <Col md={4} className="text-center">
                             <Image className="about-image" src="../assets/img/about/mechmania.jpg" responsive/>
-                            <h3>Speaker Socials</h3>
-                            <p>Interact with our accomplished speakers in an informal setting along with R|P staff.</p>
+                            <h3>Alumni Social</h3>
+                            <p>Head over to Legends after the ACM Symposium after the closing ceremony to interact and network with alumni, speakers and current students! It’s the perfect social to culminate the conference.</p>
                         </Col>
 
                         <Col md={4} className="text-center">
                             <Image className="about-image" src="../assets/img/about/puzzlebang.jpg" responsive/>
                             <h3>Experiences</h3>
-                            <p>Experiences is a chance not only to learn the state of the art in fields ranging from distributed computing to machine learning but also a mechanism for making them approachable. These hybrid talks / workshops let students get closer to the underlying technologies and problems in these spaces and learn to take a first stab at solving them.</p>
+                            <p>Experiences are hybrid talks/workshops that not only help students learn the state of the art in fields ranging from distributed computing to machine learning but also make them approachable.</p>
                         </Col>
 
                         <Col md={4} className="text-center">
                             <Image className="about-image" src="../assets/img/about/alumni.jpg" responsive/>
                             <h3>Social Media Challenge</h3>
-                            <p>Engage with R|P on our various social media platforms, for a chance to win Google Home Minis, Amazon Echo Dots and more! See our footer for social media links.</p>
+                            <p>Engage with R|P on our various social media platforms, for a chance to win a Nintendo Switch, a Google Home Mini or an Amazon Echo Dot! Follow us on social media (links in footer) to learn more!</p>
                         </Col>
                     </Row>
                     <Row>
