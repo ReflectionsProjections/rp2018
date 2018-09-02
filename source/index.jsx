@@ -44,7 +44,7 @@ class App extends React.Component {
 }
 
 render(
-    <BrowserRouter>
+    <BrowserRouter basename={"/"}>
         <div>
             <Route exact path="/" component={Home}/>
             <Route path="/sponsor" component={SponsorLetter} />
