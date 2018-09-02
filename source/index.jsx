@@ -1,7 +1,6 @@
 import React from 'react';
 import {render} from 'react-dom';
-import {HashRouter as Router, Route, Link, BrowserRouter} from 'react-router-dom'
-import {browserHistory} from 'react-router';
+import {BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom'
 // Components
 import Home from './components/home/home';
 import Landing from './components/landing/landing';
@@ -45,19 +44,19 @@ class App extends React.Component {
 
 render(
     <Router>
-        <div>
+        <Switch>
             <Route exact path="/" component={Home}/>
-            <Route path="/sponsor" component={SponsorLetter} />
-            <Route path="/startup" component={StartupLetter} />
-            <Route path="/volunteer" component={VolunteerSignup} />
-            <Route path="/symposiumregister" component={SymposiumSignup} />
-            <Route path="/home" component={Home} />
+            <Route exact path="/sponsor" component={SponsorLetter} />
+            <Route exact path="/startup" component={StartupLetter} />
+            <Route exact path="/volunteer" component={VolunteerSignup} />
+            <Route exact path="/symposiumregister" component={SymposiumSignup} />
+            <Route exact path="/home" component={Home} />
 
             <Route exact path="/YashaIsNotGettingAJacket" component={RegisterStart}/>
             <Route exact path="/registersuccess" component={RegisterSuccess}/>
             <Route exact path="/register" component={Register}/>
             <Route exact path="/auth" component={Auth}/>
-        </div>
+        </Switch>
     </Router>,
     document.getElementById('app')
 );
