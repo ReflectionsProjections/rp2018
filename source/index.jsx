@@ -18,7 +18,6 @@ const SponsorLetter = () => {
 };
 
 const StartupLetter = () => {
-    document.
     window.location = './assets/files/startup.pdf';
     return null;
 };
