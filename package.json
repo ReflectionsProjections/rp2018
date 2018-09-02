@@ -57,6 +57,7 @@
     "react-router-dom": "^4.0.0",
     "react-slick": "^0.19.0",
     "semantic-ui-react": "^0.77.2",
+    "simple-react-router": "0.0.17",
     "slick-carousel": "^1.8.1",
     "superagent": "^3.5.2"
   }

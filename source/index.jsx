@@ -1,6 +1,9 @@
 import React from 'react';
 import {render} from 'react-dom';
-import {BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom'
+// import {BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom'
+
+import SimpleReactRouter from 'simple-react-router'
+
 // Components
 import Home from './components/home/home';
 import Landing from './components/landing/landing';
@@ -42,21 +45,22 @@ class App extends React.Component {
     }
 }
 
-render(
-    <Router>
-        <Switch>
-            <Route exact path="/" component={Home}/>
-            <Route exact path="/sponsor" component={SponsorLetter} />
-            <Route exact path="/startup" component={StartupLetter} />
-            <Route exact path="/volunteer" component={VolunteerSignup} />
-            <Route exact path="/symposiumregister" component={SymposiumSignup} />
-            <Route exact path="/home" component={Home} />
+export default class Router extends SimpleReactRouter {
+    routes(map){
+        map('/', Home)
+        map('/home', Home)
+        map('/auth', Auth)
+        map('/register', Register)
+        map('/registersuccess', RegisterSuccess)
+        map('/YashaIsNotGettingAJacket', RegisterStart)
+        map('/volunteer', VolunteerSignup)
+        map('/startup', StartupLetter)
+        map('/sponsor', SponsorLetter)
+        map('/symposiumregister', SymposiumSignup)
+    }
+}
 
-            <Route exact path="/YashaIsNotGettingAJacket" component={RegisterStart}/>
-            <Route exact path="/registersuccess" component={RegisterSuccess}/>
-            <Route exact path="/register" component={Register}/>
-            <Route exact path="/auth" component={Auth}/>
-        </Switch>
-    </Router>,
+render(
+    <Router/>,
     document.getElementById('app')
 );
