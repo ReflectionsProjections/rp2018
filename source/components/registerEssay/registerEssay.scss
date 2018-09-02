@@ -1,0 +1,34 @@
+$title-color:             #1c055e;
+
+.essayPrompt {
+  font-size: 15px;
+  font-weight: 500;
+  color: $title-color;
+}
+
+.essayTextArea {
+  margin-top: 3em;
+  font-size: 13px;
+  color: $title-color;
+}
+
+.essayContainer {
+  padding-left: 7em !important;
+  padding-right: 7em !important;
+
+}
+
+.leftSquiggly{
+  position: absolute;
+  max-width: 20%;
+  width: 250px;
+  left: -15px;
+  bottom: 60px;
+}
+.rightSquiggly{
+  position: absolute;
+  max-width: 10%;
+  width: 125px;
+  top: 0px;
+  right: -15px;
+}

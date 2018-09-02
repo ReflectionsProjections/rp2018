@@ -1,10 +1,14 @@
 import React from 'react';
 import {render} from 'react-dom';
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
-
+import {HashRouter as Router, Route, Link, BrowserRouter} from 'react-router-dom'
+import {browserHistory} from 'react-router';
 // Components
 import Home from './components/home/home';
 import Landing from './components/landing/landing';
+import Register from './components/register/register';
+import Auth from './components/auth/auth';
+import RegisterStart from './components/registerStart/registerStart';
+import RegisterSuccess from './components/registerSuccess/registerSuccess';
 
 
 // Redirects
@@ -40,15 +44,20 @@ class App extends React.Component {
 }
 
 render(
-    <Router>
+    <BrowserRouter>
         <div>
             <Route exact path="/" component={Home}/>
             <Route path="/sponsor" component={SponsorLetter} />
             <Route path="/startup" component={StartupLetter} />
             <Route path="/volunteer" component={VolunteerSignup} />
-            <Route path="/symposium/register" component={SymposiumSignup} />
+            <Route path="/symposiumregister" component={SymposiumSignup} />
             <Route path="/home" component={Home} />
+
+            <Route exact path="/YashaIsNotGettingAJacket" component={RegisterStart}/>
+            <Route exact path="/registersuccess" component={RegisterSuccess}/>
+            <Route exact path="/register" component={Register}/>
+            <Route exact path="/auth" component={Auth}/>
         </div>
-    </Router>,
+    </BrowserRouter>,
     document.getElementById('app')
 );
