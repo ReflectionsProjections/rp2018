@@ -14,10 +14,10 @@
   .button {
     font-size: 13px;
     font-weight: 300;
-    color: #1c055e !important;
+    color: #fff !important;
     width: 10em;
     border-radius: 3px;
-    background-color: #ccd9fc !important;
+    background-color: rgba(0,0,0,0.85) !important;
     margin: 2em !important;
 
 
@@ -35,7 +35,10 @@
   line-height: 1.17;
   letter-spacing: normal;
   text-align: center;
-  color: #1c055e;
+  color: #fff;
+  a {
+    color: #fff;
+  }
 }
 
 .continueButton {

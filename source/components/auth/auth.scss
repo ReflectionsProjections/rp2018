@@ -4,6 +4,13 @@ html, body, #app, [data-reactroot] {
   height: 100vh;
 }
 
+.background {
+  z-index: 100;
+  width: 1000vw;
+  height: 1000vh;
+  background-color: #28323f;
+}
+
 
 .registerContainer {
   //background-color: rgba(256, 256, 256, 0.0);

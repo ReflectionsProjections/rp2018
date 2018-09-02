@@ -63,10 +63,7 @@ export default class Auth extends Component {
 
   render() {
     return (
-      <div>
-        <h1>
-          Should be redirected to /#/register
-        </h1>
+      <div className="background">
       </div>
     )
   }

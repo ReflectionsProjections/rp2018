@@ -42,12 +42,13 @@ $darkblue: #fff;
   }
 
   .githubButton {
+    font-family: 'Roboto Slab', sans-serif;
     font-size: 13px;
     font-weight: 300;
-    color: rgba(0,0,0,.6) !important;
+    color: #fff !important;
     width: 15em;
     border-radius: 3px;
-    background-color: $darkblue !important;
+    background-color: rgba(0,0,0,0.85) !important;
     margin: 1em !important;
   }
 

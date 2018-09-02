@@ -42,7 +42,6 @@ class Navigation extends Component {
                         <NavItem onClick={() => this.scrollTo('FAQ')} eventKey={4}>FAQ</NavItem>
                         <NavItem onClick={() => this.scrollTo('Sponsors')} eventKey={5} >Sponsors</NavItem>
                         <NavItem onClick={() => location.href="https://blog.reflectionsprojections.org"} eventKey={6}>Blog</NavItem>
-                        <NavItem onClick={() => location.href="/register"} eventKey={7} className="register">Register</NavItem>
                     </Nav>
                     </Navbar.Collapse>
                 </Navbar>

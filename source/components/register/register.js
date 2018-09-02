@@ -164,30 +164,33 @@ export default class Register extends Component {
 
   // Uploads resume on form submit. Resume is not required.
   uploadResume(jwt) {
-    const resumeFile = document.querySelector("[name^=resume").files[0];
+    let that = this;
+    return new Promise(function(resolve, reject) {
+        const resumeFile = document.querySelector("[name^=resume").files[0];
 
-    if (resumeFile === undefined) {
-      return;
-    }
+        if (resumeFile === undefined) {
+          resolve();
+        }
 
-    // Check file size
-    const MB = 1000000;
-    const maxFileSize = 2 * MB;
+        // Check file size
+        const MB = 1000000;
+        const maxFileSize = 2 * MB;
 
-    if (resumeFile.size > maxFileSize) {
-      alert("Please select a file smaller than 2 MB.");
-      return;
-    }
+        if (resumeFile.size > maxFileSize) {
+          alert("Please select a file smaller than 2 MB.");
+          reject();
+        }
 
-    let reader = new FileReader();
-    reader.onloadend = () => {
-      this.makeUploadApiCall(jwt, reader.result, resumeFile.type);
-    };
-    reader.readAsBinaryString(resumeFile);
-  };
+        let reader = new FileReader();
+        reader.onloadend = () => {
+          that.makeUploadApiCall(jwt, reader.result, resumeFile.type, resolve, reject);
+        };
+        reader.readAsBinaryString(resumeFile);
+    });
+  }
 
   // Makes the upload call to the API
-  makeUploadApiCall(jwt, rawResumeFile, mimeType) {
+  makeUploadApiCall(jwt, rawResumeFile, mimeType, resolve, reject) {
     console.log("Raw binary data: ", rawResumeFile);
     const resumeUploadUrl = this.apiUrl + "/upload/resume/";
     const resumeUploadOptions = {
@@ -202,7 +205,7 @@ export default class Register extends Component {
     axios(resumeUploadOptions)
       .then(function(response) {
         if (HTTP_STATUS_OK === response.status) {
-          alert("Resume upload succeeded.");
+            resolve(true);
         }
       })
       .catch(function(error) {
@@ -211,93 +214,100 @@ export default class Register extends Component {
             "The file you selected was not valid. Please choose a different file."
           );
         }
+        reject(false);
         console.log(error);
       });
   };
 
   createRegistration = jwt => {
-    const firstName = document.querySelector("[name^=firstName").innerText;
-    const lastName = document.querySelector("[name^=lastName").innerText;
-    const email = document.querySelector("[name^=email").innerText;
-    const phoneNumber = document.querySelector("[name^=phoneNumber").value;
-    const gender = document.querySelector("[name^=gender").innerText;
-    const genderTemp = personal_fields[4].options.filter(element => {return element.text === gender})[0];
-    const genderKey = (genderTemp) ? genderTemp.key : gender;
-    const studentStatus = document.querySelector("[name^=student").innerText;
-    const studentTemp = personal_fields[5].options.filter(element => {return element.text === studentStatus})[0];
-    const studentKey = (studentTemp) ? studentTemp.key : studentStatus;
-    const school = document.querySelector("[name^=school").value;
-    const major = document.querySelector("[name^=major").value;
-    const transportation = document.querySelector("[name^=transportation").innerText;
-    const transportTemp = personal_fields[8].options.filter(element => {return element.text === transportation})[0];
-    const transportKey = (transportTemp) ? transportTemp.key : transportation;
-    const shirtSize = document.querySelector("[name^=shirtSize").innerText;
-    const shirtTemp = personal_fields[9].options.filter(element => {return element.text === shirtSize})[0];
-    const shirtKey = (shirtTemp) ? shirtTemp.key : shirtSize;
-    const dietaryRestrictions = document.querySelector("[name^=diet").innerText;
-    const dietaryTemp = personal_fields[10].options.filter(element => {return element.text === dietaryRestrictions})[0];
-    const dietaryKey = (dietaryTemp) ? dietaryTemp.key : dietaryRestrictions;
-    const gradYear = document.querySelector("[name^=graduationYear").innerText;
-    const gradTemp = personal_fields[11].options.filter(element => {return element.text === gradYear})[0];
-    const gradKey = (gradTemp) ? gradTemp.key : gradYear;
-    const professionalInterest = Array.from(document.querySelector("[name^=professionalInterest").getElementsByClassName("ui label"));
-    const jobInterest =  Array.from(document.querySelector("[name^=jobInterest").getElementsByClassName("ui label"));
-    const heardFrom =  Array.from(document.querySelector("[name^=heardFrom").getElementsByClassName("ui label"));
-    const rpInterest =  Array.from(document.querySelector("[name^=rpInterest").getElementsByClassName("ui label"));
-    const file = document.querySelector("[name^=resume").files[0];
-    let professionalInterestArray = [];
-    professionalInterest.forEach(element => {professionalInterestArray.push(element.attributes.value.nodeValue)});
-    let jobInterestArray = [];
-    jobInterest.forEach(element => {jobInterestArray.push(element.attributes.value.nodeValue)});
-    let heardFromArray = [];
-    heardFrom.forEach(element => {heardFromArray.push(element.attributes.value.nodeValue)});
-    let rpInterestArray = [];
-    rpInterest.forEach(element => {rpInterestArray.push(element.attributes.value.nodeValue)});
-    // Missing rpInterest, heardFrom, and jobInterest
-    const registrationRequestBody = {
-        "phone": phoneNumber,
-      	"gender": genderKey,
-        "studentType": studentKey,
-        "major": major,
-        "school": school,
-        "transportation": transportKey,
-      	"shirtSize": shirtKey,
-        "diet": dietaryKey,
-        "graduationClass": gradKey,
-        "jobInterest": jobInterestArray,
-        "professionalInterest": professionalInterestArray,
-        "heardFrom": heardFromArray,//heardFrom,
-      	"rpInterest": rpInterestArray/*rpInterest*/,
-    };
-    console.log(registrationRequestBody);
+    return new Promise((resolve, reject) => {
+      const firstName = document.querySelector("[name^=firstName").innerText;
+      const lastName = document.querySelector("[name^=lastName").innerText;
+      const email = document.querySelector("[name^=email").innerText;
+      const phoneNumber = document.querySelector("[name^=phoneNumber").value;
+      const gender = document.querySelector("[name^=gender").innerText;
+      const genderTemp = personal_fields[4].options.filter(element => {return element.text === gender})[0];
+      const genderKey = (genderTemp) ? genderTemp.key : gender;
+      const studentStatus = document.querySelector("[name^=student").innerText;
+      const studentTemp = personal_fields[5].options.filter(element => {return element.text === studentStatus})[0];
+      const studentKey = (studentTemp) ? studentTemp.key : studentStatus;
+      const school = document.querySelector("[name^=school").value;
+      const major = document.querySelector("[name^=major").value;
+      const transportation = document.querySelector("[name^=transportation").innerText;
+      const transportTemp = personal_fields[8].options.filter(element => {return element.text === transportation})[0];
+      const transportKey = (transportTemp) ? transportTemp.key : transportation;
+      const shirtSize = document.querySelector("[name^=shirtSize").innerText;
+      const shirtTemp = personal_fields[9].options.filter(element => {return element.text === shirtSize})[0];
+      const shirtKey = (shirtTemp) ? shirtTemp.key : shirtSize;
+      const dietaryRestrictions = document.querySelector("[name^=diet").innerText;
+      const dietaryTemp = personal_fields[10].options.filter(element => {return element.text === dietaryRestrictions})[0];
+      const dietaryKey = (dietaryTemp) ? dietaryTemp.key : dietaryRestrictions;
+      const gradYear = document.querySelector("[name^=graduationYear").innerText;
+      const gradTemp = personal_fields[11].options.filter(element => {return element.text === gradYear})[0];
+      const gradKey = (gradTemp) ? gradTemp.key : gradYear;
+      const professionalInterest = Array.from(document.querySelector("[name^=professionalInterest").getElementsByClassName("ui label"));
+      const jobInterest =  Array.from(document.querySelector("[name^=jobInterest").getElementsByClassName("ui label"));
+      const heardFrom =  Array.from(document.querySelector("[name^=heardFrom").getElementsByClassName("ui label"));
+      const rpInterest =  Array.from(document.querySelector("[name^=rpInterest").getElementsByClassName("ui label"));
+      const file = document.querySelector("[name^=resume").files[0];
+      let professionalInterestArray = [];
+      professionalInterest.forEach(element => {professionalInterestArray.push(element.attributes.value.nodeValue)});
+      let jobInterestArray = [];
+      jobInterest.forEach(element => {jobInterestArray.push(element.attributes.value.nodeValue)});
+      let heardFromArray = [];
+      heardFrom.forEach(element => {heardFromArray.push(element.attributes.value.nodeValue)});
+      let rpInterestArray = [];
+      rpInterest.forEach(element => {rpInterestArray.push(element.attributes.value.nodeValue)});
+      // Missing rpInterest, heardFrom, and jobInterest
+      const registrationRequestBody = {
+          "phone": phoneNumber,
+          "gender": genderKey,
+          "studentType": studentKey,
+          "major": major,
+          "school": school,
+          "transportation": transportKey,
+          "shirtSize": shirtKey,
+          "diet": dietaryKey,
+          "graduationClass": gradKey,
+          "jobInterest": jobInterestArray,
+          "professionalInterest": professionalInterestArray,
+          "heardFrom": heardFromArray,//heardFrom,
+          "rpInterest": rpInterestArray/*rpInterest*/,
+      };
+      console.log(registrationRequestBody);
 
-    // Post request to registration
-    const registrationUrl = this.apiUrl + "/registration/attendee/";
-    const registrationOptions = {
-      method: "POST",
-      headers: { "Content-Type": "application/json", Authorization: jwt },
-      data: registrationRequestBody,
-      url: registrationUrl
-    };
-    axios(registrationOptions)
-      .then(function(response) {
-        if (HTTP_STATUS_OK === response.status) {
-          // emailToBePrefilled = response.data.email; // why is this here?
-          alert("Registering a user succeeded.");
-        }
-        window.location = "/registersuccess";
-      })
-      .catch(function(error) {
-        console.log("API call had errors.");
-        console.log(error);
-      });
-  };
+      // Post request to registration
+      const registrationUrl = this.apiUrl + "/registration/attendee/";
+      const registrationOptions = {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Authorization: jwt },
+        data: registrationRequestBody,
+        url: registrationUrl
+      };
+      axios(registrationOptions)
+        .then(function(response) {
+          if (HTTP_STATUS_OK === response.status) {
+            window.location = "/registersuccess";
+            resolve(true)
+          }
+        })
+        .catch(function(error) {
+          alert("Please fill in valid data, and ensure all required fields (marked with *) are filled.");
+          reject(error)
+        });
+    });
+  }
 
   submitForm() {
     console.log("Submitted");
+    let that = this;
     const jwt = sessionStorage.getItem("Authorization");
-    this.uploadResume(jwt);
-    this.createRegistration(jwt);
+    let twoPartRegistrationPromise = that.uploadResume(jwt)
+    .then((result) => {
+        that.createRegistration(jwt);
+    }).catch((error) => {
+        alert("Try again with valid form data.");
+    });
   }
 
   nextStep = prop => data => {
