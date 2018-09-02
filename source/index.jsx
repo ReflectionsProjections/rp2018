@@ -43,25 +43,7 @@ class App extends React.Component {
     }
 }
 
-export default class Router extends SimpleReactRouter {
-    routes(map){
-        map('/', Home)
-        map('/home', Home)
-        map('/auth', Auth)
-        map('/register', Register)
-        map('/registersuccess', RegisterSuccess)
-        map('/YashaIsNotGettingAJacket', RegisterStart)
-        map('/volunteer', VolunteerSignup)
-        map('/startup', StartupLetter)
-        map('/sponsor', SponsorLetter)
-        map('/symposiumregister', SymposiumSignup)
-    }
-}
-
 render(
-<<<<<<< HEAD
-    <Router/>,
-=======
     <Router>
         <div>
             <Route exact path="/" component={Home}/>
@@ -77,6 +59,5 @@ render(
             <Route exact path="/auth" component={Auth}/>
         </div>
     </Router>,
->>>>>>> parent of c962e50... router fix try 7
     document.getElementById('app')
 );
