@@ -1,6 +1,7 @@
 import React from 'react';
 import {render} from 'react-dom';
-import {HashRouter as Router, Route, Link, BrowserRouter} from 'react-router-dom'
+import {HashRouter as Router} from 'react-router-dom'
+import {BrowserRouter, Route, Link} from "react-browser-router";
 import {browserHistory} from 'react-router';
 // Components
 import Home from './components/home/home';
