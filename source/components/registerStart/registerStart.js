@@ -35,7 +35,7 @@ export default class RegisterStart extends Component {
               Reflections | Projections is UIUC's flagship tech conference and we're glad you can be a part of it.
             </Grid.Row>
             <Grid.Row className='verticalPadding'>
-              <Button size='medium' className="githubButton" href="https://api.reflectionsprojections.org/auth/google/">
+              <Button size='medium' className="githubButton" href="https://api.reflectionsprojections.org:8000/auth/google/">
                 Login with Google    &#9658;
               </Button>
             </Grid.Row>
