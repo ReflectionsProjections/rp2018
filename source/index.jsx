@@ -44,7 +44,7 @@ class App extends React.Component {
 }
 
 render(
-    <Router basename={process.env.PUBLIC_URL}>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
         <div>
             <Route exact path="/" component={Home}/>
             <Route path="/sponsor" component={SponsorLetter} />
@@ -58,6 +58,6 @@ render(
             <Route exact path="/register" component={Register}/>
             <Route exact path="/auth" component={Auth}/>
         </div>
-    </Router>,
+    </BrowserRouter>,
     document.getElementById('app')
 );
