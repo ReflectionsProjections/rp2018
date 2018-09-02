@@ -1,9 +1,7 @@
 import React from 'react';
 import {render} from 'react-dom';
-// import {BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom'
-
-import SimpleReactRouter from 'simple-react-router'
-
+import {HashRouter as Router, Route, Link, BrowserRouter} from 'react-router-dom'
+import {browserHistory} from 'react-router';
 // Components
 import Home from './components/home/home';
 import Landing from './components/landing/landing';
@@ -61,6 +59,24 @@ export default class Router extends SimpleReactRouter {
 }
 
 render(
+<<<<<<< HEAD
     <Router/>,
+=======
+    <Router>
+        <div>
+            <Route exact path="/" component={Home}/>
+            <Route path="/sponsor" component={SponsorLetter} />
+            <Route path="/startup" component={StartupLetter} />
+            <Route path="/volunteer" component={VolunteerSignup} />
+            <Route path="/symposiumregister" component={SymposiumSignup} />
+            <Route path="/home" component={Home} />
+
+            <Route exact path="/YashaIsNotGettingAJacket" component={RegisterStart}/>
+            <Route exact path="/registersuccess" component={RegisterSuccess}/>
+            <Route exact path="/register" component={Register}/>
+            <Route exact path="/auth" component={Auth}/>
+        </div>
+    </Router>,
+>>>>>>> parent of c962e50... router fix try 7
     document.getElementById('app')
 );
