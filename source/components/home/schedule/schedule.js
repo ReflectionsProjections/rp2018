@@ -65,6 +65,11 @@ class Schedule extends Component {
                                     <li><small>6:00p - 7:00p</small>Tech Talk: Microsoft<span>2405</span></li>
                                     <li><small>7:00p - 8:00p</small>Corporate Social: Pinterest<span>2405</span></li>
                                 </ul>
+                                <ul>
+                                    <h3>Thu, Sep 20</h3>
+                                    <li><small>12:00p - 1:00p</small>Tech Talk: Quora<span>2405</span></li>
+                                    <li><small>4:00p - 5:00p</small>Corporate Social: Lyft<span>TBD</span></li>
+                                </ul>                    
                             </div>
                         </div>
                     </div>
@@ -91,7 +96,6 @@ class Schedule extends Component {
                             <div className="col">
                                 <ul>
                                     <h3>Thu, Sep 20</h3>
-                                    <li><small>12:00p - 1:00p</small>Tech Talk: Quora<span>2405</span></li>
                                     <li><small>4:00p - 5:00p</small>Speaker: Josh Benaloh<span>2405</span></li>
                                     <li><small>5:00p - 7:00p</small>Experience: Saad Ali<span>2405</span></li>
                                     <li><small>7:00p</small>Dinner<span>Atrium</span></li>
@@ -107,7 +111,7 @@ class Schedule extends Component {
                                     <li><small>7:00p</small>Dinner<span>Atrium</span></li>
                                     <li><small>8:00p</small>Corporate Social: Lyft<span>TBD</span></li>
                                     <li><small>9:00p</small>MechMania Opening Ceremony<span>1404</span><br/><center>Sponsored by DeepScale</center></li>
-                                    <li><small>9:00p</small>Speaker Socials<span>TBD</span></li>
+                                    <li><small>9:00p</small>Speaker Social<span>TBD</span></li>
                                     <li><small>11:00p</small>Late Night Snack<span>Atrium</span></li>
                                 </ul>
                             </div>
@@ -123,8 +127,8 @@ class Schedule extends Component {
                                     <li><small>4:00p - 5:00p</small>Speaker: Zack Lipton<span>2405</span></li>
                                     <li><small>5:00p - 7:00p</small>ACM Symposium<span>2405</span></li>
                                     <li><small>7:00p</small>Dinner<span>Atrium</span></li>
-                                    <li><small>8:00p</small>PuzzleBang Closing Ceremony<span>2405</span></li>
-                                    <li><small>9:00p</small>MechMania Closing Ceremony<span>1404</span></li>
+                                    <li><small>8:00p</small>R|P Closing Ceremony<span>1404</span></li>
+                                    <li><small>9:00p</small>Alumni Social<span>Legends</span></li>
                                 </ul>
                             </div>
                         </div>
