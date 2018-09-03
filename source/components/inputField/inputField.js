@@ -56,7 +56,7 @@ export default class InputField extends Component {
           name={id}
           onChange={handleChange}
           placeholder={placeholder}
-          disabled={id == 'email' || id == 'github'}
+          disabled={id == 'email' || id == 'github' || id == 'firstName' || id == 'lastName'}
         />;
     }
     if (fieldType == 'select') {
