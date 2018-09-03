@@ -26,7 +26,7 @@ import queryString from 'query-string';
 export default class Auth extends Component {
   constructor(props) {
     super(props);
-    this.apiUrl = "https://api.reflectionsprojections.org:8000";
+    this.apiUrl = "https://api.reflectionsprojections.org";
   }
 
   componentDidMount() {

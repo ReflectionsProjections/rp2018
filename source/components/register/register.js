@@ -62,7 +62,7 @@ export default class Register extends Component {
   constructor(props) {
     super(props);
     this.axios = axios;
-    this.apiUrl = "https://api.reflectionsprojections.org:8000";
+    this.apiUrl = "https://api.reflectionsprojections.org";
     this.state = {
       step: 0,
       personal: {},
