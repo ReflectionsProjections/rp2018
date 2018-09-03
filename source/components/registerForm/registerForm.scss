@@ -39,9 +39,23 @@
 
 .buttonContainer {
   position: relative !important;
+  float: right;
+  align-items: flex-end;
+  justify-content: flex-end;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   margin: 5vh auto;
   left: 0px;
+
+  .required {
+    order: 1;
+    text-align: right;
+    color: white;
+    margin-right: 10vh;
+    //margin-right: 5vh;
+    //bottom: 100px;
+  }
 
   @media only screen and (max-width: 500px){
     bottom: 1em !important;
@@ -50,6 +64,8 @@
   }
 
   .button {
+    float: right;
+    order: 2;
     color: white;
     background: transparent !important;
     .icon {

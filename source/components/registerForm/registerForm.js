@@ -105,15 +105,14 @@ export default class RegisterForm extends Component {
             </Transition>
           </Grid.Column>
         </Grid.Row>
-        <Grid.Row className='buttonContainer'>
-          <Grid.Column>
+        <div className='buttonContainer'>
           <Button icon size='small' labelPosition='right' floated='right' onClick={submitForm}>
             <span className="labelText opposite">SUBMIT</span>
             <FontAwesomeIcon icon={faCaretRight} size="2x"/>
           </Button>
-          </Grid.Column>
-        </Grid.Row>
-        
+          <h4 className="required">* = Required</h4>
+        </div>
+
       </Grid>
     )
   }
