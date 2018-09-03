@@ -39,7 +39,7 @@ export default class Auth extends Component {
     authorizationCode.concat("#");
 
     const body = { code: authorizationCode };
-    const url = this.apiUrl + "/auth/code/google/?redirect_uri=https://reflectionsprojections.org/#/auth";
+    const url = this.apiUrl + "/auth/code/google/?redirect_uri=https://reflectionsprojections.org/auth";
     const options = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Origin': '*' },
@@ -51,7 +51,7 @@ export default class Auth extends Component {
       if(HTTP_STATUS_OK === response.status) {
         let apiJwt = response.data.token;
         sessionStorage.setItem("Authorization", apiJwt);
-        window.location = "https://reflectionsprojections.org/#/register"
+        window.location = "https://reflectionsprojections.org/register"
       }
       console.log(response);
     })
