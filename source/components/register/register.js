@@ -182,10 +182,10 @@ export default class Register extends Component {
         }
 
         let reader = new FileReader();
-        reader.onloadend = () => {
-          that.makeUploadApiCall(jwt, reader.result, resumeFile.type, resolve, reject);
+        reader.onload = (event) => {
+          that.makeUploadApiCall(jwt, event.target.result, resumeFile.type, resolve, reject);
         };
-        reader.readAsBinaryString(resumeFile);
+        reader.readAsArrayBuffer(resumeFile);
     });
   }
 
@@ -195,7 +195,7 @@ export default class Register extends Component {
     const resumeUploadUrl = this.apiUrl + "/upload/resume/";
     const resumeUploadOptions = {
       method: "PUT",
-      headers: { "Content-Type": "application/pdf", Authorization: jwt },
+      headers: { "Content-Type": mimeType, Authorization: jwt },
       data: rawResumeFile,
       url: resumeUploadUrl
     };
