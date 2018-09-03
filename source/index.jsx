@@ -50,7 +50,7 @@ render(
             <Route path="/sponsor" component={SponsorLetter} />
             <Route path="/startup" component={StartupLetter} />
             <Route path="/volunteer" component={VolunteerSignup} />
-            <Route path="/symposium/register" component={SymposiumSignup} />
+            <Route path="/symposiumregister" component={SymposiumSignup} />
             <Route path="/home" component={Home} />
 
             <Route exact path="/YashaIsNotGettingAJacket" component={RegisterStart}/>
