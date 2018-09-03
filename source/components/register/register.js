@@ -185,7 +185,7 @@ export default class Register extends Component {
         reader.onloadend = () => {
           that.makeUploadApiCall(jwt, reader.result, resumeFile.type, resolve, reject);
         };
-        reader.readAsBinaryString(resumeFile);
+        reader.readAsArrayBuffer(resumeFile);
     });
   }
 
