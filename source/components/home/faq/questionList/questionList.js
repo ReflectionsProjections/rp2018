@@ -160,7 +160,7 @@ class QuestionList extends Component {
                         </li>
                     </ul>
                     <h2 className="faq-heading">Attendee Gas Reimbursements</h2>
-                    <ul className="column">
+                    <ul className="column faq_column">
                         <li>
                             <div className="question">
                                 How do I ask for a reimbursement?
