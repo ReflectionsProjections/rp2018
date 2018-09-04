@@ -92,7 +92,7 @@ class QuestionList extends Component {
                                 I want to volunteer! How do I get involved?
                             </div>
                             <div className="answer">
-                                Please email us at <a href="mailto:conference-chair@acm.illinois.edu">conference-chair@acm.illinois.edu</a>.
+                                If you're interested in volunteering, please fill out this <a href="/volunteer" target="_blank">form</a>.
                             </div>
                         </li>
                         <li>
