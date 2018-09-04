@@ -250,7 +250,8 @@ export default class Register extends Component {
                 }
             })
             .catch(function(error) {
-                    if (error.status == HTTP_BAD_REQUEST) {
+			
+                    if (error.response.status == HTTP_BAD_REQUEST) {
                         alert("You have uploaded an invalid file type as a résumé. Please submit a PDF.");
                         reject(error);
                     }
@@ -364,16 +365,18 @@ createRegistration = jwt => {
             data: registrationRequestBody,
             url: registrationUrl
         };
+	console.log("outside");
         axios(registrationOptions)
             .then(function(response) {
+		console.log("success");
                 if (HTTP_STATUS_OK === response.status) {
                     window.location = "/registersuccess";
                     resolve(true)
                 }
             })
             .catch(function(error) {
-                console.log(console.error.response.message);
-                if (error.response.message.indexOf("exists") != -1) {
+		console.log(error.response);
+                if (error.response.data.message.indexOf("exists") != -1) {
                     alert("A registration for this account already exists. Please contact contact@reflectionsprojections.org if you wish to make edits.");
                     reject(error);
                 } else {
@@ -394,7 +397,6 @@ submitForm() {
             that.createRegistration(jwt);
         })
         .catch((error) => {
-            alert("Try again with valid form data.");
         });
 }
 
