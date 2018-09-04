@@ -173,7 +173,6 @@ export default class Register extends Component {
     let that = this;
     return new Promise(function(resolve, reject) {
         const resumeFile = document.querySelector("[name^=resume").files[0];
-
         if (resumeFile === undefined) {
           resolve();
         }
@@ -211,6 +210,7 @@ export default class Register extends Component {
     axios(resumeUploadOptions)
       .then(function(response) {
         if (HTTP_STATUS_OK === response.status) {
+        	console.log("succesful upload");
             resolve(true);
         }
       })

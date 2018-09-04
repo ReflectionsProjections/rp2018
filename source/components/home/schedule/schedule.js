@@ -109,7 +109,6 @@ class Schedule extends Component {
                                     <li><small>5:00p - 6:00p</small>Speaker: Romain Paulus<span>2405</span></li>
                                     <li><small>6:00p - 7:00p</small>Keynote Speaker: Marianna Tessel<span>2405</span></li>
                                     <li><small>7:00p</small>Dinner<span>Atrium</span></li>
-                                    <li><small>8:00p</small>Corporate Social: Lyft<span>TBD</span></li>
                                     <li><small>9:00p</small>MechMania Opening Ceremony<span>1404</span><br/><center>Sponsored by DeepScale</center></li>
                                     <li><small>9:00p</small>Speaker Social<span>TBD</span></li>
                                     <li><small>11:00p</small>Late Night Snack<span>Atrium</span></li>
