@@ -1,11 +1,9 @@
 #Photos {
-    padding: 2vh 2vw 2vh 2vw; 
-
     #Photos_items {
-        max-width: 25vw;
+        max-width: calc(8.5vh + 10vw);
     }
-}
 
+  }
 @media (max-width: 1050px) {
     #Photos {
         #Photos_items {

@@ -24,7 +24,7 @@ class Scrolldown extends Component {
 
         return(
             <section id="nav_down">
-                <a onClick={() => this.scrollTo('About')}><span></span><span></span><span></span><span></span><span></span></a>
+                <a href="#About"><span></span><span></span><span></span><span></span><span></span></a>
             </section>
         )
     }
