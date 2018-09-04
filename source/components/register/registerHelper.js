@@ -55,7 +55,6 @@ const uploadResumeFile = (method, data, id, fileType) => new Promise((resolve, r
     },
   })
   .then(response => {
-    // console.log(response.data.data);
     return resolve(response.data.data);
   })
   .catch(error => {

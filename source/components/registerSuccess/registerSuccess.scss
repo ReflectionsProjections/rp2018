@@ -35,10 +35,21 @@
   line-height: 1.17;
   letter-spacing: normal;
   text-align: center;
-  color: #fff;
+  color: #000000;
   a {
-    color: #fff;
+    color: #005D5D;
   }
+}
+
+.whiteCard {
+  background: white;
+  border-radius: 25px;
+}
+.whiteCardHeading {
+  color: #005D5D;
+  font-weight: bold;
+  padding-top: 1%;
+
 }
 
 .continueButton {
