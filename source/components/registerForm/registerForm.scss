@@ -37,6 +37,11 @@
   }
 }
 
+.ui.label > .close.icon, .ui.label > .delete.icon {
+  color: black;
+  font-family: FontAwesome;
+}
+
 .buttonContainer {
   position: relative !important;
   float: right;
