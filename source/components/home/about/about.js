@@ -85,12 +85,12 @@ class About extends Component {
                     </Row>
 
                     <Row>
-                        <Col md={12}>
-                            <p className="about-text"> Reflections | Projections is a tech conference organized and run by students at the University of Illinois at Urbana-Champaign.
+                        <Col md={12} className="about-text">
+                            <p className="about-text-p"> Reflections | Projections is a tech conference organized and run by students at the University of Illinois at Urbana-Champaign.</p>
 
-    We draw students, speakers, and companies from around the world. Join us to listen to tech talks from across the industry, to participate in an Artificial Intelligence programming competition in Mechmania, to solve puzzles throughout the conference during PuzzleBang!, and to attend our job and startup fairs.
+    <p className="about-text-p">We draw students, speakers, and companies from around the world. Join us to listen to tech talks from across the industry, to participate in an Artificial Intelligence programming competition in Mechmania, to solve puzzles throughout the conference during PuzzleBang!, and to attend our job and startup fairs.</p>
 
-    The conference is free and open to anyone regardless of age, major, job, or affiliation with the University of Illinois. So come join a discussion led by some of the brightest minds in the business about the bleeding edge of the tech industry!
+    <p className="about-text-p">The conference is free and open to anyone regardless of age, major, job, or affiliation with the University of Illinois. So come join a discussion led by some of the brightest minds in the business about the bleeding edge of the tech industry!
                             </p>
                         </Col>
                     </Row>
@@ -111,7 +111,7 @@ class About extends Component {
                         <Col md={4} className="text-center">
                             <Image className="about-image" src="../assets/img/about/speakers.jpg" responsive/>
                             <h3>Speakers</h3>
-                            <p>Come listen to some of the industry's best</p>
+                            <p>Come listen to some of the industry's best minds</p>
                         </Col>
                     </Row>
 

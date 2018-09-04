@@ -8,6 +8,11 @@
     width: 100vw;
     padding: 7vh 12.5vw;
 
+    h3 {
+        color: $accentForeground;
+        font-weight: bold;
+    }
+
     .header {
         font-family: 'Roboto Slab', sans-serif;
         font-weight: bold;
@@ -52,7 +57,14 @@
       font-weight: bold;
       margin: 0 auto;
       text-align: center;
-      padding: 2%;
+      padding: 1.5%;
+    }
+
+    .about-text-p {
+      font-weight: bold;
+      margin: 0 auto;
+      text-align: center;
+      padding: 1%;
     }
 
     .about-image {
