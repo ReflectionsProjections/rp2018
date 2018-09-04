@@ -98,6 +98,8 @@ export default class Register extends Component {
   // Gets the authenticated user's email and sets the field with it
   prefillEmail() {
     let emailToBePrefilled = "";
+    let firstNameToBePrefilled = "";
+    let lastNameToBePrefilled = "";
     const jwt = sessionStorage.getItem("Authorization");
     const HTTP_STATUS_OK = 200;
     const url = this.apiUrl + "/user/";
@@ -111,7 +113,11 @@ export default class Register extends Component {
       .then(function(response) {
         if (HTTP_STATUS_OK === response.status) {
           emailToBePrefilled = response.data.email;
-          document.querySelector("[name^=email").value = emailToBePrefilled;
+	  firstNameToBePrefilled = response.data.firstName;
+	  lastNameToBePrefilled = response.data.lastName;
+          document.querySelector("[name^=email").placeholder = emailToBePrefilled;
+	  document.querySelector("[name^=firstName").placeholder = firstNameToBePrefilled;
+	  document.querySelector("[name^=lastName").placeholder = lastNameToBePrefilled;
         }
         console.log(emailToBePrefilled);
       })
