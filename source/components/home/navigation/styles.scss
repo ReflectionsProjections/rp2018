@@ -59,7 +59,7 @@
         margin: calc(1.8vw + 1.8vh) calc(1.8vw + 1.8vh) 0 0;
     }
 
-    @media (max-width: 1024px) {
+    @media (max-width: $tabletMinWidth) {
         .nav a {
             margin: 0;
             padding: 0;
