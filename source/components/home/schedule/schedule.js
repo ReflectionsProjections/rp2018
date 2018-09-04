@@ -68,8 +68,8 @@ class Schedule extends Component {
                                 <ul>
                                     <h3>Thu, Sep 20</h3>
                                     <li><small>12:00p - 1:00p</small>Tech Talk: Quora<span>2405</span></li>
-                                    <li><small>4:00p - 5:00p</small>Corporate Social: Lyft<span>TBD</span></li>
-                                </ul>                    
+                                    <li><small>8:00p - 9:00p</small>Corporate Social: Lyft<span>TBD</span></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
