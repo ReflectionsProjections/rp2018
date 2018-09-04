@@ -61,7 +61,7 @@ render(
             <Route path="/symposiumregister" component={SymposiumSignup} />
             <Route path="/home" component={Home} />
 
-            <Route exact path="/YashaIsNotGettingAJacket" component={RegisterStart}/>
+            <Route exact path="/start" component={RegisterStart}/>
             <Route exact path="/registersuccess" component={RegisterSuccess}/>
             <Route exact path="/register" component={Register}/>
             <Route exact path="/auth" component={Auth}/>
