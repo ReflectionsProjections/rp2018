@@ -37,7 +37,7 @@ class Navigation extends Component {
                 <Navbar collapseOnSelect fixedTop>
                     <Navbar.Header>
                         <Navbar.Brand>
-                            <a href="#" style={{opacity: 1}}>
+                            <a href="/" style={{opacity: 1}}>
                                 <img className="Navigation__logo" src="../assets/svg/logo.svg" />
                             </a>
                         </Navbar.Brand>
@@ -48,9 +48,9 @@ class Navigation extends Component {
                         <Link to="/#About">
                             <NavDropdown  title="About" id="basic-nav-dropdown"  onMouseEnter={(e) => this.setState({ show: true })}
                               onMouseLeave={(e) => this.setState({ show: false })} open={this.state.show} onClick={() => location.href="/#About"}>
-                              <MenuItem onClick={() => location.href="/puzzlebang"}>PuzzleBang</MenuItem>
-                              <MenuItem onClick={() => location.href="/mechmania"}>MechMania</MenuItem>
-                              <MenuItem onClick={() => location.href="/symposium"}>ACM Symposium</MenuItem>
+                              <MenuItem className="events" onClick={() => location.href="/puzzlebang"}>PuzzleBang</MenuItem>
+                              <MenuItem className="events" onClick={() => location.href="/mechmania"}>MechMania</MenuItem>
+                              <MenuItem className="events" onClick={() => location.href="/symposium"}>ACM Symposium</MenuItem>
                             </NavDropdown>
                         </Link>
                         <Link to="/#Schedule" onClick={() => location.href="/#Schedule"}>

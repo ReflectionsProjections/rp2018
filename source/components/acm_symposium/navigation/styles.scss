@@ -36,9 +36,16 @@
           margin: 0 0.5vw;
         }
         li:hover a {
+            background-color: transparent;
             color: $active;
             text-shadow: 5px $active;
             text-decoration: none
+        }
+        .events a{
+            color: white !important;
+        }
+        .events a:hover{
+            color: $active !important;
         }
     }
 
