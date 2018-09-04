@@ -124,15 +124,17 @@ $select-underline-color:  #97c88c;
   .ui.selection.active.dropdown {
     .menu {
        box-shadow: 2px 3px 15px rgba(0, 0, 0, 0.3);
+       background: #005D5D !important;
     }
   }
 
   .active.selection.dropdown {
     padding-left: 1em !important;
+    background: transparent !important;
   }
 
   .visible {
-    background: #97c88c !important;
+    background: #19756E !important;
   }
 
   .text{
