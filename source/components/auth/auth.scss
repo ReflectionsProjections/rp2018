@@ -1,0 +1,36 @@
+$background-color:  rgba(204, 217, 252, 0);
+
+html, body, #app, [data-reactroot] {
+  height: 100vh;
+}
+
+.background {
+  z-index: 100;
+  width: 1000vw;
+  height: 1000vh;
+  background-color: #28323f;
+}
+
+
+.registerContainer {
+  //background-color: rgba(256, 256, 256, 0.0);
+  background-color: #28323f;
+  //background: linear-gradient(#28323f, #97c88c);
+  width:100%;
+	height:100vh;
+  padding: 10em !important;
+  //background-color: $background-color;
+  overflow: auto;
+
+  @media only screen and (max-width: 1200px){
+    padding: 6em !important;
+  }
+
+  @media only screen and (max-width: 640px){
+    padding: 1em !important;
+  }
+}
+
+h1 {
+  color: white;
+}

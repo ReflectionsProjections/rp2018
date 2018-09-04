@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import styles from './styles.scss'
 import { Grid, Row, Col, Thumbnail, PageHeader, Clearfix, Image } from 'react-bootstrap'
-import FlipCard from 'react-flipcard';
-import AnimationCount from 'react-count-animation';
 import Photos from '../photos/photos';
 
 
@@ -78,7 +76,7 @@ class About extends Component {
                         <h1 className="about-header">What is Reflections | Projections?</h1>
                     </Col>
                 </Row>
-
+                <hr/>
                 <Row>
                     <Col md={12}>
                         <p className="about-text"> Reflections | Projections is a tech conference organized and run by students at the University of Illinois at Urbana-Champaign.

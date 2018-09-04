@@ -4,7 +4,7 @@
     font-size: 16px;
     min-height: 100vh;
     overflow: hidden;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Slab', sans-serif !important;
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -22,6 +22,7 @@
 }
 
 .about-header {
+  color: black !important;
   font-weight: bold;
   width: 100%;
   margin: 0 auto;
