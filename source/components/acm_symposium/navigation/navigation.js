@@ -53,16 +53,16 @@ class Navigation extends Component {
                               <MenuItem onClick={() => location.href="/symposium"}>ACM Symposium</MenuItem>
                             </NavDropdown>
                         </Link>
-                        <Link to="/#Schedule" onClick={() => location.href="/#About"}>
+                        <Link to="/#Schedule" onClick={() => location.href="/#Schedule"}>
                             <NavItem eventKey={2}>Schedule</NavItem>
                         </Link>
-                        <Link to="/#Speakers" onClick={() => location.href="/#About"}>
+                        <Link to="/#Speakers" onClick={() => location.href="/#Speakers"}>
                             <NavItem eventKey={3}>Speakers</NavItem>
                         </Link>
-                        <Link to="/#FAQ" onClick={() => location.href="/#About"}>
+                        <Link to="/#FAQ" onClick={() => location.href="/#FAQ"}>
                             <NavItem eventKey={4}>FAQ</NavItem>
                         </Link>
-                        <Link to="/#Sponsors" onClick={() => location.href="/#About"}>
+                        <Link to="/#Sponsors" onClick={() => location.href="/#Sponsors"}>
                             <NavItem eventKey={5}>Sponsors</NavItem>
                         </Link>
                         <Link to="" onClick={() =>
