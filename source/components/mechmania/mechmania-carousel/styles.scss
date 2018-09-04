@@ -1,0 +1,23 @@
+#Photos {
+    padding: 2vh 2vw 2vh 2vw; 
+
+    #Photos_items {
+        max-width: 25vw;
+    }
+}
+
+@media (max-width: 1050px) {
+    #Photos {
+        #Photos_items {
+            max-width: 40vw;
+        }
+    }
+}
+
+@media (max-width: 440px) {
+    #Photos {
+        #Photos_items {
+            max-width: 90vw;
+        }
+    }
+}
