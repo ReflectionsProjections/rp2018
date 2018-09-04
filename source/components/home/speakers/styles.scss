@@ -49,6 +49,13 @@
         height: 30vh;
         box-shadow: 0px 0px 10px black;
         border-radius: 50%;
+        transition-duration: 0.5s;
+    }
+    .thumbnail img:hover {
+        cursor: pointer;
+        transition-duration: 0.8s;
+        filter: drop-shadow(0px 0px 20px black);
+
     }
 }
 
@@ -67,6 +74,14 @@
 
 h1 {
     font-family: 'Roboto Slab', serif!important;
+}
+
+.speakerBioName{
+    color: black!important;
+}
+
+.speakerBioTitle {
+  font-family: 'Roboto Slab', serif!important;
 }
 
 .wiki-icon {

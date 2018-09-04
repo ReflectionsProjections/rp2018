@@ -97,7 +97,7 @@ class Speakers extends Component {
                 'img': '../assets/img/keynotes/siraj.jpg',
                 'title': 'YouTuber - Accessible CS education',
                 'externalLink': 'https://twitter.com/sirajraval',
-                'bio': 'Siraj Raval is a data scientist, Youtube star with close to 390K subscribers, and a bestselling author. Raval is currently the director of The School of AI, the largest active AI community on the web, where his mission is to encourage and educate developers to build artificial intelligence. Siraj has also authored a best selling book, “Decentralized Applications: Harnessing Bitcoin\'s Blockchain Technology”. He has also published many articles on various topics like blockchain and artificial intelligence.'
+                'bio': 'Siraj Raval is a data scientist, a bestselling author, and a CS Education Youtuber with over 440K subscribers. Raval is currently the director of The School of AI, the largest active AI community on the web, where his mission is to encourage and educate developers to build artificial intelligence. Siraj has also authored a best selling book, “Decentralized Applications: Harnessing Bitcoin\'s Blockchain Technology”. He has also published many articles on various topics like blockchain and artificial intelligence.'
             },
             {
                 'name': 'Jay Gambetta',
