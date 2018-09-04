@@ -110,7 +110,6 @@ export default class RegisterForm extends Component {
             <span className="labelText opposite">SUBMIT</span>
             <FontAwesomeIcon icon={faCaretRight} size="2x"/>
           </Button>
-          <h4 className="required">* = Required</h4>
         </div>
 
       </Grid>

@@ -21,7 +21,7 @@ export default class RegisterSuccess extends Component {
             Check our website for information on the schedule of events! If you have any questions, please email us at <a href='mailto:contact@reflectionsprojections.org'>contact@reflectionsprojections.org</a>
             </Grid.Row>
             <Grid.Row className='successPrompt verticalPadding'>
-               Don't forget to also register for the <a href="https://acmrp.org/symposium/register" target="_blank"><u>ACM Symposium</u></a>, <a href="https://acmrp.typeform.com/to/MR6XmN" target="_blank"><u>MechMania</u></a> and <a href="https://puzzlebang.com" target="_blank"><u>PuzzleBang</u></a>
+               Don't forget to also register for the <a href="https://acmrp.org/symposiumregister" target="_blank"><u>ACM Symposium</u></a>, <a href="https://acmrp.typeform.com/to/MR6XmN" target="_blank"><u>MechMania</u></a> and <a href="https://puzzlebang.com" target="_blank"><u>PuzzleBang</u></a>
             </Grid.Row>
             <Grid.Row className='verticalPadding'>
               <a href="/"><Button>Home</Button></a>
