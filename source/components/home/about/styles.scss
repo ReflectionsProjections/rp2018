@@ -9,7 +9,7 @@
     padding: 7vh 12.5vw;
 
     h3 {
-        color: $accentForeground;
+        //color: $accentForeground;
         font-weight: bold;
     }
 
@@ -40,7 +40,8 @@
     }
 
     .about-header, .about-header-with-underline{
-      color: black !important;
+      color: $accentForeground!important;
+      //color: black !important;
       font-weight: bold;
       width: 100%;
       margin: 0 auto;
