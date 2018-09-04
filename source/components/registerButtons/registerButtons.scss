@@ -1,0 +1,41 @@
+$title-color:             #1c055e;
+
+.buttonContainer {
+  position: relative !important;
+  width: 100%;
+  margin: 5vh auto;
+  left: 0px;
+
+  @media only screen and (max-width: 500px){
+    bottom: 1em !important;
+    padding: 1em !important;
+    padding-bottom: 3em !important;
+  }
+
+  .button {
+    color: white;
+    background: transparent !important;
+    .icon {
+      background: transparent !important;
+    }
+  }
+
+  .ui.button, .ui.button:focus {
+    color: white;
+  }
+
+  .ui.button:hover {
+    color: #97c88c;
+  }
+
+  .labelText{
+    font-size: 1.1em;
+    position: relative;
+    bottom: 4px;
+    left: 20px;
+  }
+
+  .opposite{
+    left: -20px;
+  }
+}

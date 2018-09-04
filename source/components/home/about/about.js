@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import styles from './styles.scss'
 import { HashLink as Link } from 'react-router-hash-link'
 import { Grid, Row, Col, Thumbnail, PageHeader, Clearfix, Image } from 'react-bootstrap'
-import FlipCard from 'react-flipcard';
-import AnimationCount from 'react-count-animation';
 import Photos from '../photos/photos';
 
 

@@ -1,6 +1,8 @@
 @import '../../../styles/constants';
 
+
 .About {
+    font-family: 'Roboto Slab', sans-serif !important;
     display: flex;
     flex-direction: column;
     width: 100vw;
@@ -28,12 +30,12 @@
       width: 100%;
       margin: auto;
     }
-
     .about-grid {
       display: flex;
     }
 
     .about-header, .about-header-with-underline{
+      color: black !important;
       font-weight: bold;
       width: 100%;
       margin: 0 auto;

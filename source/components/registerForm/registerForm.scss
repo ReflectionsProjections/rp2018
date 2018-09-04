@@ -1,0 +1,99 @@
+.formContainer {
+  padding-left: 3em !important;
+  padding-right: 3em !important;
+
+  @media only screen and (max-width: 1200px){
+    padding-left: 1em !important;
+    padding-right: 1em !important;
+    .leftSquiggly{
+      opacity: 0;
+    }
+  }
+}
+
+.activeError {
+  animation: shake 200ms 2 linear;
+}
+
+.leftSquiggly{
+  position: absolute;
+  max-width: 20%;
+  width: 250px;
+  margin-left: 100px;
+  margin-bottom: 100px;
+  bottom: 60px;
+}
+.rightSquiggly{
+  position: absolute;
+  max-width: 10%;
+  width: 125px;
+  top: 0px;
+  right: -15px;
+}
+
+@media only screen and (max-width: 750px){
+  .leftSquiggly{
+    opacity: 0;
+  }
+}
+
+.ui.label > .close.icon, .ui.label > .delete.icon {
+  color: black;
+  font-family: FontAwesome;
+}
+
+.buttonContainer {
+  position: relative !important;
+  float: right;
+  align-items: flex-end;
+  justify-content: flex-end;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 5vh auto;
+  left: 0px;
+
+  .required {
+    order: 1;
+    text-align: right;
+    color: white;
+    margin-right: 10vh;
+    //margin-right: 5vh;
+    //bottom: 100px;
+  }
+
+  @media only screen and (max-width: 500px){
+    bottom: 1em !important;
+    padding: 1em !important;
+    padding-bottom: 3em !important;
+  }
+
+  .button {
+    float: right;
+    order: 2;
+    color: white;
+    background: transparent !important;
+    .icon {
+      background: transparent !important;
+    }
+  }
+
+  .ui.button, .ui.button:focus {
+    color: white;
+  }
+
+  .ui.button:hover {
+    color: #97c88c;
+  }
+
+  .labelText{
+    font-size: 1.1em;
+    position: relative;
+    bottom: 4px;
+    left: 20px;
+  }
+
+  .opposite{
+    left: -20px;
+  }
+}

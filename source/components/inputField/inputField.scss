@@ -1,0 +1,147 @@
+$title-color:             #fff;
+$value-color:             #fff;
+$placeholder-color:       rgba(256, 256, 256, 1);
+$input-underline-color:   #97c88c;
+$select-underline-color:  #97c88c;
+
+.fieldContainer {
+  padding-left: 3em;
+  padding-right: 3em;
+  padding-bottom: 2.5em;
+
+  @media only screen and (max-width: 1000px){
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 0em;
+  }
+
+  @media only screen and (max-width: 640px){
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 0em;
+  }
+}
+.resumeIcon{
+  margin: auto;
+  color: white;
+}
+.fieldTitle {
+  font-size: 15px;
+  font-weight: 550;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: $title-color;
+}
+
+.selectField {
+  border-bottom: solid 1px $select-underline-color;
+}
+
+.inputField {
+  border-bottom: solid 1px $input-underline-color;
+}
+
+.field {
+  font-family: 'Roboto', sans-serif!important;
+  font-size: 15px;
+
+  input[type='file'] {
+    color: transparent !important;
+  }
+
+  input, .dropdown {
+    outline: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    padding-left: 0em !important;
+    padding-right: 0 !important;
+    box-shadow: none;
+  }
+
+  input::placeholder, .default.text {
+    font-family: 'Roboto', sans-serif!important;
+    background: transparent !important;
+    color: $placeholder-color !important;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    font-size: 15px;
+  }
+
+  .dropdown {
+    .icon{
+      font-size: 25px;
+      font-weight: 550;
+      color: $title-color;
+    }
+    .menu{
+      border-color: transparent !important;
+      border: 0 !important;
+
+      :hover {
+        background: $select-underline-color !important;
+      }
+    }
+
+    .menu>.item{
+      border-top: solid 1px white !important;
+    }
+
+    .item {
+      background:  !important;
+    }
+
+    .selected, .selected.item {
+      background: $select-underline-color !important;
+      .text {
+        font-weight: 500 !important;
+        font-size: 15px;
+      }
+    }
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+      /* display: none; <- Crashes Chrome on hover */
+      -webkit-appearance: none;
+      margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+  }
+
+  .ui.selection.dropdown {
+    border-radius: 0px;
+    .menu {
+      border-radius: 0px;
+      min-width: 100%;
+      margin: 0;
+    }
+  }
+
+  .ui.selection.active.dropdown {
+    .menu {
+       box-shadow: 2px 3px 15px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  .active.selection.dropdown {
+    padding-left: 1em !important;
+  }
+
+  .visible {
+    background: #97c88c !important;
+  }
+
+  .text{
+    background: transparent !important;
+    color: $value-color !important;
+  }
+
+  input {
+    line-height: 1.5em !important;
+    color: $value-color !important;
+  }
+}
