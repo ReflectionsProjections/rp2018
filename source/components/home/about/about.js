@@ -154,11 +154,6 @@ class About extends Component {
                             <p>Engage with R|P on our various social media platforms, for a chance to win a Nintendo Switch, a Google Home Mini or an Amazon Echo Dot! Follow us on social media (links in footer) to learn more!</p>
                         </Col>
                     </Row>
-                    <Row>
-                      <Col md={12} className="text-center">
-                        <Photos/>
-                      </Col>
-                    </Row>
                 </div>
             </div>
         );
