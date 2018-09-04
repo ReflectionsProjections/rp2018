@@ -35,7 +35,7 @@ export default class Auth extends Component {
     sessionStorage.setItem("Authorization-Code", authorizationCode);
     const HTTP_STATUS_OK = 200;
 
-    console.log("OAuth Code: " + authorizationCode);
+    //console.log("OAuth Code: " + authorizationCode);
     authorizationCode.concat("#");
 
     const body = { code: authorizationCode };
@@ -53,7 +53,7 @@ export default class Auth extends Component {
         sessionStorage.setItem("Authorization", apiJwt);
         window.location = "https://reflectionsprojections.org/register"
       }
-      console.log(response);
+      //console.log(response);
     })
     .catch(function (error) {
       console.log(error.response);

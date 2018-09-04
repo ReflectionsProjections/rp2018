@@ -119,7 +119,7 @@ export default class Register extends Component {
 	  document.querySelector("[name^=firstName").placeholder = firstNameToBePrefilled;
 	  document.querySelector("[name^=lastName").placeholder = lastNameToBePrefilled;
         }
-        console.log(emailToBePrefilled);
+        //console.log(emailToBePrefilled);
       })
       .catch(function(error) {
         console.log("API call had errors.");
@@ -197,7 +197,7 @@ export default class Register extends Component {
 
   // Makes the upload call to the API
   makeUploadApiCall(jwt, rawResumeFile, mimeType, resolve, reject) {
-    console.log("Raw binary data: ", rawResumeFile);
+    //console.log("Raw binary data: ", rawResumeFile);
     const resumeUploadUrl = this.apiUrl + "/upload/resume/";
     const resumeUploadOptions = {
       method: "PUT",
@@ -206,7 +206,7 @@ export default class Register extends Component {
       url: resumeUploadUrl
     };
 
-    console.log(resumeUploadOptions);
+    //console.log(resumeUploadOptions);
 
     axios(resumeUploadOptions)
       .then(function(response) {
@@ -280,7 +280,7 @@ export default class Register extends Component {
           "heardFrom": heardFromArray,//heardFrom,
           "rpInterest": rpInterestArray/*rpInterest*/,
       };
-      console.log(registrationRequestBody);
+      //console.log(registrationRequestBody);
 
       // Post request to registration
       const registrationUrl = this.apiUrl + "/registration/attendee/";
@@ -305,7 +305,7 @@ export default class Register extends Component {
   }
 
   submitForm() {
-    console.log("Submitted");
+    //console.log("Submitted");
     let that = this;
     const jwt = sessionStorage.getItem("Authorization");
     let twoPartRegistrationPromise = that.uploadResume(jwt)
@@ -330,7 +330,7 @@ export default class Register extends Component {
     const previousStep = this.previousStep;
     const submitForm = this.submitForm;
     const state = this.state;
-    console.log(submitForm);
+    //console.log(submitForm);
     // submitForm();
     return (
       <div className="registerContainer">

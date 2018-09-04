@@ -86,7 +86,7 @@ export default class RegisterForm extends Component {
     const validateStep    = this.validateStep;
     const handleChange    = this.handleChange;
     const submitForm      = this.props.submitForm;
-    console.log("Register form ", submitForm);
+    //console.log("Register form ", submitForm);
     // submitForm();
     return(
       <Grid stackable>
