@@ -37,7 +37,7 @@ class Navigation extends Component {
                 <Navbar collapseOnSelect fixedTop>
                     <Navbar.Header>
                         <Navbar.Brand>
-                            <a href="#" style={{opacity: 1}}>
+                            <a href="/" style={{opacity: 1}}>
                                 <img className="Navigation__logo" src="../assets/svg/logo.svg" />
                             </a>
                         </Navbar.Brand>
@@ -53,16 +53,16 @@ class Navigation extends Component {
                               <MenuItem onClick={() => location.href="/symposium"}>ACM Symposium</MenuItem>
                             </NavDropdown>
                         </Link>
-                        <Link to="#Schedule" onClick={() => this.hideMenu()}>
+                        <Link to="/#Schedule" onClick={() => this.hideMenu()}>
                             <NavItem eventKey={2}>Schedule</NavItem>
                         </Link>
-                        <Link to="#Speakers" nClick={() => this.hideMenu()}>
+                        <Link to="/#Speakers" nClick={() => this.hideMenu()}>
                             <NavItem eventKey={3}>Speakers</NavItem>
                         </Link>
-                        <Link to="#FAQ" onClick={() => this.hideMenu()}>
+                        <Link to="/#FAQ" onClick={() => this.hideMenu()}>
                             <NavItem eventKey={4}>FAQ</NavItem>
                         </Link>
-                        <Link to="#Sponsors" onClick={() => this.hideMenu()}>
+                        <Link to="/#Sponsors" onClick={() => this.hideMenu()}>
                             <NavItem eventKey={5}>Sponsors</NavItem>
                         </Link>
                         <Link to="" onClick={() =>

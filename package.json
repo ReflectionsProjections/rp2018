@@ -52,6 +52,7 @@
     "react-fontawesome": "^1.6.1",
     "react-modal": "^2.3.2",
     "react-native-hyperlink": "0.0.14",
+    "react-newline-to-break": "^1.0.6",
     "react-photo-gallery": "^6.0.22",
     "react-router": "^4.0.0",
     "react-router-dom": "^4.0.0",

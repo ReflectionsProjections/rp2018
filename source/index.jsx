@@ -9,6 +9,9 @@ import Register from './components/register/register';
 import Auth from './components/auth/auth';
 import RegisterStart from './components/registerStart/registerStart';
 import RegisterSuccess from './components/registerSuccess/registerSuccess';
+import PuzzleBang from './components/puzzlebang/puzzlebang';
+import MechMania from './components/mechmania/mechmania';
+import ACMSymposium from './components/acm_symposium/acm_symposium';
 
 
 // Redirects
@@ -49,6 +52,11 @@ render(
             <Route exact path="/" component={Home}/>
             <Route path="/sponsor" component={SponsorLetter} />
             <Route path="/startup" component={StartupLetter} />
+
+
+            <Route path="/puzzlebang" component={PuzzleBang} />
+            <Route path="/mechmania" component={MechMania} />
+            <Route path="/symposium" component={ACMSymposium} />
             <Route path="/volunteer" component={VolunteerSignup} />
             <Route path="/symposiumregister" component={SymposiumSignup} />
             <Route path="/home" component={Home} />
