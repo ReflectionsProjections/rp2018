@@ -97,7 +97,7 @@ export default class RegisterForm extends Component {
                 <Grid className='formContainer' doubling columns={2}>
                   {forms.map((config, index) =>
                     <Grid.Column width={config.width} key={index}>
-                      <InputField value={data[config.id]} config={config} handleChange={handleChange}/>
+                      <InputField value={data[config.id]} config={config} accept="application/pdf" handleChange={handleChange}/>
                     </Grid.Column>
                   )}
                 </Grid>

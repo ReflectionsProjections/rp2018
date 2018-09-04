@@ -35,7 +35,7 @@ export default class InputField extends Component {
           className="inputField"
           control={Input}
           type={inputType}
-          accept=".pdf"
+          accept=".pdf, application/pdf"
           name={id}
           onChange={handleChange}
           placeholder={placeholder}
