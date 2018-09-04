@@ -108,7 +108,7 @@ const personal_fields = [
     inputType: 'text',
     id: 'transportation',
     required: true,
-    options: [{key: 'ONCAMPUS', text: 'On Campus', value:'ONCAMPUS'}, {key: 'BUS', text: 'Bus (UIC + DePaul students only)', value:'BUS'}, {key: 'DRIVINGREIMBURSEMENT', text: 'Driving (Gas Reimbursements Needed)', value:'DRIVINGREIMBURSEMENT'}, {key: 'DRIVINGNOREIMBURSEMENT', text: 'Driving (Gas Reimbursements Not Needed)', value:'DRIVINGNOREIMBURSEMENT'}, {key: 'Other', text: 'Other', value:'Other'}],
+    options: [{key: 'ONCAMPUS', text: 'On Campus', value:'ONCAMPUS'}, {key: 'BUS', text: 'Bus (UIC + DePaul students only)', value:'BUS'}, {key: 'DRIVINGREIMBURSEMENT', text: 'Driving (Gas Reimbursements Needed)', value:'DRIVINGREIMBURSEMENT'}, {key: 'DRIVINGNOREIMBURSEMENT', text: 'Driving (Gas Reimbursements Not Needed)', value:'DRIVINGNOREIMBURSEMENT'}, {key: 'OTHER', text: 'Other', value:'OTHER'}],
     placeholder: 'How do you plan to get here?',
     title: 'TRANSPORTATION',
     validate: (input) => {
