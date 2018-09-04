@@ -254,7 +254,7 @@ export default class Register extends Component {
                         alert("You have uploaded an invalid file type as a résumé. Please submit a PDF.");
                         reject(error);
                     }
-                }
+
                 reject(false); console.log(error);
             });
 };
@@ -372,11 +372,12 @@ createRegistration = jwt => {
                 }
             })
             .catch(function(error) {
+                console.log(console.error.response.message);
                 if (error.response.message.indexOf("exists") != -1) {
                     alert("A registration for this account already exists. Please contact contact@reflectionsprojections.org if you wish to make edits.");
                     reject(error);
                 } else {
-                    alert("Please fill in valid data, and ensure all required fields (marked with *) are filled.");
+                    alert("Please fill in valid data, and ensure all required fields are filled.");
                     reject(error);
                 }
 
