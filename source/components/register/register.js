@@ -136,11 +136,11 @@ export default class Register extends Component {
                     firstNameToBePrefilled = response.data.firstName;
                     lastNameToBePrefilled = response.data.lastName;
 
-                    document.querySelector("[name^=email")
+                    document.querySelector("#email")
                         .placeholder = emailToBePrefilled;
-                    document.querySelector("[name^=firstName")
+                    document.querySelector("#firstName")
                         .placeholder = firstNameToBePrefilled;
-                    document.querySelector("[name^=lastName")
+                    document.querySelector("#lastName")
                         .placeholder = lastNameToBePrefilled;
                 }
                 //console.log(emailToBePrefilled);
