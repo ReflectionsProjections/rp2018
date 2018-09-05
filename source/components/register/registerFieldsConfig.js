@@ -29,7 +29,7 @@ const personal_fields = [
     inputType: 'text',
     id: 'email',
     required: false,
-    placeholder: 'attendee@rp.org',
+    placeholder: 'email has been prefilled',
     title: 'EMAIL',
     validate: (input) => {
       return true;

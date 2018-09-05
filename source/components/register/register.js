@@ -135,26 +135,17 @@ export default class Register extends Component {
                     emailToBePrefilled = response.data.email;
                     firstNameToBePrefilled = response.data.firstName;
                     lastNameToBePrefilled = response.data.lastName;
-                    document.querySelector("#email")
+
+                    document.querySelector("[name^=email")
                         .placeholder = emailToBePrefilled;
-                    document.querySelector("#firstName")
+                    document.querySelector("[name^=firstName")
                         .placeholder = firstNameToBePrefilled;
-                    document.querySelector("#lastName")
+                    document.querySelector("[name^=lastName")
                         .placeholder = lastNameToBePrefilled;
-
-
-                    // document.querySelector("[name^=email")
-                    //     .placeholder = emailToBePrefilled;
-                    // document.querySelector("[name^=firstName")
-                    //     .placeholder = firstNameToBePrefilled;
-                    // document.querySelector("[name^=lastName")
-                    //     .placeholder = lastNameToBePrefilled;
                 }
                 //console.log(emailToBePrefilled);
             })
             .catch(function(error) {
-                console.log("API call had errors.");
-                console.log(error.response);
             });
     };
 
