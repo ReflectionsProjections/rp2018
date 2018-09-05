@@ -131,7 +131,7 @@ class About extends Component {
                         <Col md={4} className="text-center">
                             <Image className="about-image" src="../assets/img/about/symposium.JPG" responsive/>
                             <h3>ACM Symposium</h3>
-                            <p>R|P 2018 is proud to introduce the first-ever installment of the ACM Symposium a way for ACM chapters across the Midwest to network and interact by showcasing their project and research work.</p>
+                            <p>R|P 2018 is proud to introduce the first-ever installment of the ACM Symposium - a way for ACM chapters across the Midwest to network and interact by showcasing their project and research work.</p>
                         </Col>
                     </Row>
                     <h1 className="about-header">Special Events</h1>
