@@ -127,7 +127,7 @@ class Schedule extends Component {
                                     <li><small>5:00p - 7:00p</small>ACM Symposium<span>2405</span></li>
                                     <li><small>7:00p</small>Dinner<span>Atrium</span></li>
                                     <li><small>8:00p</small>R|P Closing Ceremony<span>1404</span></li>
-                                    <li><small>9:00p</small>Alumni Social<span>Legends</span></li>
+                                    <li><small>9:00p</small>Alumni Social<span>Murphy's Pub</span></li>
                                 </ul>
                             </div>
                         </div>
