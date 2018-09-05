@@ -146,6 +146,9 @@ export default class Register extends Component {
                 //console.log(emailToBePrefilled);
             })
             .catch(function(error) {
+                this.props.history.push("/start");
+                // console.log("API call had errors.");
+                // console.log(error.response);
             });
     };
 
@@ -153,11 +156,18 @@ export default class Register extends Component {
         this.setState({
             loading: true
         });
-        this.prefillEmail();
-        let {
-            personal,
-            professional
-        } = this.state;
+        const token = sessionStorage.getItem("Authorization");
+        if (token == null) {
+            this.props.history.push("/start");
+
+        }
+        else {
+            this.prefillEmail();
+            let {
+                personal,
+                professional
+            } = this.state;
+        }
     }
 
     convertDataForAPI = () => {
@@ -249,7 +259,7 @@ export default class Register extends Component {
                 }
             })
             .catch(function(error) {
-			
+
                     if (error.response.status == HTTP_BAD_REQUEST) {
                         alert("You have uploaded an invalid file type as a résumé. Please submit a PDF.");
                         reject(error);
