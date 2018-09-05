@@ -150,15 +150,18 @@
     font-weight: 700;
     font-size:2em;
     font-family: 'Roboto Slab', sans-serif;
+    line-height: 1em;
 }
 
 .answer__sym {
+    padding-top: 10px;
     font-size: 1.3em;
     color: black;
     font-family: 'Roboto Slab', sans-serif;
 }
 
 .headline__sym {
+    line-height: 1.3em;
     margin-top: 3vh;
     font-size: 1.6em;
     text-align: center;
