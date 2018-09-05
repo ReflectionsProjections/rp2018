@@ -37,6 +37,7 @@ export default class InputField extends Component {
           type={inputType}
           accept=".pdf, application/pdf"
           name={id}
+          id={id}
           onChange={handleChange}
           placeholder={placeholder}
           action={
@@ -69,6 +70,7 @@ export default class InputField extends Component {
           options={options}
           value={value}
           name={id}
+          id={id}
           onChange={handleChange}
           placeholder={placeholder}
         />;
@@ -80,6 +82,7 @@ export default class InputField extends Component {
           control={Select}
           options={options}
           name={id}
+          id={id}
           onChange={handleChange}
           placeholder={placeholder}
         />;

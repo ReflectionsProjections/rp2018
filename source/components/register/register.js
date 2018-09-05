@@ -212,7 +212,7 @@ export default class Register extends Component {
     uploadResume(jwt) {
         let that = this;
         return new Promise(function(resolve, reject) {
-            const resumeFile = document.querySelector("[name^=resume")
+            const resumeFile = document.querySelector("#resume")
                 .files[0];
 
             if (resumeFile === undefined) {
@@ -271,63 +271,63 @@ export default class Register extends Component {
 
 createRegistration = jwt => {
     return new Promise((resolve, reject) => {
-        const firstName = document.querySelector("[name^=firstName")
+        const firstName = document.querySelector("#firstName")
             .innerText;
-        const lastName = document.querySelector("[name^=lastName")
+        const lastName = document.querySelector("#lastName")
             .innerText;
-        const email = document.querySelector("[name^=email")
+        const email = document.querySelector("#email")
             .innerText;
-        const phoneNumber = document.querySelector("[name^=phoneNumber")
+        const phoneNumber = document.querySelector("#phoneNumber")
             .value;
-        const gender = document.querySelector("[name^=gender")
+        const gender = document.querySelector("#gender")
             .innerText;
         const genderTemp = personal_fields[4].options.filter(element => {
             return element.text === gender
         })[0];
         const genderKey = (genderTemp) ? genderTemp.key : gender;
-        const studentStatus = document.querySelector("[name^=student")
+        const studentStatus = document.querySelector("#student")
             .innerText;
         const studentTemp = personal_fields[5].options.filter(element => {
             return element.text === studentStatus
         })[0];
         const studentKey = (studentTemp) ? studentTemp.key : studentStatus;
-        const school = document.querySelector("[name^=school")
+        const school = document.querySelector("#school")
             .value;
-        const major = document.querySelector("[name^=major")
+        const major = document.querySelector("#major")
             .value;
-        const transportation = document.querySelector("[name^=transportation")
+        const transportation = document.querySelector("#transportation")
             .innerText;
         const transportTemp = personal_fields[8].options.filter(element => {
             return element.text === transportation
         })[0];
         const transportKey = (transportTemp) ? transportTemp.key : transportation;
-        const shirtSize = document.querySelector("[name^=shirtSize")
+        const shirtSize = document.querySelector("#shirtSize")
             .innerText;
         const shirtTemp = personal_fields[9].options.filter(element => {
             return element.text === shirtSize
         })[0];
         const shirtKey = (shirtTemp) ? shirtTemp.key : shirtSize;
-        const dietaryRestrictions = document.querySelector("[name^=diet")
+        const dietaryRestrictions = document.querySelector("#diet")
             .innerText;
         const dietaryTemp = personal_fields[10].options.filter(element => {
             return element.text === dietaryRestrictions
         })[0];
         const dietaryKey = (dietaryTemp) ? dietaryTemp.key : dietaryRestrictions;
-        const gradYear = document.querySelector("[name^=graduationYear")
+        const gradYear = document.querySelector("#graduationYear")
             .innerText;
         const gradTemp = personal_fields[11].options.filter(element => {
             return element.text === gradYear
         })[0];
         const gradKey = (gradTemp) ? gradTemp.key : gradYear;
-        const professionalInterest = Array.from(document.querySelector("[name^=professionalInterest")
+        const professionalInterest = Array.from(document.querySelector("#professionalInterest")
             .getElementsByClassName("ui label"));
-        const jobInterest = Array.from(document.querySelector("[name^=jobInterest")
+        const jobInterest = Array.from(document.querySelector("#jobInterest")
             .getElementsByClassName("ui label"));
-        const heardFrom = Array.from(document.querySelector("[name^=heardFrom")
+        const heardFrom = Array.from(document.querySelector("#heardFrom")
             .getElementsByClassName("ui label"));
-        const rpInterest = Array.from(document.querySelector("[name^=rpInterest")
+        const rpInterest = Array.from(document.querySelector("#rpInterest")
             .getElementsByClassName("ui label"));
-        const file = document.querySelector("[name^=resume")
+        const file = document.querySelector("#resume")
             .files[0];
         let professionalInterestArray = [];
         professionalInterest.forEach(element => {
