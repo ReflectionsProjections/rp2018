@@ -34,14 +34,10 @@ export default class RegisterStart extends Component {
             <Grid.Row className='startPrompt verticalPadding'>
               Reflections | Projections is UIUC's flagship tech conference and we're glad you can be a part of it.
             </Grid.Row>
-            <Grid.Row className='verticalPadding'>
-              <Button size='medium' className="githubButton" href="https://api.reflectionsprojections.org/auth/google/">
-                Login with Google    &#9658;
-              </Button>
-            </Grid.Row>
-            <Grid.Row className="ghPrompt ghPadding">
-              A Google account is required to sign up for Reflections | Projections so please make one if you do not have one already!
-            </Grid.Row>
+            <Grid.Row className='startPrompt verticalPadding'>
+              Unfortunately, our registration system is currently under maintenance. Please come back at a later time!
+            </Grid.Row>     
+            
           </Grid.Column>
         </Grid.Row>
       </Grid>

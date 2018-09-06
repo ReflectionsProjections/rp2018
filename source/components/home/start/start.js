@@ -31,9 +31,10 @@ class Start extends Component {
                     </div>
                     
                     <a className="btn" href="/start">
-                        <button className="contact">REGISTER
+                        <button className="contact" disabled>REGISTER
                         </button>
-                    </a>                
+                    </a>  
+                    <div>Registration is temporarily closed for maintenance. Please come back later!</div>              
                     <div className="caps">September 17th - 22nd, 2018</div>
                     <Countdown className="counter"/>
                     {/*<div style={{margin: "15px", paddingBottom: "10px", fontSize: "18px"}}>DAYS&nbsp; LEFT</div>*/}
