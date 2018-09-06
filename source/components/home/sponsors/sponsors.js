@@ -111,6 +111,11 @@ class Sponsors extends Component {
           webPage: "https://www.uber.com/"
         },
         {
+          name: "Rubrik",
+          img: "../assets/img/sponsors/sponsors2018/jobfair/megabyte/rubrik.png",
+          webPage: "https://rubrik.com/"
+        },
+        {
           name: "Riverbed",
           img: "../assets/img/sponsors/sponsors2018/jobfair/megabyte/riverbed_full.png",
           webPage: "https://www.riverbed.com/"
@@ -129,6 +134,26 @@ class Sponsors extends Component {
           name: "Nav Talent",
           img: "../assets/img/sponsors/sponsors2018/jobfair/megabyte/nav_talent_full.png",
           webPage: "https://navtalent.com/"
+        },
+        {
+          name: "Bank of America",
+          img: "../assets/img/sponsors/sponsors2018/jobfair/megabyte/boa_full.jpg",
+          webPage: "https://bankofamerica.com/"
+        },
+        {
+          name: "Bungie",
+          img: "../assets/img/sponsors/sponsors2018/jobfair/megabyte/bungie.png",
+          webPage: "https://bungie.net/"
+        },
+        {
+          name: "West Monroe Partners",
+          img: "../assets/img/sponsors/sponsors2018/jobfair/megabyte/wmp.png",
+          webPage: "https://westmonroepartners.com/"
+        },
+        {
+          name: "Esri",
+          img: "../assets/img/sponsors/sponsors2018/jobfair/megabyte/esri_full.PNG",
+          webPage: "https://esri.com/"
         },
 
         // Startups
@@ -172,6 +197,16 @@ class Sponsors extends Component {
           name: "Samsara",
           img: "../assets/img/sponsors/sponsors2018/startup/samsara_full.png",
           webPage: "http://www.samsara.com"
+        },
+        {
+          name: "Cruise Automation",
+          img: "../assets/img/sponsors/sponsors2018/startup/cruise.png",
+          webPage: "http://www.getcruise.com"
+        },
+        {
+          name: "Confluent",
+          img: "../assets/img/sponsors/sponsors2018/startup/confluent.png",
+          webPage: "http://www.confluent.io"
         }
       ]
     };

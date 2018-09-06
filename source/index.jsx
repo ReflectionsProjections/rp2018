@@ -25,6 +25,11 @@ const StartupLetter = () => {
     return null;
 };
 
+const GiveawayFlyer = () => {
+    window.location = './assets/files/giveaway.pdf';
+    return null;
+};
+
 const VolunteerSignup = () => {
     window.location = 'https://docs.google.com/forms/d/e/1FAIpQLSc0vkipQVsw9VIdaAKCoOsrchrWPm3tOK8SwccchLFa8qeAcg/viewform?usp=sf_link';
     return null;
@@ -52,6 +57,7 @@ render(
             <Route exact path="/" component={Home}/>
             <Route path="/sponsor" component={SponsorLetter} />
             <Route path="/startup" component={StartupLetter} />
+            <Route path="/giveaway" component={GiveawayFlyer} />
 
 
             <Route path="/puzzlebang" component={PuzzleBang} />
