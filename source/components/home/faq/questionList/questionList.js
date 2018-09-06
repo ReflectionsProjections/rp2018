@@ -128,7 +128,7 @@ class QuestionList extends Component {
                                 Do I need to register for MechMania?
                             </div>
                             <div className="answer">
-                                Yes! Keep an eye out for our MechMania tab for competition registration! Coming soon.
+                                Yes! Register<a href="https://acmrp.typeform.com/to/MR6XmN" target="_blank"> here </a>. You must be registered for Reflections | Projections to compete in MechMania.
                             </div>
                         </li>
                     </ul>

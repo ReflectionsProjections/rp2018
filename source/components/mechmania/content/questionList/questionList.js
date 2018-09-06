@@ -12,7 +12,7 @@ class QuestionList extends Component {
             {
                 "index": 0,
                 "question": "What is MechMania?",
-                "answer": nl2br("MechMania is a 24-hour programming contest in which teams of students from various schools compete to create an AI capable of playing (and winning) a strategy game we have developed for the event. The competition will begin with the opening ceremony and announcement of the game on Friday, September 21st after which the programming component will commence immediately. The competition will conclude with the closing ceremony and awards presentation on Saturday, September 22nd after running for 24 hours.\n\nRegistration for MechMania 2018 coming soon!")
+                "answer": ["MechMania is a 24-hour programming contest in which teams of students from various schools compete to create an AI capable of playing (and winning) a strategy game we have developed for the event. The competition will begin with the opening ceremony and announcement of the game on Friday, September 21st after which the programming component will commence immediately. The competition will conclude with the closing ceremony and awards presentation on Saturday, September 22nd after running for 24 hours.",<br/>, <br/> ,"Register for MechMania", <a href="https://acmrp.typeform.com/to/MR6XmN" target="_blank"> here</a>,"! You must be registered for Reflections | Projections to compete in MechMania."]
             },
             {
                 "index": 1,
