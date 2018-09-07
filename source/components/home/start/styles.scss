@@ -44,7 +44,7 @@
         margin: 10px;
     }
 
-    .btn button{
+    .btn button {
         background: none;
         height: 50px;
         width: 150px;
@@ -54,70 +54,70 @@
         border: 3px solid $yellowGreenAccent;
         text-align: center;
         position: relative;
-        background-color:$pageBackground;
+        background-color: $pageBackground;
     }
-
     .btn button:hover {
         border-color: #97c88c;
     }
-
     .btn button:hover #tooltiptext {
         visibility: visible;
         opacity: 1;
     }
-
     @media (max-width: 1024px) {
         .header {
             max-width: 85%;
         }
-        .btn button{
+        .btn button {
             font-size: 1.3em;
             width: 200px;
         }
-        #countdown, .intro, .caps {
+        #countdown,
+        .caps,
+        .intro {
             font-size: 2em;
         }
     }
-
     @media (max-width: 420px) {
         .header {
             max-width: 90%;
         }
-        .btn button{
+        .btn button {
             font-size: 0.8em;
             width: 100px;
             height: 40px;
         }
-        #countdown, .intro, .caps {
+        #countdown,
+        .caps,
+        .intro {
             font-size: 1.2em;
         }
     }
-
     @media (max-width: 320px) {
         .header {
             max-width: 90%;
         }
-        .btn button{
+        .btn button {
             font-size: 0.8em;
             width: 100px;
             height: 40px;
         }
-        #countdown, .intro, .caps {
+        #countdown,
+        .caps,
+        .intro {
             font-size: 1.0em;
         }
     }
-
     @media (max-height: 700px) {
         height: 150vh;
     }
-
     @media (max-height: 500px) {
         height: 170vh;
     }
-
     @media (max-width: 300px) and (min-height: 700px) {
         height: 170vh;
-        #countdown, .intro, .caps {
+        #countdown,
+        .caps,
+        .intro {
             font-size: 1em;
         }
     }

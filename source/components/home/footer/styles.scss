@@ -29,7 +29,6 @@
 .fa {
     margin: 1vh;
 }
-
 .Footer__contact a:hover {
     color: $yellowGreenAccentHover;
     text-shadow: 2px $yellowGreenAccentHover;
@@ -41,9 +40,8 @@
 }
 
 #snapshot .tooltiptext {
-    left: 0%;
+    left: 0;
 }
-
 #snapshot:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
@@ -79,7 +77,6 @@
 p.Footer__contact p {
     margin: 0.05vh;
 }
-
 @media (max-width: 440px) {
     .Footer__contact {
         font-size: 16px;

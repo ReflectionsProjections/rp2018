@@ -1,11 +1,13 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import ReactDOM from 'react-dom';
 import $ from 'jquery'
 import styles from './styles.scss'
 
 Number.prototype.pad = function (size) {
     var s = String(this);
-    while (s.length < (size || 2)) { s = "0" + s; }
+    while (s.length < (size || 2)) {
+        s = "0" + s;
+    }
     return s;
 }
 
@@ -25,24 +27,36 @@ class Countdown extends Component {
             var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).pad(2);
             var seconds = Math.floor((distance % (1000 * 60)) / 1000).pad(2);
             if ($("#days").text().split(" ")[0] != days) {
-                $("#days").fadeOut(500, "linear", function () {
-                    $(this).text(days).fadeIn();
-                });
+                $("#days")
+                    .fadeOut(500, "linear", function () {
+                        $(this)
+                            .text(days)
+                            .fadeIn();
+                    });
             }
             if ($("#hours").text().split(" ")[0] != hours) {
-                $("#hours").fadeOut(500, "linear", function () {
-                    $(this).text(hours).fadeIn();
-                });
+                $("#hours")
+                    .fadeOut(500, "linear", function () {
+                        $(this)
+                            .text(hours)
+                            .fadeIn();
+                    });
             }
             if ($("#minutes").text().split(" ")[0] != minutes) {
-                $("#minutes").fadeOut(500, "linear", function () {
-                    $(this).text(minutes).fadeIn();
-                });
+                $("#minutes")
+                    .fadeOut(500, "linear", function () {
+                        $(this)
+                            .text(minutes)
+                            .fadeIn();
+                    });
             }
             if ($("#seconds").text().split(" ")[0] != seconds) {
-                $("#seconds").fadeOut(500, "linear", function () {
-                    $(this).text(seconds).fadeIn();
-                });
+                $("#seconds")
+                    .fadeOut(500, "linear", function () {
+                        $(this)
+                            .text(seconds)
+                            .fadeIn();
+                    });
             }
             if (distance < 0) {
                 clearInterval(x);

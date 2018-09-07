@@ -13,7 +13,7 @@
     display: inline-block;
     background-color: $countdownBackground;
     margin: 1.25vh;
-    padding: 6vh 4vh 4vh 4vh;
+    padding: 6vh 4vh 4vh;
     margin-bottom: 1vh;
 }
 
@@ -30,7 +30,7 @@ li {
 }
 
 #seconds {
-    color:$active;
+    color: $active;
 }
 
 #time-label {
