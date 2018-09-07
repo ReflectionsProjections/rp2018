@@ -1,10 +1,9 @@
-import React, { Component } from 'react'
-import { } from 'react-bootstrap'
+import React, {Component} from 'react'
+import {} from 'react-bootstrap'
 import styles from './styles.scss'
 import Navigation from './navigation/navigation'
 import Content from './content/content'
 import Footer from './footer/footer'
-
 
 class ACMSymposium extends Component {
 
@@ -13,18 +12,18 @@ class ACMSymposium extends Component {
     }
 
     render() {
-        return(
+        return (
             <div className="ACMSymposium">
-                <Navigation />
-                <Content />
-                <Footer />
+                <Navigation/>
+                <Content/>
+                <Footer/>
             </div>
         )
     }
 
     componentDidMount() {
         window.scrollTo(0, 0)
-      }
+    }
 }
 
 export default ACMSymposium

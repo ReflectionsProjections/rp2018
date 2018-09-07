@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import styles from './styles.scss'
 import Navigation from './navigation/navigation'
 import Start from './start/start'
@@ -16,16 +16,16 @@ class Home extends Component {
     }
 
     render() {
-        return(
+        return (
             <div className="Home">
-                <Navigation />
-                <Start />
-                <About />
-                <Schedule />
-                <Speakers />
-                <FAQ />
-                <Sponsors />
-                <Footer />
+                <Navigation/>
+                <Start/>
+                <About/>
+                <Schedule/>
+                <Speakers/>
+                <FAQ/>
+                <Sponsors/>
+                <Footer/>
             </div>
         )
     }

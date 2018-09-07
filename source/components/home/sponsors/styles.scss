@@ -73,9 +73,8 @@
         border: none;
     }
 }
-h1
-{
-    font-family:'Roboto Slab', serif;
+h1 {
+    font-family: 'Roboto Slab', serif;
 }
 .panel {
     box-shadow: unset!important;
@@ -100,11 +99,10 @@ h1
     margin: 0;
     padding: 0;
 }
-
-@media (max-width: 620px) and (min-height: 760px){
+@media (max-width: 620px) and (min-height: 760px) {
     .Sponsors {
-        &__card--tier1  {
-          margin: -20vh auto;
+        &__card--tier1 {
+            margin: -20vh auto;
         }
         &__card--tier2 {
             margin: -15vh auto;
@@ -126,12 +124,10 @@ h1
         margin-bottom: 5vh;
     }
 }
-
 @media (max-width: 400px) {
     .Sponsors {
         &__card--tier1 {
-            margin: -20vh auto;
-            margin-bottom: -40vh;
+            margin: -20vh auto -40vh;
         }
         &__card--tier2 {
             margin-bottom: -15vh;
@@ -145,7 +141,6 @@ h1
         }
     }
 }
-
 @media (max-height: 500px) {
     .Sponsors {
         &__card--tier4 {
