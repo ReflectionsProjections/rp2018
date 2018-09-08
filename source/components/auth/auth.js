@@ -68,7 +68,7 @@ export default class Auth extends Component {
                     sessionStorage.setItem('Authorization', apiJwt);
 
                     if (values.isMobile !== undefined) {
-                        window.location = 'hackillinois://auth?token=' + apiJwt;
+                        window.location = 'acmrp://auth?token=' + apiJwt;
                     } else {
                         window.location =
                             'https://reflectionsprojections.org/register';
