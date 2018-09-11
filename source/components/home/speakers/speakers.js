@@ -144,17 +144,6 @@ class Speakers extends Component {
                         'd as an IBM Fellow, which is the highest honor a scientist at IBM can achieve. I' +
                         'n addition, he is the associate editor of the Quantum Information journal.'
             }, {
-                'name': 'Simon Adler',
-                'img': '../assets/img/keynotes/simon.jpg',
-                'title': 'Producer at Radiolab',
-                'externalLink': 'https://www.wnycstudios.org/people/simon-adler/',
-                'bio': 'Simon Adler is a producer at Radiolab. Before that, he was a Fellow at This Amer' +
-                        'ican Life among other production-related roles. He graduated from the from Unive' +
-                        'rsity of Oregon with a triple major in Spanish, Psychology, and International St' +
-                        'udies. He has recently worked on producing a myriad of interesting pieces on Rad' +
-                        'iolab, one of which reports on technology that could be used to rewrite the futu' +
-                        're of fake news.'
-            }, {
                 'name': 'Romain Paulus',
                 'img': '../assets/img/keynotes/romain.jpg',
                 'title': 'Lead Research Scientist at Salesforce',
