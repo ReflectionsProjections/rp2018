@@ -40,6 +40,9 @@ export default class RegisterStart extends Component {
               </Button>
             </Grid.Row>
             <Grid.Row className="ghPrompt ghPadding">
+              Our registration system is not supported by Internet Explorer/Edge. Please use Chrome, Firefox, or Safari to register.
+            </Grid.Row>
+            <Grid.Row className="ghPrompt ghPadding">
               A Google account is required to sign up for Reflections | Projections so please make one if you do not have one already!
             </Grid.Row>
           </Grid.Column>
