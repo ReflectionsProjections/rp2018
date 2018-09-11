@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import { Jumbotron, Button, OverlayTrigger, Popover } from 'react-bootstrap'
+import React, {Component} from 'react'
+import {Jumbotron, Button, OverlayTrigger, Popover} from 'react-bootstrap'
 import QuestionList from './questionList/questionList'
 import styles from './styles.scss'
 

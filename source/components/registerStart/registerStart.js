@@ -44,7 +44,8 @@ export default class RegisterStart extends Component {
             </Grid.Row>
             <Grid.Row className="ghPrompt ghPadding">
               A Google account is required to sign up for Reflections | Projections so please make one if you do not have one already!
-            </Grid.Row>
+            </Grid.Row>    
+            
           </Grid.Column>
         </Grid.Row>
       </Grid>
