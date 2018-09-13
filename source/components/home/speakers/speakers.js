@@ -17,7 +17,7 @@ class Speakers extends Component {
         super()
 
         // Update when number of speakers changes.
-        this.numSpeakers = 11;
+        this.numSpeakers = 12;
 
         this.showModal = this
             .showModal
