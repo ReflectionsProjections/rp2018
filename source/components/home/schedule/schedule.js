@@ -94,7 +94,7 @@ class Schedule extends Component {
                                 <ul>
                                     <h3>Thu, Sep 20</h3>
                                     <li>
-                                        <small>10:00a-4:00p</small>Corporate Day: Rubrik<span>2405</span>
+                                        <small>10:00a-4:00p</small>Corporate Day: Rubrik<span>Atrium by ACM</span>
                                     </li>
                                     <li>
                                         <small>12:00p - 1:00p</small>Tech Talk: Quora<span>2405</span>
