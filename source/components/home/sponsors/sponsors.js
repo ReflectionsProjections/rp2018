@@ -26,6 +26,11 @@ class Sponsors extends Component {
                     name: "Zillow Group",
                     img: "../assets/img/sponsors/sponsors2018/jobfair/terabyte/zillow_group_full.png",
                     webPage: "https://www.zillowgroup.com/"
+                },
+                {
+                    name: "Bayer",
+                    img: "../assets/img/sponsors/sponsors2018/jobfair/terabyte/bayer.png",
+                    webPage: "https://www.bayer.com/"
                 }
             ],
 
@@ -62,6 +67,10 @@ class Sponsors extends Component {
                     name: "Amazon",
                     img: "../assets/img/sponsors/sponsors2018/jobfair/gigabyte/amazon_full.png",
                     webPage: "https://www.amazon.com/"
+                }, {
+                    name: "Apple",
+                    img: "../assets/img/sponsors/sponsors2018/jobfair/gigabyte/apple.png",
+                    webPage: "https://www.apple.com/"
                 }
             ],
 
@@ -174,6 +183,11 @@ class Sponsors extends Component {
                     name: "Confluent",
                     img: "../assets/img/sponsors/sponsors2018/startup/confluent.png",
                     webPage: "http://www.confluent.io"
+                },
+                {
+                    name: "Contrary Capital",
+                    img: "../assets/img/sponsors/sponsors2018/startup/contrary.png",
+                    webPage: "https://contrarycap.com/"
                 }
             ]
         };
@@ -212,7 +226,7 @@ class Sponsors extends Component {
             .tier2
             .map((sponsor, idx) => {
                 return (
-                    <Col key={idx} xs={6} sm={6} md={6} lg={6} className="Sponsors__centeredCard">
+                    <Col key={idx} xs={6} sm={6} md={6} lg={4} className="Sponsors__centeredCard">
                         <Panel className="Sponsors__card Sponsors__card--tier2">
                             <a href={sponsor.webPage} target="_blank"><img
                                 className="Sponsors__cardLogo"
