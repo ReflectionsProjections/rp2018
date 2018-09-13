@@ -185,7 +185,7 @@ class Schedule extends Component {
                                         <small>10:00a - 11:00a</small>Speaker: Siraj Raval<span>2405</span>
                                     </li>
                                     <li>
-                                        <small>11:00a - 12:00p</small>Speaker: Simon Adler<span>2405</span>
+                                        <small>11:00a - 12:00p</small>Speaker: Bo Li<span>2405</span>
                                     </li>
                                     <li>
                                         <small>12:00p</small>Lunch<span>Atrium</span>

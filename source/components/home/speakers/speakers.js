@@ -121,6 +121,12 @@ class Speakers extends Component {
                         'eley, Forrest was a Computer Science at the University of Illinois at Urbana Cha' +
                         'mpaign, where he received his Bachelor’s degree in 2012.'
             }, {
+                'name': 'Li Li',
+                'img': '../assets/img/keynotes/lili.jpg',
+                'title': 'Principal Software Engineer Manager at Microsoft',
+                'externalLink': 'https://www.linkedin.com/in/lilyfang',
+                'bio': 'Li Li is a Principal Software Engineer Manager at the Microsoft Enterprise Open Source Group. She has been working at Microsoft for more than 17 years, and has released multiple products in both Windows and Linux successfully. Recently, she has led efforts to enable open source Mesos and DCOS as a unified orchestration platform for both Windows and Linux workloads on Azure. John Kordich, a Senior Software Engineer at Microsoft, will be assisting Li with the workshop. In this workshop, they will talk about Microsoft’s transformation of its technology and culture according to their own experiences. They will also present some cutting edge technology and have an interactive workshop that explores the Open Source development experience.'
+            }, {
                 'name': 'Siraj Raval',
                 'img': '../assets/img/keynotes/siraj.jpg',
                 'title': 'YouTuber - Accessible CS education',
@@ -143,6 +149,12 @@ class Speakers extends Component {
                         'Experience” an online platform for quantum cloud computing. He was also appointe' +
                         'd as an IBM Fellow, which is the highest honor a scientist at IBM can achieve. I' +
                         'n addition, he is the associate editor of the Quantum Information journal.'
+            }, {
+                'name': 'Bo Li',
+                'img': '../assets/img/keynotes/boli.jpeg',
+                'title': 'Associate Professor at UIUC',
+                'externalLink': 'http://www.crystal-boli.com/',
+                'bio': 'Bo Li, previously at UC Berkeley, is an Associate Professor at UIUC doing research in optimizing real-world machine learning models. She has been working on improving their vulnerabilities, regarding issues such as efficient resource allocation and building robust, scalable models that can handle large amounts of data. Her talk will be covering her recent work in specifically, training generative adversarial networks against adversarial examples.'
             }, {
                 'name': 'Romain Paulus',
                 'img': '../assets/img/keynotes/romain.jpg',
