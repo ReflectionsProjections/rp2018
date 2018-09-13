@@ -273,7 +273,6 @@ class Speakers extends Component {
             <div className="Speakers" id="Speakers">
                 <PageHeader className="Speakers__header">
                     <h1>Speakers</h1>
-                    <h3 className='coming__soon'>More Coming Soon!</h3>
                 </PageHeader>
                 <Grid
                     className="Speakers__back"
