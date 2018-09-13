@@ -152,9 +152,9 @@ class Speakers extends Component {
             }, {
                 'name': 'Bo Li',
                 'img': '../assets/img/keynotes/boli.jpeg',
-                'title': 'Associate Professor at UIUC',
+                'title': 'Assistant Professor at UIUC',
                 'externalLink': 'http://www.crystal-boli.com/',
-                'bio': 'Bo Li, previously at UC Berkeley, is an Associate Professor at UIUC doing research in optimizing real-world machine learning models. She has been working on improving their vulnerabilities, regarding issues such as efficient resource allocation and building robust, scalable models that can handle large amounts of data. Her talk will be covering her recent work in specifically, training generative adversarial networks against adversarial examples.'
+                'bio': 'Bo Li, previously at UC Berkeley, is an Assistant Professor at UIUC doing research in optimizing real-world machine learning models. She has been working on improving their vulnerabilities, regarding issues such as efficient resource allocation and building robust, scalable models that can handle large amounts of data. Her talk will be covering her recent work in specifically, training generative adversarial networks against adversarial examples.'
             }, {
                 'name': 'Romain Paulus',
                 'img': '../assets/img/keynotes/romain.jpg',
