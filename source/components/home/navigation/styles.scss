@@ -35,6 +35,9 @@
             flex-direction: row;
             margin: 0 0.5vw;
         }
+        a.navBarLink li {
+            display: inline-block!important;
+        }
         li:hover a {
             background-color: transparent;
             color: $active;
@@ -58,12 +61,20 @@
     .navbar-toggle {
         margin: calc(1.8vw + 1.8vh) calc(1.8vw + 1.8vh) 0 0;
     }
-    @media (max-width: 1024px) {
+    @media(min-width: 1024px) and (max-width: 1366px) {
+        a.navBarLink li {
+            padding-left: 2.5vw!important;
+        }
+        .Navigation__logo {
+            margin-left: -2.5vw;
+        }
+    }
+    @media (max-width: 1023px) {
         .nav a {
             margin: 0;
             padding: 0;
         }
-        a li {
+        a.navBarLink li {
             display: block!important;
         }
         .nav {

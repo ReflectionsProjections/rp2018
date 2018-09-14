@@ -133,7 +133,7 @@ class About extends Component {
                                 className="about-image"
                                 src="../assets/img/about/speakers.jpg"
                                 responsive/>
-                            <h3>Speakers</h3>
+                            <h3><a href="/#Speakers">Speakers</a></h3>
                             <p>Come listen to some of the industry's best minds</p>
                         </Col>
                     </Row>
@@ -144,7 +144,7 @@ class About extends Component {
                                 className="about-image"
                                 src="../assets/img/about/mechmania.jpg"
                                 responsive/>
-                            <h3>Mechmania</h3>
+                            <h3><a href="/mechmania">MechMania</a></h3>
                             <p>Mechmania is our 24 hour AI hackathon that runs from Friday (9/21) - Saturday
                                 (9/22). Build your own AI bot to compete. The best part? No prior experience
                                 needed. This year’s Mechmania is sponsored by DeepScale!</p>
@@ -155,7 +155,7 @@ class About extends Component {
                                 className="about-image"
                                 src="../assets/img/about/puzzlebang.jpg"
                                 responsive/>
-                            <h3>PuzzleBang</h3>
+                            <h3><a href="/puzzlebang">PuzzleBang</a></h3>
                             <p>Compete in a week-long puzzle contest hosted by two UIUC Alums to win
                                 exciting prizes. This year’s PuzzleBang is sponsored by IMO! Be sure to checkout
                                 our 2 pop-up escape rooms in Siebel on Saturday, 9/22!</p>
@@ -166,7 +166,7 @@ class About extends Component {
                                 className="about-image"
                                 src="../assets/img/about/symposium.JPG"
                                 responsive/>
-                            <h3>ACM Symposium</h3>
+                            <h3><a href="/symposium">ACM Symposium</a></h3>
                             <p>R|P 2018 is proud to introduce the first-ever installment of the ACM
                                 Symposium - a way for ACM chapters across the Midwest to network and interact by
                                 showcasing their project and research work.</p>
@@ -198,7 +198,7 @@ class About extends Component {
                                 className="about-image"
                                 src="../assets/img/about/challenge.JPG"
                                 responsive/>
-                            <h3>Social Media Challenge</h3>
+                            <h3><a href="/giveaway">R|P Giveaway Contest</a></h3>
                             <p>Engage with R|P on our various social media platforms, for a chance to win a
                                 Nintendo Switch, a Google Home Mini or an Amazon Echo Dot! Follow us on social
                                 media (links in footer) to learn more!</p>

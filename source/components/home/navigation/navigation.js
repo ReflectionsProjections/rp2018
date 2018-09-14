@@ -45,7 +45,7 @@ class Navigation extends Component {
                     </Navbar.Header>
                     <Navbar.Collapse>
                         <Nav pullRight>
-                            <Link to="/#About">
+                            <Link className="navBarLink" to="/#About">
                                 <NavDropdown
                                     title="About"
                                     id="basic-nav-dropdown"
@@ -53,25 +53,26 @@ class Navigation extends Component {
                                     onMouseLeave={(e) => this.setState({show: false})}
                                     open={this.state.show}
                                     onClick={() => location.href = "/#About"}>
-                                    <MenuItem className="events" onClick={() => location.href = "/puzzlebang"}>PuzzleBang</MenuItem>
-                                    <MenuItem className="events" onClick={() => location.href = "/mechmania"}>MechMania</MenuItem>
-                                    <MenuItem className="events" onClick={() => location.href = "/symposium"}>ACM Symposium</MenuItem>
+                                    <MenuItem className="events" className="navBarLink" onClick={() => location.href = "/puzzlebang"}>PuzzleBang</MenuItem>
+                                    <MenuItem className="events" className="navBarLink" onClick={() => location.href = "/mechmania"}>MechMania</MenuItem>
+                                    <MenuItem className="events" className="navBarLink" onClick={() => location.href = "/symposium"}>ACM Symposium</MenuItem>
                                 </NavDropdown>
                             </Link>
-                            <Link to="/#Schedule" onClick={() => location.href = "/#Schedule"}>
+                            <Link to="/#Schedule" className="navBarLink" onClick={() => location.href = "/#Schedule"}>
                                 <NavItem eventKey={2}>Schedule</NavItem>
                             </Link>
-                            <Link to="/#Speakers" onClick={() => location.href = "/#Speakers"}>
+                            <Link to="/#Speakers" className="navBarLink" onClick={() => location.href = "/#Speakers"}>
                                 <NavItem eventKey={3}>Speakers</NavItem>
                             </Link>
-                            <Link to="/#FAQ" onClick={() => location.href = "/#FAQ"}>
+                            <Link to="/#FAQ" className="navBarLink" onClick={() => location.href = "/#FAQ"}>
                                 <NavItem eventKey={4}>FAQ</NavItem>
                             </Link>
-                            <Link to="/#Sponsors" onClick={() => location.href = "/#Sponsors"}>
+                            <Link to="/#Sponsors" className="navBarLink" onClick={() => location.href = "/#Sponsors"}>
                                 <NavItem eventKey={5}>Sponsors</NavItem>
                             </Link>
                             <Link
                                 to=""
+                                className="navBarLink"
                                 onClick={() => window.open("https://blog.reflectionsprojections.org")}>
                                 <NavItem href="https://blog.reflectionsprojections.org" eventKey={6}>Blog</NavItem>
                             </Link>

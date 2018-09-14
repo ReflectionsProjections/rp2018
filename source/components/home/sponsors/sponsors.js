@@ -9,6 +9,7 @@ class Sponsors extends Component {
 
     render() {
         const sponsorsList = {
+            // Petabyte (PB)
             tier1: [
                 {
                     name: "Microsoft",
@@ -16,7 +17,7 @@ class Sponsors extends Component {
                     webPage: "https://microsoft.com/"
                 }
             ],
-
+            // Terabyte (TB)
             tier2: [
                 {
                     name: "IMO Intelligent Medical Objects",
@@ -33,7 +34,7 @@ class Sponsors extends Component {
                     webPage: "https://www.bayer.com/"
                 }
             ],
-
+            // Gigabyte (GB)
             tier3: [
                 {
                     name: "Cloudflare",
@@ -67,13 +68,9 @@ class Sponsors extends Component {
                     name: "Amazon",
                     img: "../assets/img/sponsors/sponsors2018/jobfair/gigabyte/amazon_full.png",
                     webPage: "https://www.amazon.com/"
-                }, {
-                    name: "Apple",
-                    img: "../assets/img/sponsors/sponsors2018/jobfair/gigabyte/apple.png",
-                    webPage: "https://www.apple.com/"
                 }
             ],
-
+            // Megabyte (MB)
             tier4: [
                 {
                     name: "Google",
@@ -139,6 +136,10 @@ class Sponsors extends Component {
                     name: "Esri",
                     img: "../assets/img/sponsors/sponsors2018/jobfair/megabyte/esri_full.PNG",
                     webPage: "https://esri.com/"
+                }, {
+                    name: "Apple",
+                    img: "../assets/img/sponsors/sponsors2018/jobfair/gigabyte/apple.png",
+                    webPage: "https://www.apple.com/"
                 },
 
                 // Startups
