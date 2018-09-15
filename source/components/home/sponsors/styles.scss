@@ -104,9 +104,6 @@ h1 {
         &__card--tier1 {
             margin: -20vh auto;
         }
-        &__card--tier2 {
-            margin: -15vh auto;
-        }
         &__card--tier3 {
             margin: -7vh -2.5vh;
         }
@@ -129,9 +126,6 @@ h1 {
         &__card--tier1 {
             margin: -20vh auto -40vh;
         }
-        &__card--tier2 {
-            margin-bottom: -15vh;
-        }
         &__card--tier3 {
             min-height: 15vh;
             margin: -1vh -3vh;
@@ -141,6 +135,15 @@ h1 {
         }
     }
 }
+
+@media(max-width: 600px) {
+    .Sponsors {
+        &__card--tier2 {
+            min-height: 20vh;
+        }
+    }
+}
+
 @media (max-height: 500px) {
     .Sponsors {
         &__card--tier4 {

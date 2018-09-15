@@ -63,9 +63,6 @@ class Schedule extends Component {
                                     <li>
                                         <small>6:00p - 7:00p</small>Tech Talk: Salesforce<span>2405</span>
                                     </li>
-                                    <li>
-                                        <small>7:00p - 8:00p</small>Corporate Social: Qualtrics<span>2405</span>
-                                    </li>
                                 </ul>
                                 <ul>
                                     <h3>Tue, Sep 18</h3>

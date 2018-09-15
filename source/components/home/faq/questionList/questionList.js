@@ -262,6 +262,25 @@ class QuestionList extends Component {
                         </div>
                     </li>
                 </ul>
+                <h2 className="faq-heading">R|P Giveaway Contest</h2>
+                <ul className="column faq_column">
+                    <li>
+                        <div className="question">
+                            What is the R|P Giveaway Contest?
+                        </div>
+                        <div className="answer">
+                            Brand new this year, Reflections | Projections is raffling off a few prizes to attendees based on attendance and social media presence! The raffle entry period starts on Thursday, September 6th at noon and ends on Saturday, September 22nd at 6:00pm.
+                        </div>
+                    </li>
+                    <li>
+                        <div className="question">
+                            How can I participate in the contest?
+                        </div>
+                        <div className="answer">
+                            Entries can be earned by registering for the conference, attending events, and sharing posts about R|P on social media. We will announce the winners and give out prizes at the closing ceremony on September 22nd. If you win, we will contact you via social media or email and, if necessary, we can ship the prizes to your preferred address.
+                        </div>
+                    </li>
+                </ul>
             </section>
         );
     }
