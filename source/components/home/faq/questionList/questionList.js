@@ -60,15 +60,6 @@ class QuestionList extends Component {
                     </li>
                     <li>
                         <div className="question">
-                            Do I need to register?
-                        </div>
-                        <div className="answer">
-                            Nope! But registering is the only way you'll be guaranteed a T-shirt.
-                            Registration coming soon!
-                        </div>
-                    </li>
-                    <li>
-                        <div className="question">
                             Is the conference free to attend?
                         </div>
                         <div className="answer">
