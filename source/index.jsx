@@ -7,6 +7,7 @@ import Home from './components/home/home';
 import Landing from './components/landing/landing';
 import Register from './components/register/register';
 import Auth from './components/auth/auth';
+import ScanAuth from './components/auth/scanAuth';
 import RegisterStart from './components/registerStart/registerStart';
 import RegisterSuccess from './components/registerSuccess/registerSuccess';
 import PuzzleBang from './components/puzzlebang/puzzlebang';
@@ -70,7 +71,11 @@ render(
             <Route exact path="/start" component={RegisterStart}/>
             <Route exact path="/registersuccess" component={RegisterSuccess}/>
             <Route exact path="/register" component={Register}/>
+            // For registration flow auth
             <Route exact path="/auth" component={Auth}/>
+            // For scanning app flow auth
+            <Route exact path="/scanAuth" component={ScanAuth}/>
+
         </div>
     </BrowserRouter>,
     document.getElementById('app')
