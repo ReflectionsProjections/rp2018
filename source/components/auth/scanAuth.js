@@ -6,7 +6,7 @@
 import React, { Component } from 'react';
 import qs from 'qs';
 // Components
-import styles from './auth.scss';
+import styles from './scanAuth.scss';
 import axios from 'axios';
 import queryString from 'query-string';
 
@@ -33,11 +33,8 @@ ga('create', 'UA-46010489-2', {
     cookieDomain: 'hackillinois.org'
 });
 
-// This route should be accessed with a query string containing either the
-// OAuth authorization code, or an isMobile flag.
-// We will then make a call to the API, exchanging it for the JWT,
-// with which we can get user info for the email.
-export default class Auth extends Component {
+// This route is hit on redirect from /auth/google/ in the scanning workflow
+export default class ScanAuth extends Component {
     constructor(props) {
         super(props);
         this.apiUrl = 'https://api.reflectionsprojections.org';
@@ -54,35 +51,27 @@ export default class Auth extends Component {
         const body = { code: authorizationCode };
         const url =
             this.apiUrl +
-            '/auth/code/google/?redirect_uri=https://reflectionsprojections.org/auth';
+            '/auth/code/google/?redirect_uri=https://reflectionsprojections.org/scanAuth';
         const options = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json', Origin: '*' },
             data: body,
             url
         };
-        // If auth is hit as a redirect from the Register flow, then get the JWT.
-        // If auth is hit from effective-googles i.e. the QR code scanning app,
-        //     then, it must hit the /auth/google/ endpoint and finally take the user to
-        //     the acmrp:// URI endpoint
-        if (values.isMobile !== undefined) {
-            window.location = this.apiUrl + "/auth/google/?redirect_uri=https://reflectionsprojections.org/scanAuth";
-        } else {
-            axios(options)
-                .then(function(response) {
-                    if (HTTP_STATUS_OK === response.status) {
-                        let apiJwt = response.data.token;
-                        sessionStorage.setItem('Authorization', apiJwt);
+        axios(options)
+            .then(function(response) {
+                if (HTTP_STATUS_OK === response.status) {
+                    let apiJwt = response.data.token;
+                    sessionStorage.setItem('Authorization', apiJwt);
 
-                        window.location =
-                            'https://reflectionsprojections.org/register';
-                    }
-                })
-                .catch(function(error) {
-                    console.log(error.response);
-                });
+                    window.location =
+                        'acmrp://auth?token=' + apiJwt;
+                }
+            })
+            .catch(function(error) {
+                console.log(error.response);
+            });
         }
-    }
 
     render() {
         return <div className="background" />;
