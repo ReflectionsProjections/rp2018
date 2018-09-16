@@ -54,7 +54,6 @@ export default class Auth extends Component {
             // Means it is a redirect from Google
             // Make POST request, and redirect appropriately
             let authorizationCode = values.code;
-            authorizationCode.concat('#');
             sessionStorage.setItem('Authorization-Code', authorizationCode);
 
             const body = { code: authorizationCode };
