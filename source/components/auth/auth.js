@@ -46,7 +46,7 @@ export default class Auth extends Component {
     componentDidMount() {
         const HTTP_STATUS_OK = 200;
         const values = queryString.parse(this.props.location.search);
-        const isAuthorized = values.hasAuthorizationCode || values.hasAuthorizationCode === "true";
+        const isAuthorized = values.code !== undefined;
         const isMobile = values.isMobile || isMobile === "true"; 
 
         if (isAuthorized) {
@@ -57,12 +57,11 @@ export default class Auth extends Component {
             authorizationCode.concat('#');
             sessionStorage.setItem('Authorization-Code', authorizationCode);
 
-
             const body = { code: authorizationCode };
-            let url = this.apiUrl + '/auth/code/google/?redirect_uri=https://reflectionsprojections.org/auth?hasAuthorizationCode=true';
+            let url = this.apiUrl + '/auth/code/google/?redirect_uri=https://reflectionsprojections.org/auth';
 
             if (isMobile) {
-                url.concat('&isMobile=true');
+                url.concat('?isMobile=true');
             }
 
             const tokenRequestOptions = {
@@ -95,7 +94,7 @@ export default class Auth extends Component {
         } else {
             // Means authorization is required
             if (isMobile) {
-                window.location = this.apiUrl + '/auth/google/?redirect_uri=https://reflectionsprojections.org/auth?hasAuthorizationCode=true&isMobile=true';
+                window.location = this.apiUrl + '/auth/google/?redirect_uri=https://reflectionsprojections.org/auth?isMobile=true';
             }
         }
     }
