@@ -44,43 +44,59 @@ export default class Auth extends Component {
     }
 
     componentDidMount() {
-        const values = queryString.parse(this.props.location.search);
-        const authorizationCode = values.code;
-        sessionStorage.setItem('Authorization-Code', authorizationCode);
         const HTTP_STATUS_OK = 200;
+        const values = queryString.parse(this.props.location.search);
+        const isAuthorized = values.hasAuthorizationCode || values.hasAuthorizationCode === "true";
+        const isMobile = values.isMobile || isMobile === "true"; 
 
-        authorizationCode.concat('#');
+        if (isAuthorized) {
+            
+            // Means it is a redirect from Google
+            // Make POST request, and redirect appropriately
+            let authorizationCode = values.code;
+            authorizationCode.concat('#');
+            sessionStorage.setItem('Authorization-Code', authorizationCode);
 
-        const body = { code: authorizationCode };
-        const url =
-            this.apiUrl +
-            '/auth/code/google/?redirect_uri=https://reflectionsprojections.org/auth';
-        const options = {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json', Origin: '*' },
-            data: body,
-            url
-        };
-        // If auth is hit as a redirect from the Register flow, then get the JWT.
-        // If auth is hit from effective-googles i.e. the QR code scanning app,
-        //     then, it must hit the /auth/google/ endpoint and finally take the user to
-        //     the acmrp:// URI endpoint
-        if (values.isMobile !== undefined) {
-            window.location = this.apiUrl + "/auth/google/?redirect_uri=https://reflectionsprojections.org/scanAuth";
-        } else {
-            axios(options)
+
+            const body = { code: authorizationCode };
+            let url = this.apiUrl + '/auth/code/google/?redirect_uri=https://reflectionsprojections.org/auth?hasAuthorizationCode=true';
+
+            if (isMobile) {
+                url.concat('&isMobile=true');
+            }
+
+            const tokenRequestOptions = {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', Origin: '*' },
+                data: body,
+                url: url
+            };
+
+            // If auth is hit as a redirect from the Register flow, then get the JWT.
+            // If auth is hit from effective-googles i.e. the QR code scanning app,
+            //     then, it must hit the /auth/google/ endpoint and finally take the user to
+            axios(tokenRequestOptions)
                 .then(function(response) {
                     if (HTTP_STATUS_OK === response.status) {
                         let apiJwt = response.data.token;
                         sessionStorage.setItem('Authorization', apiJwt);
-
-                        window.location =
-                            'https://reflectionsprojections.org/register';
+                        
+                        if (isMobile) {
+                            window.location = "acmrp://auth?token=" + apiJwt;
+                        } else {
+                            window.location = 'https://reflectionsprojections.org/register';
+                        }
                     }
                 })
                 .catch(function(error) {
                     console.log(error.response);
                 });
+
+        } else {
+            // Means authorization is required
+            if (isMobile) {
+                window.location = this.apiUrl + '/auth/google/?redirect_uri=https://reflectionsprojections.org/auth?hasAuthorizationCode=true&isMobile=true';
+            }
         }
     }
 
