@@ -66,7 +66,7 @@ render(
         <div>
             <Route exact path="/" component={Home}/>
             <Route path="/sponsor" component={SponsorLetter} />
-            <Route path="/startup" component={StartupLetter} />
+            <Route path="/startupsponsor" component={StartupLetter} />
             <Route path="/giveaway" component={GiveawayFlyer} />
 
 
