@@ -31,7 +31,7 @@ const CareerFairMap = () => {
 };
 
 const StartupFairMap = () => {
-    window.location = './assets/files/startup_fair.png';
+    window.location = '/assets/files/startup_fair.png';
     return null;
 };
 
