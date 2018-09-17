@@ -177,7 +177,7 @@ class About extends Component {
                         <Col md={4} className="text-center">
                             <Image className="about-image" src="../assets/img/about/alumni.jpg" responsive/>
                             <h3>Alumni Social</h3>
-                            <p>Head over to Legends after the ACM Symposium after the closing ceremony to
+                            <p>Head over to Murphy's after the ACM Symposium after the closing ceremony to
                                 interact and network with alumni, speakers and current students! It’s the
                                 perfect social to culminate the conference.</p>
                         </Col>
