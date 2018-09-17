@@ -124,7 +124,7 @@ class About extends Component {
                                 className="about-image"
                                 src="../assets/img/about/startupfair.jpg"
                                 responsive/>
-                            <h3><a href="/startup_fair">Startup Fair</a></h3>
+                            <h3><a href="/assets/files/startup_fair.png">Startup Fair</a></h3>
                             <p>Interact with hot new startups</p>
                         </Col>
 
