@@ -26,6 +26,7 @@
             padding-bottom: 0;
             font-weight: bold;
             display: flex;
+            flex-direction: row;
             margin: 0;
         }
         a {
@@ -35,22 +36,42 @@
             flex-direction: row;
             margin: 0 0.5vw;
         }
-        a.navBarLink li {
-            display: inline-block!important;
-        }
-        li:hover a {
-            background-color: transparent;
-            color: $active;
-            text-shadow: 5px $active;
-            text-decoration: none;
-        }
+    
         .events a {
             color: white !important;
         }
         .events a:hover {
             color: $active !important;
         }
-    }
+        
+        @media(min-width: 1024px) and (max-width: 1366px) {
+            .Navigation .navbar a.navBarLink li.dropdown[namespaceURI="http://www.w3.org/1999/xhtml"], .Navigation .navbar a.navBarLink li.presentation[namespaceURI="http://www.w3.org/1999/xhtml"],  {
+                padding-left: 2.5vw!important;
+                display: block !important; 
+            }
+            .Navigation__logo {
+                margin-left: -2.5vw;
+            }
+            .navbar .nav {
+                display: flex!important;
+                flex-direction: column!important;
+            }
+        }
+
+        @media (max-width: 1023px) {
+            .nav a {
+                margin: 0;
+                padding: 0;
+            }
+            a.navBarLink li {
+                display: block!important;
+            }
+            .nav {
+                display: flex!important;
+                flex-direction: column!important;
+            }
+        }
+    }   
 
     &__logo {
         width: 7.5vh !important;
@@ -61,27 +82,20 @@
     .navbar-toggle {
         margin: calc(1.8vw + 1.8vh) calc(1.8vw + 1.8vh) 0 0;
     }
-    @media(min-width: 1024px) and (max-width: 1366px) {
-        a.navBarLink li {
-            padding-left: 2.5vw!important;
-        }
-        .Navigation__logo {
-            margin-left: -2.5vw;
-        }
-    }
-    @media (max-width: 1023px) {
-        .nav a {
-            margin: 0;
-            padding: 0;
-        }
-        a.navBarLink li {
-            display: block!important;
-        }
-        .nav {
-            display: unset!important;
-        }
-    }
 }
+
+.Navigation .navbar a.navBarLink li.dropdown, .Navigation .navbar a.navBarLink li.presentation {
+    display: inline-block!important;
+}
+
+.navbar li:hover a {
+    background-color: unset!important;
+    color: $active;
+    text-shadow: 5px $active;
+    text-decoration: none;
+}
+
+
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:focus,
 .navbar-default .navbar-nav > .open > a:hover {

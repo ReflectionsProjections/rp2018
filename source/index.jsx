@@ -26,6 +26,16 @@ const StartupLetter = () => {
     return null;
 };
 
+const CareerFairMap = () => {
+    window.location = '/assets/files/career_fair.png';
+    return null;
+};
+
+const StartupFairMap = () => {
+    window.location = '/assets/files/startup_fair.png';
+    return null;
+};
+
 const GiveawayFlyer = () => {
     window.location = './assets/files/giveaway.pdf';
     return null;
@@ -57,7 +67,7 @@ render(
         <div>
             <Route exact path="/" component={Home}/>
             <Route path="/sponsor" component={SponsorLetter} />
-            <Route path="/startup" component={StartupLetter} />
+            <Route path="/startupsponsor" component={StartupLetter} />
             <Route path="/giveaway" component={GiveawayFlyer} />
 
 
@@ -68,12 +78,14 @@ render(
             <Route path="/symposiumregister" component={SymposiumSignup} />
             <Route path="/dashboard" component={Dashboard} />
             <Route path="/dashboardlarge" component={DashboardLarge} />
+            <Route path="/career_fair" component={CareerFairMap} />
+            <Route path="/startup_fair" component={StartupFairMap} />
             <Route path="/home" component={Home} />
 
             <Route exact path="/start" component={RegisterStart}/>
             <Route exact path="/registersuccess" component={RegisterSuccess}/>
             <Route exact path="/register" component={Register}/>
-            // For registration flow auth
+          
             <Route exact path="/auth" component={Auth}/>
 
         </div>

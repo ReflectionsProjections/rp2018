@@ -115,7 +115,7 @@ class About extends Component {
                                 className="about-image"
                                 src="../assets/img/about/jobfair.jpg"
                                 responsive/>
-                            <h3>Career Fair</h3>
+                            <h3><a href="/career_fair">Career Fair</a></h3>
                             <p>Meet some of the best companies in the country</p>
                         </Col>
 
@@ -124,7 +124,7 @@ class About extends Component {
                                 className="about-image"
                                 src="../assets/img/about/startupfair.jpg"
                                 responsive/>
-                            <h3>Startup Fair</h3>
+                            <h3><a href="/assets/files/startup_fair.png">Startup Fair</a></h3>
                             <p>Interact with hot new startups</p>
                         </Col>
 
@@ -177,7 +177,7 @@ class About extends Component {
                         <Col md={4} className="text-center">
                             <Image className="about-image" src="../assets/img/about/alumni.jpg" responsive/>
                             <h3>Alumni Social</h3>
-                            <p>Head over to Legends after the ACM Symposium after the closing ceremony to
+                            <p>Head over to Murphy's after the ACM Symposium after the closing ceremony to
                                 interact and network with alumni, speakers and current students! It’s the
                                 perfect social to culminate the conference.</p>
                         </Col>
