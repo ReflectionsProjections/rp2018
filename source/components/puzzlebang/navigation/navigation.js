@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import {Navbar, Nav, NavItem, NavDropdown, MenuItem} from 'react-bootstrap'
 import {HashLink as Link} from 'react-router-hash-link'
-import styles from './styles.scss'
 
 class Navigation extends Component {
 
