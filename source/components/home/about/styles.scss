@@ -8,6 +8,10 @@
     width: 100vw;
     padding: 7vh 12.5vw;
 
+    a {
+      text-decoration: underline;
+    }
+
     h3 {
         //color: $accentForeground;
         font-weight: bold;
@@ -56,7 +60,7 @@
 
     .text-center{
       color: rgba(0,0,0,1) !important;
-    } 
+    }
 
     .about-text {
       font-weight: bold;

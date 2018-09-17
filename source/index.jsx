@@ -25,6 +25,16 @@ const StartupLetter = () => {
     return null;
 };
 
+const CareerFairMap = () => {
+    window.location = '/assets/files/career_fair.png';
+    return null;
+};
+
+const StartupFairMap = () => {
+    window.location = './assets/files/startup_fair.png';
+    return null;
+};
+
 const GiveawayFlyer = () => {
     window.location = './assets/files/giveaway.pdf';
     return null;
@@ -65,6 +75,9 @@ render(
             <Route path="/symposium" component={ACMSymposium} />
             <Route path="/volunteer" component={VolunteerSignup} />
             <Route path="/symposiumregister" component={SymposiumSignup} />
+            <Route path="/career_fair" component={CareerFairMap} />
+            <Route path="/startup_fair" component={StartupFairMap} />
+
             <Route path="/home" component={Home} />
 
             <Route exact path="/start" component={RegisterStart}/>

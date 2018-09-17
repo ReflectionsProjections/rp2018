@@ -115,7 +115,7 @@ class About extends Component {
                                 className="about-image"
                                 src="../assets/img/about/jobfair.jpg"
                                 responsive/>
-                            <h3>Career Fair</h3>
+                            <h3><a href="/career_fair">Career Fair</a></h3>
                             <p>Meet some of the best companies in the country</p>
                         </Col>
 
@@ -124,7 +124,7 @@ class About extends Component {
                                 className="about-image"
                                 src="../assets/img/about/startupfair.jpg"
                                 responsive/>
-                            <h3>Startup Fair</h3>
+                            <h3><a href="/startup_fair">Startup Fair</a></h3>
                             <p>Interact with hot new startups</p>
                         </Col>
 
