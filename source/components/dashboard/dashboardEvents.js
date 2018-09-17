@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Grid, Container, Segment, Responsive, Image} from 'semantic-ui-react';
 
 import styles from './dashboardEvents.scss'
+import moment from 'moment'
 import axios from 'axios';
 
 export default class DashboardEvents extends Component {
@@ -52,9 +53,10 @@ export default class DashboardEvents extends Component {
       console.log(data);
 
       // filter events
-      let currentEvent = data.filter(event => new Date(event.startTime) < currentTime && new Date(event.endTime) > currentTime);
-      console.log(new Date(currentTime));
-      let upcomingEvent = data.filter(event => event.startTime > currentTime);
+      let currentEvent = data.filter(event => new Date(event.startTime*1000) < currentTime && new Date(event.endTime*1000) > currentTime && event.name != "Example Event 2" && event.name != "Corporate Social");
+      console.log("BREAK");
+      let upcomingEvent = data.filter((event) => (event.startTime*1000) > currentTime && event.name != "Corporate Social");
+
 
       currentEvent.sort(function(a, b) {
           return new Date(a.startTime) - new Date(b.startTime)
@@ -90,6 +92,7 @@ export default class DashboardEvents extends Component {
 
               </div>
             </Segment>
+
           :
           currentEvent.map((event, index) => {
             return(
@@ -98,15 +101,10 @@ export default class DashboardEvents extends Component {
                   {event.name}
                 </div>
                 {
-                  event.locations.map((location, index) => {
-                    return (
-                      <div className="cellLocation">
-                        {this.state.locations[location.locationId]}
-                      </div>
-                    )
-                  })
+                  moment(event.endTime *1000).format('hh:mm a') + " @ " + (event.name == "Startup Fair" ? "Siebel Atrium" : "Siebel Center 2405")
                 }
               </Segment>
+
             )
           })
         }
@@ -132,10 +130,12 @@ export default class DashboardEvents extends Component {
                 </div>
                 <div className="cellLocation">
                 {
-                  event.locations.map((location, index) => {
+                    moment(event.startTime *1000).format('hh:mm a') + " @ " + (event.name == "Startup Fair" ? "Siebel Atrium" : "Siebel Center 2405")
+                                  /*  event.locations.map((location, index) => {
                     const divider = index != event.locations.length - 1 ? " | ": "";
                     return this.state.locations[location.locationId] + divider
-                  })
+                  })*/
+
                 }
                 </div>
               </Segment>

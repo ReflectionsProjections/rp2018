@@ -14,15 +14,14 @@ export default class DashboardLarge extends Component {
 
     this.state = {
       logos: [
-        "fulcrumtransparent-regular",
-        "googlecloudplatformtransparent",
-        "forcepointtransparent",
-        "caterpillartransparent",
-        "microsofttransparent",
-        "rubriktransparent",
-        "oathtransparent",
-        "facebooktransparent",
-        "schlumbergertransparent"
+        "amazon_full.png",
+        "braintree.png",
+        "cf_placeholder.png",
+        "lyft_full.png",
+        "northern_trust.jpg",
+        "qualtrics_full.png",
+        "quora_full.png",
+        "sf_placeholder.png"
       ],
       visibles: [
         true,
@@ -65,7 +64,7 @@ export default class DashboardLarge extends Component {
       newLogo = allLogos[newLogoIndex];
     }
 
-    logos[index] = allLogos[newLogoIndex];
+    //logos[index] = allLogos[newLogoIndex];
     visibles[index] = true;
     this.setState({
       logos: logos,
@@ -81,16 +80,39 @@ export default class DashboardLarge extends Component {
       <Grid className='largeDashboardContainer' columns='equal'>
         <Grid.Row>
           <Grid.Column className="largeLeftSideContainer">
-            <div className="largeBlockContainer">
-              <DashboardClock clock={false} title='COUNTDOWN'/>
+            <div className="largeBlockContainer rpLogoContainer">
+              <Image src={'/assets/full-logo_2018_white.svg'} size = 'large' centered/>
             </div>
             <div className="largeBlockContainer">
-              <DashboardEvents key="dashboardLarge" className="bottomContainer"/>
+              <Segment basic className="posterContainer">
+                <Image className='posterImg' src={'../assets/posters/Salesforce_Tech_Talk.png'} size='large' centered />
+              </Segment>
             </div>
+
           </Grid.Column>
           <Grid.Column>
-            <div className="largeBlockContainer">
-              <DashboardClock clock={true} title='CURRENT TIME'/>
+          <div className="largeBlockContainer">
+            <DashboardClock clock={true} title='CURRENT TIME'/>
+          </div>
+          <div className="largeBlockContainer">
+            <DashboardEvents key="dashboardLarge" className="bottomContainer"/>
+          </div>
+
+          </Grid.Column>
+          <Grid.Column className="largeRightSideContainer">
+            <div className="largeLogoContainer">
+              <Grid>
+                <Grid.Row columns={1} className="logoRow">
+                  <Grid.Column className="logoCol">
+                    <Segment basic className="logoContainer">
+                      <div className="eventsTitle">
+                        Powered by:
+                      </div>
+                      <Image className="sponsorLogo" src={'../assets/img/sponsors/sponsors2018/jobfair/petabyte/microsoft_full.png'} size='medium' centered />
+                    </Segment>
+                  </Grid.Column>
+                </Grid.Row>
+              </Grid>
             </div>
             <div className="largeBlockContainer">
               <Segment basic className="twitterContainer">
@@ -99,71 +121,6 @@ export default class DashboardLarge extends Component {
                   options={{chrome: 'transparent nofooter noheader noscrollbar', tweetLimit: 3, ariaPolite: 'rude', username:'uiuc_rp'}}
                 />
               </Segment>
-            </div>
-          </Grid.Column>
-          <Grid.Column className="largeRightSideContainer">
-            <div className="largeBlockContainer dashboardAnimationPlaceholder">
-              <Image src="../../assets/animation/dashboard_animation.gif" size='large' className="dashboardAnimation"/>
-            </div>
-            <div className="largeBlockContainer" style={{marginBottom: '4vh'}}>
-              <DashboardAnnouncements size='small'/>
-            </div>
-            <div className="largeLogoContainer">
-              <Grid>
-                <Grid.Row columns={3} className="logoRow">
-                  <Grid.Column className="logoCol">
-                    <Transition duration={{ hide, show }} onHide={() => this.randomLogos(0)} visible={visibles[0]} animation='fade'>
-                      <Image className="sponsorLogo" src={'../../assets/img/png/logos/'+logos[0]+'.png'} size='small' centered />
-                    </Transition>
-                  </Grid.Column>
-                  <Grid.Column className="logoCol">
-                    <Transition duration={{ hide, show }} onHide={() => this.randomLogos(1)} visible={visibles[1]} animation='fade'>
-                      <Image className="sponsorLogo" src={'../../assets/img/png/logos/'+logos[1]+'.png'} size='small' centered />
-                    </Transition>
-                   </Grid.Column>
-                  <Grid.Column className="logoCol">
-                    <Transition duration={{ hide, show }} onHide={() => this.randomLogos(2)} visible={visibles[2]} animation='fade'>
-                      <Image className="sponsorLogo" src={'../../assets/img/png/logos/'+logos[2]+'.png'} size='small' centered />
-                    </Transition>
-                  </Grid.Column>
-                </Grid.Row>
-
-                <Grid.Row columns={3} className="logoRow">
-                  <Grid.Column className="logoCol">
-                    <Transition duration={{ hide, show }} onHide={() => this.randomLogos(3)} visible={visibles[3]} animation='fade'>
-                      <Image className="sponsorLogo" src={'../../assets/img/png/logos/'+logos[3]+'.png'} size='small' centered />
-                    </Transition>
-                  </Grid.Column>
-                  <Grid.Column className="logoCol">
-                    <Transition duration={{ hide, show }} onHide={() => this.randomLogos(4)} visible={visibles[4]} animation='fade'>
-                      <Image className="sponsorLogo" src={'../../assets/img/png/logos/'+logos[4]+'.png'} size='small' centered />
-                    </Transition>
-                   </Grid.Column>
-                  <Grid.Column className="logoCol">
-                    <Transition duration={{ hide, show }} onHide={() => this.randomLogos(5)} visible={visibles[5]} animation='fade'>
-                      <Image className="sponsorLogo" src={'../../assets/img/png/logos/'+logos[5]+'.png'} size='small' centered />
-                    </Transition>
-                  </Grid.Column>
-                </Grid.Row>
-
-                <Grid.Row columns={3} className="logoRow">
-                  <Grid.Column className="logoCol">
-                    <Transition duration={{ hide, show }} onHide={() => this.randomLogos(6)} visible={visibles[6]} animation='fade'>
-                      <Image className="sponsorLogo" src={'../../assets/img/png/logos/'+logos[6]+'.png'} size='small' centered />
-                    </Transition>
-                  </Grid.Column>
-                  <Grid.Column className="logoCol">
-                    <Transition duration={{ hide, show }} onHide={() => this.randomLogos(7)} visible={visibles[7]} animation='fade'>
-                      <Image className="sponsorLogo" src={'../../assets/img/png/logos/'+logos[7]+'.png'} size='small' centered />
-                    </Transition>
-                   </Grid.Column>
-                  <Grid.Column className="logoCol">
-                    <Transition duration={{ hide, show }} onHide={() => this.randomLogos(8)} visible={visibles[8]} animation='fade'>
-                      <Image className="sponsorLogo" src={'../../assets/img/png/logos/'+logos[8]+'.png'} size='small' centered />
-                    </Transition>
-                  </Grid.Column>
-                </Grid.Row>
-              </Grid>
             </div>
           </Grid.Column>
         </Grid.Row>

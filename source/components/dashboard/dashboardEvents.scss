@@ -6,13 +6,22 @@
   font-stretch: normal;
   letter-spacing: normal;
   text-align: center;
-  color: #232157;
+  color: #075c60!important;
+  font-family: "Roboto Slab", sans-serif!important;
 }
 
 .eventsContainer {
+
+  color: #075c60!important;
   background-color: #f2f5fe !important;
   border-radius: 5px !important;
   padding: 0vh 2vw 0vh 2vw !important;
-  height: 55vh;
+  height: 57.5vh;
   overflow: hidden;
+  font-family: "Roboto Slab", sans-serif!important;
+}
+
+.cellTitle {
+
+    color: #075c60!important;
 }

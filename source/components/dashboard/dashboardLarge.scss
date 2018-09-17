@@ -13,11 +13,12 @@
 }
 
 .largeLogoContainer{
-  margin: 3.5vh 1.5vw 3.5vh 1.5vw;
+  margin: 6vh 1.5vw 3.5vh 1.5vw;
+  color: white;
 
   .sponsorLogo {
     padding: 0.5vw;
-    background: rgba(255, 255, 255, 0.95) !important;
+    //background: rgba(255, 255, 255, 0.95) !important;
   }
 
   .logoCol{
@@ -31,17 +32,42 @@
   }
 }
 
+.rpLogoContainer {
+  margin-top: 12vh;
+}
+
 .largeDashboardContainer {
+
+  color: white;
   height: 100%;
   background-color: #25225a;
   background: url("../../assets/img/png/dashboard_background.png");
   background-size: auto 100%;
 }
 
+.posterImg {
+
+  height: 65vh !important;
+}
+
+.posterContainer {
+  background-color: #f2f5fe !important;
+  border-radius: 5px !important;
+  height: 68vh;
+  overflow: hidden;
+}
+
 .twitterContainer{
   background-color: #f2f5fe !important;
   border-radius: 5px !important;
-  height: 55vh;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.logoContainer {
+  background-color: #f2f5fe !important;
+  border-radius: 5px !important;
+  height: 25vh;
   overflow: hidden;
 }
 

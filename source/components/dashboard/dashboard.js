@@ -91,7 +91,7 @@ export default class Dashboard extends Component {
           </Grid.Column>
           <Grid.Column width={5}>
             <div className="blockContainer">
-              <DashboardClock key="countdown" clock={false} title='COUNTDOWN'/>
+              <Image src={'/assets/2018logo.png'} size = 'large'/>
             </div>
             <div className="blockContainer">
               <DashboardEvents key="dashboardSmall" className="bottomContainer"/>
