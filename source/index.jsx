@@ -12,7 +12,8 @@ import RegisterSuccess from './components/registerSuccess/registerSuccess';
 import PuzzleBang from './components/puzzlebang/puzzlebang';
 import MechMania from './components/mechmania/mechmania';
 import ACMSymposium from './components/acm_symposium/acm_symposium';
-
+import Dashboard from './components/dashboard/dashboard';
+import DashboardLarge from './components/dashboard/dashboardLarge';
 
 // Redirects
 const SponsorLetter = () => {
@@ -65,6 +66,8 @@ render(
             <Route path="/symposium" component={ACMSymposium} />
             <Route path="/volunteer" component={VolunteerSignup} />
             <Route path="/symposiumregister" component={SymposiumSignup} />
+            <Route path="/dashboard" component={Dashboard} />
+            <Route path="/dashboardlarge" component={DashboardLarge} />
             <Route path="/home" component={Home} />
 
             <Route exact path="/start" component={RegisterStart}/>
