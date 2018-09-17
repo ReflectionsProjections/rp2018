@@ -42,7 +42,6 @@ class Start extends Component {
                         </button>
                     </a>
                     <div className="caps">September 17th - 22nd, 2018</div>
-                    <Countdown className="counter"/> {/*<div style={{margin: "15px", paddingBottom: "10px", fontSize: "18px"}}>DAYS&nbsp; LEFT</div>*/}
                     <Scrolldown/>
                 </Jumbotron>
             </div>

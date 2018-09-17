@@ -89,7 +89,7 @@
 }
 
 .navbar li:hover a {
-    background-color: transparent;
+    background-color: unset!important;
     color: $active;
     text-shadow: 5px $active;
     text-decoration: none;

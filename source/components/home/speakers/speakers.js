@@ -160,7 +160,7 @@ class Speakers extends Component {
                 'img': '../assets/img/keynotes/romain.jpg',
                 'title': 'Lead Research Scientist at Salesforce',
                 'externalLink': 'https://www.linkedin.com/in/romainpaulus/?locale=en_US',
-                'bio': 'Romain Paulus is the Chief ML Scientist at Salesforce and is well established in' +
+                'bio': 'Romain Paulus is Lead Research Scientist at Salesforce and is well established in' +
                         ' the software and machine learning industry. Over the years, he has conducted re' +
                         'search focusing on natural language processing and has published numerous papers' +
                         ' in natural language processing and machine learning. Romain was also a founding' +
