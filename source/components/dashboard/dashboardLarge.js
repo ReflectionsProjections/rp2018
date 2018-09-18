@@ -85,7 +85,7 @@ export default class DashboardLarge extends Component {
             </div>
             <div className="largeBlockContainer">
               <Segment basic className="posterContainer">
-                <Image className='posterImg' src={'../assets/posters/Salesforce_Tech_Talk.png'} size='large' centered />
+                <Image className='posterImg' src={'../assets/posters/startup_fair.png'} size='large' centered />
               </Segment>
             </div>
 
