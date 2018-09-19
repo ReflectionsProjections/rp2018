@@ -21,6 +21,11 @@ const SponsorLetter = () => {
     return null;
 };
 
+const JoshBenaloh = () => {
+    window.location = '/assets/files/josh.png';
+    return null;
+};
+
 const StartupLetter = () => {
     window.location = './assets/files/startup.pdf';
     return null;
@@ -69,6 +74,7 @@ render(
             <Route path="/sponsor" component={SponsorLetter} />
             <Route path="/startupsponsor" component={StartupLetter} />
             <Route path="/giveaway" component={GiveawayFlyer} />
+            <Route path="/joshbenaloh" component={JoshBenaloh} />
 
 
             <Route path="/puzzlebang" component={PuzzleBang} />
