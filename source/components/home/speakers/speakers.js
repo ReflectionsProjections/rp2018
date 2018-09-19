@@ -17,7 +17,7 @@ class Speakers extends Component {
         super()
 
         // Update when number of speakers changes.
-        this.numSpeakers = 12;
+        this.numSpeakers = 13;
 
         this.showModal = this
             .showModal
@@ -94,6 +94,12 @@ class Speakers extends Component {
                         'lumes subsystem and maintains the Container Storage Interface. Before coming to ' +
                         'Google, Saad worked at Microsoft where he led the development of the Internet Me' +
                         'ssage Access protocol for Outlook.com.'
+            }, {
+                'name': 'Sammy Sidhu',
+                'img': '../assets/img/keynotes/sammy_sidhu.jpg',
+                'title': 'Chief Architect at DeepScale',
+                'externalLink': 'https://www.crunchbase.com/person/sammy-sidhu-2',
+                'bio': 'Sammy Sidhu is the Chief Architect at DeepScale where he uses his background on High Performance Computing as well as Deep Learning to solve the problem of perception for Autonomous Vehicles. Prior to DeepScale, Sammy was an AI researcher at UC Berkeley, worked on High Frequency Trading at Two Sigma, and interned at the Applied Machine Learning team at Apple.'
             }, {
                 'name': 'Brian Hoffman',
                 'img': '../assets/img/keynotes/brain_h.jpg',
