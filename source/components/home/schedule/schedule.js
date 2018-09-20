@@ -144,7 +144,7 @@ class Schedule extends Component {
                                         <center>Sponsored by IMO</center>
                                     </li>
                                     <li>
-                                        <small>1:00p - 2:00p</small>Speaker: TBA<span>2405</span>
+                                        <small>1:00p - 2:00p</small>Open Source Workshop: Li Li<span>2405</span>
                                     </li>
                                     <li>
                                         <small>2:00p - 4:00p</small>Experience: Forrest Iandola<span>2405</span>
@@ -156,7 +156,7 @@ class Schedule extends Component {
                                         <small>5:00p - 6:00p</small>Speaker: Romain Paulus<span>2405</span>
                                     </li>
                                     <li>
-                                        <small>6:00p - 7:00p</small><b>Keynote</b> Speaker: Marianna Tessel<span>1404</span>
+                                        <small>6:00p - 7:00p</small><b>Keynote</b>Speaker: Marianna Tessel<span>1404</span>
                                     </li>
                                     <li>
                                         <small>7:00p</small>Dinner: Himalayan Chimney<span>Atrium</span>
