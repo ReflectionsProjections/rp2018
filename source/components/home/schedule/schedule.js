@@ -133,7 +133,7 @@ class Schedule extends Component {
                                         <small>5:00p - 7:00p</small>Experience: Saad Ali<span>2405</span>
                                     </li>
                                     <li>
-                                        <small>7:00p</small>Dinner Noodles & Company<span>Atrium</span><br/>
+                                        <small>7:00p</small>Dinner: Noodles & Company<span>Atrium</span><br/>
                                         <center>Sponsored by Zillow Group</center>
                                     </li>
                                 </ul>
