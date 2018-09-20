@@ -156,7 +156,7 @@ class Schedule extends Component {
                                         <small>5:00p - 6:00p</small>Speaker: Romain Paulus<span>2405</span>
                                     </li>
                                     <li>
-                                        <small>6:00p - 7:00p</small><b>Keynote</b>Speaker: Marianna Tessel<span>1404</span>
+                                        <small>6:00p - 7:00p</small><b>Keynote </b>Speaker: Marianna Tessel<span>1404</span>
                                     </li>
                                     <li>
                                         <small>7:00p</small>Dinner: Himalayan Chimney<span>Atrium</span>
