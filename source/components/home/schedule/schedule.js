@@ -147,7 +147,7 @@ class Schedule extends Component {
                                         <small>1:00p - 2:00p</small>Open Source Workshop: Li Li<span>2405</span>
                                     </li>
                                     <li>
-                                        <small>2:00p - 4:00p</small>Experience: Forrest Iandola<span>2405</span>
+                                        <small>2:00p - 4:00p</small>Experience: Forrest Iandola & Sammy Sidhu<span>2405</span>
                                     </li>
                                     <li>
                                         <small>4:00p - 5:00p</small>Speaker: Jay Gambetta<span>2405</span>
