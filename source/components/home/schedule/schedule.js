@@ -97,7 +97,7 @@ class Schedule extends Component {
                                         <small>12:00p - 1:00p</small>Tech Talk: Quora<span>2405</span>
                                     </li>
                                     <li>
-                                        <small>8:00p - 9:00p</small>Corporate Social: Lyft<span>TBD</span>
+                                        <small>8:00p - 9:00p</small>Corporate Social: Lyft<span>Legends Bar and Grill</span>
                                     </li>
                                 </ul>
                             </div>
@@ -133,13 +133,14 @@ class Schedule extends Component {
                                         <small>5:00p - 7:00p</small>Experience: Saad Ali<span>2405</span>
                                     </li>
                                     <li>
-                                        <small>7:00p</small>Dinner<span>Atrium</span>
+                                        <small>7:00p</small>Dinner Noodles & Company<span>Atrium</span><br/>
+                                        <center>Sponsored by Zillow Group</center>
                                     </li>
                                 </ul>
                                 <ul>
                                     <h3>Fri, Sep 21</h3>
                                     <li>
-                                        <small>11:00a</small>PuzzleBang Comes to UIUC!<span>TBA</span><br/>
+                                        <small>11:00a</small>PuzzleBang Comes to UIUC!<span>Siebel</span><br/>
                                         <center>Sponsored by IMO</center>
                                     </li>
                                     <li>
@@ -155,17 +156,15 @@ class Schedule extends Component {
                                         <small>5:00p - 6:00p</small>Speaker: Romain Paulus<span>2405</span>
                                     </li>
                                     <li>
-                                        <small>6:00p - 7:00p</small>Keynote Speaker: Marianna Tessel<span>2405</span>
+                                        <small>6:00p - 7:00p</small><b>Keynote</b> Speaker: Marianna Tessel<span>1404</span>
                                     </li>
                                     <li>
-                                        <small>7:00p</small>Dinner<span>Atrium</span>
+                                        <small>7:00p</small>Dinner: Himalayan Chimney<span>Atrium</span>
+                                        <center>Sponsored by IMO</center>
                                     </li>
                                     <li>
                                         <small>7:00p</small>MechMania Opening Ceremony<span>1404</span><br/>
                                         <center>Sponsored by DeepScale</center>
-                                    </li>
-                                    <li>
-                                        <small>9:00p</small>Speaker Social<span>TBD</span>
                                     </li>
                                     <li>
                                         <small>11:00p</small>Late Night Snack<span>Atrium</span>
@@ -176,7 +175,8 @@ class Schedule extends Component {
                                 <ul>
                                     <h3>Sat, Sep 22</h3>
                                     <li>
-                                        <small>8:00a</small>Breakfast<span>Atrium</span>
+                                        <small>8:00a</small>Breakfast: Einstein Bros.<span>Atrium</span>
+                                        <center>Sponsored by Bayer</center>
                                     </li>
                                     <li>
                                         <small>10:00a - 11:00a</small>Speaker: Siraj Raval<span>2405</span>
@@ -185,7 +185,8 @@ class Schedule extends Component {
                                         <small>11:00a - 12:00p</small>Speaker: Bo Li<span>2405</span>
                                     </li>
                                     <li>
-                                        <small>12:00p</small>Lunch<span>Atrium</span>
+                                        <small>12:00p</small>Lunch: Jimmy John's<span>Atrium</span>
+                                        <center>Sponsored by DeepScale</center>
                                     </li>
                                     <li>
                                         <small>1:00p - 3:00p</small>Experience: Brian Hoffman<span>2405</span>
@@ -200,7 +201,8 @@ class Schedule extends Component {
                                         <small>5:00p - 7:00p</small>ACM Symposium<span>2405</span>
                                     </li>
                                     <li>
-                                        <small>7:00p</small>Dinner<span>Atrium</span>
+                                        <small>7:00p</small>Dinner: Papa Del's<span>Atrium</span>
+                                        <center>Sponsored by Quora</center>
                                     </li>
                                     <li>
                                         <small>7:30p</small>R|P Closing Ceremony<span>1404</span>
