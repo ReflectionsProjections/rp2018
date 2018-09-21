@@ -4,6 +4,7 @@ const webpack = require('webpack');
 const path = require('path');
 const autoprefixer = require('autoprefixer');
 const copy = require('copy-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 // var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const BUILD_DIR = path.resolve(__dirname, 'public');
@@ -21,7 +22,7 @@ const config = {
     },
     context: path.join(__dirname, 'source'),
     module: {
-        loaders : [
+        rules : [
             {
                 test: /\.jsx?/,
                 exclude : [/node_modules/, /bower_components/],
@@ -54,12 +55,16 @@ const config = {
             copyUnmodified: false,
             debug: 'debug'
         }),
-
         new webpack.optimize.CommonsChunkPlugin({
             name: 'vendor',
             minChunks: Infinity,
             filename: 'vendor.bundle.js',
             publicPath: '/'
+        }),
+        new webpack.optimize.UglifyJsPlugin({
+            parallel: true,
+            cache: true,
+            test: /\.js(\?.*)?$/i
         })
     ]
 };
