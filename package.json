@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.jsx",
-  "homepage": "https://reflectionsprojections.github.io/rp2018",
+  "homepage": "http://reflectionsprojections.github.io/rp2018",
   "scripts": {
     "watch": "webpack -d --watch",
     "build": "webpack",
