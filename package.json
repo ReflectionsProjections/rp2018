@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.jsx",
-  "homepage": "https://reflectionsprojections.github.io/rp2018"
+  "homepage": "https://reflectionsprojections.github.io/rp2018",
   "scripts": {
     "watch": "webpack -d --watch",
-    "build": "webpack",
+    "build": "yarn install",
     "dev": "webpack-dev-server --content-base public/ --history-api-fallback",
-    "predeploy": "webpack",
-    "deploy": "yarn build"
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d public"
   },
   "author": "R|P 2018 Website Staff, inspired by R|P 2017 website by Simon Lu",
   "license": "MIT",
