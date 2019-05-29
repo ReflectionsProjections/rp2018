@@ -18,7 +18,7 @@ class Landing extends Component {
                         </div>
                         <div className="hero-item center">
                             <div className="hero-item-title">
-                                <img src="../assets/svg/logo.svg" />
+                                <img src="assets/svg/logo.svg" />
                             </div>
                         </div>
                         <div className="hero-item right">
