@@ -58,14 +58,14 @@ const SymposiumSignup = () => {
 require("normalize.css");
 require("./styles/main.scss");
 
-class App extends React.Component {
+export default class App extends React.Component {
   render() {
     return <div className="main">Hello World</div>;
   }
 }
 
 render(
-  <BrowserRouter basename={process.env.PUBLIC_URL}>
+  <BrowserRouter basename="/rp2018">
     <div>
       <Route exact path="/" component={Home} />
       <Route path="/sponsor" component={SponsorLetter} />
