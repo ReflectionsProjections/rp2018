@@ -19,7 +19,7 @@ class Footer extends Component {
             <div className="Footer container" id="Footer">
                 <Media>
                     <Media.Left>
-                        <img style={logoStyle} src="{process.env.PUBLIC_URL + "/assets/svg/acm_logo_50.svg"} alt="Image"/>
+                        <img style={logoStyle} src={process.env.PUBLIC_URL + "/assets/svg/acm_logo_50.svg"} alt="Image"/>
                     </Media.Left>
                     <Media.Body>
                         <p className="Footer__contact">
@@ -61,7 +61,7 @@ class Footer extends Component {
                             </a>
                             <a id="snapshot"><FA name='snapchat-ghost'/>
                                 uiuc_rp
-                                <img className="tooltiptext" src="{process.env.PUBLIC_URL + "/assets/img/snapcode.png"}/></a><br/>
+                                <img className="tooltiptext" src={process.env.PUBLIC_URL + "/assets/img/snapcode.png"}/></a><br/>
                         </p>
                     </Media.Body>
                 </Media>

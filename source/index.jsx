@@ -15,32 +15,32 @@ import DashboardLarge from "./components/dashboard/dashboardLarge";
 
 // Redirects
 const SponsorLetter = () => {
-  window.location = {process.env.PUBLIC_URL + "/assets/files/sponsor.pdf"};
+  window.location = process.env.PUBLIC_URL + "/assets/files/sponsor.pdf";
   return null;
 };
 
 const JoshBenaloh = () => {
-  window.location = {process.env.PUBLIC_URL + "/assets/files/josh.png"};
+  window.location = process.env.PUBLIC_URL + "/assets/files/josh.png";
   return null;
 };
 
 const StartupLetter = () => {
-  window.location = {process.env.PUBLIC_URL + "/assets/files/startup.pdf"};
+  window.location = process.env.PUBLIC_URL + "/assets/files/startup.pdf";
   return null;
 };
 
 const CareerFairMap = () => {
-  window.location = {process.env.PUBLIC_URL + "/assets/files/career_fair.png"};
+  window.location = process.env.PUBLIC_URL + "/assets/files/career_fair.png";
   return null;
 };
 
 const StartupFairMap = () => {
-  window.location = {process.env.PUBLIC_URL + "/assets/files/startup_fair.png"};
+  window.location = process.env.PUBLIC_URL + "/assets/files/startup_fair.png";
   return null;
 };
 
 const GiveawayFlyer = () => {
-  window.location = {process.env.PUBLIC_URL + "/assets/files/giveaway.pdf"};
+  window.location = process.env.PUBLIC_URL + "/assets/files/giveaway.pdf";
   return null;
 };
 

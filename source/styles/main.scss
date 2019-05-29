@@ -9,7 +9,7 @@ body {
     overflow-x: hidden;
     font-family: 'Roboto', sans-serif;
     background-color: $pageBackground;
-    background-image: url({process.env.PUBLIC_URL + "/assets/svg/home_background.svg'});
+    background-image: url("rp2018" + "/assets/svg/home_background.svg");
     background-size: 100%;
     scroll-behavior: smooth;
     background-size: cover;

@@ -1,7 +1,7 @@
 .dashboardContainer {
   height: 100%;
   background-color: #25225a;
-  background: url("../../{process.env.PUBLIC_URL + "/assets/img/png/dashboard_background.png"});
+  background: url("rp2018/" + "/assets/img/png/dashboard_background.png");
   background-size: auto 100%;
 }
 

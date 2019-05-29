@@ -1,34 +1,34 @@
-import React, {Component} from 'react'
-import Slider from 'react-slick'
-import styles from './styles.scss'
+import React, {Component} from "react"
+import Slider from "react-slick"
+import styles from "./styles.scss"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 
 const PHOTO_SET = [
     {
-        src: {process.env.PUBLIC_URL + "/assets/img/history/career0.jpg'},
-        alt: 'Slide 1'
+        src: process.env.PUBLIC_URL + "/assets/img/history/career0.jpg",
+        alt: "Slide 1"
     }, {
-        src: {process.env.PUBLIC_URL + "/assets/img/history/career2.jpg'},
-        alt: 'Slide 2'
+        src: process.env.PUBLIC_URL + "/assets/img/history/career2.jpg",
+        alt: "Slide 2"
     }, {
-        src: {process.env.PUBLIC_URL + "/assets/img/history/speaker0.jpg'},
-        alt: 'Slide 3'
+        src: process.env.PUBLIC_URL + "/assets/img/history/speaker0.jpg",
+        alt: "Slide 3"
     }, {
-        src: {process.env.PUBLIC_URL + "/assets/img/history/speaker1.jpg'},
-        alt: 'Slide 4'
+        src: process.env.PUBLIC_URL + "/assets/img/history/speaker1.jpg",
+        alt: "Slide 4"
     }, {
-        src: {process.env.PUBLIC_URL + "/assets/img/history/career3.jpg'},
-        alt: 'Slide 5'
+        src: process.env.PUBLIC_URL + "/assets/img/history/career3.jpg",
+        alt: "Slide 5"
     }, {
-        src: {process.env.PUBLIC_URL + "/assets/img/history/career4.jpg'},
-        alt: 'Slide 6'
+        src: process.env.PUBLIC_URL + "/assets/img/history/career4.jpg",
+        alt: "Slide 6"
     }, {
-        src: {process.env.PUBLIC_URL + "/assets/img/history/career5.jpg'},
-        alt: 'Slide 7'
+        src: process.env.PUBLIC_URL + "/assets/img/history/career5.jpg",
+        alt: "Slide 7"
     }, {
-        src: {process.env.PUBLIC_URL + "/assets/img/history/career6.jpg'},
-        alt: 'Slide 8'
+        src: process.env.PUBLIC_URL + "/assets/img/history/career6.jpg",
+        alt: "Slide 8"
     }
 ];
 
@@ -36,7 +36,7 @@ function HiddenArrow(props) {
     const {style} = props
     return (
         <div style={{
-            display: 'none'
+            display: "none"
         }}></div>
     );
 }
@@ -63,10 +63,10 @@ class Photos extends Component {
                         slidesToShow: 3,
                         slidesToScroll: 1,
                         infinite: true,
-                        className: 'center',
+                        className: "center",
                         centerMode: true,
                         infinite: true,
-                        centerPadding: '60px'
+                        centerPadding: "60px"
                     }
                 }, {
                     breakpoint: 1050,
