@@ -65,30 +65,30 @@ export default class App extends React.Component {
 }
 
 render(
-  <BrowserRouter basename="/rp2018">
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
     <div>
-      <Route exact path="/" component={Home} />
-      <Route path="/sponsor" component={SponsorLetter} />
-      <Route path="/startupsponsor" component={StartupLetter} />
-      <Route path="/giveaway" component={GiveawayFlyer} />
-      <Route path="/joshbenaloh" component={JoshBenaloh} />
+      <Route exact path={process.env.PUBLIC_URL + '/'} component={Home} />
+      <Route path={process.env.PUBLIC_URL + "/sponsor"} component={SponsorLetter} />
+      <Route path={process.env.PUBLIC_URL + "/startupsponsor"} component={StartupLetter} />
+      <Route path={process.env.PUBLIC_URL + "/giveaway"} component={GiveawayFlyer} />
+      <Route path={process.env.PUBLIC_URL + "/joshbenaloh"} component={JoshBenaloh} />
 
-      <Route path="/puzzlebang" component={PuzzleBang} />
-      <Route path="/mechmania" component={MechMania} />
-      <Route path="/symposium" component={ACMSymposium} />
-      <Route path="/volunteer" component={VolunteerSignup} />
-      <Route path="/symposiumregister" component={SymposiumSignup} />
-      <Route path="/dashboard" component={Dashboard} />
-      <Route path="/dashboardlarge" component={DashboardLarge} />
-      <Route path="/career_fair" component={CareerFairMap} />
-      <Route path="/startup_fair" component={StartupFairMap} />
-      <Route path="/home" component={Home} />
+      <Route path={process.env.PUBLIC_URL + "/puzzlebang"} component={PuzzleBang} />
+      <Route path={process.env.PUBLIC_URL + "/mechmania"} component={MechMania} />
+      <Route path={process.env.PUBLIC_URL + "/symposium"} component={ACMSymposium} />
+      <Route path={process.env.PUBLIC_URL + "/volunteer"} component={VolunteerSignup} />
+      <Route path={process.env.PUBLIC_URL + "/symposiumregister"} component={SymposiumSignup} />
+      <Route path={process.env.PUBLIC_URL + "/dashboard"} component={Dashboard} />
+      <Route path={process.env.PUBLIC_URL + "/dashboardlarge"} component={DashboardLarge} />
+      <Route path={process.env.PUBLIC_URL + "/career_fair"} component={CareerFairMap} />
+      <Route path={process.env.PUBLIC_URL + "/startup_fair"} component={StartupFairMap} />
+      <Route path={process.env.PUBLIC_URL + "/home"} component={Home} />
 
-      <Route exact path="/start" component={RegisterStart} />
-      <Route exact path="/registersuccess" component={RegisterSuccess} />
-      <Route exact path="/register" component={Register} />
+      <Route exact path={process.env.PUBLIC_URL + "/start"} component={RegisterStart} />
+      <Route exact path={process.env.PUBLIC_URL + "/registersuccess"} component={RegisterSuccess} />
+      <Route exact path={process.env.PUBLIC_URL + "/register"} component={Register} />
 
-      <Route exact path="/auth" component={Auth} />
+      <Route exact path={process.env.PUBLIC_URL + "/auth"} component={Auth} />
     </div>
   </BrowserRouter>,
   document.getElementById("app")
