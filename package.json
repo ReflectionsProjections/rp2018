@@ -6,8 +6,8 @@
   "homepage": "http://reflectionsprojections.github.io/rp2018",
   "scripts": {
     "watch": "webpack -d --watch",
-    "build": "webpack",
-    "dev": "webpack-dev-server --content-base public/ --history-api-fallback",
+    "build": "webpack --display=minimal",
+    "dev": "webpack-dev-server --content-base public/ --history-api-fallback --quiet --no-info",
     "predeploy": "yarn build",
     "deploy": "gh-pages -d public"
   },
