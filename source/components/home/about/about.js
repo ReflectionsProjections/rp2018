@@ -113,7 +113,7 @@ class About extends Component {
                         <Col md={4} className="text-center">
                             <Image
                                 className="about-image"
-                                src="assets/img/about/jobfair.jpg"
+                                src="{process.env.PUBLIC_URL + "/assets/img/about/jobfair.jpg"}
                                 responsive/>
                             <h3><a href="/career_fair">Career Fair</a></h3>
                             <p>Meet some of the best companies in the country</p>
@@ -122,16 +122,16 @@ class About extends Component {
                         <Col md={4} className="text-center">
                             <Image
                                 className="about-image"
-                                src="assets/img/about/startupfair.jpg"
+                                src="{process.env.PUBLIC_URL + "/assets/img/about/startupfair.jpg"}
                                 responsive/>
-                            <h3><a href="/assets/files/startup_fair.png">Startup Fair</a></h3>
+                            <h3><a href={process.env.PUBLIC_URL + "/assets/files/startup_fair.png"}>Startup Fair</a></h3>
                             <p>Interact with hot new startups</p>
                         </Col>
 
                         <Col md={4} className="text-center">
                             <Image
                                 className="about-image"
-                                src="assets/img/about/speakers.jpg"
+                                src="{process.env.PUBLIC_URL + "/assets/img/about/speakers.jpg"}
                                 responsive/>
                             <h3><a href="/#Speakers">Speakers</a></h3>
                             <p>Come listen to some of the industry's best minds</p>
@@ -142,7 +142,7 @@ class About extends Component {
                         <Col md={4} className="text-center">
                             <Image
                                 className="about-image"
-                                src="assets/img/about/mechmania.jpg"
+                                src="{process.env.PUBLIC_URL + "/assets/img/about/mechmania.jpg"}
                                 responsive/>
                             <h3><a href="/mechmania">MechMania</a></h3>
                             <p>Mechmania is our 24 hour AI hackathon that runs from Friday (9/21) - Saturday
@@ -153,7 +153,7 @@ class About extends Component {
                         <Col md={4} className="text-center">
                             <Image
                                 className="about-image"
-                                src="assets/img/about/puzzlebang.jpg"
+                                src="{process.env.PUBLIC_URL + "/assets/img/about/puzzlebang.jpg"}
                                 responsive/>
                             <h3><a href="/puzzlebang">PuzzleBang</a></h3>
                             <p>Compete in a week-long puzzle contest hosted by two UIUC Alums to win
@@ -164,7 +164,7 @@ class About extends Component {
                         <Col md={4} className="text-center">
                             <Image
                                 className="about-image"
-                                src="assets/img/about/symposium.JPG"
+                                src="{process.env.PUBLIC_URL + "/assets/img/about/symposium.JPG"}
                                 responsive/>
                             <h3><a href="/symposium">ACM Symposium</a></h3>
                             <p>R|P 2018 is proud to introduce the first-ever installment of the ACM
@@ -175,7 +175,7 @@ class About extends Component {
                     <h1 className="about-header">Special Events</h1>
                     <Row>
                         <Col md={4} className="text-center">
-                            <Image className="about-image" src="assets/img/about/alumni.jpg" responsive/>
+                            <Image className="about-image" src="{process.env.PUBLIC_URL + "/assets/img/about/alumni.jpg"} responsive/>
                             <h3>Alumni Social</h3>
                             <p>Head over to Murphy's after the ACM Symposium after the closing ceremony to
                                 interact and network with alumni, speakers and current students! It’s the
@@ -185,7 +185,7 @@ class About extends Component {
                         <Col md={4} className="text-center">
                             <Image
                                 className="about-image"
-                                src="assets/img/about/experiences.JPG"
+                                src="{process.env.PUBLIC_URL + "/assets/img/about/experiences.JPG"}
                                 responsive/>
                             <h3>Experiences</h3>
                             <p>Experiences are hybrid talks/workshops that not only help students learn the
@@ -196,7 +196,7 @@ class About extends Component {
                         <Col md={4} className="text-center">
                             <Image
                                 className="about-image"
-                                src="assets/img/about/challenge.JPG"
+                                src="{process.env.PUBLIC_URL + "/assets/img/about/challenge.JPG"}
                                 responsive/>
                             <h3><a href="/giveaway">R|P Giveaway Contest</a></h3>
                             <p>Engage with R|P on our various social media platforms, for a chance to win a

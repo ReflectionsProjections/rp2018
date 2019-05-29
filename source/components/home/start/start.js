@@ -27,13 +27,13 @@ class Start extends Component {
         return (
             <div className="Start">
                 <Jumbotron>
-                    <img className="header" src="assets/svg/home_header.svg"/>
+                    <img className="header" src="{process.env.PUBLIC_URL + "/assets/svg/home_header.svg"}/>
                     <div className="title_sponsor">
                         <h3>Title Sponsor:</h3>
                         <a href="https://microsoft.com/" target="_blank">
                             <img
                                 className="title_sponsor_img"
-                                src="assets/img/sponsors/sponsors2018/jobfair/petabyte/microsoft_full_white.png"/>
+                                src="{process.env.PUBLIC_URL + "/assets/img/sponsors/sponsors2018/jobfair/petabyte/microsoft_full_white.png"}/>
                         </a>
                     </div>
 

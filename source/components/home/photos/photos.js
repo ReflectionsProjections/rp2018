@@ -6,28 +6,28 @@ import "slick-carousel/slick/slick-theme.css"
 
 const PHOTO_SET = [
     {
-        src: '../assets/img/history/career0.jpg',
+        src: {process.env.PUBLIC_URL + "/assets/img/history/career0.jpg'},
         alt: 'Slide 1'
     }, {
-        src: '../assets/img/history/career2.jpg',
+        src: {process.env.PUBLIC_URL + "/assets/img/history/career2.jpg'},
         alt: 'Slide 2'
     }, {
-        src: '../assets/img/history/speaker0.jpg',
+        src: {process.env.PUBLIC_URL + "/assets/img/history/speaker0.jpg'},
         alt: 'Slide 3'
     }, {
-        src: '../assets/img/history/speaker1.jpg',
+        src: {process.env.PUBLIC_URL + "/assets/img/history/speaker1.jpg'},
         alt: 'Slide 4'
     }, {
-        src: '../assets/img/history/career3.jpg',
+        src: {process.env.PUBLIC_URL + "/assets/img/history/career3.jpg'},
         alt: 'Slide 5'
     }, {
-        src: '../assets/img/history/career4.jpg',
+        src: {process.env.PUBLIC_URL + "/assets/img/history/career4.jpg'},
         alt: 'Slide 6'
     }, {
-        src: '../assets/img/history/career5.jpg',
+        src: {process.env.PUBLIC_URL + "/assets/img/history/career5.jpg'},
         alt: 'Slide 7'
     }, {
-        src: '../assets/img/history/career6.jpg',
+        src: {process.env.PUBLIC_URL + "/assets/img/history/career6.jpg'},
         alt: 'Slide 8'
     }
 ];

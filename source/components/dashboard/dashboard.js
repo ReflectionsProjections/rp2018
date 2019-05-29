@@ -75,23 +75,23 @@ export default class Dashboard extends Component {
           <Grid.Column verticalAlign='bottom' className="sponsorLogoContainer leftSideContainer">
             <Transition duration={{ hide, show }} onHide={() => this.randomLogos(0)} visible={visibles[0]} animation='fade'>
               <Segment basic className="sponsorLogo">
-                <Image src={'./assets/img/png/logos/'+logos[0]+'.png'} size='large' centered />
+                <Image src={'./{process.env.PUBLIC_URL + "/assets/img/png/logos/'+logos[0]+'.png'} size='large' centered />
               </Segment>
             </Transition>
             <Transition duration={{ hide, show }} onHide={() => this.randomLogos(1)} visible={visibles[1]} animation='fade'>
               <Segment basic className="sponsorLogo">
-                <Image src={'./assets/img/png/logos/'+logos[1]+'.png'} size='large' centered />
+                <Image src={'./{process.env.PUBLIC_URL + "/assets/img/png/logos/'+logos[1]+'.png'} size='large' centered />
               </Segment>
             </Transition>
             <Transition duration={{ hide, show }} onHide={() => this.randomLogos(2)} visible={visibles[2]} animation='fade'>
               <Segment basic className="sponsorLogo">
-                <Image src={'./assets/img/png/logos/'+logos[2]+'.png'} size='large' centered />
+                <Image src={'./{process.env.PUBLIC_URL + "/assets/img/png/logos/'+logos[2]+'.png'} size='large' centered />
               </Segment>
             </Transition>
           </Grid.Column>
           <Grid.Column width={5}>
             <div className="blockContainer">
-              <Image src={'/assets/2018logo.png'} size = 'large'/>
+              <Image src={'/{process.env.PUBLIC_URL + "/assets/2018logo.png'} size = 'large'/>
             </div>
             <div className="blockContainer">
               <DashboardEvents key="dashboardSmall" className="bottomContainer"/>
@@ -108,17 +108,17 @@ export default class Dashboard extends Component {
           <Grid.Column verticalAlign='bottom' className="sponsorLogoContainer rightSideContainer">
             <Transition duration={{ hide, show }} onHide={() => this.randomLogos(3)} visible={visibles[3]} animation='fade'>
               <Segment basic className="sponsorLogo">
-                <Image  src={'./assets/img/png/logos/'+logos[3]+'.png'} size='large' centered />
+                <Image  src={'./{process.env.PUBLIC_URL + "/assets/img/png/logos/'+logos[3]+'.png'} size='large' centered />
               </Segment>
             </Transition>
             <Transition duration={{ hide, show }} onHide={() => this.randomLogos(4)}visible={visibles[4]} animation='fade'>
               <Segment basic className="sponsorLogo">
-                <Image src={'./assets/img/png/logos/'+logos[4]+'.png'} size='large' centered />
+                <Image src={'./{process.env.PUBLIC_URL + "/assets/img/png/logos/'+logos[4]+'.png'} size='large' centered />
               </Segment>
             </Transition>
             <Transition duration={{ hide, show }} onHide={() => this.randomLogos(5)} visible={visibles[5]} animation='fade'>
               <Segment basic className="sponsorLogo">
-                <Image src={'./assets/img/png/logos/'+logos[5]+'.png'} size='large' centered />
+                <Image src={'./{process.env.PUBLIC_URL + "/assets/img/png/logos/'+logos[5]+'.png'} size='large' centered />
               </Segment>
             </Transition>
 

@@ -29,7 +29,7 @@ export default class RegisterStart extends Component {
         <Grid.Row className='startContainer'>
           <Grid.Column mobile={14} computer={8} textAlign='center' verticalAlign='middle'>
             <Grid.Row className='verticalPadding'>
-              <Image style={{margin: 'auto'}} src='../assets/2018logo.png' size='small' />
+              <Image style={{margin: 'auto'}} src='../{process.env.PUBLIC_URL + "/assets/2018logo.png' size='small' />
             </Grid.Row>
             <Grid.Row className='startPrompt verticalPadding'>
               Reflections | Projections is UIUC's flagship tech conference and we're glad you can be a part of it.

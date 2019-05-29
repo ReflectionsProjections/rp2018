@@ -74,7 +74,7 @@ class Speakers extends Component {
             // Keynotes
             {
                 'name': 'Marianna Tessel',
-                'img': '../assets/img/keynotes/marianna_tessel.jpg',
+                'img': '../{process.env.PUBLIC_URL + "/assets/img/keynotes/marianna_tessel.jpg',
                 'title': 'Chief Product Development Officer at Intuit',
                 'externalLink': 'https://twitter.com/mtessel12',
                 'track': 'keynote',
@@ -86,7 +86,7 @@ class Speakers extends Component {
                         'tualization platform.'
             }, {
                 'name': 'Saad Ali',
-                'img': '../assets/img/keynotes/saad.jpg',
+                'img': '../{process.env.PUBLIC_URL + "/assets/img/keynotes/saad.jpg',
                 'title': 'Senior Software Engineer at Google',
                 'externalLink': 'https://twitter.com/the_saad_ali',
                 'bio': 'Saad Ali is a senior software engineer at Google and is currently working on the' +
@@ -96,13 +96,13 @@ class Speakers extends Component {
                         'ssage Access protocol for Outlook.com.'
             }, {
                 'name': 'Sammy Sidhu',
-                'img': '../assets/img/keynotes/sammy_sidhu.jpg',
+                'img': '../{process.env.PUBLIC_URL + "/assets/img/keynotes/sammy_sidhu.jpg',
                 'title': 'Chief Architect at DeepScale',
                 'externalLink': 'https://www.crunchbase.com/person/sammy-sidhu-2',
                 'bio': 'Sammy Sidhu is the Chief Architect at DeepScale where he uses his background on High Performance Computing as well as Deep Learning to solve the problem of perception for Autonomous Vehicles. Prior to DeepScale, Sammy was an AI researcher at UC Berkeley, worked on High Frequency Trading at Two Sigma, and interned at the Applied Machine Learning team at Apple.'
             }, {
                 'name': 'Brian Hoffman',
-                'img': '../assets/img/keynotes/brain_h.jpg',
+                'img': '../{process.env.PUBLIC_URL + "/assets/img/keynotes/brain_h.jpg',
                 'title': 'CEO and Co-founder at OpenBazaar',
                 'externalLink': 'https://twitter.com/brianchoffman',
                 'bio': 'Brian Hoffman is the CEO and co-founder of OB1, a company focused on building so' +
@@ -114,7 +114,7 @@ class Speakers extends Component {
                         'the space with OpenBazaar.'
             }, {
                 'name': 'Forrest Iandola',
-                'img': '../assets/img/keynotes/forrest.jpg',
+                'img': '../{process.env.PUBLIC_URL + "/assets/img/keynotes/forrest.jpg',
                 'title': 'CEO and Co-founder at Deepscale.ai',
                 'externalLink': 'https://en.wikipedia.org/wiki/Forrest_Iandola',
                 'bio': 'Forrest Iandola is the co-founder and CEO of DeepScale, which develops energy-ef' +
@@ -128,13 +128,13 @@ class Speakers extends Component {
                         'mpaign, where he received his Bachelor’s degree in 2012.'
             }, {
                 'name': 'Li Li',
-                'img': '../assets/img/keynotes/lili.jpg',
+                'img': '../{process.env.PUBLIC_URL + "/assets/img/keynotes/lili.jpg',
                 'title': 'Principal Software Engineer Manager at Microsoft',
                 'externalLink': 'https://www.linkedin.com/in/lilyfang',
                 'bio': 'Li Li is a Principal Software Engineer Manager at the Microsoft Enterprise Open Source Group. She has been working at Microsoft for more than 17 years, and has released multiple products in both Windows and Linux successfully. Recently, she has led efforts to enable open source Mesos and DCOS as a unified orchestration platform for both Windows and Linux workloads on Azure. John Kordich, a Senior Software Engineer at Microsoft, will be assisting Li with the workshop. In this workshop, they will talk about Microsoft’s transformation of its technology and culture according to their own experiences. They will also present some cutting edge technology and have an interactive workshop that explores the Open Source development experience.'
             }, {
                 'name': 'Siraj Raval',
-                'img': '../assets/img/keynotes/siraj.jpg',
+                'img': '../{process.env.PUBLIC_URL + "/assets/img/keynotes/siraj.jpg',
                 'title': 'YouTuber - Accessible CS education',
                 'externalLink': 'https://twitter.com/sirajraval',
                 'bio': 'Siraj Raval is a data scientist, a bestselling author, and a CS Education Youtub' +
@@ -146,7 +146,7 @@ class Speakers extends Component {
                         'ockchain and artificial intelligence.'
             }, {
                 'name': 'Jay Gambetta',
-                'img': '../assets/img/keynotes/jay_g.jpg',
+                'img': '../{process.env.PUBLIC_URL + "/assets/img/keynotes/jay_g.jpg',
                 'title': 'Quantum Computing Researcher at IBM',
                 'externalLink': 'https://en.wikipedia.org/wiki/Jay_Gambetta',
                 'bio': 'Jay Gambetta is co-leading a team at IBM working to construct a large-scale quan' +
@@ -157,13 +157,13 @@ class Speakers extends Component {
                         'n addition, he is the associate editor of the Quantum Information journal.'
             }, {
                 'name': 'Bo Li',
-                'img': '../assets/img/keynotes/boli.jpeg',
+                'img': '../{process.env.PUBLIC_URL + "/assets/img/keynotes/boli.jpeg',
                 'title': 'Assistant Professor at UIUC',
                 'externalLink': 'http://www.crystal-boli.com/',
                 'bio': 'Bo Li, previously at UC Berkeley, is an Assistant Professor at UIUC doing research in optimizing real-world machine learning models. She has been working on improving their vulnerabilities, regarding issues such as efficient resource allocation and building robust, scalable models that can handle large amounts of data. Her talk will be covering her recent work in specifically, training generative adversarial networks against adversarial examples.'
             }, {
                 'name': 'Romain Paulus',
-                'img': '../assets/img/keynotes/romain.jpg',
+                'img': '../{process.env.PUBLIC_URL + "/assets/img/keynotes/romain.jpg',
                 'title': 'Lead Research Scientist at Salesforce',
                 'externalLink': 'https://www.linkedin.com/in/romainpaulus/?locale=en_US',
                 'bio': 'Romain Paulus is Lead Research Scientist at Salesforce and is well established in' +
@@ -175,7 +175,7 @@ class Speakers extends Component {
                         'cs. MetaMind was acquired by Salesforce in 2016.'
             }, {
                 'name': 'Zachary Lipton',
-                'img': '../assets/img/keynotes/zac.jpg',
+                'img': '../{process.env.PUBLIC_URL + "/assets/img/keynotes/zac.jpg',
                 'title': 'ML Scientist at Amazon AI Labs, Assistant Professor CMU',
                 'externalLink': 'http://zacklipton.com',
                 'bio': 'Zack Lipton is an assistant professor in the Machine Learning Department at Carn' +
@@ -185,7 +185,7 @@ class Speakers extends Component {
                         'also intrigued by the study of the societal impacts of machine learning.'
             }, {
                 'name': 'Jonah Horowitz',
-                'img': '../assets/img/keynotes/jonah.jpg',
+                'img': '../{process.env.PUBLIC_URL + "/assets/img/keynotes/jonah.jpg',
                 'title': 'Senior Site Reliability Engineer at Apple',
                 'externalLink': 'https://jonahhorowitz.com/',
                 'bio': 'Jonah Horowitz is a Site Reliability Manager at Apple, and has previously worked' +
@@ -196,7 +196,7 @@ class Speakers extends Component {
                         'e Reliability Engineering and role in ultra-scalable systems.'
             }, {
                 'name': 'Josh Benaloh',
-                'img': '../assets/img/keynotes/josh.jpg',
+                'img': '../{process.env.PUBLIC_URL + "/assets/img/keynotes/josh.jpg',
                 'title': 'Senior Cryptographer at Microsoft Research',
                 'externalLink': 'https://www.microsoft.com/en-us/research/people/benaloh/',
                 'bio': 'Josh Benaloh is a Senior Cryptographer at Microsoft Research and is responsible ' +

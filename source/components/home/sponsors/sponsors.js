@@ -13,7 +13,7 @@ class Sponsors extends Component {
             tier1: [
                 {
                     name: "Microsoft",
-                    img: "assets/img/sponsors/sponsors2018/jobfair/petabyte/microsoft_full.png",
+                    img: "{process.env.PUBLIC_URL + "/assets/img/sponsors/sponsors2018/jobfair/petabyte/microsoft_full.png"},
                     webPage: "https://microsoft.com/"
                 }
             ],
@@ -21,16 +21,16 @@ class Sponsors extends Component {
             tier2: [
                 {
                     name: "IMO Intelligent Medical Objects",
-                    img: "assets/img/sponsors/sponsors2018/jobfair/terabyte/imo_full.png",
+                    img: "{process.env.PUBLIC_URL + "/assets/img/sponsors/sponsors2018/jobfair/terabyte/imo_full.png"},
                     webPage: "https://www.e-imo.com/"
                 }, {
                     name: "Zillow Group",
-                    img: "assets/img/sponsors/sponsors2018/jobfair/terabyte/zillow_group_full.png",
+                    img: "{process.env.PUBLIC_URL + "/assets/img/sponsors/sponsors2018/jobfair/terabyte/zillow_group_full.png"},
                     webPage: "https://www.zillowgroup.com/"
                 },
                 {
                     name: "Bayer",
-                    img: "assets/img/sponsors/sponsors2018/jobfair/terabyte/bayer.png",
+                    img: "{process.env.PUBLIC_URL + "/assets/img/sponsors/sponsors2018/jobfair/terabyte/bayer.png"},
                     webPage: "https://www.bayer.com/"
                 }
             ],
@@ -38,35 +38,35 @@ class Sponsors extends Component {
             tier3: [
                 {
                     name: "Cloudflare",
-                    img: "assets/img/sponsors/sponsors2018/jobfair/gigabyte/cf_placeholder.png",
+                    img: "{process.env.PUBLIC_URL + "/assets/img/sponsors/sponsors2018/jobfair/gigabyte/cf_placeholder.png"},
                     webPage: "https://www.cloudflare.com/"
                 }, {
                     name: "Northern Trust",
-                    img: "assets/img/sponsors/sponsors2018/jobfair/gigabyte/northern_trust.jpg",
+                    img: "{process.env.PUBLIC_URL + "/assets/img/sponsors/sponsors2018/jobfair/gigabyte/northern_trust.jpg"},
                     webPage: "https://www.northerntrust.com/"
                 }, {
                     name: "Salesforce",
-                    img: "assets/img/sponsors/sponsors2018/jobfair/gigabyte/sf_placeholder.png",
+                    img: "{process.env.PUBLIC_URL + "/assets/img/sponsors/sponsors2018/jobfair/gigabyte/sf_placeholder.png"},
                     webPage: "https://www.salesforce.com/"
                 }, {
                     name: "Braintree",
-                    img: "assets/img/sponsors/sponsors2018/jobfair/gigabyte/braintree.png",
+                    img: "{process.env.PUBLIC_URL + "/assets/img/sponsors/sponsors2018/jobfair/gigabyte/braintree.png"},
                     webPage: "http://braintree.com/"
                 }, {
                     name: "Qualtrics",
-                    img: "assets/img/sponsors/sponsors2018/jobfair/gigabyte/qualtrics_full.png",
+                    img: "{process.env.PUBLIC_URL + "/assets/img/sponsors/sponsors2018/jobfair/gigabyte/qualtrics_full.png"},
                     webPage: "https://www.qualtrics.com/"
                 }, {
                     name: "Quora",
-                    img: "assets/img/sponsors/sponsors2018/jobfair/gigabyte/quora_full.png",
+                    img: "{process.env.PUBLIC_URL + "/assets/img/sponsors/sponsors2018/jobfair/gigabyte/quora_full.png"},
                     webPage: "https://www.quora.com/"
                 }, {
                     name: "Lyft",
-                    img: "assets/img/sponsors/sponsors2018/jobfair/gigabyte/lyft_full.png",
+                    img: "{process.env.PUBLIC_URL + "/assets/img/sponsors/sponsors2018/jobfair/gigabyte/lyft_full.png"},
                     webPage: "https://www.lyft.com/"
                 }, {
                     name: "Amazon",
-                    img: "assets/img/sponsors/sponsors2018/jobfair/gigabyte/amazon_full.png",
+                    img: "{process.env.PUBLIC_URL + "/assets/img/sponsors/sponsors2018/jobfair/gigabyte/amazon_full.png"},
                     webPage: "https://www.amazon.com/"
                 }
             ],
@@ -74,71 +74,71 @@ class Sponsors extends Component {
             tier4: [
                 {
                     name: "Google",
-                    img: "assets/img/sponsors/sponsors2018/jobfair/megabyte/google.png",
+                    img: "{process.env.PUBLIC_URL + "/assets/img/sponsors/sponsors2018/jobfair/megabyte/google.png"},
                     webPage: "https://google.com"
                 }, {
                     name: "Amobee",
-                    img: "assets/img/sponsors/sponsors2018/jobfair/megabyte/amobee_full.jpeg",
+                    img: "{process.env.PUBLIC_URL + "/assets/img/sponsors/sponsors2018/jobfair/megabyte/amobee_full.jpeg"},
                     webPage: "https://www.amobee.com/"
                 }, {
                     name: "Sandia National Laboratories",
-                    img: "assets/img/sponsors/sponsors2018/jobfair/megabyte/sandia.png",
+                    img: "{process.env.PUBLIC_URL + "/assets/img/sponsors/sponsors2018/jobfair/megabyte/sandia.png"},
                     webPage: "http://www.sandia.gov/"
                 }, {
                     name: "PricewaterhouseCoopers",
-                    img: "assets/img/sponsors/sponsors2018/jobfair/megabyte/pwc.jpg",
+                    img: "{process.env.PUBLIC_URL + "/assets/img/sponsors/sponsors2018/jobfair/megabyte/pwc.jpg"},
                     webPage: "https://www.pwc.com/"
                 }, {
                     name: "Granular",
-                    img: "assets/img/sponsors/sponsors2018/jobfair/megabyte/granular.svg",
+                    img: "{process.env.PUBLIC_URL + "/assets/img/sponsors/sponsors2018/jobfair/megabyte/granular.svg"},
                     webPage: "https://granular.ag/"
                 }, {
                     name: "MongoDB",
-                    img: "assets/img/sponsors/sponsors2018/jobfair/megabyte/mongodb_full.png",
+                    img: "{process.env.PUBLIC_URL + "/assets/img/sponsors/sponsors2018/jobfair/megabyte/mongodb_full.png"},
                     webPage: "https://www.mongodb.com/"
                 }, {
                     name: "Uber",
-                    img: "assets/img/sponsors/sponsors2018/jobfair/megabyte/uber_full.png",
+                    img: "{process.env.PUBLIC_URL + "/assets/img/sponsors/sponsors2018/jobfair/megabyte/uber_full.png"},
                     webPage: "https://www.uber.com/"
                 }, {
                     name: "Rubrik",
-                    img: "assets/img/sponsors/sponsors2018/jobfair/megabyte/rubrik.png",
+                    img: "{process.env.PUBLIC_URL + "/assets/img/sponsors/sponsors2018/jobfair/megabyte/rubrik.png"},
                     webPage: "https://rubrik.com/"
                 }, {
                     name: "Riverbed",
-                    img: "assets/img/sponsors/sponsors2018/jobfair/megabyte/riverbed_full.png",
+                    img: "{process.env.PUBLIC_URL + "/assets/img/sponsors/sponsors2018/jobfair/megabyte/riverbed_full.png"},
                     webPage: "https://www.riverbed.com/"
                 }, {
                     name: "Facebook",
-                    img: "assets/img/sponsors/sponsors2018/jobfair/megabyte/facebook_full.jpg",
+                    img: "{process.env.PUBLIC_URL + "/assets/img/sponsors/sponsors2018/jobfair/megabyte/facebook_full.jpg"},
                     webPage: "https://www.facebook.com/"
                 }, {
                     name: "Pinterest",
-                    img: "assets/img/sponsors/sponsors2018/jobfair/megabyte/pinterest_full.jpg",
+                    img: "{process.env.PUBLIC_URL + "/assets/img/sponsors/sponsors2018/jobfair/megabyte/pinterest_full.jpg"},
                     webPage: "https://www.pinterest.com/"
                 }, {
                     name: "Nav Talent",
-                    img: "assets/img/sponsors/sponsors2018/jobfair/megabyte/nav_talent_full.png",
+                    img: "{process.env.PUBLIC_URL + "/assets/img/sponsors/sponsors2018/jobfair/megabyte/nav_talent_full.png"},
                     webPage: "https://navtalent.com/"
                 }, {
                     name: "Bank of America",
-                    img: "assets/img/sponsors/sponsors2018/jobfair/megabyte/boa_full.jpg",
+                    img: "{process.env.PUBLIC_URL + "/assets/img/sponsors/sponsors2018/jobfair/megabyte/boa_full.jpg"},
                     webPage: "https://bankofamerica.com/"
                 }, {
                     name: "Bungie",
-                    img: "assets/img/sponsors/sponsors2018/jobfair/megabyte/bungie.png",
+                    img: "{process.env.PUBLIC_URL + "/assets/img/sponsors/sponsors2018/jobfair/megabyte/bungie.png"},
                     webPage: "https://bungie.net/"
                 }, {
                     name: "West Monroe Partners",
-                    img: "assets/img/sponsors/sponsors2018/jobfair/megabyte/wmp.png",
+                    img: "{process.env.PUBLIC_URL + "/assets/img/sponsors/sponsors2018/jobfair/megabyte/wmp.png"},
                     webPage: "https://westmonroepartners.com/"
                 }, {
                     name: "Esri",
-                    img: "assets/img/sponsors/sponsors2018/jobfair/megabyte/esri_full.PNG",
+                    img: "{process.env.PUBLIC_URL + "/assets/img/sponsors/sponsors2018/jobfair/megabyte/esri_full.PNG"},
                     webPage: "https://esri.com/"
                 }, {
                     name: "Apple",
-                    img: "assets/img/sponsors/sponsors2018/jobfair/gigabyte/apple.png",
+                    img: "{process.env.PUBLIC_URL + "/assets/img/sponsors/sponsors2018/jobfair/gigabyte/apple.png"},
                     webPage: "https://www.apple.com/"
                 },
 
@@ -146,48 +146,48 @@ class Sponsors extends Component {
 
                 {
                     name: "DeepScale",
-                    img: "assets/img/sponsors/sponsors2018/startup/ds_placeholder.png",
+                    img: "{process.env.PUBLIC_URL + "/assets/img/sponsors/sponsors2018/startup/ds_placeholder.png"},
                     webPage: "http://deepscale.ai/"
                 }, {
                     name: "Flexport",
-                    img: "assets/img/sponsors/sponsors2018/startup/fp_placeholder.png",
+                    img: "{process.env.PUBLIC_URL + "/assets/img/sponsors/sponsors2018/startup/fp_placeholder.png"},
                     webPage: "https://www.flexport.com/"
                 }, {
                     name: "Ocient",
-                    img: "assets/img/sponsors/sponsors2018/startup/ocient_full.png",
+                    img: "{process.env.PUBLIC_URL + "/assets/img/sponsors/sponsors2018/startup/ocient_full.png"},
                     webPage: "http://www.ocient.com/"
                 }, {
                     name: "Polsky Center",
-                    img: "assets/img/sponsors/sponsors2018/startup/pc_placeholder.png",
+                    img: "{process.env.PUBLIC_URL + "/assets/img/sponsors/sponsors2018/startup/pc_placeholder.png"},
                     webPage: "https://polsky.uchicago.edu/"
                 }, {
                     name: "Reconstruct",
-                    img: "assets/img/sponsors/sponsors2018/startup/reconstruct_full.jpg",
+                    img: "{process.env.PUBLIC_URL + "/assets/img/sponsors/sponsors2018/startup/reconstruct_full.jpg"},
                     webPage: "https://www.reconstructinc.com/"
                 }, {
                     name: "Sentry",
-                    img: "assets/img/sponsors/sponsors2018/startup/sentry.png",
+                    img: "{process.env.PUBLIC_URL + "/assets/img/sponsors/sponsors2018/startup/sentry.png"},
                     webPage: "http://www.sentry.io"
                 }, {
                     name: "Sift Science",
-                    img: "assets/img/sponsors/sponsors2018/startup/sift_science_full.png",
+                    img: "{process.env.PUBLIC_URL + "/assets/img/sponsors/sponsors2018/startup/sift_science_full.png"},
                     webPage: "https://siftscience.com/"
                 }, {
                     name: "Samsara",
-                    img: "assets/img/sponsors/sponsors2018/startup/samsara_full.png",
+                    img: "{process.env.PUBLIC_URL + "/assets/img/sponsors/sponsors2018/startup/samsara_full.png"},
                     webPage: "http://www.samsara.com"
                 }, {
                     name: "Cruise Automation",
-                    img: "assets/img/sponsors/sponsors2018/startup/cruise.png",
+                    img: "{process.env.PUBLIC_URL + "/assets/img/sponsors/sponsors2018/startup/cruise.png"},
                     webPage: "http://www.getcruise.com"
                 }, {
                     name: "Confluent",
-                    img: "assets/img/sponsors/sponsors2018/startup/confluent.png",
+                    img: "{process.env.PUBLIC_URL + "/assets/img/sponsors/sponsors2018/startup/confluent.png"},
                     webPage: "http://www.confluent.io"
                 },
                 {
                     name: "Contrary Capital",
-                    img: "assets/img/sponsors/sponsors2018/startup/contrary.png",
+                    img: "{process.env.PUBLIC_URL + "/assets/img/sponsors/sponsors2018/startup/contrary.png"},
                     webPage: "https://contrarycap.com/"
                 }
             ]

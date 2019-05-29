@@ -12,7 +12,7 @@ export default class RegisterSuccess extends Component {
               <h1 className="whiteCardHeading">You're Registered for Reflections | Projections 2018</h1>
             </Grid.Row>
             <Grid.Row className='verticalPadding'>
-              <Image style={{margin: 'auto'}} src='../assets/2018logo.png' size='small' />
+              <Image style={{margin: 'auto'}} src='../{process.env.PUBLIC_URL + "/assets/2018logo.png' size='small' />
             </Grid.Row>
             <Grid.Row className='successPrompt verticalPadding'>
               You have succesfully registered for Reflections | Projections 2018! You should receive an email from us shortly with your <b>unique conference QR code</b>. Be sure to check your <b>spam folder</b>. 

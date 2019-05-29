@@ -6,12 +6,12 @@ import "slick-carousel/slick/slick-theme.css"
 
 
 const PHOTO_SET = [
-  { src: '../assets/img/mechmania/1.jpg', alt: 'Slide 1' },
-  { src: '../assets/img/mechmania/2.jpg', alt: 'Slide 2' },
-  { src: '../assets/img/mechmania/3.jpg', alt: 'Slide 3' },
-  { src: '../assets/img/mechmania/4.jpg', alt: 'Slide 4' },
-  { src: '../assets/img/mechmania/5.jpg', alt: 'Slide 5' },
-  { src: '../assets/img/mechmania/6.jpg', alt: 'Slide 6' }
+  { src: '../{process.env.PUBLIC_URL + "/assets/img/mechmania/1.jpg', alt: 'Slide 1' },
+  { src: '../{process.env.PUBLIC_URL + "/assets/img/mechmania/2.jpg', alt: 'Slide 2' },
+  { src: '../{process.env.PUBLIC_URL + "/assets/img/mechmania/3.jpg', alt: 'Slide 3' },
+  { src: '../{process.env.PUBLIC_URL + "/assets/img/mechmania/4.jpg', alt: 'Slide 4' },
+  { src: '../{process.env.PUBLIC_URL + "/assets/img/mechmania/5.jpg', alt: 'Slide 5' },
+  { src: '../{process.env.PUBLIC_URL + "/assets/img/mechmania/6.jpg', alt: 'Slide 6' }
 ];
 
 function HiddenArrow(props) {

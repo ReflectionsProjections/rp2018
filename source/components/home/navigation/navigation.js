@@ -38,7 +38,7 @@ class Navigation extends Component {
                                 style={{
                                 opacity: 1
                             }}>
-                                <img className="Navigation__logo" src="assets/svg/logo.svg"/>
+                                <img className="Navigation__logo" src="{process.env.PUBLIC_URL + "/assets/svg/logo.svg"}/>
                             </a>
                         </Navbar.Brand>
                         <Navbar.Toggle/>

@@ -81,11 +81,11 @@ export default class DashboardLarge extends Component {
         <Grid.Row>
           <Grid.Column className="largeLeftSideContainer">
             <div className="largeBlockContainer rpLogoContainer">
-              <Image src={'/assets/full-logo_2018_white.svg'} size = 'large' centered/>
+              <Image src={'/{process.env.PUBLIC_URL + "/assets/full-logo_2018_white.svg'} size = 'large' centered/>
             </div>
             <div className="largeBlockContainer">
               <Segment basic className="posterContainer">
-                <Image className='posterImg' src={'../assets/posters/startup_fair.png'} size='large' centered />
+                <Image className='posterImg' src={'../{process.env.PUBLIC_URL + "/assets/posters/startup_fair.png'} size='large' centered />
               </Segment>
             </div>
 
@@ -108,7 +108,7 @@ export default class DashboardLarge extends Component {
                       <div className="eventsTitle">
                         Powered by:
                       </div>
-                      <Image className="sponsorLogo" src={'../assets/img/sponsors/sponsors2018/jobfair/petabyte/microsoft_full.png'} size='medium' centered />
+                      <Image className="sponsorLogo" src={'../{process.env.PUBLIC_URL + "/assets/img/sponsors/sponsors2018/jobfair/petabyte/microsoft_full.png'} size='medium' centered />
                     </Segment>
                   </Grid.Column>
                 </Grid.Row>
