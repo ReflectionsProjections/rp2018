@@ -9,7 +9,7 @@
     "build": "webpack --hide-modules",
     "dev": "webpack-dev-server --content-base public/ --history-api-fallback --quiet --no-info",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d public -b gh-pages -o origin -m 'Deploys website.'"
   },
   "author": "R|P 2018 Website Staff, inspired by R|P 2017 website by Simon Lu",
   "license": "MIT",
